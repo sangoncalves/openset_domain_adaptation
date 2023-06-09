@@ -29,6 +29,7 @@ import random
 from math import e
 import wandb
 import zipfile
+from class_collection import VideoDataset, VideoDatasetSourceAndTarget
 
 
 def calculate_new_labels(source_dataset, target_dataset):
@@ -209,20 +210,20 @@ def get_paths_dataset(config, adaptation_direction='ucf2hmdb'):
   #     shutil.copy('/content/drive/MyDrive/datasets-thesis/hmdb_ucf_temp/hmdb_test_target.txt', '/content/')
       
 
-    if(adaptation_direction=='ucf2hmdb'):
-      #source 
-      path_source_train = '/content/hmdb_ucf_giacomo/ucf/train'
-      path_source_val = '/content/hmdb_ucf_giacomo/ucf/test'
-      #target
-      path_target_train = '/content/hmdb_ucf_giacomo/hmdb/train'
-      path_target_val = '/content/hmdb_ucf_giacomo/hmdb/test'
-    else:
-      #source 
-      path_source_train = '/content/hmdb_ucf_giacomo/hmdb/train'
-      path_source_val = '/content/hmdb_ucf_giacomo/hmdb/test'
-      #target
-      path_target_train = '/content/hmdb_ucf_giacomo/ucf/train'
-      path_target_val = '/content/hmdb_ucf_giacomo/ucf/test'      
+  if(adaptation_direction=='ucf2hmdb'):
+    #source 
+    path_source_train = '/content/hmdb_ucf_giacomo/ucf/train'
+    path_source_val = '/content/hmdb_ucf_giacomo/ucf/test'
+    #target
+    path_target_train = '/content/hmdb_ucf_giacomo/hmdb/train'
+    path_target_val = '/content/hmdb_ucf_giacomo/hmdb/test'
+  else:
+    #source 
+    path_source_train = '/content/hmdb_ucf_giacomo/hmdb/train'
+    path_source_val = '/content/hmdb_ucf_giacomo/hmdb/test'
+    #target
+    path_target_train = '/content/hmdb_ucf_giacomo/ucf/train'
+    path_target_val = '/content/hmdb_ucf_giacomo/ucf/test'      
 
   # else:
   #   #source 
