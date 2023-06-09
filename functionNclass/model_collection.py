@@ -1,3 +1,8 @@
+import torch.nn as nn
+import torch
+import torchvision.models as models
+
+
 class CEVTModel(nn.Module):
     def __init__(self, feature_extractor='resnet18', output_layer=102):
         super(CEVTModel, self).__init__()
