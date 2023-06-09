@@ -234,7 +234,7 @@ def create_datasets(config):
   path_source_train = config['path_source_train']
   path_target_train = config['path_target_train']
   path_target_val = config['path_target_val']
-  source_txt_file_path = config['source_txt_file_path']
+  source_txt_file_path = config['source_train_txt_file_path'] #need to create a file with all data for source. source_txt_file_path = source_train_txt_file_path + source_test_txt_file_path
   target_train_txt_file_path = config['target_train_txt_file_path']
   target_test_txt_file_path =config['target_test_txt_file_path']
 
@@ -255,9 +255,6 @@ def create_datasets(config):
       target_txt_path = '/content/hmdb_test_target.txt'
       modify_labels_in_datasets(source_txt_path, target_txt_path, source_old_mapping, target_old_mapping, new_mapping, classes_to_remove, unknown_label)
       #updating the class with new labels.
-      source_txt_file_path = '/content/ucf_train_source_mod.txt'
-      target_train_txt_file_path = '/content/hmdb_test_target_mod.txt' 
-      target_test_txt_file_path = '/content/hmdb_test_target_mod.txt' #later replace by target_test_txt_file_path correct txt. Need to update function about labels
       source_n_target_train_dataset, target_val_dataset = prepare_datasets(path_source_train,
                                                                           path_target_train,
                                                                           path_target_val, 
