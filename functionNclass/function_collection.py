@@ -29,7 +29,7 @@ import random
 from math import e
 import wandb
 import zipfile
-from class_collection import VideoDataset, VideoDatasetSourceAndTarget
+from functionNclass.class_collection import VideoDataset, VideoDatasetSourceAndTarget
 
 
 def calculate_new_labels(source_dataset, target_dataset):
@@ -194,44 +194,34 @@ def prepare_dataloaders(train_dataset, val_dataset, batch_size=8, num_workers=2)
     return train_loader, val_loader
 
 def get_paths_dataset(config, adaptation_direction='ucf2hmdb'):
-  # if(config['dataset_choice']=='Giacomo'): 
-  #   folder_path = '/content/hmdb_ucf'
-  #   import zipfile
-  #   zip_file_path = '/content/drive/MyDrive/datasets-thesis/hmdb_ucf_giacomo.zip'
-  #   destination_directory = '/content/'
-  #   if not os.path.exists(folder_path):
-  #     with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
-  #         zip_ref.extractall(destination_directory)
 
-  #     os.rename('/content/hmdb_ucf_temp', '/content/hmdb_ucf_giacomo')
-      
-  #     # use shutil.copy instead of !cp
-  #     shutil.copy('/content/drive/MyDrive/datasets-thesis/hmdb_ucf_temp/ucf_train_source.txt', '/content/')
-  #     shutil.copy('/content/drive/MyDrive/datasets-thesis/hmdb_ucf_temp/hmdb_test_target.txt', '/content/')
-      
+  if(adaptation_direction=='ucf2hmdb'): #source -> target
+    #source  UCF
+    path_source_train = '/content/hmdb_ucf/ucf/train'
+    path_source_val = '/content/hmdb_ucf/ucf/test'
+    config['source_train_txt_file_path'] = '/content/ucf_train_source.txt'
+    config['source_test_txt_file_path'] = '/content/ucf_test_source.txt'
 
-  if(adaptation_direction=='ucf2hmdb'):
-    #source 
-    path_source_train = '/content/hmdb_ucf_giacomo/ucf/train'
-    path_source_val = '/content/hmdb_ucf_giacomo/ucf/test'
-    #target
-    path_target_train = '/content/hmdb_ucf_giacomo/hmdb/train'
-    path_target_val = '/content/hmdb_ucf_giacomo/hmdb/test'
+    #target HMDB
+    path_target_train = '/content/hmdb_ucf/hmdb/train'
+    path_target_val = '/content/hmdb_ucf/hmdb/test'
+    config['target_train_txt_file_path'] = '/content/hmdb_train_target.txt'
+    config['target_test_txt_file_path'] = '/content/hmdb_test_target.txt'
+
   else:
-    #source 
-    path_source_train = '/content/hmdb_ucf_giacomo/hmdb/train'
-    path_source_val = '/content/hmdb_ucf_giacomo/hmdb/test'
-    #target
-    path_target_train = '/content/hmdb_ucf_giacomo/ucf/train'
-    path_target_val = '/content/hmdb_ucf_giacomo/ucf/test'      
+    #source HMDB
+    path_source_train = '/content/hmdb_ucf/hmdb/train'
+    path_source_val = '/content/hmdb_ucf/hmdb/test'
+    config['source_train_txt_file_path'] = '/content/hmdb_train_source.txt'
+    config['source_test_txt_file_path'] = '/content/hmdb_test_source.txt'
+    
+    #target UCF
+    path_target_train = '/content/hmdb_ucf/ucf/train'
+    path_target_val = '/content/hmdb_ucf/ucf/test' 
+    config['target_train_txt_file_path'] = '/content/ucf_train_target.txt'
+    config['target_test_txt_file_path'] = '/content/ucf_test_target.txt'   
 
-  # else:
-  #   #source 
-  #   path_source_train = '/content/drive/MyDrive/datasets-thesis/ucf101RGB_reduced/train'
-  #   path_source_val = '/content/drive/MyDrive/datasets-thesis/ucf101RGB_reduced/val'
-  #   #target
-  #   path_target_train = '/content/drive/MyDrive/datasets-thesis/HMDB51RGB_reduced/train'
-  #   path_target_val = '/content/drive/MyDrive/datasets-thesis/HMDB51RGB_reduced/val'
+
 
   config['path_source_train'] = path_source_train
   config['path_source_val'] = path_source_val

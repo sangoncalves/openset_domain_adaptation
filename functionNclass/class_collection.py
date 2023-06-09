@@ -11,7 +11,7 @@ from PIL import Image, ImageFilter
 from torch.utils.data import DataLoader, Dataset
 from torchvision.transforms import RandomHorizontalFlip, RandomCrop, RandomResizedCrop, ColorJitter
 import tempfile
-
+from functionNclass.function_collection import get_frames_by_class, apply_data_augmentation
 
 class VideoDatasetSourceAndTarget:
     def __init__(self, source_dataset, target_dataset):
