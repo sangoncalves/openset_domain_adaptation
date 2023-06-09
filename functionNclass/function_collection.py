@@ -1,3 +1,36 @@
+import random
+import re
+import os
+from os import listdir
+from os.path import join
+import datetime
+import torch
+import torchvision.transforms.functional as TF
+import torch.nn.functional as F
+import torchvision
+from PIL import Image, ImageFilter
+from torch.utils.data import DataLoader, Dataset
+from random import Random
+import torch
+import torch.nn as nn
+import torch.optim as optim
+import torchvision.models as models
+import numpy as np
+from tqdm import tqdm
+import time
+from torch.utils.tensorboard import SummaryWriter
+from sklearn.metrics import confusion_matrix
+import matplotlib.pyplot as plt
+from torchvision.transforms import RandomHorizontalFlip, RandomCrop, RandomResizedCrop, ColorJitter
+import seaborn as sn
+import pandas as pd
+import shutil
+import random
+from math import e
+import wandb
+
+
+
 def calculate_new_labels(source_dataset, target_dataset):
     # Combine the source and target dataset into one
     combined_dataset = source_dataset + target_dataset
@@ -776,7 +809,132 @@ def modify_labels_in_datasets(source_txt_path, target_txt_path, source_old_mappi
         f.writelines(mod_lines_target)
 
 
+def create_temp_file_with_new_labels(path, new_labels):
+    # create a temporary file in the same directory as the original file
+    base_dir = os.path.dirname(path)
+    temp_file = tempfile.NamedTemporaryFile(delete=False, dir=base_dir)
+    
+    with open(path, 'r') as original_file, open(temp_file.name, 'w') as new_file:
+        for line in original_file:
+            line_split = line.strip().split()
+            new_label = new_labels.get(line_split[0])
+            if new_label is not None:
+                # replace the label in the line
+                line_split[-1] = new_label
+            # write the line to the new file
+            new_file.write(' '.join(line_split) + '\n')
 
+    return temp_file.name
+
+def get_new_labels(source_mapping, target_mapping, source_validation_mapping, target_validation_mapping):
+    # Start with the source classes and their IDs
+    new_labels = source_mapping.copy()
+
+    # Create a mapping for new target classes not in the source dataset
+    for target_class in target_mapping:
+        if target_class not in source_mapping:
+            new_labels[target_class] = str(max(map(int, source_mapping.values())) + 1)
+            source_mapping[target_class] = new_labels[target_class]
+
+    # For validation set, assign new labels for classes not in source or target training sets
+    for validation_class in target_validation_mapping:
+        if validation_class not in source_mapping and validation_class not in target_mapping:
+            new_labels[validation_class] = str(max(map(int, new_labels.values())) + 1)
+            
+    return new_labels
+
+
+# def open_set_loss(outputs, labels, num_classes, device):
+#     # Create a tensor of shape (batch_size, num_classes) with all zeros
+#     # This will be the target tensor for the source data
+#     source_targets = torch.zeros_like(outputs[:, :num_classes])
+
+#     # Create a tensor of shape (batch_size, 1) with all ones
+#     # This will be the target tensor for the target data
+#     target_targets = torch.ones_like(outputs[:, num_classes:])
+
+#     # Concatenate the source and target targets tensors along the second dimension
+#     targets = torch.cat([source_targets, target_targets], dim=1)
+
+#     # Move the targets tensor to the device
+#     targets = targets.to(device)
+
+#     # Calculate the cross-entropy loss between the outputs and targets tensors
+#     loss = nn.CrossEntropyLoss()(outputs, labels)
+
+#     return loss
+
+def apply_data_augmentation(img):
+    # Define the data augmentation transformations
+    augmentations = [
+        RandomHorizontalFlip(p=0.5),
+        RandomCrop(size=(224, 224), padding=4),
+        RandomResizedCrop(size=(224, 224), scale=(0.08, 1.0), ratio=(3.0/4.0, 4.0/3.0)),
+        ColorJitter(brightness=0.4, contrast=0.4, saturation=0.4, hue=0.2)
+    ]
+
+    # Apply the transformations to the input image
+    for transform in augmentations:
+        img = transform(img)
+
+    return img
+
+# def get_frames_by_class(dataset_path, n_frames):
+#     classes = {}
+#     video_label = []
+#     classes_root = sorted(os.listdir(dataset_path))
+#     for i, class_name in enumerate(classes_root):
+#         observation_folder = sorted(os.listdir(os.path.join(dataset_path, class_name)))
+#         classes[i] = class_name
+#         for obs in observation_folder:
+#             frames = os.listdir(os.path.join(dataset_path,class_name,obs))
+#             if len(frames) >= n_frames:
+#               class_obs = class_name + "/" + obs
+#               video_label.append((class_obs, i))
+#     return video_label, classes
+
+def get_frames_by_class(txt_file_path, n_frames):
+  # if(train):
+  #   # p = '/content/drive/MyDrive/datasets-thesis/ucf_train_source.txt'
+  #   p = '/content/ucf_train_source.txt'
+  # else:
+  #   p = '/content/hmdb_test_target.txt'
+  #   # p = '/content/drive/MyDrive/datasets-thesis/hmdb_test_target.txt'
+  p = txt_file_path
+
+  video_label = []
+  classes = {}
+  # Open the text file for reading
+  with open(p, 'r') as file:
+      # Iterate over each line in the file
+      for line in file:
+          # Strip any newline characters from the line
+          line_split = line.strip().split()
+          # Append the line to the self.video_label and classes list
+          classes[line_split[0]]=line_split[-1]
+          video_label.append(tuple(line_split[1:]))
+  # create the inverse mapping
+  class_id_to_name = {v: k for k, v in classes.items()}
+
+  return video_label, classes, class_id_to_name
+
+# def get_frames_by_class(train, n_frames, new_labels):
+#     if(train):
+#         p = '/content/ucf_train_source.txt'
+#     else:
+#         p = '/content/hmdb_test_target.txt'
+
+#     # create a temporary file with new labels
+#     temp_file_path = create_temp_file_with_new_labels(p, new_labels)
+
+#     video_label = []
+#     classes = {}
+#     with open(temp_file_path, 'r') as file:
+#         for line in file:
+#             line_split = line.strip().split()
+#             classes[line_split[0]] = line_split[-1]
+#             video_label.append(tuple(line_split[1:]))
+#     return video_label, classes
 
 
 
