@@ -945,6 +945,7 @@ def push(message):
   result = subprocess.run(['git', 'status'], stdout=subprocess.PIPE)
   print(result.stdout.decode('utf-8'))
   os.system(f'git commit -m "{message}"')
+  print('#######################################')
   result = subprocess.run(['git', 'status'], stdout=subprocess.PIPE)
   print(result.stdout.decode('utf-8'))
   os.system('git push origin main')
