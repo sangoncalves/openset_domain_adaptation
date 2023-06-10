@@ -11,7 +11,48 @@ from PIL import Image, ImageFilter
 from torch.utils.data import DataLoader, Dataset
 from torchvision.transforms import RandomHorizontalFlip, RandomCrop, RandomResizedCrop, ColorJitter
 import tempfile
-from functionNclass.function_collection import get_frames_by_class, apply_data_augmentation
+
+def apply_data_augmentation(img):
+    # Define the data augmentation transformations
+    augmentations = [
+        RandomHorizontalFlip(p=0.5),
+        RandomCrop(size=(224, 224), padding=4),
+        RandomResizedCrop(size=(224, 224), scale=(0.08, 1.0), ratio=(3.0/4.0, 4.0/3.0)),
+        ColorJitter(brightness=0.4, contrast=0.4, saturation=0.4, hue=0.2)
+    ]
+
+    # Apply the transformations to the input image
+    for transform in augmentations:
+        img = transform(img)
+
+    return img
+
+def get_frames_by_class(txt_file_path, n_frames):
+  # if(train):
+  #   # p = '/content/drive/MyDrive/datasets-thesis/ucf_train_source.txt'
+  #   p = '/content/ucf_train_source.txt'
+  # else:
+  #   p = '/content/hmdb_test_target.txt'
+  #   # p = '/content/drive/MyDrive/datasets-thesis/hmdb_test_target.txt'
+  p = txt_file_path
+
+  video_label = []
+  classes = {}
+  # Open the text file for reading
+  with open(p, 'r') as file:
+      # Iterate over each line in the file
+      for line in file:
+          # Strip any newline characters from the line
+          line_split = line.strip().split()
+          # Append the line to the self.video_label and classes list
+          classes[line_split[0]]=line_split[-1]
+          video_label.append(tuple(line_split[1:]))
+  # create the inverse mapping
+  class_id_to_name = {v: k for k, v in classes.items()}
+
+  return video_label, classes, class_id_to_name
+
+
 
 class VideoDatasetSourceAndTarget:
     def __init__(self, source_dataset, target_dataset):
