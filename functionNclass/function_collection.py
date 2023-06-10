@@ -98,8 +98,8 @@ def prepare_datasets(
     target_dataset,
     val_dataset,
     source_txt_file_path,
-    target_train_txt_file_path,
-    target_test_txt_file_path,
+    target_train_txt,
+    target_test_txt,
     n_frames=16, #4
     n_clips=1, #4
     frame_size=224,
@@ -119,7 +119,7 @@ def prepare_datasets(
 
     target_dataset = VideoDataset(
         target_dataset,
-        target_train_txt_file_path,
+        target_train_txt,
         frame_size=frame_size,
         n_frames=n_frames,
         n_clips=n_clips,
@@ -133,7 +133,7 @@ def prepare_datasets(
 
     val_dataset = VideoDataset(
         val_dataset,
-        target_test_txt_file_path,
+        target_test_txt,
         frame_size=frame_size,
         n_frames=n_frames,
         n_clips=n_clips,
@@ -234,17 +234,17 @@ def create_datasets(config):
   path_source_train = config['path_source_train']
   path_target_train = config['path_target_train']
   path_target_val = config['path_target_val']
-  source_txt_file_path = config['source_train_txt_file_path'] #need to create a file with all data for source. source_txt_file_path = source_train_txt_file_path + source_test_txt_file_path
-  target_train_txt_file_path = config['target_train_txt_file_path']
-  target_test_txt_file_path =config['target_test_txt_file_path']
+  source_txt_file_path = config['source_train_txt'] #need to create a file with all data for source. source_txt_file_path = source_train_txt + source_test_txt_file_path
+  target_train_txt = config['target_train_txt']
+  target_test_txt =config['target_test_txt']
 
 
   source_n_target_train_dataset, target_val_dataset = prepare_datasets(path_source_train,
                                                                       path_target_train,
                                                                       path_target_val, 
                                                                       source_txt_file_path,
-                                                                      target_train_txt_file_path,
-                                                                      target_test_txt_file_path)
+                                                                      target_train_txt,
+                                                                      target_test_txt)
 
   if(config['g_open_set']==True): 
       num_classes_to_remove = config['num_classes_to_remove']
@@ -259,8 +259,8 @@ def create_datasets(config):
                                                                           path_target_train,
                                                                           path_target_val, 
                                                                           source_txt_file_path,
-                                                                          target_train_txt_file_path,
-                                                                          target_test_txt_file_path)  
+                                                                          target_train_txt,
+                                                                          target_test_txt)  
 
   if(config['subset_flag']==True): ########################### ADDING A SAMPLER
     from util.sampler import ClassObservationsSamplerVideoDatasetSourceAndTarget
@@ -924,40 +924,4 @@ def get_frames_by_class(txt_file_path, n_frames):
 #             classes[line_split[0]] = line_split[-1]
 #             video_label.append(tuple(line_split[1:]))
 #     return video_label, classes
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
