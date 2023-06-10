@@ -1,0 +1,47 @@
+{
+    "os": "Linux-5.15.107+-x86_64-with-glibc2.31",
+    "python": "3.10.12",
+    "heartbeatAt": "2023-06-10T21:13:52.271658",
+    "startedAt": "2023-06-10T21:13:51.046072",
+    "docker": null,
+    "cuda": null,
+    "args": null,
+    "state": "running",
+    "program": "OpenDomainAdaptation-Thesisv3.ipynb",
+    "colab": "https://colab.research.google.com/notebook#fileId=1RSH42QM_MhlnN8qaUdNGhkNF1GEhVCJS",
+    "git": {
+        "remote": "https://github.com/sangoncalves/openset_domain_adaptation.git",
+        "commit": "924516b216a89efd8aa2ae12fc0dc73f9b2cc500"
+    },
+    "email": "sander.martinsgoncalves@gmail.com",
+    "root": "/content/openset_domain_adaptation",
+    "host": "9ccec479c49c",
+    "username": "root",
+    "executable": "/usr/bin/python3",
+    "cpu_count": 1,
+    "cpu_count_logical": 2,
+    "cpu_freq": {
+        "current": 2249.998,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2249.998,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2249.998,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "total": 107.71508407592773,
+        "used": 45.642337799072266
+    },
+    "memory": {
+        "total": 12.678398132324219
+    }
+}

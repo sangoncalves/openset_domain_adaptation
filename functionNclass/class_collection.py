@@ -11,6 +11,8 @@ from PIL import Image, ImageFilter
 from torch.utils.data import DataLoader, Dataset
 from torchvision.transforms import RandomHorizontalFlip, RandomCrop, RandomResizedCrop, ColorJitter
 import tempfile
+from collections import defaultdict
+from torch.utils.data import Subset
 
 def apply_data_augmentation(img):
     # Define the data augmentation transformations
@@ -171,3 +173,136 @@ class VideoDataset(Dataset):
         
         tensor = self.frame2video_tensor(reduced_frames)     
         return tensor, int(label) # return tensor
+
+
+
+class ExtendedSubset(Subset):
+    def __init__(self, dataset, indices, classes, video_label, class_id_to_name):
+        super().__init__(dataset, indices)
+        self.class_id_to_name = class_id_to_name
+        # self.classes = {k: classes[k] for k in self.indices}
+        self.classes = {idx: self.class_id_to_name[video_label[idx][1]] for idx in self.indices}
+        self.classes = classes
+        self.video_label = [video_label[i] for i in self.indices]
+        self.index_mapping = {original_idx: subset_idx for subset_idx, original_idx in enumerate(self.indices)}
+
+
+
+class ClassObservationsSamplerVideoDatasetSourceAndTarget:
+    def __init__(self, video_dataset, num_observations):
+        self.video_dataset = video_dataset
+        self.num_observations = num_observations
+
+        # Get subset indices for source and target datasets
+        self.source_indices = self._get_indices_by_class(self.video_dataset.source_dataset)
+        self.target_indices = self._get_indices_by_class(self.video_dataset.target_dataset)
+
+        # Create a subset of the source and target datasets
+        self.source_dataset = ExtendedSubset(
+            self.video_dataset.source_dataset, 
+            self.source_indices, 
+            self.video_dataset.source_dataset.classes,
+            self.video_dataset.source_dataset.video_label,
+            self.video_dataset.source_dataset.class_id_to_name
+        )
+        self.target_dataset = ExtendedSubset(
+            self.video_dataset.target_dataset, 
+            self.target_indices, 
+            self.video_dataset.target_dataset.classes,
+            self.video_dataset.target_dataset.video_label,
+            self.video_dataset.target_dataset.class_id_to_name
+
+        )
+
+        self.output_dim = self.video_dataset.output_dim
+
+        # Get the size of the tensors for the first sample in the source and target datasets
+        source_size = len(self.source_dataset[0][0]), *self.source_dataset[0][0].size()[1:]
+        target_size = len(self.target_dataset[0][0]), *self.target_dataset[0][0].size()[1:]
+
+        # Store the size of the tensors as instance variables
+        self.source_size = source_size
+        self.target_size = target_size
+
+    def _get_indices_by_class(self, dataset):
+        class_indices = defaultdict(list)
+        for idx in range(len(dataset.video_label)):
+            _, class_id = dataset.video_label[idx]
+            class_indices[int(class_id)].append(idx)
+        indices = []
+        for class_id, class_idx in class_indices.items():
+            np.random.shuffle(class_idx)
+            indices.extend(class_idx[:self.num_observations])
+        return indices
+
+    def __len__(self):
+        return max(len(self.source_dataset), len(self.target_dataset))
+
+    def __getitem__(self, index):
+      # Get source and target indices based on subset indices
+      source_index = self.source_indices[index % len(self.source_indices)]
+      source_subset_index = self.source_dataset.index_mapping[source_index]
+      source_data, source_label = self.source_dataset[source_subset_index]
+
+      target_index = self.target_indices[index % len(self.target_indices)]
+      target_subset_index = self.target_dataset.index_mapping[target_index]
+      target_data, target_label = self.target_dataset[target_subset_index]
+
+      return source_index, source_data, source_label, target_index, target_data, target_label
+
+
+
+
+
+class ClassObservationsSamplerVideoDatasetTarget:
+    def __init__(self, video_dataset, num_observations):
+        self.video_dataset = video_dataset
+        self.num_observations = num_observations
+
+        # Get subset indices for source and target datasets
+        self.source_indices = self._get_indices_by_class(self.video_dataset)
+
+        # Create a subset of the source and target datasets
+        self.source_dataset = ExtendedSubset(
+            self.video_dataset, 
+            self.source_indices, 
+            self.video_dataset.classes,
+            self.video_dataset.video_label,
+            self.video_dataset.class_id_to_name
+        )
+
+        self.output_dim = self.video_dataset.output_dim
+
+        # Get the size of the tensors for the first sample in the source and target datasets
+        source_size = len(self.source_dataset[0][0]), *self.source_dataset[0][0].size()[1:]
+
+        # Store the size of the tensors as instance variables
+        self.source_size = source_size
+
+        # Assign video_label and classes from source_dataset
+        self.video_label = self.source_dataset.video_label
+        self.classes = self.source_dataset.classes
+        self.class_id_to_name = self.source_dataset.class_id_to_name  # Carry over class_id_to_name attribute
+
+    def _get_indices_by_class(self, dataset):
+        class_indices = defaultdict(list)
+        for idx in range(len(dataset.video_label)):
+            _, class_id = dataset.video_label[idx]
+            class_indices[int(class_id)].append(idx)
+        indices = []
+        for class_id, class_idx in class_indices.items():
+            np.random.shuffle(class_idx)
+            indices.extend(class_idx[:self.num_observations])
+        return indices
+
+    def __len__(self):
+      return len(self.source_dataset)
+
+
+    def __getitem__(self, index):
+      # Get source and target indices based on subset indices
+      source_index = self.source_indices[index % len(self.source_indices)]
+      source_subset_index = self.source_dataset.index_mapping[source_index]
+      source_data = self.source_dataset[source_subset_index]
+
+      return (source_index, *source_data)        

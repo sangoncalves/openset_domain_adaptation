@@ -30,7 +30,7 @@ from math import e
 import wandb
 import zipfile
 import subprocess
-from functionNclass.class_collection import VideoDataset, VideoDatasetSourceAndTarget
+from functionNclass.class_collection import VideoDataset, VideoDatasetSourceAndTarget, ClassObservationsSamplerVideoDatasetSourceAndTarget, ClassObservationsSamplerVideoDatasetTarget
 
 
 def calculate_new_labels(source_dataset, target_dataset):
@@ -235,7 +235,7 @@ def create_datasets(config):
   path_source_train = config['path_source_train']
   path_target_train = config['path_target_train']
   path_target_test = config['path_target_test']
-  source_txt_file_path = config['source_train_txt'] #need to create a file with all data for source. source_txt_file_path = source_train_txt + source_test_txt_file_path
+  source_txt = config['source_train_txt'] #need to create a file with all data for source. source_txt_file_path = source_train_txt + source_test_txt_file_path
   target_train_txt = config['target_train_txt']
   target_test_txt =config['target_test_txt']
 
@@ -243,7 +243,7 @@ def create_datasets(config):
   source_n_target_train_dataset, target_test_dataset = prepare_datasets(path_source_train,
                                                                       path_target_train,
                                                                       path_target_test, 
-                                                                      source_txt_file_path,
+                                                                      source_txt,
                                                                       target_train_txt,
                                                                       target_test_txt)
 
@@ -252,20 +252,16 @@ def create_datasets(config):
       source_old_mapping = map_classes_to_labels(path_source_train)
       target_old_mapping = map_classes_to_labels(path_target_train)
       classes_to_remove, new_mapping, unknown_label = select_classes_to_remove_and_create_new_mapping(path_source_train,path_target_train, source_old_mapping, num_classes_to_remove)
-      source_txt_path = '/content/ucf_train_source.txt'
-      target_txt_path = '/content/hmdb_test_target.txt'
-      modify_labels_in_datasets(source_txt_path, target_txt_path, source_old_mapping, target_old_mapping, new_mapping, classes_to_remove, unknown_label)
+      modify_labels_in_datasets(source_txt, target_train_txt, target_test_txt, source_old_mapping, target_old_mapping, new_mapping, classes_to_remove, unknown_label)
       #updating the class with new labels.
       source_n_target_train_dataset, target_test_dataset = prepare_datasets(path_source_train,
                                                                           path_target_train,
                                                                           path_target_test, 
-                                                                          source_txt_file_path,
+                                                                          source_txt,
                                                                           target_train_txt,
                                                                           target_test_txt)  
 
   if(config['subset_flag']==True): ########################### ADDING A SAMPLER
-    from util.sampler import ClassObservationsSamplerVideoDatasetSourceAndTarget
-    from util.sampler import ClassObservationsSamplerVideoDatasetTarget
     source_n_target_train_dataset = ClassObservationsSamplerVideoDatasetSourceAndTarget(source_n_target_train_dataset, config['obs_num'])
     target_test_dataset = ClassObservationsSamplerVideoDatasetTarget(target_test_dataset, config['obs_num'])
   return source_n_target_train_dataset, target_test_dataset
@@ -759,10 +755,10 @@ def modify_labels_in_file(file_path, old_mapping, new_mapping, unknown_label, cl
 
 
 
-def modify_labels_in_datasets(source_txt_path, target_txt_path, source_old_mapping, target_old_mapping, new_mapping, classes_to_remove, unknown_label):
+def modify_labels_in_datasets(source_txt, target_train_txt, target_test_txt, source_old_mapping, target_old_mapping, new_mapping, classes_to_remove, unknown_label):
     # Modify labels in source text file
-    mod_lines_source = modify_labels_in_file(source_txt_path, source_old_mapping, new_mapping, unknown_label, classes_to_remove, source=True)
-    mod_source_txt_path = source_txt_path.replace('.txt', '_mod.txt')
+    mod_lines_source = modify_labels_in_file(source_txt, source_old_mapping, new_mapping, unknown_label, classes_to_remove, source=True)
+    mod_source_txt_path = source_txt.replace('.txt', '_mod.txt')
     with open(mod_source_txt_path , 'w') as f:
         f.writelines(mod_lines_source)
 
@@ -793,8 +789,13 @@ def modify_labels_in_datasets(source_txt_path, target_txt_path, source_old_mappi
         print(class_entry)
 
     # Modify labels in target text file
-    mod_lines_target = modify_labels_in_file(target_txt_path, target_old_mapping, new_mapping, unknown_label, classes_to_remove, source=False)
-    mod_target_txt_path = target_txt_path.replace('.txt', '_mod.txt')
+    mod_lines_target = modify_labels_in_file(target_train_txt, target_old_mapping, new_mapping, unknown_label, classes_to_remove, source=False)
+    mod_target_txt_path = target_train_txt.replace('.txt', '_mod.txt')
+    with open(mod_target_txt_path , 'w') as f:
+        f.writelines(mod_lines_target)
+        
+    mod_lines_target = modify_labels_in_file(target_test_txt, target_old_mapping, new_mapping, unknown_label, classes_to_remove, source=False)
+    mod_target_txt_path = target_test_txt.replace('.txt', '_mod.txt')
     with open(mod_target_txt_path , 'w') as f:
         f.writelines(mod_lines_target)
 
