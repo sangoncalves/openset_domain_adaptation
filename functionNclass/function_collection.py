@@ -936,13 +936,16 @@ def changeTXT(root = '/content/openset_domain_adaptation/paths', destination = '
       for line in lines:
           f.write(line.replace(pattern_search, pattern_out))
 
-def gpush(message = 'files updated'):
-  !git config --global user.email "sander.martinsgoncalves@gmail.com"
-  !git config --global user.name "sangoncalves"
-  !git remote set-url origin https://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@github.com/sangoncalves/openset_domain_adaptation.git
-  !git add /content/openset_domain_adaptation/
-  !git commit -m "{message}"
-  !git push origin main
+def git_publish(message):
+  os.system('git config --global user.email "sander.martinsgoncalves@gmail.com"')
+  os.system('git config --global user.name "sangoncalves"')
+  os.system('git remote set-url origin https://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@github.com/sangoncalves/openset_domain_adaptation.git')
+  os.system('git add /content/openset_domain_adaptation/')
+  os.system(f'git commit -m "{message}"')
+  os.system('git push origin main')
   print('########## GIT PUSH COMPLETE ##########')
-  !git status          
+  os.system('git status')
+
+
+         
 
