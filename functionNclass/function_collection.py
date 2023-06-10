@@ -197,29 +197,29 @@ def get_paths_dataset(config, adaptation_direction='ucf2hmdb'):
 
   if(adaptation_direction=='ucf2hmdb'): #source -> target
     #source  UCF
-    path_source_train = '/content/hmdb_ucf/ucf/train'
-    path_source_val = '/content/hmdb_ucf/ucf/test'
-    config['source_train_txt_file_path'] = '/content/ucf_train_source.txt'
-    config['source_test_txt_file_path'] = '/content/ucf_test_source.txt'
+    path_source_train = '/content/openset_domain_adaptation/hmdb_ucf/ucf/train'
+    path_source_val = '/content/openset_domain_adaptation/hmdb_ucf/ucf/test'
+    config['source_train_txt'] = '/content/openset_domain_adaptation/paths/ucf_train_source.txt'
+    config['source_eval_txt'] = '/content/openset_domain_adaptation/paths/ucf_test_source.txt'
 
     #target HMDB
-    path_target_train = '/content/hmdb_ucf/hmdb/train'
-    path_target_val = '/content/hmdb_ucf/hmdb/test'
-    config['target_train_txt_file_path'] = '/content/hmdb_train_target.txt'
-    config['target_test_txt_file_path'] = '/content/hmdb_test_target.txt'
+    path_target_train = '/content/openset_domain_adaptation/hmdb_ucf/hmdb/train'
+    path_target_val = '/content/openset_domain_adaptation/hmdb_ucf/hmdb/test'
+    config['target_train_txt'] = '/content/openset_domain_adaptation/paths/hmdb_train_target.txt'
+    config['target_eval_txt'] = '/content/openset_domain_adaptation/paths/hmdb_test_target.txt'
 
   else:
     #source HMDB
-    path_source_train = '/content/hmdb_ucf/hmdb/train'
-    path_source_val = '/content/hmdb_ucf/hmdb/test'
-    config['source_train_txt_file_path'] = '/content/hmdb_train_source.txt'
-    config['source_test_txt_file_path'] = '/content/hmdb_test_source.txt'
+    path_source_train = '/content/openset_domain_adaptation/hmdb_ucf/hmdb/train'
+    path_source_val = '/content/openset_domain_adaptation/hmdb_ucf/hmdb/test'
+    config['source_train_txt'] = '/content/openset_domain_adaptation/paths/hmdb_train_source.txt'
+    config['source_eval_txt'] = '/content/openset_domain_adaptation/paths/hmdb_test_source.txt'
     
     #target UCF
-    path_target_train = '/content/hmdb_ucf/ucf/train'
-    path_target_val = '/content/hmdb_ucf/ucf/test' 
-    config['target_train_txt_file_path'] = '/content/ucf_train_target.txt'
-    config['target_test_txt_file_path'] = '/content/ucf_test_target.txt'   
+    path_target_train = '/content/openset_domain_adaptation/hmdb_ucf/ucf/train'
+    path_target_val = '/content/openset_domain_adaptation/hmdb_ucf/ucf/test' 
+    config['target_train_txt'] = '/content/ucf_train_target.txt'
+    config['target_eval_txt'] = '/content/ucf_test_target.txt'   
 
 
 
