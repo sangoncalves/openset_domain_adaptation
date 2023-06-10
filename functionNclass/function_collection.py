@@ -937,21 +937,21 @@ def changeTXT(root = '/content/openset_domain_adaptation/paths', destination = '
       for line in lines:
           f.write(line.replace(pattern_search, pattern_out))
 
-def push(message):
-  os.system('git config --global user.email "sander.martinsgoncalves@gmail.com"')
-  os.system('git config --global user.name "sangoncalves"')
-  os.system('git remote set-url origin https://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@github.com/sangoncalves/openset_domain_adaptation.git')
-  os.system('git add /content/openset_domain_adaptation/')
-  result = subprocess.run(['git', 'status'], stdout=subprocess.PIPE)
-  print(result.stdout.decode('utf-8'))
-  os.system(f'git commit -m "{message}"')
-  print('#######################################')
-  result = subprocess.run(['git', 'status'], stdout=subprocess.PIPE)
-  print(result.stdout.decode('utf-8'))
-  os.system('git push origin main')
-  print('########## GIT PUSH COMPLETE ##########')
-  result = subprocess.run(['git', 'status'], stdout=subprocess.PIPE)
-  print(result.stdout.decode('utf-8'))
+# def push(message):
+#   os.system('git config --global user.email "sander.martinsgoncalves@gmail.com"')
+#   os.system('git config --global user.name "sangoncalves"')
+#   os.system('git remote set-url origin https://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@github.com/sangoncalves/openset_domain_adaptation.git')
+#   os.system('git add /content/openset_domain_adaptation/')
+#   result = subprocess.run(['git', 'status'], stdout=subprocess.PIPE)
+#   print(result.stdout.decode('utf-8'))
+#   os.system(f'git commit -m "{message}"')
+#   print('#######################################')
+#   result = subprocess.run(['git', 'status'], stdout=subprocess.PIPE)
+#   print(result.stdout.decode('utf-8'))
+#   os.system('git push origin main')
+#   print('########## GIT PUSH COMPLETE ##########')
+#   result = subprocess.run(['git', 'status'], stdout=subprocess.PIPE)
+#   print(result.stdout.decode('utf-8'))
 
 
          
