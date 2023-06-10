@@ -198,50 +198,50 @@ def get_paths_dataset(config, adaptation_direction='ucf2hmdb'):
   if(adaptation_direction=='ucf2hmdb'): #source -> target
     #source  UCF
     path_source_train = '/content/openset_domain_adaptation/hmdb_ucf/ucf/train'
-    path_source_val = '/content/openset_domain_adaptation/hmdb_ucf/ucf/test'
+    path_source_test = '/content/openset_domain_adaptation/hmdb_ucf/ucf/test'
     config['source_train_txt'] = '/content/openset_domain_adaptation/paths/ucf_train_source.txt'
-    config['source_eval_txt'] = '/content/openset_domain_adaptation/paths/ucf_test_source.txt'
+    config['source_test_txt'] = '/content/openset_domain_adaptation/paths/ucf_test_source.txt'
 
     #target HMDB
     path_target_train = '/content/openset_domain_adaptation/hmdb_ucf/hmdb/train'
-    path_target_val = '/content/openset_domain_adaptation/hmdb_ucf/hmdb/test'
+    path_target_test = '/content/openset_domain_adaptation/hmdb_ucf/hmdb/test'
     config['target_train_txt'] = '/content/openset_domain_adaptation/paths/hmdb_train_target.txt'
-    config['target_eval_txt'] = '/content/openset_domain_adaptation/paths/hmdb_test_target.txt'
+    config['target_test_txt'] = '/content/openset_domain_adaptation/paths/hmdb_test_target.txt'
 
   else:
     #source HMDB
     path_source_train = '/content/openset_domain_adaptation/hmdb_ucf/hmdb/train'
-    path_source_val = '/content/openset_domain_adaptation/hmdb_ucf/hmdb/test'
+    path_source_test = '/content/openset_domain_adaptation/hmdb_ucf/hmdb/test'
     config['source_train_txt'] = '/content/openset_domain_adaptation/paths/hmdb_train_source.txt'
-    config['source_eval_txt'] = '/content/openset_domain_adaptation/paths/hmdb_test_source.txt'
+    config['source_test_txt'] = '/content/openset_domain_adaptation/paths/hmdb_test_source.txt'
     
     #target UCF
     path_target_train = '/content/openset_domain_adaptation/hmdb_ucf/ucf/train'
-    path_target_val = '/content/openset_domain_adaptation/hmdb_ucf/ucf/test' 
-    config['target_train_txt'] = '/content/ucf_train_target.txt'
-    config['target_eval_txt'] = '/content/ucf_test_target.txt'   
+    path_target_test = '/content/openset_domain_adaptation/hmdb_ucf/ucf/test' 
+    config['target_train_txt'] = '/content/openset_domain_adaptation/paths/ucf_train_target.txt'
+    config['target_test_txt'] = '/content/openset_domain_adaptation/paths/ucf_test_target.txt'   
 
 
 
   config['path_source_train'] = path_source_train
-  config['path_source_val'] = path_source_val
+  config['path_source_test'] = path_source_test
   config['path_target_train'] = path_target_train
-  config['path_target_val'] = path_target_val
+  config['path_target_test'] = path_target_test
   return config
   
 def create_datasets(config):
 
   path_source_train = config['path_source_train']
   path_target_train = config['path_target_train']
-  path_target_val = config['path_target_val']
+  path_target_test = config['path_target_test']
   source_txt_file_path = config['source_train_txt'] #need to create a file with all data for source. source_txt_file_path = source_train_txt + source_test_txt_file_path
   target_train_txt = config['target_train_txt']
   target_test_txt =config['target_test_txt']
 
 
-  source_n_target_train_dataset, target_val_dataset = prepare_datasets(path_source_train,
+  source_n_target_train_dataset, target_test_dataset = prepare_datasets(path_source_train,
                                                                       path_target_train,
-                                                                      path_target_val, 
+                                                                      path_target_test, 
                                                                       source_txt_file_path,
                                                                       target_train_txt,
                                                                       target_test_txt)
@@ -255,9 +255,9 @@ def create_datasets(config):
       target_txt_path = '/content/hmdb_test_target.txt'
       modify_labels_in_datasets(source_txt_path, target_txt_path, source_old_mapping, target_old_mapping, new_mapping, classes_to_remove, unknown_label)
       #updating the class with new labels.
-      source_n_target_train_dataset, target_val_dataset = prepare_datasets(path_source_train,
+      source_n_target_train_dataset, target_test_dataset = prepare_datasets(path_source_train,
                                                                           path_target_train,
-                                                                          path_target_val, 
+                                                                          path_target_test, 
                                                                           source_txt_file_path,
                                                                           target_train_txt,
                                                                           target_test_txt)  
@@ -266,16 +266,16 @@ def create_datasets(config):
     from util.sampler import ClassObservationsSamplerVideoDatasetSourceAndTarget
     from util.sampler import ClassObservationsSamplerVideoDatasetTarget
     source_n_target_train_dataset = ClassObservationsSamplerVideoDatasetSourceAndTarget(source_n_target_train_dataset, config['obs_num'])
-    target_val_dataset = ClassObservationsSamplerVideoDatasetTarget(target_val_dataset, config['obs_num'])
-  return source_n_target_train_dataset, target_val_dataset
+    target_test_dataset = ClassObservationsSamplerVideoDatasetTarget(target_test_dataset, config['obs_num'])
+  return source_n_target_train_dataset, target_test_dataset
 
-def classes_validation(source_n_target_train_dataset, target_val_dataset):
+def classes_validation(source_n_target_train_dataset, target_test_dataset):
   # classes validation
-  verification1 = source_n_target_train_dataset.source_dataset.classes==source_n_target_train_dataset.target_dataset.classes==target_val_dataset.classes
+  verification1 = source_n_target_train_dataset.source_dataset.classes==source_n_target_train_dataset.target_dataset.classes==target_test_dataset.classes
   source_classes_verification = list(set(source_n_target_train_dataset.source_dataset[idx][1] for idx in range(0,len(source_n_target_train_dataset.source_dataset))))
   target_train_classes_verification = list(set(source_n_target_train_dataset.target_dataset[idx][1] for idx in range(0,len(source_n_target_train_dataset.target_dataset))))
-  target_val_verification = list(set(target_val_dataset[idx][2] for idx in range(0,len(target_val_dataset))))
-  verification2 = source_classes_verification==target_train_classes_verification==target_val_verification
+  target_test_verification = list(set(target_test_dataset[idx][2] for idx in range(0,len(target_test_dataset))))
+  verification2 = source_classes_verification==target_train_classes_verification==target_test_verification
 
   if(config['g_open_set']==False):
     print('CLOSED SET VALIDATION!')
@@ -291,7 +291,7 @@ def classes_validation(source_n_target_train_dataset, target_val_dataset):
     else:
       raise ValueError("Classes are EQUAL for source and target. Not allowed for OPEN set!") 
 
-def train_model(config, source_n_target_train_loader, target_val_loader, entropy_val, filename):
+def train_model(config, source_n_target_train_loader, target_test_loader, entropy_val, filename):
 
     model = config["model"]
     criterion = config["criterion"]
@@ -363,12 +363,12 @@ def train_model(config, source_n_target_train_loader, target_val_loader, entropy
         
 
         # Run evaluation only if the current epoch is a multiple of eval_interval
-        eval_model(config, target_val_loader, entropy_val, filename)
+        eval_model(config, target_test_loader, entropy_val, filename)
         # if (epoch + 1) % eval_interval == 0:
-        #   eval_model(config, dataset, target_val_loader, entropy_val, filename)
+        #   eval_model(config, dataset, target_test_loader, entropy_val, filename)
 
 
-def eval_model(config, target_val_loader, entropy_val, filename):
+def eval_model(config, target_test_loader, entropy_val, filename):
 
     model = config["model"]
     criterion = config["criterion"]
@@ -392,7 +392,7 @@ def eval_model(config, target_val_loader, entropy_val, filename):
         class_correct = list(0. for i in range(num_classes))
         class_total = list(0. for i in range(num_classes))
 
-        for batch in target_val_loader:
+        for batch in target_test_loader:
               if config['subset_flag']:
                   index, target_data, target_label = batch
               else:
@@ -443,7 +443,7 @@ def eval_model(config, target_val_loader, entropy_val, filename):
             open_accuracy = 0
             h_score = 0
 
-        # val_loss = val_loss / len(target_val_loader.dataset)
+        # val_loss = val_loss / len(target_test_loader.dataset)
         # val_accuracy = 100 * val_correct / val_total
         val_time = time.time() - val_start_time
         print("#################### - EVALUATION - ##########################")
@@ -488,7 +488,7 @@ def eval_model(config, target_val_loader, entropy_val, filename):
         #     class_names=class_names
         # )})
         # class_names = [str(i) for i in range(config["num_classes"] - 1)] + ["unknown"]
-        all_classes = sorted(set(int(val) for val in config["target_val_classes"].values()))
+        all_classes = sorted(set(int(val) for val in config["target_test_classes"].values()))
         plot_confusion_matrix(labels_all, predicted_all, all_classes)
         print("#################### - EVALUATION - ##########################")
 
@@ -570,13 +570,13 @@ def plot_confusion_matrix(labels_all, predicted_all, all_classes):
 #     return classes_to_remove
 
 
-# def update_class_labels(source_and_target_dataset, target_val_dataset):
+# def update_class_labels(source_and_target_dataset, target_test_dataset):
 #     """
 #     Update class labels in source, target and validation datasets.
 
 #     Args:
 #         source_and_target_dataset (Dataset): The dataset containing both source and target datasets.
-#         target_val_dataset (Dataset): The target validation dataset.
+#         target_test_dataset (Dataset): The target validation dataset.
 #     """
 
 #     # Get the sorted class names of the source dataset
@@ -590,11 +590,11 @@ def plot_confusion_matrix(labels_all, predicted_all, all_classes):
 
 #     # Get the sorted class names of the target datasets
 #     target_classes = sorted(list(source_and_target_dataset.target_dataset.classes.keys()))
-#     target_val_classes = sorted(list(target_val_dataset.classes.keys()))
+#     target_test_classes = sorted(list(target_test_dataset.classes.keys()))
 
 #     # Initialize the target mappings with the source mapping
 #     target_mapping = source_mapping.copy()
-#     target_val_mapping = source_mapping.copy()
+#     target_test_mapping = source_mapping.copy()
 
 #     # The label for the classes that are not in the source dataset
 #     unknown_class_label = str(max(map(int, source_mapping.values())) + 1)
@@ -604,13 +604,13 @@ def plot_confusion_matrix(labels_all, predicted_all, all_classes):
 #         if class_name not in target_mapping:
 #             target_mapping[class_name] = unknown_class_label
 
-#     for class_name in target_val_classes:
-#         if class_name not in target_val_mapping:
-#             target_val_mapping[class_name] = unknown_class_label
+#     for class_name in target_test_classes:
+#         if class_name not in target_test_mapping:
+#             target_test_mapping[class_name] = unknown_class_label
 
 #     # Update the classes in the target datasets
 #     source_and_target_dataset.target_dataset.classes = target_mapping
-#     target_val_dataset.classes = target_val_mapping
+#     target_test_dataset.classes = target_test_mapping
 
 #     # Update the video_label in the datasets
 #     for video in source_and_target_dataset.source_dataset.video_label:
@@ -619,8 +619,8 @@ def plot_confusion_matrix(labels_all, predicted_all, all_classes):
 #     for video in source_and_target_dataset.target_dataset.video_label:
 #         video[1] = source_and_target_dataset.target_dataset.classes[source_and_target_dataset.target_dataset.class_id_to_name[video[1]]]
 
-#     for video in target_val_dataset.video_label:
-#         video[1] = target_val_dataset.classes[target_val_dataset.class_id_to_name[video[1]]]
+#     for video in target_test_dataset.video_label:
+#         video[1] = target_test_dataset.classes[target_test_dataset.class_id_to_name[video[1]]]
 
 def get_classes_from_dir(dir_path):
     return sorted(os.listdir(dir_path))
@@ -924,4 +924,15 @@ def get_frames_by_class(txt_file_path, n_frames):
 #             classes[line_split[0]] = line_split[-1]
 #             video_label.append(tuple(line_split[1:]))
 #     return video_label, classes
+def changeTXT(root = '/content/openset_domain_adaptation/paths', destination = '/content', pattern_search="/content/hmdb_ucf_giacomo/data", pattern_out="/content/openset_domain_adaptation/hmdb_ucf"):  
+  for file_name in [file for file in os.listdir(root) if os.path.isfile(os.path.join(root, file))]:
+    file_path = os.path.join(root, file_name)
+    with open(file_path, "r") as f:
+        lines = f.readlines()
+
+    file_path = os.path.join(destination, file_name)
+    with open(file_path, "w") as f:
+      
+      for line in lines:
+          f.write(line.replace(pattern_search, pattern_out))
 
