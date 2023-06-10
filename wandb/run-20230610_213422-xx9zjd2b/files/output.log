@@ -1,0 +1,16 @@
+
+Epoch 1/2
+Training loss: 18.5000
+Training accuracy: 12.50%
+Training time: 39.67s
+#################### - EVALUATION - ##########################
+Entropy VAL: 1.0
+Entropy: tensor([1.8613, 1.7715, 1.7770, 1.8599, 1.8262, 1.8650])
+Validation loss: 0.0000
+Validation accuracy_per_class: [0. 0. 0. 0. 0. 0. 1.]
+Validation closed_accuracy: 0.00%
+Validation open_accuracy: 100.00%
+Validation h_score: 0.00%
+Validation time: 19.94
+PREDICTED LABELS: [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6]
+TARGET LABELS   : [6, 6, 2, 2, 4, 4, 1, 1, 0, 0, 5, 5, 3, 3]
