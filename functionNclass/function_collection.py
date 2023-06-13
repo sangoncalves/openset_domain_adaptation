@@ -956,4 +956,15 @@ def changeTXT(root = '/content/openset_domain_adaptation/paths', destination = '
 
 
          
+def get_txt_classes(txt_list, txt_folder):
+  df = pd.DataFrame(columns=['txt_name', 'classes'])
+  for f in txt_list:
+    with open(os.path.join(txt_folder,f), 'r') as f_txt:
+      lines = f_txt.readlines()
+      df_classes = pd.DataFrame([{'txt_name': f, 'classes': sorted(list(set([l.split()[-1] for l in lines])), key=int)}])
+      df = pd.concat([df, df_classes] , ignore_index=True)
+  return df
 
+txt_folder ='/content/openset_domain_adaptation/paths' 
+txt_list = [f for f in os.listdir(txt_folder) if os.path.isfile(os.path.join(txt_folder,f))]
+# df = get_txt_classes(txt_list, txt_folder)
