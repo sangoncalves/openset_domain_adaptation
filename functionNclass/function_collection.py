@@ -194,9 +194,9 @@ def prepare_dataloaders(train_dataset, val_dataset, batch_size=8, num_workers=2)
     )
     return train_loader, val_loader
 
-def get_paths_dataset(config, adaptation_direction='ucf2hmdb'):
+def get_paths_dataset(config):
 
-  if(adaptation_direction=='ucf2hmdb'): #source -> target
+  if(config['adaptation_direction']=='ucf2hmdb'): #source -> target
     #source  UCF
     path_source_train = '/content/openset_domain_adaptation/hmdb_ucf/ucf/train'
     path_source_test = '/content/openset_domain_adaptation/hmdb_ucf/ucf/test'
