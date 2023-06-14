@@ -352,7 +352,7 @@ def train_model(config, source_n_target_train_loader, target_test_loader, entrop
         print(f'Training time: {train_time:.2f}s')
         # Log metrics to wandb
         wandb.log({
-            "Epoch": epoch + 1,
+            "Epoch": epoch,
             "Train Loss": train_loss,
             "Train Accuracy": train_accuracy,
             "Train Time": train_time
@@ -360,12 +360,12 @@ def train_model(config, source_n_target_train_loader, target_test_loader, entrop
         
 
         # Run evaluation only if the current epoch is a multiple of eval_interval
-        eval_model(config, target_test_loader, entropy_val, filename)
+        eval_model(config, target_test_loader, entropy_val, filename, epoch)
         # if (epoch + 1) % eval_interval == 0:
         #   eval_model(config, dataset, target_test_loader, entropy_val, filename)
 
 
-def eval_model(config, target_test_loader, entropy_val, filename):
+def eval_model(config, target_test_loader, entropy_val, filename, epoch):
 
     model = config["model"]
     criterion = config["criterion"]
@@ -485,13 +485,14 @@ def eval_model(config, target_test_loader, entropy_val, filename):
         #     class_names=class_names
         # )})
         # class_names = [str(i) for i in range(config["num_classes"] - 1)] + ["unknown"]
+        # if(epoch==config['num_epochs']):
         all_classes = sorted(set(int(val) for val in config["target_test_classes"].values()))
-        plot_confusion_matrix(labels_all, predicted_all, all_classes)
+        plot_confusion_matrix(labels_all, predicted_all, all_classes, epoch)
         print("#################### - EVALUATION - ##########################")
 
 
 
-def plot_confusion_matrix(labels_all, predicted_all, all_classes):
+def plot_confusion_matrix(labels_all, predicted_all, all_classes, epoch):
     cm = confusion_matrix(labels_all, predicted_all, labels=all_classes)
     df_cm = pd.DataFrame(cm, index=all_classes, columns=all_classes)
     plt.figure(figsize=(10,7))
