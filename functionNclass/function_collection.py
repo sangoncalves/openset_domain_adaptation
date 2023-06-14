@@ -500,7 +500,7 @@ def plot_confusion_matrix(labels_all, predicted_all, all_classes):
     plt.ylabel('Actual')
     plt.title('Confusion Matrix')
     plt.savefig("confusion_matrix.png")
-    wandb.log({"confusion_matrix": wandb.Image("confusion_matrix.png")})
+    wandb.log({"confusion_matrix": wandb.Image("confusion_matrix.png")}, step=epoch)
 
 
 # def plot_confusion_matrix(y_true, y_pred, class_names):
