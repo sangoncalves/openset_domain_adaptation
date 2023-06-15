@@ -487,21 +487,21 @@ def eval_model(config, target_test_loader, entropy_val, filename, epoch):
         # class_names = [str(i) for i in range(config["num_classes"] - 1)] + ["unknown"]
         # if(epoch==config['num_epochs']):
         all_classes = sorted(set(int(val) for val in config["target_test_classes"].values()))
-        plot_confusion_matrix(labels_all, predicted_all, all_classes, epoch)
+        plot_confusion_matrix(labels_all, predicted_all, all_classes, epoch, entropy_val)
         print("#################### - EVALUATION - ##########################")
 
 
 
-def plot_confusion_matrix(labels_all, predicted_all, all_classes, epoch):
+def plot_confusion_matrix(labels_all, predicted_all, all_classes, epoch, entropy_val):
     cm = confusion_matrix(labels_all, predicted_all, labels=all_classes)
     df_cm = pd.DataFrame(cm, index=all_classes, columns=all_classes)
     plt.figure(figsize=(10,7))
     sn.heatmap(df_cm, annot=True, fmt='d')
     plt.xlabel('Predicted')
     plt.ylabel('Actual')
-    plt.title('Confusion Matrix')
+    plt.title('Confusion Matrix, Entropy: {}'.format(entropy_val))
     plt.savefig("confusion_matrix.png")
-    wandb.log({"confusion_matrix": wandb.Image("confusion_matrix.png")}, step=epoch)
+    wandb.log({"confusion_matrix": wandb.Image("confusion_matrix.png")})
 
 
 # def plot_confusion_matrix(y_true, y_pred, class_names):
