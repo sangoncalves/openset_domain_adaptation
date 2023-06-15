@@ -33,6 +33,16 @@ import subprocess
 from functionNclass.class_collection import VideoDataset, VideoDatasetSourceAndTarget, ClassObservationsSamplerVideoDatasetSourceAndTarget, ClassObservationsSamplerVideoDatasetTarget
 
 
+def set_seed(seed):
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed_all(seed)
+
+
+
+
 def calculate_new_labels(source_dataset, target_dataset):
     # Combine the source and target dataset into one
     combined_dataset = source_dataset + target_dataset
