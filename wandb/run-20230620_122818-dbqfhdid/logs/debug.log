@@ -27,3 +27,14 @@ config: {}
 2023-06-20 12:28:21,734 INFO    Thread-21 (_run_job):1081 [wandb_run.py:_redirect():2075] Wrapping output streams.
 2023-06-20 12:28:21,734 INFO    Thread-21 (_run_job):1081 [wandb_run.py:_redirect():2100] Redirects installed.
 2023-06-20 12:28:21,735 INFO    Thread-21 (_run_job):1081 [wandb_init.py:init():828] run started, returning control to user process
+2023-06-20 12:28:23,481 INFO    Thread-21 (_run_job):1081 [wandb_watch.py:watch():51] Watching
+2023-06-20 12:28:23,496 INFO    Thread-21 (_run_job):1081 [wandb_run.py:_finish():1890] finishing run sango/openset_domain_adaptation/dbqfhdid
+2023-06-20 12:28:23,496 INFO    Thread-21 (_run_job):1081 [jupyter.py:save_history():445] not saving jupyter history
+2023-06-20 12:28:23,496 INFO    Thread-21 (_run_job):1081 [jupyter.py:save_ipynb():373] not saving jupyter notebook
+2023-06-20 12:28:23,496 INFO    Thread-21 (_run_job):1081 [wandb_init.py:_jupyter_teardown():435] cleaning up jupyter logic
+2023-06-20 12:28:23,496 INFO    Thread-21 (_run_job):1081 [wandb_run.py:_atexit_cleanup():2124] got exitcode: 1
+2023-06-20 12:28:23,496 INFO    Thread-21 (_run_job):1081 [wandb_run.py:_restore():2107] restore
+2023-06-20 12:28:23,496 INFO    Thread-21 (_run_job):1081 [wandb_run.py:_restore():2113] restore done
+2023-06-20 12:28:26,969 INFO    Thread-21 (_run_job):1081 [wandb_run.py:_footer_history_summary_info():3467] rendering history
+2023-06-20 12:28:26,969 INFO    Thread-21 (_run_job):1081 [wandb_run.py:_footer_history_summary_info():3499] rendering summary
+2023-06-20 12:28:26,977 INFO    Thread-21 (_run_job):1081 [wandb_run.py:_footer_sync_info():3426] logging synced files

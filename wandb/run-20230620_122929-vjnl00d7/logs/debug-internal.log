@@ -1,0 +1,37 @@
+2023-06-20 12:29:29,769 INFO    StreamThr :3985 [internal.py:wandb_internal():86] W&B internal server running at pid: 3985, started at: 2023-06-20 12:29:29.768503
+2023-06-20 12:29:29,772 DEBUG   HandlerThread:3985 [handler.py:handle_request():144] handle_request: status
+2023-06-20 12:29:31,343 INFO    WriterThread:3985 [datastore.py:open_for_write():85] open: /content/openset_domain_adaptation/wandb/run-20230620_122929-vjnl00d7/run-vjnl00d7.wandb
+2023-06-20 12:29:31,344 DEBUG   SenderThread:3985 [sender.py:send():369] send: header
+2023-06-20 12:29:31,350 DEBUG   SenderThread:3985 [sender.py:send():369] send: run
+2023-06-20 12:29:31,705 DEBUG   HandlerThread:3985 [handler.py:handle_request():144] handle_request: check_version
+2023-06-20 12:29:31,707 INFO    SenderThread:3985 [dir_watcher.py:__init__():211] watching files in: /content/openset_domain_adaptation/wandb/run-20230620_122929-vjnl00d7/files
+2023-06-20 12:29:31,707 INFO    SenderThread:3985 [sender.py:_start_run_threads():1100] run started: vjnl00d7 with start time 1687264169.77092
+2023-06-20 12:29:31,707 DEBUG   SenderThread:3985 [sender.py:send_request():396] send_request: summary_record
+2023-06-20 12:29:31,708 INFO    SenderThread:3985 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-06-20 12:29:31,708 DEBUG   SenderThread:3985 [sender.py:send_request():396] send_request: check_version
+2023-06-20 12:29:31,773 DEBUG   HandlerThread:3985 [handler.py:handle_request():144] handle_request: run_start
+2023-06-20 12:29:31,783 DEBUG   HandlerThread:3985 [system_info.py:__init__():31] System info init
+2023-06-20 12:29:31,783 DEBUG   HandlerThread:3985 [system_info.py:__init__():46] System info init done
+2023-06-20 12:29:31,783 INFO    HandlerThread:3985 [system_monitor.py:start():181] Starting system monitor
+2023-06-20 12:29:31,784 INFO    SystemMonitor:3985 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-06-20 12:29:31,784 INFO    HandlerThread:3985 [system_monitor.py:probe():201] Collecting system info
+2023-06-20 12:29:31,786 INFO    SystemMonitor:3985 [interfaces.py:start():190] Started cpu monitoring
+2023-06-20 12:29:31,786 INFO    SystemMonitor:3985 [interfaces.py:start():190] Started disk monitoring
+2023-06-20 12:29:31,787 INFO    SystemMonitor:3985 [interfaces.py:start():190] Started gpu monitoring
+2023-06-20 12:29:31,788 INFO    SystemMonitor:3985 [interfaces.py:start():190] Started memory monitoring
+2023-06-20 12:29:31,788 INFO    SystemMonitor:3985 [interfaces.py:start():190] Started network monitoring
+2023-06-20 12:29:31,791 DEBUG   HandlerThread:3985 [system_info.py:probe():195] Probing system
+2023-06-20 12:29:31,793 DEBUG   HandlerThread:3985 [system_info.py:_probe_git():180] Probing git
+2023-06-20 12:29:31,808 DEBUG   HandlerThread:3985 [system_info.py:_probe_git():188] Probing git done
+2023-06-20 12:29:31,808 DEBUG   HandlerThread:3985 [system_info.py:probe():240] Probing system done
+2023-06-20 12:29:31,808 DEBUG   HandlerThread:3985 [system_monitor.py:probe():210] {'os': 'Linux-5.15.107+-x86_64-with-glibc2.31', 'python': '3.10.12', 'heartbeatAt': '2023-06-20T12:29:31.791477', 'startedAt': '2023-06-20T12:29:29.749273', 'docker': None, 'cuda': None, 'args': None, 'state': 'running', 'program': 'OpenDomainAdaptation_Thesisv4.ipynb', 'colab': 'https://colab.research.google.com/notebook#fileId=1AHs9TgV4WiWxx-aejdHJfHj5hkpO8WPT', 'git': {'remote': 'https://github.com/sangoncalves/openset_domain_adaptation.git', 'commit': 'e6769a0498aa57783a97edae16e50bb354cd1d62'}, 'email': 'sander.martinsgoncalves@gmail.com', 'root': '/content/openset_domain_adaptation', 'host': '5ba98c504ab0', 'username': 'root', 'executable': '/usr/bin/python3', 'cpu_count': 1, 'cpu_count_logical': 2, 'cpu_freq': {'current': 2000.142, 'min': 0.0, 'max': 0.0}, 'cpu_freq_per_core': [{'current': 2000.142, 'min': 0.0, 'max': 0.0}, {'current': 2000.142, 'min': 0.0, 'max': 0.0}], 'disk': {'total': 78.1898422241211, 'used': 35.80808639526367}, 'gpu': 'Tesla T4', 'gpu_count': 1, 'gpu_devices': [{'name': 'Tesla T4', 'memory_total': 16106127360}], 'memory': {'total': 12.678398132324219}}
+2023-06-20 12:29:31,808 INFO    HandlerThread:3985 [system_monitor.py:probe():211] Finished collecting system info
+2023-06-20 12:29:31,808 INFO    HandlerThread:3985 [system_monitor.py:probe():214] Publishing system info
+2023-06-20 12:29:31,809 DEBUG   HandlerThread:3985 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-06-20 12:29:31,809 DEBUG   HandlerThread:3985 [system_info.py:_save_pip():67] Saving pip packages done
+2023-06-20 12:29:31,810 INFO    HandlerThread:3985 [system_monitor.py:probe():216] Finished publishing system info
+2023-06-20 12:29:31,817 DEBUG   SenderThread:3985 [sender.py:send():369] send: files
+2023-06-20 12:29:31,817 INFO    SenderThread:3985 [sender.py:_save_file():1354] saving file wandb-metadata.json with policy now
+2023-06-20 12:29:31,852 DEBUG   HandlerThread:3985 [handler.py:handle_request():144] handle_request: stop_status
+2023-06-20 12:29:31,852 DEBUG   SenderThread:3985 [sender.py:send_request():396] send_request: stop_status
+2023-06-20 12:29:32,016 DEBUG   SenderThread:3985 [sender.py:send():369] send: telemetry
