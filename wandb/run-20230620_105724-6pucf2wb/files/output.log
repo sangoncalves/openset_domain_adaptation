@@ -1,0 +1,97 @@
+[main 07beb52] update wandb log file
+ 82 files changed, 7711 insertions(+), 4 deletions(-)
+ create mode 100644 wandb/run-20230620_103251-rvrgxets/files/output.log
+ rewrite wandb/run-20230620_103251-rvrgxets/files/wandb-summary.json (100%)
+ create mode 100644 wandb/run-20230620_105411-lds4wags/files/config.yaml
+ create mode 100644 wandb/run-20230620_105411-lds4wags/files/requirements.txt
+ create mode 100644 wandb/run-20230620_105411-lds4wags/files/wandb-metadata.json
+ create mode 100644 wandb/run-20230620_105411-lds4wags/files/wandb-summary.json
+ create mode 100644 wandb/run-20230620_105411-lds4wags/logs/debug-internal.log
+ create mode 100644 wandb/run-20230620_105411-lds4wags/logs/debug.log
+ create mode 100644 wandb/run-20230620_105411-lds4wags/run-lds4wags.wandb
+ create mode 100644 wandb/run-20230620_105420-olo0to11/files/config.yaml
+ create mode 100644 wandb/run-20230620_105420-olo0to11/files/requirements.txt
+ create mode 100644 wandb/run-20230620_105420-olo0to11/files/wandb-metadata.json
+ create mode 100644 wandb/run-20230620_105420-olo0to11/files/wandb-summary.json
+ create mode 100644 wandb/run-20230620_105420-olo0to11/logs/debug-internal.log
+ create mode 100644 wandb/run-20230620_105420-olo0to11/logs/debug.log
+ create mode 100644 wandb/run-20230620_105420-olo0to11/run-olo0to11.wandb
+ create mode 100644 wandb/run-20230620_105431-fzuuyvif/files/config.yaml
+ create mode 100644 wandb/run-20230620_105431-fzuuyvif/files/requirements.txt
+ create mode 100644 wandb/run-20230620_105431-fzuuyvif/files/wandb-metadata.json
+ create mode 100644 wandb/run-20230620_105431-fzuuyvif/files/wandb-summary.json
+ create mode 100644 wandb/run-20230620_105431-fzuuyvif/logs/debug-internal.log
+ create mode 100644 wandb/run-20230620_105431-fzuuyvif/logs/debug.log
+ create mode 100644 wandb/run-20230620_105431-fzuuyvif/run-fzuuyvif.wandb
+ create mode 100644 wandb/run-20230620_105444-20dzator/files/config.yaml
+ create mode 100644 wandb/run-20230620_105444-20dzator/files/requirements.txt
+ create mode 100644 wandb/run-20230620_105444-20dzator/files/wandb-metadata.json
+ create mode 100644 wandb/run-20230620_105444-20dzator/files/wandb-summary.json
+ create mode 100644 wandb/run-20230620_105444-20dzator/logs/debug-internal.log
+ create mode 100644 wandb/run-20230620_105444-20dzator/logs/debug.log
+ create mode 100644 wandb/run-20230620_105444-20dzator/run-20dzator.wandb
+ create mode 100644 wandb/run-20230620_105455-806i9o18/files/config.yaml
+ create mode 100644 wandb/run-20230620_105455-806i9o18/files/requirements.txt
+ create mode 100644 wandb/run-20230620_105455-806i9o18/files/wandb-metadata.json
+ create mode 100644 wandb/run-20230620_105455-806i9o18/files/wandb-summary.json
+ create mode 100644 wandb/run-20230620_105455-806i9o18/logs/debug-internal.log
+ create mode 100644 wandb/run-20230620_105455-806i9o18/logs/debug.log
+ create mode 100644 wandb/run-20230620_105455-806i9o18/run-806i9o18.wandb
+ create mode 100644 wandb/run-20230620_105504-fd6l6coy/files/config.yaml
+ create mode 100644 wandb/run-20230620_105504-fd6l6coy/files/requirements.txt
+ create mode 100644 wandb/run-20230620_105504-fd6l6coy/files/wandb-metadata.json
+ create mode 100644 wandb/run-20230620_105504-fd6l6coy/files/wandb-summary.json
+ create mode 100644 wandb/run-20230620_105504-fd6l6coy/logs/debug-internal.log
+ create mode 100644 wandb/run-20230620_105504-fd6l6coy/logs/debug.log
+ create mode 100644 wandb/run-20230620_105504-fd6l6coy/run-fd6l6coy.wandb
+ create mode 100644 wandb/run-20230620_105620-m8ovtc79/files/config.yaml
+ create mode 100644 wandb/run-20230620_105620-m8ovtc79/files/requirements.txt
+ create mode 100644 wandb/run-20230620_105620-m8ovtc79/files/wandb-metadata.json
+ create mode 100644 wandb/run-20230620_105620-m8ovtc79/files/wandb-summary.json
+ create mode 100644 wandb/run-20230620_105620-m8ovtc79/logs/debug-internal.log
+ create mode 100644 wandb/run-20230620_105620-m8ovtc79/logs/debug.log
+ create mode 100644 wandb/run-20230620_105620-m8ovtc79/run-m8ovtc79.wandb
+ create mode 100644 wandb/run-20230620_105631-2igfa02o/files/config.yaml
+ create mode 100644 wandb/run-20230620_105631-2igfa02o/files/requirements.txt
+ create mode 100644 wandb/run-20230620_105631-2igfa02o/files/wandb-metadata.json
+ create mode 100644 wandb/run-20230620_105631-2igfa02o/files/wandb-summary.json
+ create mode 100644 wandb/run-20230620_105631-2igfa02o/logs/debug-internal.log
+ create mode 100644 wandb/run-20230620_105631-2igfa02o/logs/debug.log
+ create mode 100644 wandb/run-20230620_105631-2igfa02o/run-2igfa02o.wandb
+ create mode 100644 wandb/run-20230620_105724-6pucf2wb/files/config.yaml
+ create mode 100644 wandb/run-20230620_105724-6pucf2wb/files/requirements.txt
+ create mode 100644 wandb/run-20230620_105724-6pucf2wb/files/wandb-metadata.json
+ copy wandb/{run-20230620_103251-rvrgxets => run-20230620_105724-6pucf2wb}/files/wandb-summary.json (100%)
+ create mode 100644 wandb/run-20230620_105724-6pucf2wb/logs/debug-internal.log
+ create mode 100644 wandb/run-20230620_105724-6pucf2wb/logs/debug.log
+ create mode 100644 wandb/run-20230620_105724-6pucf2wb/run-6pucf2wb.wandb
+ create mode 100644 wandb/sweep-1e13nya0/config-2igfa02o.yaml
+ create mode 100644 wandb/sweep-1e13nya0/config-m8ovtc79.yaml
+ create mode 100644 wandb/sweep-416mrjyh/config-20dzator.yaml
+ create mode 100644 wandb/sweep-416mrjyh/config-806i9o18.yaml
+ create mode 100644 wandb/sweep-416mrjyh/config-fd6l6coy.yaml
+ create mode 100644 wandb/sweep-bz54qp82/config-fzuuyvif.yaml
+ create mode 100644 wandb/sweep-bz54qp82/config-lds4wags.yaml
+ create mode 100644 wandb/sweep-bz54qp82/config-olo0to11.yaml
+ create mode 100644 wandb/sweep-vy7obdpf/config-6pucf2wb.yaml
+Enumerating objects: 116, done.
+Counting objects: 100% (116/116), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (98/98), done.
+Writing objects: 100% (101/101), 48.07 KiB | 2.40 MiB/s, done.
+Total 101 (delta 58), reused 0 (delta 0)
+remote: Resolving deltas: 100% (58/58), completed with 7 local objects.
+To https://github.com/sangoncalves/openset_domain_adaptation.git
+   8bff0ad..07beb52  main -> main
+########## GIT PUSH COMPLETE ##########
+On branch main
+Your branch is up to date with 'origin/main'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mmodified:   wandb/run-20230620_105724-6pucf2wb/logs/debug-internal.log
+	[31mmodified:   wandb/run-20230620_105724-6pucf2wb/run-6pucf2wb.wandb
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mwandb/run-20230620_105724-6pucf2wb/files/output.log
+no changes added to commit (use "git add" and/or "git commit -a")
