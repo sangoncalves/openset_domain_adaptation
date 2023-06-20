@@ -2,7 +2,7 @@ wandb_version: 1
 
 entropy:
   desc: null
-  value: 0.1
+  value: 0.2
 seed:
   desc: null
   value: 42
@@ -14,7 +14,7 @@ _wandb:
     framework: torch
     is_jupyter_run: true
     is_kaggle_kernel: false
-    start_time: 1687256771.254806
+    start_time: 1687256786.598605
     t:
       1:
       - 1
@@ -25,21 +25,8 @@ _wandb:
       - 41
       - 53
       - 55
-      2:
-      - 1
-      - 2
-      - 3
-      - 5
-      - 12
-      - 41
-      - 53
-      - 55
       3:
-      - 1
-      - 2
-      - 17
       - 23
-      - 37
       4: 3.10.12
       5: 0.15.4
       8:
