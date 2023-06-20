@@ -1,0 +1,33 @@
+[main 6a4d41f] update wandb log file
+ 17 files changed, 895 insertions(+), 4 deletions(-)
+ create mode 100644 wandb/run-20230620_103225-4dvxywqm/files/output.log
+ rewrite wandb/run-20230620_103225-4dvxywqm/files/wandb-summary.json (100%)
+ create mode 100644 wandb/run-20230620_103237-cpqlhr8r/files/config.yaml
+ create mode 100644 wandb/run-20230620_103237-cpqlhr8r/files/requirements.txt
+ create mode 100644 wandb/run-20230620_103237-cpqlhr8r/files/wandb-metadata.json
+ copy wandb/{run-20230620_103225-4dvxywqm => run-20230620_103237-cpqlhr8r}/files/wandb-summary.json (100%)
+ create mode 100644 wandb/run-20230620_103237-cpqlhr8r/logs/debug-internal.log
+ create mode 100644 wandb/run-20230620_103237-cpqlhr8r/logs/debug.log
+ create mode 100644 wandb/run-20230620_103237-cpqlhr8r/run-cpqlhr8r.wandb
+ create mode 100644 wandb/sweep-bwch1ij0/config-cpqlhr8r.yaml
+Enumerating objects: 36, done.
+Counting objects: 100% (36/36), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (21/21), done.
+Writing objects: 100% (23/23), 12.87 KiB | 3.22 MiB/s, done.
+Total 23 (delta 7), reused 0 (delta 0)
+remote: Resolving deltas: 100% (7/7), completed with 4 local objects.
+To https://github.com/sangoncalves/openset_domain_adaptation.git
+   8cd7a48..6a4d41f  main -> main
+########## GIT PUSH COMPLETE ##########
+On branch main
+Your branch is up to date with 'origin/main'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mmodified:   wandb/run-20230620_103237-cpqlhr8r/logs/debug-internal.log
+	[31mmodified:   wandb/run-20230620_103237-cpqlhr8r/run-cpqlhr8r.wandb
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mwandb/run-20230620_103237-cpqlhr8r/files/output.log
+no changes added to commit (use "git add" and/or "git commit -a")
