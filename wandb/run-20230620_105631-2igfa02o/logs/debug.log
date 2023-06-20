@@ -1,0 +1,40 @@
+2023-06-20 10:56:31,392 INFO    Thread-59 (_run_job):153 [wandb_setup.py:_flush():76] Current SDK version is 0.15.4
+2023-06-20 10:56:31,392 INFO    Thread-59 (_run_job):153 [wandb_setup.py:_flush():76] Configure stats pid to 153
+2023-06-20 10:56:31,392 INFO    Thread-59 (_run_job):153 [wandb_setup.py:_flush():76] Loading settings from /root/.config/wandb/settings
+2023-06-20 10:56:31,392 INFO    Thread-59 (_run_job):153 [wandb_setup.py:_flush():76] Loading settings from /content/openset_domain_adaptation/wandb/settings
+2023-06-20 10:56:31,392 INFO    Thread-59 (_run_job):153 [wandb_setup.py:_flush():76] Loading settings from environment variables: {'api_key': '***REDACTED***', 'entity': 'sango', 'project': 'openset_domain_adaptation', 'root_dir': '/content/openset_domain_adaptation', 'silent': 'false', 'run_id': '2igfa02o', 'sweep_param_path': '/content/openset_domain_adaptation/wandb/sweep-1e13nya0/config-2igfa02o.yaml', 'sweep_id': '1e13nya0'}
+2023-06-20 10:56:31,392 INFO    Thread-59 (_run_job):153 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-06-20 10:56:31,392 INFO    Thread-59 (_run_job):153 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2023-06-20 10:56:31,392 INFO    Thread-59 (_run_job):153 [wandb_init.py:_log_setup():507] Logging user logs to /content/openset_domain_adaptation/wandb/run-20230620_105631-2igfa02o/logs/debug.log
+2023-06-20 10:56:31,393 INFO    Thread-59 (_run_job):153 [wandb_init.py:_log_setup():508] Logging internal logs to /content/openset_domain_adaptation/wandb/run-20230620_105631-2igfa02o/logs/debug-internal.log
+2023-06-20 10:56:31,393 INFO    Thread-59 (_run_job):153 [wandb_init.py:_jupyter_setup():453] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x7f433e8a7a30>
+2023-06-20 10:56:31,393 INFO    Thread-59 (_run_job):153 [wandb_init.py:init():547] calling init triggers
+2023-06-20 10:56:31,393 INFO    Thread-59 (_run_job):153 [wandb_init.py:init():554] wandb.init called with sweep_config: {'entropy': 0.2, 'seed': 42}
+config: {}
+2023-06-20 10:56:31,393 INFO    Thread-59 (_run_job):153 [wandb_init.py:init():596] starting backend
+2023-06-20 10:56:31,393 INFO    Thread-59 (_run_job):153 [wandb_init.py:init():600] setting up manager
+2023-06-20 10:56:31,401 INFO    Thread-59 (_run_job):153 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-06-20 10:56:31,408 INFO    Thread-59 (_run_job):153 [wandb_init.py:init():606] backend started and connected
+2023-06-20 10:56:31,442 INFO    Thread-59 (_run_job):153 [wandb_run.py:_config_callback():1283] config_cb None None {'entropy': 0.2, 'seed': 42}
+2023-06-20 10:56:31,447 INFO    Thread-59 (_run_job):153 [wandb_run.py:_label_probe_notebook():1235] probe notebook
+2023-06-20 10:56:32,508 INFO    Thread-59 (_run_job):153 [wandb_init.py:init():703] updated telemetry
+2023-06-20 10:56:32,514 INFO    Thread-59 (_run_job):153 [wandb_init.py:init():736] communicating run to backend with 60.0 second timeout
+2023-06-20 10:56:32,698 INFO    Thread-59 (_run_job):153 [wandb_run.py:_on_init():2176] communicating current version
+2023-06-20 10:56:32,772 INFO    Thread-59 (_run_job):153 [wandb_run.py:_on_init():2185] got version response 
+2023-06-20 10:56:32,772 INFO    Thread-59 (_run_job):153 [wandb_init.py:init():787] starting run threads in backend
+2023-06-20 10:56:32,876 INFO    Thread-59 (_run_job):153 [wandb_run.py:_console_start():2155] atexit reg
+2023-06-20 10:56:32,877 INFO    Thread-59 (_run_job):153 [wandb_run.py:_redirect():2010] redirect: SettingsConsole.WRAP_RAW
+2023-06-20 10:56:32,877 INFO    Thread-59 (_run_job):153 [wandb_run.py:_redirect():2075] Wrapping output streams.
+2023-06-20 10:56:32,877 INFO    Thread-59 (_run_job):153 [wandb_run.py:_redirect():2100] Redirects installed.
+2023-06-20 10:56:32,877 INFO    Thread-59 (_run_job):153 [wandb_init.py:init():828] run started, returning control to user process
+2023-06-20 10:56:32,885 INFO    Thread-59 (_run_job):153 [wandb_watch.py:watch():51] Watching
+2023-06-20 10:56:32,886 INFO    Thread-59 (_run_job):153 [wandb_run.py:_finish():1890] finishing run sango/openset_domain_adaptation/2igfa02o
+2023-06-20 10:56:32,887 INFO    Thread-59 (_run_job):153 [jupyter.py:save_history():445] not saving jupyter history
+2023-06-20 10:56:32,887 INFO    Thread-59 (_run_job):153 [jupyter.py:save_ipynb():373] not saving jupyter notebook
+2023-06-20 10:56:32,887 INFO    Thread-59 (_run_job):153 [wandb_init.py:_jupyter_teardown():435] cleaning up jupyter logic
+2023-06-20 10:56:32,887 INFO    Thread-59 (_run_job):153 [wandb_run.py:_atexit_cleanup():2124] got exitcode: 1
+2023-06-20 10:56:32,887 INFO    Thread-59 (_run_job):153 [wandb_run.py:_restore():2107] restore
+2023-06-20 10:56:32,887 INFO    Thread-59 (_run_job):153 [wandb_run.py:_restore():2113] restore done
+2023-06-20 10:56:35,948 INFO    Thread-59 (_run_job):153 [wandb_run.py:_footer_history_summary_info():3467] rendering history
+2023-06-20 10:56:35,949 INFO    Thread-59 (_run_job):153 [wandb_run.py:_footer_history_summary_info():3499] rendering summary
+2023-06-20 10:56:35,953 INFO    Thread-59 (_run_job):153 [wandb_run.py:_footer_sync_info():3426] logging synced files

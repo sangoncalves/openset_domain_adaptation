@@ -1,0 +1,55 @@
+{
+    "os": "Linux-5.15.107+-x86_64-with-glibc2.31",
+    "python": "3.10.12",
+    "heartbeatAt": "2023-06-20T10:54:32.904906",
+    "startedAt": "2023-06-20T10:54:31.169811",
+    "docker": null,
+    "cuda": null,
+    "args": null,
+    "state": "running",
+    "program": "OpenDomainAdaptation-Thesisv3.ipynb",
+    "colab": "https://colab.research.google.com/notebook#fileId=1RSH42QM_MhlnN8qaUdNGhkNF1GEhVCJS",
+    "git": {
+        "remote": "https://github.com/sangoncalves/openset_domain_adaptation.git",
+        "commit": "8bff0ad7633729d9a3c7c60fa61a73228f1c1161"
+    },
+    "email": "sander.martinsgoncalves@gmail.com",
+    "root": "/content/openset_domain_adaptation",
+    "host": "30614b74157d",
+    "username": "root",
+    "executable": "/usr/bin/python3",
+    "cpu_count": 1,
+    "cpu_count_logical": 2,
+    "cpu_freq": {
+        "current": 2299.998,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2299.998,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2299.998,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "total": 78.1898422241211,
+        "used": 35.808555603027344
+    },
+    "gpu": "Tesla T4",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "Tesla T4",
+            "memory_total": 16106127360
+        }
+    ],
+    "memory": {
+        "total": 12.678398132324219
+    }
+}
