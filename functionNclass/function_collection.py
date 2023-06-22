@@ -40,8 +40,124 @@ def set_seed(seed):
     if torch.cuda.is_available():
         torch.cuda.manual_seed_all(seed)
 
+def save_best_model(h_score, model, config):
+    # Get the file path of the saved model
+    model_dir = config["model_dir"]
+    os.makedirs(model_dir, exist_ok=True)
+    model_path = os.path.join(model_dir, f"model_hscore_{h_score:.4f}.pth")
 
+    # If there's no saved model yet, save the current model
+    if not os.listdir(model_dir):
+        torch.save(model.state_dict(), model_path)
+        print(f"Model saved with h_score: {h_score}")
+        return
 
+    # If there is a saved model, load it and compare the h_scores
+    for file in os.listdir(model_dir):
+        saved_h_score = float(file.split('_')[-1][:-4])
+        if h_score > saved_h_score:
+            # Remove the saved model with lower h_score
+            os.remove(os.path.join(model_dir, file))
+            # Save the current model with higher h_score
+            torch.save(model.state_dict(), model_path)
+            print(f"Previous model with h_score {saved_h_score} replaced with model with h_score: {h_score}")
+            return
+    print(f"Model not saved, h_score: {h_score} is not better than existing model's h_score: {saved_h_score}")
+
+def baseline(config, source_n_target_train_loader, target_test_loader, entropy_val, filename):
+    model = config["model"]
+    criterion = config["criterion"]
+    device = config["device"]
+    optimizer = config["optimizer"]
+    num_epochs = config["num_epochs"]
+    num_classes = config["num_classes"]
+    wandb.watch(model)
+    
+    for epoch in range(num_epochs):
+        # Training Phase
+        model.train()
+        train_loss = 0.0
+        train_correct = 0
+        train_total = 0
+        train_start_time = time.time()
+        
+        for X_index, X_source, y_source, x_index, X_target, y_target in source_n_target_train_loader:
+            X_source, y_source = X_source.to(device), y_source.to(device)
+            optimizer.zero_grad()
+            pred_source = model(X_source)
+            loss = criterion(pred_source, y_source)
+            loss.backward()
+            optimizer.step()
+            pred_labels = torch.argmax(pred_source, dim=1)
+            train_loss += loss.item() * X_source.size(0)
+            train_total += y_source.size(0)
+            train_correct += (pred_labels == y_source).sum().item()
+        
+        train_accuracy = train_correct / train_total
+        train_time = time.time() - train_start_time
+        wandb.log({
+            "Epoch": epoch,
+            "Train Loss": train_loss,
+            "Train Accuracy": train_accuracy,
+            "Train Time": train_time
+        })
+        
+        # Evaluation Phase
+        model.eval()
+        val_loss = 0.0
+        val_correct = 0
+        val_total = 0
+        val_start_time = time.time()
+        correct_per_class = [0 for _ in range(num_classes)]
+        instances_per_class = [0 for _ in range(num_classes)]
+        
+        with torch.no_grad():
+            predicted_all = []
+            labels_all = []
+            
+            for batch in target_test_loader:
+                if config['subset_flag']:
+                    index, target_data, target_label = batch
+                else:
+                    target_data, target_label = batch
+
+                target_data, target_label = target_data.to(device), target_label.to(device)
+                pred_target = model(target_data)
+                probs = F.softmax(pred_target, dim=1)
+                entropy = torch.sum(-probs * torch.log(probs + 1e-6), dim=1)
+                pred_labels = torch.argmax(pred_target, dim=1)
+                pred_labels_entrop = pred_labels.clone()
+                pred_labels_entrop[entropy > entropy_val] = num_classes - 1 
+                loss = criterion(pred_target, target_label)
+                
+                for i in range(len(target_label)):
+                    label = target_label[i]
+                    predicted_label = pred_labels_entrop[i]
+                    instances_per_class[label] += 1
+                    if label.item() == predicted_label.item():
+                        correct_per_class[label] += 1
+                
+                predicted_all.extend(pred_labels_entrop.cpu().tolist())
+                labels_all.extend(target_label.cpu().tolist())
+            
+            accuracy_per_class = np.divide(np.array(correct_per_class), np.array(instances_per_class), out=np.zeros_like(np.array(correct_per_class), dtype=float), where=np.array(instances_per_class)!=0)
+            closed_accuracy = (accuracy_per_class[:num_classes-1].mean())
+            open_accuracy = (accuracy_per_class[-1])
+            h_score = (2 * closed_accuracy * open_accuracy / (closed_accuracy + open_accuracy)) if (closed_accuracy + open_accuracy) > 0 else 0
+            val_time = time.time() - val_start_time
+            wandb.log({
+                "Entropy VAL": entropy_val,
+                "Validation Loss": val_loss,
+                "Validation Closed Accuracy": closed_accuracy,
+                "Validation Open Accuracy": open_accuracy,
+                "Validation H Score": h_score,
+                "Validation Time": val_time
+            })
+            all_classes = sorted(set(int(val) for val in config["target_test_classes"].values()))
+            plot_confusion_matrix(labels_all, predicted_all, all_classes, epoch, entropy_val)
+            
+            # Save the best model based on h_score
+            save_best_model(h_score, model, config)
 
 def calculate_new_labels(source_dataset, target_dataset):
     # Combine the source and target dataset into one
