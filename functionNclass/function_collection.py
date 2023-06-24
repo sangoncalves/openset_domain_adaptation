@@ -142,6 +142,15 @@ def baseline(config, source_n_target_train_loader, target_test_loader, entropy_v
 
                 target_data, target_label = target_data.to(device), target_label.to(device)
                 pred_target = model(target_data)
+                
+                #adding tsne
+                if epoch == num_epochs - 1:  # only on the last epoch
+                    # Extract 2D features for t-SNE
+                    features_2d = pred_target.detach().cpu().numpy()
+                    labels = target_label.detach().cpu().numpy()
+                    # Plot t-SNE
+                    plot_tsne(features_2d, labels, epoch, entropy_val)
+                
                 probs = F.softmax(pred_target, dim=1)
                 entropy = torch.sum(-probs * torch.log(probs + 1e-6), dim=1)
                 pred_labels = torch.argmax(pred_target, dim=1)
