@@ -30,6 +30,8 @@ from math import e
 import wandb
 import zipfile
 import subprocess
+from sklearn.manifold import TSNE
+import matplotlib.pyplot as plt
 from functionNclass.class_collection import VideoDataset, VideoDatasetSourceAndTarget, ClassObservationsSamplerVideoDatasetSourceAndTarget, ClassObservationsSamplerVideoDatasetTarget
 
 
@@ -63,6 +65,23 @@ def save_best_model(h_score, model, config):
             print(f"Previous model with h_score {saved_h_score} replaced with model with h_score: {h_score}")
             return
     print(f"Model not saved, h_score: {h_score} is not better than existing model's h_score: {saved_h_score}")
+
+
+
+def plot_tsne(features, labels, epoch, entropy_val):
+    tsne = TSNE(n_components=2, random_state=42)
+    features_2d = tsne.fit_transform(features)
+
+    plt.figure(figsize=(10, 10))
+    plt.scatter(features_2d[:, 0], features_2d[:, 1], c=labels, cmap='viridis')
+    plt.colorbar()
+    plt.title(f't-SNE plot at epoch {epoch}, entropy {entropy_val}')
+    plt.savefig(f'tsne_plot_epoch_{epoch}_entropy_{entropy_val}.png')
+    plt.close()
+
+    # Log the image to W&B
+    wandb.log({"t-SNE plot": wandb.Image(f'tsne_plot_epoch_{epoch}_entropy_{entropy_val}.png')})
+
 
 def baseline(config, source_n_target_train_loader, target_test_loader, entropy_val, filename):
     model = config["model"]
