@@ -58,29 +58,41 @@ def save_best_model(h_score, model, config):
     for file in os.listdir(model_dir):
         saved_h_score = float(file.split('_')[-1][:-4])
         if h_score > saved_h_score:
-            # Remove the saved model with lower h_score
-            os.remove(os.path.join(model_dir, file))
             # Save the current model with higher h_score
             torch.save(model.state_dict(), model_path)
+            # Remove the saved model with lower h_score
+            os.remove(os.path.join(model_dir, file))
             print(f"Previous model with h_score {saved_h_score} replaced with model with h_score: {h_score}")
             return
     print(f"Model not saved, h_score: {h_score} is not better than existing model's h_score: {saved_h_score}")
 
 
 
-def plot_tsne(features, labels, epoch, entropy_val):
-    tsne = TSNE(n_components=2, random_state=42)
-    features_2d = tsne.fit_transform(features)
+def plot_tsne(features, labels, epoch, entropy_val, perplexity=30):
+    if len(features) <= perplexity:
+        perplexity = len(features) - 1
+    tsne = TSNE(n_components=2, verbose=1, perplexity=perplexity, n_iter=300)
+    tsne_results = tsne.fit_transform(features)
 
-    plt.figure(figsize=(10, 10))
-    plt.scatter(features_2d[:, 0], features_2d[:, 1], c=labels, cmap='viridis')
-    plt.colorbar()
-    plt.title(f't-SNE plot at epoch {epoch}, entropy {entropy_val}')
-    plt.savefig(f'tsne_plot_epoch_{epoch}_entropy_{entropy_val}.png')
-    plt.close()
+    df = pd.DataFrame()
+    df['x-tsne'] = tsne_results[:,0]
+    df['y-tsne'] = tsne_results[:,1]
+    df['labels'] = labels
 
-    # Log the image to W&B
-    wandb.log({"t-SNE plot": wandb.Image(f'tsne_plot_epoch_{epoch}_entropy_{entropy_val}.png')})
+    plt.figure(figsize=(8,8))
+    sns.scatterplot(
+        x="x-tsne", y="y-tsne",
+        hue="labels",
+        palette=sns.color_palette("hsv", len(set(labels))),
+        data=df,
+        legend="full",
+        alpha=0.6
+    )
+    plt.title(f't-SNE plot at epoch {epoch} with entropy {entropy_val}')
+    plt.savefig(f'tsne_epoch_{epoch}_entropy_{entropy_val}.png')
+    wandb.log({"t-SNE plot": wandb.Image(f'tsne_epoch_{epoch}_entropy_{entropy_val}.png')})
+    plt.close()  # Add this line
+
 
 
 def baseline(config, source_n_target_train_loader, target_test_loader, entropy_val, filename):
@@ -186,6 +198,16 @@ def baseline(config, source_n_target_train_loader, target_test_loader, entropy_v
             
             # Save the best model based on h_score
             save_best_model(h_score, model, config)
+            print("#################### - EVALUATION - ##########################")
+            print(f'Entropy VAL: {entropy_val}')
+            print(f'Validation loss: {val_loss:.4f}')
+            print(f'Validation accuracy_per_class: {accuracy_per_class}')
+            print(f'Validation closed_accuracy: {closed_accuracy:.2%}')
+            print(f'Validation open_accuracy: {open_accuracy:.2%}')
+            print(f'Validation h_score: {h_score:.2%}')
+            print(f'Validation time: {val_time:.2f}')
+            print(f'PREDICTED LABELS: {predicted_all}')
+            print(f'TARGET LABELS   : {labels_all}')
 
 def calculate_new_labels(source_dataset, target_dataset):
     # Combine the source and target dataset into one
@@ -655,6 +677,7 @@ def plot_confusion_matrix(labels_all, predicted_all, all_classes, epoch, entropy
     plt.ylabel('Actual')
     plt.title('Confusion Matrix, Entropy: {}'.format(entropy_val))
     plt.savefig("confusion_matrix.png")
+    plt.close()
     wandb.log({"confusion_matrix": wandb.Image("confusion_matrix.png")})
 
 

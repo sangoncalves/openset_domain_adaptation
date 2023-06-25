@@ -1,0 +1,15 @@
+
+Model saved with h_score: 0.06546165119687347
+Previous model with h_score 0.0655 replaced with model with h_score: 0.2092660926609266
+Previous model with h_score 0.2093 replaced with model with h_score: 0.3639500842287751
+Previous model with h_score 0.364 replaced with model with h_score: 0.46150556930614645
+Previous model with h_score 0.4615 replaced with model with h_score: 0.5266095511042003
+Previous model with h_score 0.5266 replaced with model with h_score: 0.5306633684895882
+Model not saved, h_score: 0.5242054107773277 is not better than existing model's h_score: 0.5307
+Previous model with h_score 0.5307 replaced with model with h_score: 0.5832058965350967
+Model not saved, h_score: 0.562419740810213 is not better than existing model's h_score: 0.5832
+Previous model with h_score 0.5832 replaced with model with h_score: 0.5852313070074826
+Model not saved, h_score: 0.580475740509758 is not better than existing model's h_score: 0.5852
+Model not saved, h_score: 0.5739253492814763 is not better than existing model's h_score: 0.5852
+Previous model with h_score 0.5852 replaced with model with h_score: 0.6105386118173485
+Model not saved, h_score: 0.5811766131842491 is not better than existing model's h_score: 0.6105

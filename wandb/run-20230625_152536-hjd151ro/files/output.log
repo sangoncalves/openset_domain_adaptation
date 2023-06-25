@@ -1,0 +1,8 @@
+
+Model not saved, h_score: 0.5518877925125176 is not better than existing model's h_score: 0.6105
+Model not saved, h_score: 0.5178216637268332 is not better than existing model's h_score: 0.6105
+Model not saved, h_score: 0.5470289716505925 is not better than existing model's h_score: 0.6105
+Model not saved, h_score: 0.5229126550076082 is not better than existing model's h_score: 0.6105
+Model not saved, h_score: 0.5386321018662088 is not better than existing model's h_score: 0.6105
+Model not saved, h_score: 0.5409492500513664 is not better than existing model's h_score: 0.6105
+[34m[1mwandb[39m[22m: Ctrl + C detected. Stopping sweep.
