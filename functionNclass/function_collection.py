@@ -33,7 +33,9 @@ import subprocess
 from sklearn.manifold import TSNE
 import matplotlib.pyplot as plt
 from functionNclass.class_collection import VideoDataset, VideoDatasetSourceAndTarget, ClassObservationsSamplerVideoDatasetSourceAndTarget, ClassObservationsSamplerVideoDatasetTarget
-
+from sklearn.manifold import TSNE
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 def set_seed(seed):
     random.seed(seed)
@@ -42,11 +44,11 @@ def set_seed(seed):
     if torch.cuda.is_available():
         torch.cuda.manual_seed_all(seed)
 
-def save_best_model(h_score, model, config):
+def save_best_model(h_score, model, config, entropy_val):
     # Get the file path of the saved model
     model_dir = config["model_dir"]
     os.makedirs(model_dir, exist_ok=True)
-    model_path = os.path.join(model_dir, f"model_hscore_{h_score:.4f}.pth")
+    model_path = os.path.join(model_dir, f"model_entropy_{entropy_val:.4f}_hscore_{h_score:.4f}.pth")
 
     # If there's no saved model yet, save the current model
     if not os.listdir(model_dir):
@@ -62,9 +64,9 @@ def save_best_model(h_score, model, config):
             torch.save(model.state_dict(), model_path)
             # Remove the saved model with lower h_score
             os.remove(os.path.join(model_dir, file))
-            print(f"Previous model with h_score {saved_h_score} replaced with model with h_score: {h_score}")
+            print(f"Previous model with h_score {saved_h_score} and entropy {entropy_val:.4f} replaced with model with h_score: {h_score} nd entropy {entropy_val:.4f} ")
             return
-    print(f"Model not saved, h_score: {h_score} is not better than existing model's h_score: {saved_h_score}")
+    print(f"Model not saved, h_score: {h_score} is not better than existing model's h_score: {saved_h_score} and entropy {entropy_val:.4f}")
 
 
 
@@ -93,7 +95,7 @@ def plot_tsne(features, labels, epoch, entropy_val, config, perplexity=30):
     plt.title(f't-SNE plot at epoch {epoch} with entropy {entropy_val}')
     plt.savefig(f'tsne_epoch_{epoch}_entropy_{entropy_val}.png')
     wandb.log({"t-SNE plot": wandb.Image(plt)})
-    plt.close()  # Add this line
+    plt.close() 
 
 
 
@@ -200,7 +202,7 @@ def baseline(config, source_n_target_train_loader, target_test_loader, entropy_v
             plot_confusion_matrix(labels_all, predicted_all, all_classes, epoch, entropy_val)
             
             # Save the best model based on h_score
-            save_best_model(h_score, model, config)
+            save_best_model(h_score, model, config, entropy_val)
             print("#################### - EVALUATION - ##########################")
             print(f'Entropy VAL: {entropy_val}')
             print(f'Validation loss: {val_loss:.4f}')
