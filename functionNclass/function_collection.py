@@ -68,10 +68,12 @@ def save_best_model(h_score, model, config):
 
 
 
-def plot_tsne(features, labels, epoch, entropy_val, perplexity=30):
+def plot_tsne(features, labels, epoch, entropy_val, config, perplexity=30):
+    # Adapt perplexity according to the size of the input
     if len(features) <= perplexity:
         perplexity = len(features) - 1
-    tsne = TSNE(n_components=2, verbose=1, perplexity=perplexity, n_iter=300)
+    # Set a seed for the t-SNE
+    tsne = TSNE(n_components=2, verbose=1, perplexity=perplexity, n_iter=300, random_state=config['seed'])
     tsne_results = tsne.fit_transform(features)
 
     df = pd.DataFrame()
@@ -90,8 +92,9 @@ def plot_tsne(features, labels, epoch, entropy_val, perplexity=30):
     )
     plt.title(f't-SNE plot at epoch {epoch} with entropy {entropy_val}')
     plt.savefig(f'tsne_epoch_{epoch}_entropy_{entropy_val}.png')
-    wandb.log({"t-SNE plot": wandb.Image(f'tsne_epoch_{epoch}_entropy_{entropy_val}.png')})
+    wandb.log({"t-SNE plot": wandb.Image(plt)})
     plt.close()  # Add this line
+
 
 
 
@@ -161,7 +164,7 @@ def baseline(config, source_n_target_train_loader, target_test_loader, entropy_v
                     features_2d = pred_target.detach().cpu().numpy()
                     labels = target_label.detach().cpu().numpy()
                     # Plot t-SNE
-                    plot_tsne(features_2d, labels, epoch, entropy_val)
+                    plot_tsne(features_2d, labels, epoch, entropy_val, config)
                 
                 probs = F.softmax(pred_target, dim=1)
                 entropy = torch.sum(-probs * torch.log(probs + 1e-6), dim=1)
