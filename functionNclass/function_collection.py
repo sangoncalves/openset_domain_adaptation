@@ -111,24 +111,25 @@ def plot_tsne(features, labels, epoch, entropy_val, config, filename, perplexity
 
 
 
-def baseline(config, source_n_target_train_loader, target_test_loader, entropy_val, filename):
-    model = config["model"]
-    criterion = config["criterion"]
-    device = config["device"]
-    optimizer = config["optimizer"]
-    num_epochs = config["num_epochs"]
-    num_classes = config["num_classes"]
-    wandb.watch(model)
-    
+def baseline(config, source_n_target_train_loader, target_test_loader, entropy_val, filename, run_id):
+  model = config["model"]
+  criterion = config["criterion"]
+  device = config["device"]
+  optimizer = config["optimizer"]
+  num_epochs = config["num_epochs"]
+  num_classes = config["num_classes"]
+  wandb.watch(model)
+  for entropy_val in entropy_list:
     for epoch in range(num_epochs):
+        print("Epoch: ", epoch)
         # Training Phase
         model.train()
         train_loss = 0.0
         train_correct = 0
         train_total = 0
         train_start_time = time.time()
-        
-        for X_index, X_source, y_source, x_index, X_target, y_target in source_n_target_train_loader:
+
+        for X_index, X_source, y_source, x_index, X_target, y_target in source_n_target_train_loader: #should we use the target?
             X_source, y_source = X_source.to(device), y_source.to(device)
             optimizer.zero_grad()
             pred_source = model(X_source)
@@ -136,19 +137,19 @@ def baseline(config, source_n_target_train_loader, target_test_loader, entropy_v
             loss.backward()
             optimizer.step()
             pred_labels = torch.argmax(pred_source, dim=1)
+            print('pred_labels: ', pred_labels)
             train_loss += loss.item() * X_source.size(0)
             train_total += y_source.size(0)
             train_correct += (pred_labels == y_source).sum().item()
-        
+
         train_accuracy = train_correct / train_total
         train_time = time.time() - train_start_time
         wandb.log({
-            "Epoch": epoch,
             "Train Loss": train_loss,
             "Train Accuracy": train_accuracy,
             "Train Time": train_time
         })
-        
+
         # Evaluation Phase
         model.eval()
         val_loss = 0.0
@@ -157,12 +158,15 @@ def baseline(config, source_n_target_train_loader, target_test_loader, entropy_v
         val_start_time = time.time()
         correct_per_class = [0 for _ in range(num_classes)]
         instances_per_class = [0 for _ in range(num_classes)]
-        
+
         with torch.no_grad():
             predicted_all = []
             labels_all = []
-            
-            for batch in target_test_loader:
+            entropy_values = []
+            hist, bin_edges = np.histogram(entropy_values, bins=30)
+
+
+            for batch in target_test_loader: #should we have data from both datasets?
                 if config['subset_flag']:
                     index, target_data, target_label = batch
                 else:
@@ -170,52 +174,61 @@ def baseline(config, source_n_target_train_loader, target_test_loader, entropy_v
 
                 target_data, target_label = target_data.to(device), target_label.to(device)
                 pred_target = model(target_data)
-                
-                #adding tsne
-                if epoch == num_epochs - 1:  # only on the last epoch
-                    # Extract 2D features for t-SNE
-                    features_2d = pred_target.detach().cpu().numpy()
-                    labels = target_label.detach().cpu().numpy()
-                    # Plot t-SNE
-                    plot_tsne(features_2d, labels, epoch, entropy_val, config)
-                
+
+                # adding tsne
+                # Extract 2D features for t-SNE
+                features_2d = pred_target.detach().cpu().numpy()
+                labels = target_label.detach().cpu().numpy()
+                # Plot t-SNE
+                plot_tsne(features_2d, labels, epoch, entropy_val, config, filename)
+
                 probs = F.softmax(pred_target, dim=1)
                 entropy = torch.sum(-probs * torch.log(probs + 1e-6), dim=1)
+                print('entropy: ', entropy)
+                entropy_values.extend(entropy.tolist())
                 pred_labels = torch.argmax(pred_target, dim=1)
                 pred_labels_entrop = pred_labels.clone()
-                pred_labels_entrop[entropy > entropy_val] = num_classes - 1 
+                pred_labels_entrop[entropy > entropy_val] = num_classes - 1
                 loss = criterion(pred_target, target_label)
-                
+
                 for i in range(len(target_label)):
                     label = target_label[i]
                     predicted_label = pred_labels_entrop[i]
                     instances_per_class[label] += 1
                     if label.item() == predicted_label.item():
                         correct_per_class[label] += 1
-                
+
                 predicted_all.extend(pred_labels_entrop.cpu().tolist())
                 labels_all.extend(target_label.cpu().tolist())
-            
+
             accuracy_per_class = np.divide(np.array(correct_per_class), np.array(instances_per_class), out=np.zeros_like(np.array(correct_per_class), dtype=float), where=np.array(instances_per_class)!=0)
             closed_accuracy = (accuracy_per_class[:num_classes-1].mean())
             open_accuracy = (accuracy_per_class[-1])
             h_score = (2 * closed_accuracy * open_accuracy / (closed_accuracy + open_accuracy)) if (closed_accuracy + open_accuracy) > 0 else 0
             val_time = time.time() - val_start_time
+
+            # Save the best model based on h_score
+            model_name = save_best_model(h_score, model, config, entropy_val)
+            if(model_name!='no_model'):
+              model_id = model_name + '_' + run_id
+              filename = os.path.join("/content/drive/MyDrive/datasets-thesis/runs", model_id)
+
             wandb.log({
-                "Entropy VAL": entropy_val,
+                'Epoch': epoch,
+                "Entropy": entropy_val,
                 "Validation Loss": val_loss,
                 "Validation Closed Accuracy": closed_accuracy,
                 "Validation Open Accuracy": open_accuracy,
                 "Validation H Score": h_score,
-                "Validation Time": val_time
+                "Validation Time": val_time,
+                "Model Name" : model_name
             })
             all_classes = sorted(set(int(val) for val in config["target_test_classes"].values()))
-            plot_confusion_matrix(labels_all, predicted_all, all_classes, epoch, entropy_val)
-            
-            # Save the best model based on h_score
-            save_best_model(h_score, model, config, entropy_val)
+            plot_confusion_matrix(labels_all, predicted_all, all_classes, epoch, entropy_val, filename)
+            wandb.log({"wandb_confusion_matrix": wandb.Image(f"{filename}/confusion_matrix_epoch_{epoch}.png")})
+
             print("#################### - EVALUATION - ##########################")
-            print(f'Entropy VAL: {entropy_val}')
+            print(f'Entropy: {entropy_val}')
             print(f'Validation loss: {val_loss:.4f}')
             print(f'Validation accuracy_per_class: {accuracy_per_class}')
             print(f'Validation closed_accuracy: {closed_accuracy:.2%}')
@@ -224,6 +237,17 @@ def baseline(config, source_n_target_train_loader, target_test_loader, entropy_v
             print(f'Validation time: {val_time:.2f}')
             print(f'PREDICTED LABELS: {predicted_all}')
             print(f'TARGET LABELS   : {labels_all}')
+
+        # Draw and save the entropy histogram
+        plt.hist(entropy_values, bins=30)
+        plt.title('Histogram of entropy values')
+        plt.xlabel('Entropy')
+        plt.ylabel('Frequency')
+        entropy_histogram_path = f"{filename}/entropy_histogram_epoch_{epoch}.png"
+        plt.savefig(entropy_histogram_path)
+        plt.close()
+        # log the image to Weights & Biases
+        wandb.log({"entropy_histogram": wandb.Image(entropy_histogram_path)})
 
 def calculate_new_labels(source_dataset, target_dataset):
     # Combine the source and target dataset into one
