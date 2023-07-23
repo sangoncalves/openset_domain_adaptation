@@ -46,9 +46,15 @@ def set_seed(seed):
 
 def save_best_model(h_score, model, config, entropy_val):
     # Get the file path of the saved model
-    model_dir = config["model_dir"]
+    model_path = config["model_dir"]
+    if(config['baseline_or_proposed']=='baseline'):
+      model_dir = os.path.join(model_path, 'baseline')
+    else:
+      model_dir = os.path.join(model_path, 'proposed')
+
     os.makedirs(model_dir, exist_ok=True)
-    model_path = os.path.join(model_dir, f"model_entropy_{entropy_val:.4f}_hscore_{h_score:.4f}.pth")
+    model_name = f"model_entropy_{entropy_val:.4f}_hscore_{h_score:.4f}_direction_{config['adaptation_direction']}_{config['baseline_or_proposed']}_seed_{config['seed']}.pth"
+    model_path = os.path.join(model_dir, model_name)
 
     # If there's no saved model yet, save the current model
     if not os.listdir(model_dir):
@@ -56,26 +62,29 @@ def save_best_model(h_score, model, config, entropy_val):
         print(f"Model saved with h_score: {h_score}")
         return
 
+    model_list = [m for m in os.listdir(model_dir) if config['adaptation_direction'] and config['baseline_or_proposed'] and config['seed'] in m]
     # If there is a saved model, load it and compare the h_scores
-    for file in os.listdir(model_dir):
+    for file in model_list:
         saved_h_score = float(file.split('_')[-1][:-4])
         if h_score > saved_h_score:
             # Save the current model with higher h_score
             torch.save(model.state_dict(), model_path)
             # Remove the saved model with lower h_score
             os.remove(os.path.join(model_dir, file))
-            print(f"Previous model with h_score {saved_h_score} and entropy {entropy_val:.4f} replaced with model with h_score: {h_score} nd entropy {entropy_val:.4f} ")
-            return
-    print(f"Model not saved, h_score: {h_score} is not better than existing model's h_score: {saved_h_score} and entropy {entropy_val:.4f}")
 
 
+            print(f"Previous model with seed {config['seed']}, h_score {saved_h_score}, entropy {entropy_val:.4f}, direction {config['adaptation_direction']}, and type {config['baseline_or_proposed']} replaced with model with h_score: {h_score} nd entropy {entropy_val:.4f} ")
+            return model_name
+    print(f"Model not saved, h_score: {h_score} is not better than existing model's h_score: {saved_h_score}, entropy {entropy_val:.4f}, direction {config['adaptation_direction']}, and type {config['baseline_or_proposed']}")
+    return 'no_model'
 
-def plot_tsne(features, labels, epoch, entropy_val, config, perplexity=30):
+
+def plot_tsne(features, labels, epoch, entropy_val, config, filename, perplexity=30):
     # Adapt perplexity according to the size of the input
     if len(features) <= perplexity:
         perplexity = len(features) - 1
     # Set a seed for the t-SNE
-    tsne = TSNE(n_components=2, verbose=1, perplexity=perplexity, n_iter=300, random_state=config['seed'])
+    tsne = TSNE(n_components=2, verbose=1, perplexity=perplexity, n_iter=300, random_state=int(config['seed']))
     tsne_results = tsne.fit_transform(features)
 
     df = pd.DataFrame()
@@ -92,11 +101,13 @@ def plot_tsne(features, labels, epoch, entropy_val, config, perplexity=30):
         legend="full",
         alpha=0.6
     )
+    # tsne_name = f'{filename}/tsne_epoch_{epoch}_entropy_{entropy_val}.png'
+    tsne_name = f'{filename}/tsne_entropy_{entropy_val}.png'
     plt.title(f't-SNE plot at epoch {epoch} with entropy {entropy_val}')
-    plt.savefig(f'tsne_epoch_{epoch}_entropy_{entropy_val}.png')
-    wandb.log({"t-SNE plot": wandb.Image(plt)})
-    plt.close() 
-
+    plt.savefig(tsne_name)
+    # wandb.log({"t-SNE plot": wandb.Image(plt)})
+    plt.close()
+    wandb.log({"t-SNE plot": wandb.Image(tsne_name)})
 
 
 
