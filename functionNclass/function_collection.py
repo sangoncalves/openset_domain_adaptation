@@ -220,7 +220,7 @@ def baseline(config, source_n_target_train_loader, target_test_loader, entropy_l
             val_time = time.time() - val_start_time
 
             # Save the best model based on h_score
-            model_name = save_best_model(h_score, model, config, entropy_val)
+            model_name = save_best_model(h_score, model, config, entropy_val, epoch)
             if(model_name!='no_model'):
               model_id = model_name + '_' + run_id
               filename = os.path.join("/content/drive/MyDrive/datasets-thesis/runs", model_id)
