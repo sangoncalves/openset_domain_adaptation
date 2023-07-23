@@ -62,7 +62,7 @@ def save_best_model(h_score, model, config, entropy_val):
         print(f"Model saved with h_score: {h_score}")
         return
 
-    model_list = [m for m in os.listdir(model_dir) if config['adaptation_direction'] and config['baseline_or_proposed'] and config['seed'] in m]
+    model_list = [m for m in os.listdir(model_dir) if config['adaptation_direction'] and config['baseline_or_proposed'] and str(config['seed']) in m]
     if(model_list==[]):
       torch.save(model.state_dict(), model_path)
       print(f"No previous model saved. Saving model with seed {config['seed']}, h_score {h_score}, entropy {entropy_val:.4f}, direction {config['adaptation_direction']}, and type {config['baseline_or_proposed']}")
@@ -89,7 +89,7 @@ def plot_tsne(features, labels, epoch, entropy_val, config, filename, perplexity
     if len(features) <= perplexity:
         perplexity = len(features) - 1
     # Set a seed for the t-SNE
-    tsne = TSNE(n_components=2, verbose=1, perplexity=perplexity, n_iter=300, random_state=int(config['seed']))
+    tsne = TSNE(n_components=2, verbose=0, perplexity=perplexity, n_iter=300, random_state=int(config['seed']))
     tsne_results = tsne.fit_transform(features)
 
     df = pd.DataFrame()

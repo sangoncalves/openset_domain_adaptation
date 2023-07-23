@@ -1,0 +1,1075 @@
+2023-07-23 18:00:22,654 INFO    StreamThr :17285 [internal.py:wandb_internal():86] W&B internal server running at pid: 17285, started at: 2023-07-23 18:00:22.653596
+2023-07-23 18:00:22,655 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: status
+2023-07-23 18:00:24,757 INFO    WriterThread:17285 [datastore.py:open_for_write():85] open: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/run-2cu26tzk.wandb
+2023-07-23 18:00:24,757 DEBUG   SenderThread:17285 [sender.py:send():369] send: header
+2023-07-23 18:00:24,763 DEBUG   SenderThread:17285 [sender.py:send():369] send: run
+2023-07-23 18:00:25,400 INFO    SenderThread:17285 [dir_watcher.py:__init__():211] watching files in: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files
+2023-07-23 18:00:25,400 INFO    SenderThread:17285 [sender.py:_start_run_threads():1100] run started: 2cu26tzk with start time 1690135222.654962
+2023-07-23 18:00:25,400 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:00:25,401 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:00:25,403 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: check_version
+2023-07-23 18:00:25,403 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: check_version
+2023-07-23 18:00:25,535 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: run_start
+2023-07-23 18:00:25,543 DEBUG   HandlerThread:17285 [system_info.py:__init__():31] System info init
+2023-07-23 18:00:25,543 DEBUG   HandlerThread:17285 [system_info.py:__init__():46] System info init done
+2023-07-23 18:00:25,543 INFO    HandlerThread:17285 [system_monitor.py:start():181] Starting system monitor
+2023-07-23 18:00:25,543 INFO    SystemMonitor:17285 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-07-23 18:00:25,543 INFO    HandlerThread:17285 [system_monitor.py:probe():201] Collecting system info
+2023-07-23 18:00:25,544 INFO    SystemMonitor:17285 [interfaces.py:start():190] Started cpu monitoring
+2023-07-23 18:00:25,544 INFO    SystemMonitor:17285 [interfaces.py:start():190] Started disk monitoring
+2023-07-23 18:00:25,545 INFO    SystemMonitor:17285 [interfaces.py:start():190] Started gpu monitoring
+2023-07-23 18:00:25,546 INFO    SystemMonitor:17285 [interfaces.py:start():190] Started memory monitoring
+2023-07-23 18:00:25,546 INFO    SystemMonitor:17285 [interfaces.py:start():190] Started network monitoring
+2023-07-23 18:00:25,555 DEBUG   HandlerThread:17285 [system_info.py:probe():195] Probing system
+2023-07-23 18:00:25,557 DEBUG   HandlerThread:17285 [system_info.py:_probe_git():180] Probing git
+2023-07-23 18:00:25,563 DEBUG   HandlerThread:17285 [system_info.py:_probe_git():188] Probing git done
+2023-07-23 18:00:25,563 DEBUG   HandlerThread:17285 [system_info.py:probe():240] Probing system done
+2023-07-23 18:00:25,563 DEBUG   HandlerThread:17285 [system_monitor.py:probe():210] {'os': 'Linux-5.15.109+-x86_64-with-glibc2.35', 'python': '3.10.6', 'heartbeatAt': '2023-07-23T18:00:25.556069', 'startedAt': '2023-07-23T18:00:22.643823', 'docker': None, 'cuda': None, 'args': None, 'state': 'running', 'program': 'OpenDomainAdaptation_Thesisv4.ipynb', 'colab': 'https://colab.research.google.com/notebook#fileId=1AHs9TgV4WiWxx-aejdHJfHj5hkpO8WPT', 'git': {'remote': 'https://github.com/sangoncalves/openset_domain_adaptation.git', 'commit': 'e6f3b68b3f5fc12132cac5560b6a509ffeee4339'}, 'email': 'sander.martinsgoncalves@gmail.com', 'root': '/content/openset_domain_adaptation', 'host': '44b8f30a5b00', 'username': 'root', 'executable': '/usr/bin/python3', 'cpu_count': 6, 'cpu_count_logical': 12, 'cpu_freq': {'current': 2200.158, 'min': 0.0, 'max': 0.0}, 'cpu_freq_per_core': [{'current': 2200.158, 'min': 0.0, 'max': 0.0}, {'current': 2200.158, 'min': 0.0, 'max': 0.0}, {'current': 2200.158, 'min': 0.0, 'max': 0.0}, {'current': 2200.158, 'min': 0.0, 'max': 0.0}, {'current': 2200.158, 'min': 0.0, 'max': 0.0}, {'current': 2200.158, 'min': 0.0, 'max': 0.0}, {'current': 2200.158, 'min': 0.0, 'max': 0.0}, {'current': 2200.158, 'min': 0.0, 'max': 0.0}, {'current': 2200.158, 'min': 0.0, 'max': 0.0}, {'current': 2200.158, 'min': 0.0, 'max': 0.0}, {'current': 2200.158, 'min': 0.0, 'max': 0.0}, {'current': 2200.158, 'min': 0.0, 'max': 0.0}], 'disk': {'total': 166.77415084838867, 'used': 46.67432403564453}, 'gpu': 'NVIDIA A100-SXM4-40GB', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA A100-SXM4-40GB', 'memory_total': 42949672960}], 'memory': {'total': 83.48074722290039}}
+2023-07-23 18:00:25,563 INFO    HandlerThread:17285 [system_monitor.py:probe():211] Finished collecting system info
+2023-07-23 18:00:25,563 INFO    HandlerThread:17285 [system_monitor.py:probe():214] Publishing system info
+2023-07-23 18:00:25,563 DEBUG   HandlerThread:17285 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-07-23 18:00:25,564 DEBUG   HandlerThread:17285 [system_info.py:_save_pip():67] Saving pip packages done
+2023-07-23 18:00:25,564 INFO    HandlerThread:17285 [system_monitor.py:probe():216] Finished publishing system info
+2023-07-23 18:00:25,569 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:00:25,569 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-metadata.json with policy now
+2023-07-23 18:00:25,583 DEBUG   SenderThread:17285 [sender.py:send():369] send: telemetry
+2023-07-23 18:00:25,624 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: stop_status
+2023-07-23 18:00:25,624 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:00:25,624 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:00:25,627 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: stop_status
+2023-07-23 18:00:25,955 DEBUG   SenderThread:17285 [sender.py:send():369] send: telemetry
+2023-07-23 18:00:25,956 DEBUG   SenderThread:17285 [sender.py:send():369] send: run
+2023-07-23 18:00:26,196 INFO    wandb-upload_0:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/ud741o8e-wandb-metadata.json
+2023-07-23 18:00:26,241 INFO    SenderThread:17285 [sender.py:send_run():978] updated run: 2cu26tzk
+2023-07-23 18:00:26,241 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:00:26,241 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:00:26,242 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:00:26,242 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:00:26,242 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:00:26,242 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:00:26,243 DEBUG   SenderThread:17285 [sender.py:send():369] send: telemetry
+2023-07-23 18:00:26,243 DEBUG   SenderThread:17285 [sender.py:send():369] send: config
+2023-07-23 18:00:26,243 DEBUG   SenderThread:17285 [sender.py:send():369] send: config
+2023-07-23 18:00:26,243 DEBUG   SenderThread:17285 [sender.py:send():369] send: config
+2023-07-23 18:00:26,244 DEBUG   SenderThread:17285 [sender.py:send():369] send: config
+2023-07-23 18:00:26,244 DEBUG   SenderThread:17285 [sender.py:send():369] send: config
+2023-07-23 18:00:26,244 DEBUG   SenderThread:17285 [sender.py:send():369] send: config
+2023-07-23 18:00:26,244 DEBUG   SenderThread:17285 [sender.py:send():369] send: config
+2023-07-23 18:00:26,244 DEBUG   SenderThread:17285 [sender.py:send():369] send: config
+2023-07-23 18:00:26,244 DEBUG   SenderThread:17285 [sender.py:send():369] send: config
+2023-07-23 18:00:26,244 DEBUG   SenderThread:17285 [sender.py:send():369] send: config
+2023-07-23 18:00:26,244 DEBUG   SenderThread:17285 [sender.py:send():369] send: config
+2023-07-23 18:00:26,244 DEBUG   SenderThread:17285 [sender.py:send():369] send: config
+2023-07-23 18:00:26,244 DEBUG   SenderThread:17285 [sender.py:send():369] send: config
+2023-07-23 18:00:26,244 DEBUG   SenderThread:17285 [sender.py:send():369] send: telemetry
+2023-07-23 18:00:26,401 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/config.yaml
+2023-07-23 18:00:26,402 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/requirements.txt
+2023-07-23 18:00:26,402 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/wandb-summary.json
+2023-07-23 18:00:26,402 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/wandb-metadata.json
+2023-07-23 18:00:26,402 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/output.log
+2023-07-23 18:00:28,245 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: status_report
+2023-07-23 18:00:28,401 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/output.log
+2023-07-23 18:00:33,246 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: status_report
+2023-07-23 18:00:38,247 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: status_report
+2023-07-23 18:00:40,583 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: stop_status
+2023-07-23 18:00:40,583 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: stop_status
+2023-07-23 18:00:43,814 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: status_report
+2023-07-23 18:00:48,815 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: status_report
+2023-07-23 18:00:53,821 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: status_report
+2023-07-23 18:00:54,409 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/config.yaml
+2023-07-23 18:00:55,582 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: stop_status
+2023-07-23 18:00:55,583 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: stop_status
+2023-07-23 18:00:59,825 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: status_report
+2023-07-23 18:01:04,826 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: status_report
+2023-07-23 18:01:09,827 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: status_report
+2023-07-23 18:01:10,582 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: stop_status
+2023-07-23 18:01:10,583 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: stop_status
+2023-07-23 18:01:15,807 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: status_report
+2023-07-23 18:01:20,808 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: status_report
+2023-07-23 18:01:25,547 DEBUG   SystemMonitor:17285 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-07-23 18:01:25,548 DEBUG   SenderThread:17285 [sender.py:send():369] send: stats
+2023-07-23 18:01:25,582 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: stop_status
+2023-07-23 18:01:25,583 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: stop_status
+2023-07-23 18:01:25,809 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: status_report
+2023-07-23 18:01:30,809 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: status_report
+2023-07-23 18:01:35,810 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: status_report
+2023-07-23 18:01:40,582 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: stop_status
+2023-07-23 18:01:40,583 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: stop_status
+2023-07-23 18:01:40,813 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: status_report
+2023-07-23 18:01:45,814 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: status_report
+2023-07-23 18:01:50,815 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: status_report
+2023-07-23 18:01:55,549 DEBUG   SenderThread:17285 [sender.py:send():369] send: stats
+2023-07-23 18:01:55,582 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: stop_status
+2023-07-23 18:01:55,583 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: stop_status
+2023-07-23 18:01:56,813 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: status_report
+2023-07-23 18:02:01,813 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: status_report
+2023-07-23 18:02:06,814 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: status_report
+2023-07-23 18:02:10,583 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: stop_status
+2023-07-23 18:02:10,583 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: stop_status
+2023-07-23 18:02:12,807 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: status_report
+2023-07-23 18:02:17,808 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: status_report
+2023-07-23 18:02:22,808 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: status_report
+2023-07-23 18:02:25,550 DEBUG   SenderThread:17285 [sender.py:send():369] send: stats
+2023-07-23 18:02:25,583 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: stop_status
+2023-07-23 18:02:25,584 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: stop_status
+2023-07-23 18:02:27,837 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: status_report
+2023-07-23 18:02:32,838 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: status_report
+2023-07-23 18:02:37,839 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: status_report
+2023-07-23 18:02:40,583 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: stop_status
+2023-07-23 18:02:40,584 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: stop_status
+2023-07-23 18:02:43,804 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: status_report
+2023-07-23 18:02:48,805 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: status_report
+2023-07-23 18:02:53,806 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: status_report
+2023-07-23 18:02:55,550 DEBUG   SenderThread:17285 [sender.py:send():369] send: stats
+2023-07-23 18:02:55,583 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: stop_status
+2023-07-23 18:02:55,584 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: stop_status
+2023-07-23 18:02:58,811 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: status_report
+2023-07-23 18:03:03,812 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: status_report
+2023-07-23 18:03:08,813 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: status_report
+2023-07-23 18:03:10,583 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: stop_status
+2023-07-23 18:03:10,584 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: stop_status
+2023-07-23 18:03:13,925 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:13,926 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:13,926 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:13,926 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: status_report
+2023-07-23 18:03:13,929 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:14,457 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/wandb-summary.json
+2023-07-23 18:03:15,627 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:15,627 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:15,628 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_3_a75827b5be0723d6ba49.png with policy now
+2023-07-23 18:03:15,630 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:15,630 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:15,631 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:16,007 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:16,008 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:16,008 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_4_fcd17af98fbacefc0606.png with policy now
+2023-07-23 18:03:16,009 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:16,009 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:16,010 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:16,196 INFO    wandb-upload_0:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/xtx69y36-media/images/t-SNE plot_3_a75827b5be0723d6ba49.png
+2023-07-23 18:03:16,436 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:16,437 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:16,437 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_5_9034cf6b443a00bd7f6f.png with policy now
+2023-07-23 18:03:16,437 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:16,438 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:16,439 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:16,457 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/wandb-summary.json
+2023-07-23 18:03:16,458 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/output.log
+2023-07-23 18:03:16,458 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_3_a75827b5be0723d6ba49.png
+2023-07-23 18:03:16,458 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_5_9034cf6b443a00bd7f6f.png
+2023-07-23 18:03:16,459 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_4_fcd17af98fbacefc0606.png
+2023-07-23 18:03:16,459 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media
+2023-07-23 18:03:16,459 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images
+2023-07-23 18:03:16,839 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:16,839 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:16,840 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_6_38d75a1f9cac8c18fee2.png with policy now
+2023-07-23 18:03:16,841 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:16,841 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:16,842 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:16,948 INFO    wandb-upload_1:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/j53o0emd-media/images/t-SNE plot_4_fcd17af98fbacefc0606.png
+2023-07-23 18:03:17,146 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:17,146 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:17,147 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_7_25796e7353968b8811db.png with policy now
+2023-07-23 18:03:17,148 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:17,148 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:17,149 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:17,173 INFO    wandb-upload_0:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/0laug5ft-media/images/t-SNE plot_5_9034cf6b443a00bd7f6f.png
+2023-07-23 18:03:17,277 INFO    wandb-upload_2:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/1wsw49sf-media/images/t-SNE plot_3_a75827b5be0723d6ba49.png
+2023-07-23 18:03:17,437 INFO    wandb-upload_3:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/wmxgjup2-media/images/t-SNE plot_6_38d75a1f9cac8c18fee2.png
+2023-07-23 18:03:17,458 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/wandb-summary.json
+2023-07-23 18:03:17,458 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_7_25796e7353968b8811db.png
+2023-07-23 18:03:17,458 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_6_38d75a1f9cac8c18fee2.png
+2023-07-23 18:03:17,459 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images
+2023-07-23 18:03:17,568 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:17,569 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:17,569 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_8_e9e10e0e4bbfc126d5e6.png with policy now
+2023-07-23 18:03:17,570 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:17,570 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:17,571 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:17,907 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:17,908 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:17,909 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_9_c39ce330d5a28e6267db.png with policy now
+2023-07-23 18:03:17,909 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:17,910 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:17,911 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:18,001 INFO    wandb-upload_1:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/8dqrxvqu-media/images/t-SNE plot_7_25796e7353968b8811db.png
+2023-07-23 18:03:18,209 INFO    wandb-upload_4:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/nvi6czu6-media/images/t-SNE plot_8_e9e10e0e4bbfc126d5e6.png
+2023-07-23 18:03:18,251 INFO    wandb-upload_3:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/lq46xzdq-media/images/t-SNE plot_6_38d75a1f9cac8c18fee2.png
+2023-07-23 18:03:18,277 INFO    wandb-upload_0:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/vbkcnmxv-media/images/t-SNE plot_4_fcd17af98fbacefc0606.png
+2023-07-23 18:03:18,330 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:18,330 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:18,330 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_10_4179e5e5dcd207a968b6.png with policy now
+2023-07-23 18:03:18,331 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:18,331 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:18,332 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:18,459 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/wandb-summary.json
+2023-07-23 18:03:18,459 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/output.log
+2023-07-23 18:03:18,459 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_8_e9e10e0e4bbfc126d5e6.png
+2023-07-23 18:03:18,459 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_10_4179e5e5dcd207a968b6.png
+2023-07-23 18:03:18,460 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_9_c39ce330d5a28e6267db.png
+2023-07-23 18:03:18,460 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images
+2023-07-23 18:03:18,518 INFO    wandb-upload_5:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/ewr8snr1-media/images/t-SNE plot_9_c39ce330d5a28e6267db.png
+2023-07-23 18:03:18,589 INFO    wandb-upload_2:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/hlkd3mo1-media/images/t-SNE plot_5_9034cf6b443a00bd7f6f.png
+2023-07-23 18:03:18,635 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:18,635 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:18,636 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_11_fd955bea2dc0a177f2ee.png with policy now
+2023-07-23 18:03:18,637 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:18,637 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:18,638 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:19,041 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:19,041 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:19,042 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_12_412a7469e081af809b2e.png with policy now
+2023-07-23 18:03:19,043 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: status_report
+2023-07-23 18:03:19,044 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:19,044 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:19,045 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:19,111 INFO    wandb-upload_0:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/nevnio76-media/images/t-SNE plot_8_e9e10e0e4bbfc126d5e6.png
+2023-07-23 18:03:19,253 INFO    wandb-upload_2:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/q5fbpu7o-media/images/t-SNE plot_11_fd955bea2dc0a177f2ee.png
+2023-07-23 18:03:19,279 INFO    wandb-upload_1:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/nfp3s2xt-media/images/t-SNE plot_7_25796e7353968b8811db.png
+2023-07-23 18:03:19,302 INFO    wandb-upload_4:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/lfc3viv7-media/images/t-SNE plot_10_4179e5e5dcd207a968b6.png
+2023-07-23 18:03:19,307 INFO    wandb-upload_3:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/z87ch1y1-media/images/t-SNE plot_9_c39ce330d5a28e6267db.png
+2023-07-23 18:03:19,430 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:19,430 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:19,430 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_13_db50a244bad7ea8aeceb.png with policy now
+2023-07-23 18:03:19,432 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:19,432 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:19,433 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:19,459 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/wandb-summary.json
+2023-07-23 18:03:19,459 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_13_db50a244bad7ea8aeceb.png
+2023-07-23 18:03:19,460 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_11_fd955bea2dc0a177f2ee.png
+2023-07-23 18:03:19,460 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_12_412a7469e081af809b2e.png
+2023-07-23 18:03:19,460 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images
+2023-07-23 18:03:19,639 INFO    wandb-upload_5:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/cmlfyp0m-media/images/t-SNE plot_12_412a7469e081af809b2e.png
+2023-07-23 18:03:19,835 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:19,835 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_14_25a1d7384f9c07f4866f.png with policy now
+2023-07-23 18:03:19,835 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:19,837 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:19,837 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:19,838 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:20,062 INFO    wandb-upload_0:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/d19009po-media/images/t-SNE plot_10_4179e5e5dcd207a968b6.png
+2023-07-23 18:03:20,110 INFO    wandb-upload_2:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/m0koq3iw-media/images/t-SNE plot_11_fd955bea2dc0a177f2ee.png
+2023-07-23 18:03:20,144 INFO    wandb-upload_1:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/7iuf87ea-media/images/t-SNE plot_13_db50a244bad7ea8aeceb.png
+2023-07-23 18:03:20,223 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:20,223 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:20,224 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_15_2b29c6dd955ed50e104c.png with policy now
+2023-07-23 18:03:20,225 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:20,225 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:20,226 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:20,460 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/wandb-summary.json
+2023-07-23 18:03:20,460 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/output.log
+2023-07-23 18:03:20,460 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_14_25a1d7384f9c07f4866f.png
+2023-07-23 18:03:20,460 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_15_2b29c6dd955ed50e104c.png
+2023-07-23 18:03:20,461 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images
+2023-07-23 18:03:20,618 INFO    wandb-upload_4:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/9ltzbq1z-media/images/t-SNE plot_14_25a1d7384f9c07f4866f.png
+2023-07-23 18:03:20,622 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:20,622 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:20,623 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_16_7c7d44e61b2b2bddf088.png with policy now
+2023-07-23 18:03:20,624 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:20,624 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:20,625 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:20,761 INFO    wandb-upload_5:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/532f4pao-media/images/t-SNE plot_12_412a7469e081af809b2e.png
+2023-07-23 18:03:20,798 INFO    wandb-upload_2:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/831idhmk-media/images/t-SNE plot_15_2b29c6dd955ed50e104c.png
+2023-07-23 18:03:20,896 INFO    wandb-upload_0:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/03p46q03-media/images/t-SNE plot_13_db50a244bad7ea8aeceb.png
+2023-07-23 18:03:21,042 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:21,042 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_17_9d7d31ddf0ed85179e70.png with policy now
+2023-07-23 18:03:21,042 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:21,044 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:21,044 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:21,045 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:21,190 INFO    wandb-upload_4:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/kr5z9p84-media/images/t-SNE plot_16_7c7d44e61b2b2bddf088.png
+2023-07-23 18:03:21,450 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:21,451 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:21,451 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_18_1cc3914fcdbae22f6be9.png with policy now
+2023-07-23 18:03:21,453 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:21,453 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:21,454 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:21,460 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/wandb-summary.json
+2023-07-23 18:03:21,461 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_16_7c7d44e61b2b2bddf088.png
+2023-07-23 18:03:21,461 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_18_1cc3914fcdbae22f6be9.png
+2023-07-23 18:03:21,461 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_17_9d7d31ddf0ed85179e70.png
+2023-07-23 18:03:21,461 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images
+2023-07-23 18:03:21,587 INFO    wandb-upload_1:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/4pmf5inu-media/images/t-SNE plot_15_2b29c6dd955ed50e104c.png
+2023-07-23 18:03:21,648 INFO    wandb-upload_2:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/kpnko99l-media/images/t-SNE plot_17_9d7d31ddf0ed85179e70.png
+2023-07-23 18:03:21,659 INFO    wandb-upload_3:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/52l0dizv-media/images/t-SNE plot_14_25a1d7384f9c07f4866f.png
+2023-07-23 18:03:21,879 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:21,879 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:21,880 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_19_fa470b1919f3cc61c717.png with policy now
+2023-07-23 18:03:21,881 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:21,881 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:21,882 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:22,018 INFO    wandb-upload_0:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/9o2gbeir-media/images/t-SNE plot_18_1cc3914fcdbae22f6be9.png
+2023-07-23 18:03:22,119 INFO    wandb-upload_4:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/etup07b7-media/images/t-SNE plot_16_7c7d44e61b2b2bddf088.png
+2023-07-23 18:03:22,304 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:22,305 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:22,306 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_20_9ad15919110420f74f73.png with policy now
+2023-07-23 18:03:22,307 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:22,307 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:22,308 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:22,330 INFO    wandb-upload_5:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/6yil72pa-media/images/t-SNE plot_17_9d7d31ddf0ed85179e70.png
+2023-07-23 18:03:22,460 INFO    wandb-upload_2:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/93fav5bo-media/images/t-SNE plot_19_fa470b1919f3cc61c717.png
+2023-07-23 18:03:22,461 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/wandb-summary.json
+2023-07-23 18:03:22,461 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/output.log
+2023-07-23 18:03:22,462 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_19_fa470b1919f3cc61c717.png
+2023-07-23 18:03:22,462 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_20_9ad15919110420f74f73.png
+2023-07-23 18:03:22,462 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images
+2023-07-23 18:03:22,722 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:22,723 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:22,723 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_21_ff59d5e235b798aa874b.png with policy now
+2023-07-23 18:03:22,724 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:22,725 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:22,725 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:22,879 INFO    wandb-upload_1:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/c4cc6d5r-media/images/t-SNE plot_20_9ad15919110420f74f73.png
+2023-07-23 18:03:22,886 INFO    wandb-upload_3:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/dszsqoqw-media/images/t-SNE plot_18_1cc3914fcdbae22f6be9.png
+2023-07-23 18:03:23,112 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:23,112 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:23,113 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_22_0a1b335a8f58096dcd02.png with policy now
+2023-07-23 18:03:23,114 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:23,114 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:23,115 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:23,156 INFO    wandb-upload_4:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/e3emc5qj-media/images/t-SNE plot_19_fa470b1919f3cc61c717.png
+2023-07-23 18:03:23,358 INFO    wandb-upload_5:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/uzr9qzi7-media/images/t-SNE plot_21_ff59d5e235b798aa874b.png
+2023-07-23 18:03:23,462 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/wandb-summary.json
+2023-07-23 18:03:23,462 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_22_0a1b335a8f58096dcd02.png
+2023-07-23 18:03:23,463 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_21_ff59d5e235b798aa874b.png
+2023-07-23 18:03:23,463 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images
+2023-07-23 18:03:23,510 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:23,510 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:23,512 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_23_e1554378fe6ea6e83a20.png with policy now
+2023-07-23 18:03:23,512 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:23,512 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:23,513 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:23,566 INFO    wandb-upload_0:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/xbv0e6c1-media/images/t-SNE plot_20_9ad15919110420f74f73.png
+2023-07-23 18:03:23,797 INFO    wandb-upload_1:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/yy2pgsaw-media/images/t-SNE plot_22_0a1b335a8f58096dcd02.png
+2023-07-23 18:03:23,944 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:23,945 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:23,945 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_24_e86e086b2f54877bd5d7.png with policy now
+2023-07-23 18:03:23,947 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:23,947 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:23,950 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:24,087 INFO    wandb-upload_4:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/3yveziym-media/images/t-SNE plot_23_e1554378fe6ea6e83a20.png
+2023-07-23 18:03:24,148 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: status_report
+2023-07-23 18:03:24,198 INFO    wandb-upload_3:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/1w8n135j-media/images/t-SNE plot_21_ff59d5e235b798aa874b.png
+2023-07-23 18:03:24,377 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:24,377 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:24,377 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_25_53d3e308b409c760d3e6.png with policy now
+2023-07-23 18:03:24,379 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:24,379 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:24,379 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:24,480 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/wandb-summary.json
+2023-07-23 18:03:24,480 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/output.log
+2023-07-23 18:03:24,480 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_23_e1554378fe6ea6e83a20.png
+2023-07-23 18:03:24,481 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_25_53d3e308b409c760d3e6.png
+2023-07-23 18:03:24,481 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_24_e86e086b2f54877bd5d7.png
+2023-07-23 18:03:24,481 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images
+2023-07-23 18:03:24,580 INFO    wandb-upload_2:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/8q2kakb2-media/images/t-SNE plot_22_0a1b335a8f58096dcd02.png
+2023-07-23 18:03:24,819 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:24,820 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:24,820 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_26_8bac8ecc7fc9d547086b.png with policy now
+2023-07-23 18:03:24,821 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:24,821 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:24,822 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:24,833 INFO    wandb-upload_0:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/2odvi8th-media/images/t-SNE plot_24_e86e086b2f54877bd5d7.png
+2023-07-23 18:03:25,135 INFO    wandb-upload_4:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/rtxqj3op-media/images/t-SNE plot_23_e1554378fe6ea6e83a20.png
+2023-07-23 18:03:25,155 INFO    wandb-upload_5:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/0gej3az3-media/images/t-SNE plot_25_53d3e308b409c760d3e6.png
+2023-07-23 18:03:25,271 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:25,271 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:25,271 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_27_878414a9fc711a52fe93.png with policy now
+2023-07-23 18:03:25,279 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:25,280 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:25,280 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:25,390 INFO    wandb-upload_1:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/mjpuixfx-media/images/t-SNE plot_26_8bac8ecc7fc9d547086b.png
+2023-07-23 18:03:25,481 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/wandb-summary.json
+2023-07-23 18:03:25,481 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_27_878414a9fc711a52fe93.png
+2023-07-23 18:03:25,481 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_26_8bac8ecc7fc9d547086b.png
+2023-07-23 18:03:25,482 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images
+2023-07-23 18:03:25,506 INFO    wandb-upload_2:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/6csjg5ny-media/images/t-SNE plot_24_e86e086b2f54877bd5d7.png
+2023-07-23 18:03:25,551 DEBUG   SenderThread:17285 [sender.py:send():369] send: stats
+2023-07-23 18:03:25,585 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: stop_status
+2023-07-23 18:03:25,586 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: stop_status
+2023-07-23 18:03:25,748 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:25,822 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:25,823 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_28_2fbc47ecd360d59e7a9c.png with policy now
+2023-07-23 18:03:25,824 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:25,824 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:25,824 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:26,149 INFO    wandb-upload_3:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/bd7u6fdm-media/images/t-SNE plot_26_8bac8ecc7fc9d547086b.png
+2023-07-23 18:03:26,354 INFO    wandb-upload_4:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/bit6judi-media/images/t-SNE plot_27_878414a9fc711a52fe93.png
+2023-07-23 18:03:26,411 INFO    wandb-upload_1:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/9pzbbl17-media/images/t-SNE plot_28_2fbc47ecd360d59e7a9c.png
+2023-07-23 18:03:26,481 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/wandb-summary.json
+2023-07-23 18:03:26,482 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_28_2fbc47ecd360d59e7a9c.png
+2023-07-23 18:03:26,482 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images
+2023-07-23 18:03:26,487 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:26,487 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:26,488 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_29_094d997516ae1b5ce537.png with policy now
+2023-07-23 18:03:26,488 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:26,488 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:26,489 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:26,568 INFO    wandb-upload_0:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/vh7kuz94-media/images/t-SNE plot_25_53d3e308b409c760d3e6.png
+2023-07-23 18:03:26,886 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:26,886 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_30_80d33117833c4591ad91.png with policy now
+2023-07-23 18:03:26,886 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:26,888 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:26,888 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:26,889 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:27,008 INFO    wandb-upload_2:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/6dr3vgu2-media/images/t-SNE plot_27_878414a9fc711a52fe93.png
+2023-07-23 18:03:27,056 INFO    wandb-upload_5:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/rqa7mci6-media/images/t-SNE plot_29_094d997516ae1b5ce537.png
+2023-07-23 18:03:27,266 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:27,266 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:27,266 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_31_8a05468d6a4dd9d967ec.png with policy now
+2023-07-23 18:03:27,267 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:27,267 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:27,268 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:27,387 INFO    wandb-upload_3:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/cu8cl6u2-media/images/t-SNE plot_28_2fbc47ecd360d59e7a9c.png
+2023-07-23 18:03:27,482 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/wandb-summary.json
+2023-07-23 18:03:27,482 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/output.log
+2023-07-23 18:03:27,483 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_30_80d33117833c4591ad91.png
+2023-07-23 18:03:27,483 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_31_8a05468d6a4dd9d967ec.png
+2023-07-23 18:03:27,483 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_29_094d997516ae1b5ce537.png
+2023-07-23 18:03:27,483 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images
+2023-07-23 18:03:27,660 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:27,660 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:27,661 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_32_8f996f93290cf2a2661b.png with policy now
+2023-07-23 18:03:27,662 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:27,662 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:27,663 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:27,906 INFO    wandb-upload_0:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/gnrnoq76-media/images/t-SNE plot_31_8a05468d6a4dd9d967ec.png
+2023-07-23 18:03:27,988 INFO    wandb-upload_4:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/x2qkkkn6-media/images/t-SNE plot_30_80d33117833c4591ad91.png
+2023-07-23 18:03:28,060 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:28,061 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:28,061 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_33_23b17bad85271c4c0bf2.png with policy now
+2023-07-23 18:03:28,062 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:28,063 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:28,064 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:28,138 INFO    wandb-upload_2:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/1et5mnec-media/images/t-SNE plot_29_094d997516ae1b5ce537.png
+2023-07-23 18:03:28,228 INFO    wandb-upload_1:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/jq2v466b-media/images/t-SNE plot_32_8f996f93290cf2a2661b.png
+2023-07-23 18:03:28,471 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:28,472 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:28,473 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_34_a16ca0147709bcbfe124.png with policy now
+2023-07-23 18:03:28,474 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:28,474 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:28,475 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:28,483 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/wandb-summary.json
+2023-07-23 18:03:28,483 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_33_23b17bad85271c4c0bf2.png
+2023-07-23 18:03:28,483 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_34_a16ca0147709bcbfe124.png
+2023-07-23 18:03:28,484 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_32_8f996f93290cf2a2661b.png
+2023-07-23 18:03:28,484 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images
+2023-07-23 18:03:28,668 INFO    wandb-upload_5:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/rxibg3kh-media/images/t-SNE plot_31_8a05468d6a4dd9d967ec.png
+2023-07-23 18:03:28,801 INFO    wandb-upload_3:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/kdkrg09c-media/images/t-SNE plot_30_80d33117833c4591ad91.png
+2023-07-23 18:03:28,848 INFO    wandb-upload_0:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/mkyxnbr2-media/images/t-SNE plot_33_23b17bad85271c4c0bf2.png
+2023-07-23 18:03:28,867 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:28,867 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:28,867 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_35_c928ef943c442e0eeac0.png with policy now
+2023-07-23 18:03:28,869 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:28,869 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:28,870 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:29,060 INFO    wandb-upload_2:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/jhymg4c8-media/images/t-SNE plot_34_a16ca0147709bcbfe124.png
+2023-07-23 18:03:29,139 INFO    wandb-upload_1:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/bh72rjgd-media/images/t-SNE plot_32_8f996f93290cf2a2661b.png
+2023-07-23 18:03:29,289 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:29,289 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:29,289 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_36_1557a5c21e6437e2a4d4.png with policy now
+2023-07-23 18:03:29,291 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:29,291 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: status_report
+2023-07-23 18:03:29,292 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:29,293 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:29,484 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/wandb-summary.json
+2023-07-23 18:03:29,484 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/output.log
+2023-07-23 18:03:29,485 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_36_1557a5c21e6437e2a4d4.png
+2023-07-23 18:03:29,485 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_35_c928ef943c442e0eeac0.png
+2023-07-23 18:03:29,485 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images
+2023-07-23 18:03:29,489 INFO    wandb-upload_4:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/0dy8ag5j-media/images/t-SNE plot_33_23b17bad85271c4c0bf2.png
+2023-07-23 18:03:29,693 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:29,693 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:29,694 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_37_5d8e7364af85409bcd22.png with policy now
+2023-07-23 18:03:29,695 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:29,695 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:29,696 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:29,758 INFO    wandb-upload_5:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/gp8kdion-media/images/t-SNE plot_34_a16ca0147709bcbfe124.png
+2023-07-23 18:03:29,851 INFO    wandb-upload_2:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/onuz4zem-media/images/t-SNE plot_36_1557a5c21e6437e2a4d4.png
+2023-07-23 18:03:30,019 INFO    wandb-upload_3:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/7wz1qln6-media/images/t-SNE plot_35_c928ef943c442e0eeac0.png
+2023-07-23 18:03:30,119 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:30,120 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:30,120 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_38_cf36739f74d35f4b48d6.png with policy now
+2023-07-23 18:03:30,121 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:30,121 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:30,123 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:30,363 INFO    wandb-upload_1:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/qxtktvs1-media/images/t-SNE plot_37_5d8e7364af85409bcd22.png
+2023-07-23 18:03:30,485 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/wandb-summary.json
+2023-07-23 18:03:30,485 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_38_cf36739f74d35f4b48d6.png
+2023-07-23 18:03:30,485 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_37_5d8e7364af85409bcd22.png
+2023-07-23 18:03:30,486 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images
+2023-07-23 18:03:30,502 INFO    wandb-upload_4:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/owxrzgk8-media/images/t-SNE plot_36_1557a5c21e6437e2a4d4.png
+2023-07-23 18:03:30,545 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:30,545 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:30,546 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_39_1315853f357d87e5482c.png with policy now
+2023-07-23 18:03:30,547 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:30,547 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:30,548 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:30,672 INFO    wandb-upload_5:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/gpow538h-media/images/t-SNE plot_35_c928ef943c442e0eeac0.png
+2023-07-23 18:03:30,680 INFO    wandb-upload_0:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/i99kzi8a-media/images/t-SNE plot_38_cf36739f74d35f4b48d6.png
+2023-07-23 18:03:30,942 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:30,943 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:30,943 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_40_1da6301a6c219e044650.png with policy now
+2023-07-23 18:03:30,944 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:30,944 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:30,945 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:31,341 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:31,341 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_41_fc0a60e46513a31ee51c.png with policy now
+2023-07-23 18:03:31,342 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:31,343 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:31,343 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:31,344 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:31,486 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/wandb-summary.json
+2023-07-23 18:03:31,486 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/output.log
+2023-07-23 18:03:31,486 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_41_fc0a60e46513a31ee51c.png
+2023-07-23 18:03:31,487 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_40_1da6301a6c219e044650.png
+2023-07-23 18:03:31,487 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_39_1315853f357d87e5482c.png
+2023-07-23 18:03:31,487 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images
+2023-07-23 18:03:31,740 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:31,741 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:31,741 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_42_fbfc7ef797d12960ea05.png with policy now
+2023-07-23 18:03:31,742 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:31,743 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:31,743 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:32,163 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:32,164 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:32,164 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_43_917a36086679282eafc8.png with policy now
+2023-07-23 18:03:32,165 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:32,166 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:32,166 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:32,487 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/wandb-summary.json
+2023-07-23 18:03:32,487 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_43_917a36086679282eafc8.png
+2023-07-23 18:03:32,487 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_42_fbfc7ef797d12960ea05.png
+2023-07-23 18:03:32,488 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images
+2023-07-23 18:03:32,581 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:32,582 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:32,582 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_44_dee9783197b501e88646.png with policy now
+2023-07-23 18:03:32,583 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:32,583 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:32,584 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:32,986 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:32,986 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:32,987 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_45_985f47d821d09f141586.png with policy now
+2023-07-23 18:03:32,988 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:32,988 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:32,989 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:33,395 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:33,395 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:33,396 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_46_e27088caaa144a52bf09.png with policy now
+2023-07-23 18:03:33,397 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:33,397 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:33,398 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:33,488 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/wandb-summary.json
+2023-07-23 18:03:33,488 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/output.log
+2023-07-23 18:03:33,489 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_46_e27088caaa144a52bf09.png
+2023-07-23 18:03:33,489 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_44_dee9783197b501e88646.png
+2023-07-23 18:03:33,490 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_45_985f47d821d09f141586.png
+2023-07-23 18:03:33,490 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images
+2023-07-23 18:03:33,715 INFO    wandb-upload_5:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/8ihaj64h-media/images/t-SNE plot_40_1da6301a6c219e044650.png
+2023-07-23 18:03:33,783 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:33,783 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:33,784 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_47_ca603adabd2a881aef61.png with policy now
+2023-07-23 18:03:33,785 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:33,785 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:33,786 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:34,132 INFO    wandb-upload_7:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/psrczrnw-media/images/t-SNE plot_44_dee9783197b501e88646.png
+2023-07-23 18:03:34,164 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:34,164 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_48_04d2dae8b8ab93a8fb7c.png with policy now
+2023-07-23 18:03:34,164 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:34,165 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:34,165 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:34,170 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:34,185 INFO    wandb-upload_2:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/lgvisi55-media/images/t-SNE plot_37_5d8e7364af85409bcd22.png
+2023-07-23 18:03:34,273 INFO    wandb-upload_3:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/rs3ttlj8-media/images/t-SNE plot_41_fc0a60e46513a31ee51c.png
+2023-07-23 18:03:34,289 INFO    wandb-upload_1:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/iek2gtzs-media/images/t-SNE plot_39_1315853f357d87e5482c.png
+2023-07-23 18:03:34,389 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: status_report
+2023-07-23 18:03:34,489 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/wandb-summary.json
+2023-07-23 18:03:34,489 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_47_ca603adabd2a881aef61.png
+2023-07-23 18:03:34,490 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_48_04d2dae8b8ab93a8fb7c.png
+2023-07-23 18:03:34,490 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images
+2023-07-23 18:03:34,505 INFO    wandb-upload_6:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/zoanuw0r-media/images/t-SNE plot_43_917a36086679282eafc8.png
+2023-07-23 18:03:34,580 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:34,581 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:34,582 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_49_3012fa9ccce074c83a11.png with policy now
+2023-07-23 18:03:34,583 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:34,583 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:34,584 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:34,651 INFO    wandb-upload_8:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/yapwpj21-media/images/t-SNE plot_45_985f47d821d09f141586.png
+2023-07-23 18:03:34,686 INFO    wandb-upload_0:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/htaweqby-media/images/t-SNE plot_42_fbfc7ef797d12960ea05.png
+2023-07-23 18:03:34,722 INFO    wandb-upload_9:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/7vx5p3ii-media/images/t-SNE plot_46_e27088caaa144a52bf09.png
+2023-07-23 18:03:34,851 INFO    wandb-upload_5:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/8m5q2avj-media/images/t-SNE plot_47_ca603adabd2a881aef61.png
+2023-07-23 18:03:34,957 INFO    wandb-upload_10:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/q7js3kvw-media/images/t-SNE plot_48_04d2dae8b8ab93a8fb7c.png
+2023-07-23 18:03:34,973 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:34,973 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:34,974 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_50_549f7a0f965e8527d1c6.png with policy now
+2023-07-23 18:03:34,976 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:34,976 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:34,980 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:35,025 INFO    wandb-upload_4:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/4th96cne-media/images/t-SNE plot_38_cf36739f74d35f4b48d6.png
+2023-07-23 18:03:35,156 INFO    wandb-upload_7:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/6s3oje30-media/images/t-SNE plot_40_1da6301a6c219e044650.png
+2023-07-23 18:03:35,352 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:35,352 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_51_c5f8885b27963a7fe026.png with policy now
+2023-07-23 18:03:35,352 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:35,353 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:35,353 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:35,355 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:35,459 INFO    wandb-upload_6:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/m99tjr91-media/images/t-SNE plot_41_fc0a60e46513a31ee51c.png
+2023-07-23 18:03:35,490 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/wandb-summary.json
+2023-07-23 18:03:35,490 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/output.log
+2023-07-23 18:03:35,491 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_50_549f7a0f965e8527d1c6.png
+2023-07-23 18:03:35,491 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_51_c5f8885b27963a7fe026.png
+2023-07-23 18:03:35,491 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_49_3012fa9ccce074c83a11.png
+2023-07-23 18:03:35,491 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images
+2023-07-23 18:03:35,531 INFO    wandb-upload_1:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/hsv27qmu-media/images/t-SNE plot_44_dee9783197b501e88646.png
+2023-07-23 18:03:35,608 INFO    wandb-upload_9:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/0h2zn5vq-media/images/t-SNE plot_50_549f7a0f965e8527d1c6.png
+2023-07-23 18:03:35,619 INFO    wandb-upload_8:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/mg89ta2d-media/images/t-SNE plot_39_1315853f357d87e5482c.png
+2023-07-23 18:03:35,629 INFO    wandb-upload_2:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/8xiihfu1-media/images/t-SNE plot_49_3012fa9ccce074c83a11.png
+2023-07-23 18:03:35,771 INFO    wandb-upload_3:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/ghyptz19-media/images/t-SNE plot_45_985f47d821d09f141586.png
+2023-07-23 18:03:35,789 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:35,789 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:35,790 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_52_f50d4292208e8b53fc64.png with policy now
+2023-07-23 18:03:35,791 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:35,791 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:35,791 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:35,803 INFO    wandb-upload_0:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/4lvbsy6k-media/images/t-SNE plot_43_917a36086679282eafc8.png
+2023-07-23 18:03:36,014 INFO    wandb-upload_4:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/aoc5idz4-media/images/t-SNE plot_47_ca603adabd2a881aef61.png
+2023-07-23 18:03:36,200 INFO    wandb-upload_6:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/n4spq37g-media/images/t-SNE plot_46_e27088caaa144a52bf09.png
+2023-07-23 18:03:36,204 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:36,204 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:36,206 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_53_977260763b9495c4083e.png with policy now
+2023-07-23 18:03:36,206 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:36,206 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:36,207 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:36,334 INFO    wandb-upload_7:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/xivzdfla-media/images/t-SNE plot_51_c5f8885b27963a7fe026.png
+2023-07-23 18:03:36,386 INFO    wandb-upload_1:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/jie716yu-media/images/t-SNE plot_50_549f7a0f965e8527d1c6.png
+2023-07-23 18:03:36,451 INFO    wandb-upload_9:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/zxm3683a-media/images/t-SNE plot_49_3012fa9ccce074c83a11.png
+2023-07-23 18:03:36,491 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/wandb-summary.json
+2023-07-23 18:03:36,492 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_53_977260763b9495c4083e.png
+2023-07-23 18:03:36,492 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_52_f50d4292208e8b53fc64.png
+2023-07-23 18:03:36,493 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images
+2023-07-23 18:03:36,496 INFO    wandb-upload_10:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/on67fxif-media/images/t-SNE plot_48_04d2dae8b8ab93a8fb7c.png
+2023-07-23 18:03:36,605 INFO    wandb-upload_2:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/hg9igprp-media/images/t-SNE plot_52_f50d4292208e8b53fc64.png
+2023-07-23 18:03:36,606 INFO    wandb-upload_5:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/ehodwu0n-media/images/t-SNE plot_42_fbfc7ef797d12960ea05.png
+2023-07-23 18:03:36,616 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:36,617 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:36,617 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_54_ee564b4493b58f2d1cb4.png with policy now
+2023-07-23 18:03:36,618 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:36,619 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:36,620 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:36,943 INFO    wandb-upload_3:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/34o8g52q-media/images/t-SNE plot_53_977260763b9495c4083e.png
+2023-07-23 18:03:36,997 INFO    wandb-upload_0:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/8rx81p82-media/images/t-SNE plot_51_c5f8885b27963a7fe026.png
+2023-07-23 18:03:37,031 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:37,031 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:37,032 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_55_e44af29c6833b5958426.png with policy now
+2023-07-23 18:03:37,033 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:37,033 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:37,034 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:37,165 INFO    wandb-upload_7:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/83999dg3-media/images/t-SNE plot_54_ee564b4493b58f2d1cb4.png
+2023-07-23 18:03:37,420 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:37,420 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:37,422 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_56_9237544d1923443eb580.png with policy now
+2023-07-23 18:03:37,422 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:37,422 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:37,423 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:37,493 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/wandb-summary.json
+2023-07-23 18:03:37,493 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/output.log
+2023-07-23 18:03:37,493 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_56_9237544d1923443eb580.png
+2023-07-23 18:03:37,494 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_54_ee564b4493b58f2d1cb4.png
+2023-07-23 18:03:37,494 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_55_e44af29c6833b5958426.png
+2023-07-23 18:03:37,494 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images
+2023-07-23 18:03:37,799 INFO    wandb-upload_6:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/4xbppy6m-media/images/t-SNE plot_52_f50d4292208e8b53fc64.png
+2023-07-23 18:03:37,861 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:37,861 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:37,861 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_57_df27143bc04d6edfdeb8.png with policy now
+2023-07-23 18:03:37,863 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:37,863 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:37,864 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:37,953 INFO    wandb-upload_10:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/a6l794qw-media/images/t-SNE plot_55_e44af29c6833b5958426.png
+2023-07-23 18:03:37,984 INFO    wandb-upload_5:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/zokde7jb-media/images/t-SNE plot_56_9237544d1923443eb580.png
+2023-07-23 18:03:38,022 INFO    wandb-upload_1:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/2mudngup-media/images/t-SNE plot_53_977260763b9495c4083e.png
+2023-07-23 18:03:38,263 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:38,263 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:38,264 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_58_fb33483994abb6baac83.png with policy now
+2023-07-23 18:03:38,265 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:38,265 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:38,265 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:38,454 INFO    wandb-upload_9:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/o31c7kep-media/images/t-SNE plot_57_df27143bc04d6edfdeb8.png
+2023-07-23 18:03:38,457 INFO    wandb-upload_4:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/kyhtxgs9-media/images/t-SNE plot_54_ee564b4493b58f2d1cb4.png
+2023-07-23 18:03:38,494 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/wandb-summary.json
+2023-07-23 18:03:38,494 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_58_fb33483994abb6baac83.png
+2023-07-23 18:03:38,494 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_57_df27143bc04d6edfdeb8.png
+2023-07-23 18:03:38,494 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images
+2023-07-23 18:03:38,665 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:38,665 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:38,667 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_59_d406f46beecc4726ce27.png with policy now
+2023-07-23 18:03:38,667 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:38,667 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:38,668 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:38,864 INFO    wandb-upload_2:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/r153qbbz-media/images/t-SNE plot_55_e44af29c6833b5958426.png
+2023-07-23 18:03:39,062 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:39,062 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:39,063 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_60_c3c7e687007e3b191b3a.png with policy now
+2023-07-23 18:03:39,064 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:39,064 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:39,065 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:39,157 INFO    wandb-upload_8:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/cenpsds6-media/images/t-SNE plot_56_9237544d1923443eb580.png
+2023-07-23 18:03:39,333 INFO    wandb-upload_6:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/4swuzymg-media/images/t-SNE plot_58_fb33483994abb6baac83.png
+2023-07-23 18:03:39,338 INFO    wandb-upload_5:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/2ffymph8-media/images/t-SNE plot_59_d406f46beecc4726ce27.png
+2023-07-23 18:03:39,363 INFO    wandb-upload_10:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/bo1qhhk1-media/images/t-SNE plot_57_df27143bc04d6edfdeb8.png
+2023-07-23 18:03:39,480 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:39,480 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:39,481 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_61_afbe378b8e11ee43057a.png with policy now
+2023-07-23 18:03:39,482 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: status_report
+2023-07-23 18:03:39,482 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:39,482 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:39,483 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:39,495 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/wandb-summary.json
+2023-07-23 18:03:39,495 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/output.log
+2023-07-23 18:03:39,495 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_60_c3c7e687007e3b191b3a.png
+2023-07-23 18:03:39,495 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_61_afbe378b8e11ee43057a.png
+2023-07-23 18:03:39,495 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_59_d406f46beecc4726ce27.png
+2023-07-23 18:03:39,496 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images
+2023-07-23 18:03:39,635 INFO    wandb-upload_1:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/gw04g14k-media/images/t-SNE plot_60_c3c7e687007e3b191b3a.png
+2023-07-23 18:03:39,898 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:39,899 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:39,899 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_62_8a90e43c4bd49f406eda.png with policy now
+2023-07-23 18:03:39,900 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:39,900 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:39,901 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:40,029 INFO    wandb-upload_9:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/to4ffxv3-media/images/t-SNE plot_58_fb33483994abb6baac83.png
+2023-07-23 18:03:40,164 INFO    wandb-upload_7:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/i7hpjle5-media/images/t-SNE plot_61_afbe378b8e11ee43057a.png
+2023-07-23 18:03:40,290 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:40,290 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_63_d0eb6225bef22a74e706.png with policy now
+2023-07-23 18:03:40,291 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:40,292 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:40,292 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:40,294 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:40,496 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/wandb-summary.json
+2023-07-23 18:03:40,496 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_63_d0eb6225bef22a74e706.png
+2023-07-23 18:03:40,496 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_62_8a90e43c4bd49f406eda.png
+2023-07-23 18:03:40,496 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images
+2023-07-23 18:03:40,510 INFO    wandb-upload_2:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/q3mjuakb-media/images/t-SNE plot_59_d406f46beecc4726ce27.png
+2023-07-23 18:03:40,587 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: stop_status
+2023-07-23 18:03:40,588 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: stop_status
+2023-07-23 18:03:40,680 INFO    wandb-upload_4:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/4f5r33ny-media/images/t-SNE plot_62_8a90e43c4bd49f406eda.png
+2023-07-23 18:03:40,737 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:40,820 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:40,820 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_64_c519554e8800d3291d11.png with policy now
+2023-07-23 18:03:40,821 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:40,821 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:40,822 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:40,905 INFO    wandb-upload_8:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/dbsyzb3s-media/images/t-SNE plot_60_c3c7e687007e3b191b3a.png
+2023-07-23 18:03:41,000 INFO    wandb-upload_0:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/ybh50stt-media/images/t-SNE plot_63_d0eb6225bef22a74e706.png
+2023-07-23 18:03:41,019 INFO    wandb-upload_10:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/alvm2giz-media/images/t-SNE plot_61_afbe378b8e11ee43057a.png
+2023-07-23 18:03:41,118 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:41,119 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:41,119 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_65_7a39b83f7224408612ec.png with policy now
+2023-07-23 18:03:41,120 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:41,121 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:41,122 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:41,372 INFO    wandb-upload_6:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/s8p23yc5-media/images/t-SNE plot_62_8a90e43c4bd49f406eda.png
+2023-07-23 18:03:41,497 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/wandb-summary.json
+2023-07-23 18:03:41,497 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/output.log
+2023-07-23 18:03:41,497 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_65_7a39b83f7224408612ec.png
+2023-07-23 18:03:41,498 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_64_c519554e8800d3291d11.png
+2023-07-23 18:03:41,498 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images
+2023-07-23 18:03:41,513 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:41,513 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:41,514 INFO    wandb-upload_9:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/nfidbp19-media/images/t-SNE plot_64_c519554e8800d3291d11.png
+2023-07-23 18:03:41,515 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_66_42effad0bc4f39f6a5de.png with policy now
+2023-07-23 18:03:41,515 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:41,516 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:41,517 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:41,711 INFO    wandb-upload_2:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/kxntbk8i-media/images/t-SNE plot_65_7a39b83f7224408612ec.png
+2023-07-23 18:03:41,909 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:41,909 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:41,910 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_67_935ab47c62ba69ad6cf4.png with policy now
+2023-07-23 18:03:41,911 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:41,911 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:41,912 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:41,924 INFO    wandb-upload_3:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/uz7kyj1b-media/images/t-SNE plot_63_d0eb6225bef22a74e706.png
+2023-07-23 18:03:42,299 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:42,299 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:42,300 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_68_cf707ee64b99c733d5eb.png with policy now
+2023-07-23 18:03:42,301 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:42,301 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:42,302 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:42,368 INFO    wandb-upload_8:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/yqugi6o3-media/images/t-SNE plot_64_c519554e8800d3291d11.png
+2023-07-23 18:03:42,450 INFO    wandb-upload_5:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/zatkx2j8-media/images/t-SNE plot_66_42effad0bc4f39f6a5de.png
+2023-07-23 18:03:42,498 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/wandb-summary.json
+2023-07-23 18:03:42,498 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_67_935ab47c62ba69ad6cf4.png
+2023-07-23 18:03:42,498 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_68_cf707ee64b99c733d5eb.png
+2023-07-23 18:03:42,499 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_66_42effad0bc4f39f6a5de.png
+2023-07-23 18:03:42,499 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images
+2023-07-23 18:03:42,608 INFO    wandb-upload_4:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/a1c7cid6-media/images/t-SNE plot_65_7a39b83f7224408612ec.png
+2023-07-23 18:03:42,692 INFO    wandb-upload_1:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/oixkp5hh-media/images/t-SNE plot_67_935ab47c62ba69ad6cf4.png
+2023-07-23 18:03:42,713 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:42,713 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_69_5a66b2e6a29151eacfaf.png with policy now
+2023-07-23 18:03:42,714 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:42,715 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:42,716 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:42,716 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:42,903 INFO    wandb-upload_9:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/nsm77f09-media/images/t-SNE plot_68_cf707ee64b99c733d5eb.png
+2023-07-23 18:03:43,124 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:43,124 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:43,125 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_70_278cfee5bf5738dfca09.png with policy now
+2023-07-23 18:03:43,126 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:43,126 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:43,127 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:43,156 INFO    wandb-upload_2:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/z64g5tpv-media/images/t-SNE plot_66_42effad0bc4f39f6a5de.png
+2023-07-23 18:03:43,499 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/wandb-summary.json
+2023-07-23 18:03:43,499 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/output.log
+2023-07-23 18:03:43,499 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_69_5a66b2e6a29151eacfaf.png
+2023-07-23 18:03:43,500 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_70_278cfee5bf5738dfca09.png
+2023-07-23 18:03:43,500 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images
+2023-07-23 18:03:43,512 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:43,512 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:43,512 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_71_875f28a83f2f266856f5.png with policy now
+2023-07-23 18:03:43,513 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:43,513 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:43,514 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:43,550 INFO    wandb-upload_6:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/gv445k15-media/images/t-SNE plot_67_935ab47c62ba69ad6cf4.png
+2023-07-23 18:03:43,634 INFO    wandb-upload_10:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/171htc48-media/images/t-SNE plot_69_5a66b2e6a29151eacfaf.png
+2023-07-23 18:03:43,678 INFO    wandb-upload_8:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/0haftjpp-media/images/t-SNE plot_70_278cfee5bf5738dfca09.png
+2023-07-23 18:03:43,857 INFO    wandb-upload_0:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/gxsqcd7i-media/images/t-SNE plot_68_cf707ee64b99c733d5eb.png
+2023-07-23 18:03:43,885 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:43,885 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_72_f63cc153707840d63994.png with policy now
+2023-07-23 18:03:43,885 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:43,886 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:43,887 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:43,888 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:44,093 INFO    wandb-upload_1:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/zj6slaci-media/images/t-SNE plot_71_875f28a83f2f266856f5.png
+2023-07-23 18:03:44,259 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:44,259 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_73_78ea332c4a73c994620b.png with policy now
+2023-07-23 18:03:44,260 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:44,261 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:44,262 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:44,265 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:44,378 INFO    wandb-upload_9:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/2hzkzd0z-media/images/t-SNE plot_69_5a66b2e6a29151eacfaf.png
+2023-07-23 18:03:44,475 INFO    wandb-upload_4:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/ip6t5vfj-media/images/t-SNE plot_72_f63cc153707840d63994.png
+2023-07-23 18:03:44,500 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/wandb-summary.json
+2023-07-23 18:03:44,500 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_72_f63cc153707840d63994.png
+2023-07-23 18:03:44,500 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_71_875f28a83f2f266856f5.png
+2023-07-23 18:03:44,501 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_73_78ea332c4a73c994620b.png
+2023-07-23 18:03:44,501 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images
+2023-07-23 18:03:44,515 INFO    wandb-upload_5:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/b6s6zpkz-media/images/t-SNE plot_70_278cfee5bf5738dfca09.png
+2023-07-23 18:03:44,576 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-23 18:03:44,578 DEBUG   SenderThread:17285 [sender.py:send():369] send: files
+2023-07-23 18:03:44,578 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file media/images/t-SNE plot_74_29b163834b6726a83ec6.png with policy now
+2023-07-23 18:03:44,579 DEBUG   SenderThread:17285 [sender.py:send():369] send: history
+2023-07-23 18:03:44,579 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: summary_record
+2023-07-23 18:03:44,579 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: status_report
+2023-07-23 18:03:44,579 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:44,656 DEBUG   SenderThread:17285 [sender.py:send():369] send: telemetry
+2023-07-23 18:03:44,657 DEBUG   SenderThread:17285 [sender.py:send():369] send: exit
+2023-07-23 18:03:44,657 INFO    SenderThread:17285 [sender.py:send_exit():574] handling exit code: 1
+2023-07-23 18:03:44,657 INFO    SenderThread:17285 [sender.py:send_exit():576] handling runtime: 199
+2023-07-23 18:03:44,657 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:44,657 INFO    SenderThread:17285 [sender.py:send_exit():582] send defer
+2023-07-23 18:03:44,658 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: defer
+2023-07-23 18:03:44,658 INFO    HandlerThread:17285 [handler.py:handle_request_defer():170] handle defer: 0
+2023-07-23 18:03:44,658 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: defer
+2023-07-23 18:03:44,658 INFO    SenderThread:17285 [sender.py:send_request_defer():598] handle sender defer: 0
+2023-07-23 18:03:44,658 INFO    SenderThread:17285 [sender.py:transition_state():602] send defer: 1
+2023-07-23 18:03:44,658 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: defer
+2023-07-23 18:03:44,658 INFO    HandlerThread:17285 [handler.py:handle_request_defer():170] handle defer: 1
+2023-07-23 18:03:44,658 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: defer
+2023-07-23 18:03:44,659 INFO    SenderThread:17285 [sender.py:send_request_defer():598] handle sender defer: 1
+2023-07-23 18:03:44,659 INFO    SenderThread:17285 [sender.py:transition_state():602] send defer: 2
+2023-07-23 18:03:44,659 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: defer
+2023-07-23 18:03:44,659 INFO    HandlerThread:17285 [handler.py:handle_request_defer():170] handle defer: 2
+2023-07-23 18:03:44,659 INFO    HandlerThread:17285 [system_monitor.py:finish():190] Stopping system monitor
+2023-07-23 18:03:44,659 INFO    HandlerThread:17285 [interfaces.py:finish():202] Joined cpu monitor
+2023-07-23 18:03:44,660 DEBUG   SystemMonitor:17285 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-07-23 18:03:44,661 DEBUG   SystemMonitor:17285 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-07-23 18:03:44,661 INFO    HandlerThread:17285 [interfaces.py:finish():202] Joined disk monitor
+2023-07-23 18:03:44,670 INFO    HandlerThread:17285 [interfaces.py:finish():202] Joined gpu monitor
+2023-07-23 18:03:44,670 INFO    HandlerThread:17285 [interfaces.py:finish():202] Joined memory monitor
+2023-07-23 18:03:44,671 INFO    HandlerThread:17285 [interfaces.py:finish():202] Joined network monitor
+2023-07-23 18:03:44,671 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: defer
+2023-07-23 18:03:44,671 INFO    SenderThread:17285 [sender.py:send_request_defer():598] handle sender defer: 2
+2023-07-23 18:03:44,671 INFO    SenderThread:17285 [sender.py:transition_state():602] send defer: 3
+2023-07-23 18:03:44,671 DEBUG   SenderThread:17285 [sender.py:send():369] send: stats
+2023-07-23 18:03:44,671 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: defer
+2023-07-23 18:03:44,672 INFO    HandlerThread:17285 [handler.py:handle_request_defer():170] handle defer: 3
+2023-07-23 18:03:44,672 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: defer
+2023-07-23 18:03:44,672 INFO    SenderThread:17285 [sender.py:send_request_defer():598] handle sender defer: 3
+2023-07-23 18:03:44,672 INFO    SenderThread:17285 [sender.py:transition_state():602] send defer: 4
+2023-07-23 18:03:44,672 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: defer
+2023-07-23 18:03:44,672 INFO    HandlerThread:17285 [handler.py:handle_request_defer():170] handle defer: 4
+2023-07-23 18:03:44,672 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: defer
+2023-07-23 18:03:44,672 INFO    SenderThread:17285 [sender.py:send_request_defer():598] handle sender defer: 4
+2023-07-23 18:03:44,672 INFO    SenderThread:17285 [sender.py:transition_state():602] send defer: 5
+2023-07-23 18:03:44,672 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: defer
+2023-07-23 18:03:44,672 INFO    HandlerThread:17285 [handler.py:handle_request_defer():170] handle defer: 5
+2023-07-23 18:03:44,673 DEBUG   SenderThread:17285 [sender.py:send():369] send: summary
+2023-07-23 18:03:44,673 INFO    SenderThread:17285 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-23 18:03:44,673 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: defer
+2023-07-23 18:03:44,673 INFO    SenderThread:17285 [sender.py:send_request_defer():598] handle sender defer: 5
+2023-07-23 18:03:44,673 INFO    SenderThread:17285 [sender.py:transition_state():602] send defer: 6
+2023-07-23 18:03:44,674 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: defer
+2023-07-23 18:03:44,674 INFO    HandlerThread:17285 [handler.py:handle_request_defer():170] handle defer: 6
+2023-07-23 18:03:44,674 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: defer
+2023-07-23 18:03:44,674 INFO    SenderThread:17285 [sender.py:send_request_defer():598] handle sender defer: 6
+2023-07-23 18:03:44,678 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: status_report
+2023-07-23 18:03:44,857 INFO    wandb-upload_6:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/nyx2xnd3-media/images/t-SNE plot_73_78ea332c4a73c994620b.png
+2023-07-23 18:03:44,975 INFO    SenderThread:17285 [sender.py:transition_state():602] send defer: 7
+2023-07-23 18:03:44,975 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: defer
+2023-07-23 18:03:44,975 INFO    HandlerThread:17285 [handler.py:handle_request_defer():170] handle defer: 7
+2023-07-23 18:03:44,975 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: defer
+2023-07-23 18:03:44,975 INFO    SenderThread:17285 [sender.py:send_request_defer():598] handle sender defer: 7
+2023-07-23 18:03:45,159 INFO    wandb-upload_0:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/0k8zwb0o-media/images/t-SNE plot_71_875f28a83f2f266856f5.png
+2023-07-23 18:03:45,161 INFO    wandb-upload_3:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/e1jxrzh1-media/images/t-SNE plot_74_29b163834b6726a83ec6.png
+2023-07-23 18:03:45,373 INFO    wandb-upload_8:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/qfwmdc6n-media/images/t-SNE plot_72_f63cc153707840d63994.png
+2023-07-23 18:03:45,501 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/wandb-summary.json
+2023-07-23 18:03:45,501 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/config.yaml
+2023-07-23 18:03:45,502 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/output.log
+2023-07-23 18:03:45,502 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_created():272] file/dir created: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_74_29b163834b6726a83ec6.png
+2023-07-23 18:03:45,502 INFO    Thread-12 :17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images
+2023-07-23 18:03:45,602 INFO    wandb-upload_10:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/wqxsyzi0-media/images/t-SNE plot_73_78ea332c4a73c994620b.png
+2023-07-23 18:03:45,659 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: poll_exit
+2023-07-23 18:03:46,145 INFO    wandb-upload_4:17285 [upload_job.py:push():133] Uploaded file /tmp/tmpcrci881wwandb/ew82qj8b-media/images/t-SNE plot_74_29b163834b6726a83ec6.png
+2023-07-23 18:03:46,580 INFO    SenderThread:17285 [sender.py:transition_state():602] send defer: 8
+2023-07-23 18:03:46,581 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: poll_exit
+2023-07-23 18:03:46,581 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: defer
+2023-07-23 18:03:46,581 INFO    HandlerThread:17285 [handler.py:handle_request_defer():170] handle defer: 8
+2023-07-23 18:03:46,582 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: defer
+2023-07-23 18:03:46,582 INFO    SenderThread:17285 [sender.py:send_request_defer():598] handle sender defer: 8
+2023-07-23 18:03:46,582 INFO    SenderThread:17285 [job_builder.py:build():240] Attempting to build job artifact
+2023-07-23 18:03:46,582 INFO    SenderThread:17285 [job_builder.py:build():259] run is notebook based run
+2023-07-23 18:03:46,582 INFO    SenderThread:17285 [job_builder.py:build():264] is repo sourced job
+2023-07-23 18:03:46,582 INFO    SenderThread:17285 [sender.py:transition_state():602] send defer: 9
+2023-07-23 18:03:46,582 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: defer
+2023-07-23 18:03:46,582 INFO    HandlerThread:17285 [handler.py:handle_request_defer():170] handle defer: 9
+2023-07-23 18:03:46,583 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: defer
+2023-07-23 18:03:46,583 INFO    SenderThread:17285 [sender.py:send_request_defer():598] handle sender defer: 9
+2023-07-23 18:03:46,583 INFO    SenderThread:17285 [dir_watcher.py:finish():359] shutting down directory watcher
+2023-07-23 18:03:46,659 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: poll_exit
+2023-07-23 18:03:47,504 INFO    SenderThread:17285 [dir_watcher.py:_on_file_modified():289] file/dir modified: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/output.log
+2023-07-23 18:03:47,505 INFO    SenderThread:17285 [dir_watcher.py:finish():389] scan: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files
+2023-07-23 18:03:47,505 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/requirements.txt requirements.txt
+2023-07-23 18:03:47,505 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/output.log output.log
+2023-07-23 18:03:47,508 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/wandb-summary.json wandb-summary.json
+2023-07-23 18:03:47,509 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/config.yaml config.yaml
+2023-07-23 18:03:47,509 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/wandb-metadata.json wandb-metadata.json
+2023-07-23 18:03:47,517 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_41_fc0a60e46513a31ee51c.png media/images/t-SNE plot_41_fc0a60e46513a31ee51c.png
+2023-07-23 18:03:47,518 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_3_a75827b5be0723d6ba49.png media/images/t-SNE plot_3_a75827b5be0723d6ba49.png
+2023-07-23 18:03:47,518 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_35_c928ef943c442e0eeac0.png media/images/t-SNE plot_35_c928ef943c442e0eeac0.png
+2023-07-23 18:03:47,518 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_20_9ad15919110420f74f73.png media/images/t-SNE plot_20_9ad15919110420f74f73.png
+2023-07-23 18:03:47,518 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_54_ee564b4493b58f2d1cb4.png media/images/t-SNE plot_54_ee564b4493b58f2d1cb4.png
+2023-07-23 18:03:47,518 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_18_1cc3914fcdbae22f6be9.png media/images/t-SNE plot_18_1cc3914fcdbae22f6be9.png
+2023-07-23 18:03:47,518 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_30_80d33117833c4591ad91.png media/images/t-SNE plot_30_80d33117833c4591ad91.png
+2023-07-23 18:03:47,518 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_51_c5f8885b27963a7fe026.png media/images/t-SNE plot_51_c5f8885b27963a7fe026.png
+2023-07-23 18:03:47,518 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_45_985f47d821d09f141586.png media/images/t-SNE plot_45_985f47d821d09f141586.png
+2023-07-23 18:03:47,518 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_61_afbe378b8e11ee43057a.png media/images/t-SNE plot_61_afbe378b8e11ee43057a.png
+2023-07-23 18:03:47,518 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_63_d0eb6225bef22a74e706.png media/images/t-SNE plot_63_d0eb6225bef22a74e706.png
+2023-07-23 18:03:47,518 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_8_e9e10e0e4bbfc126d5e6.png media/images/t-SNE plot_8_e9e10e0e4bbfc126d5e6.png
+2023-07-23 18:03:47,518 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_11_fd955bea2dc0a177f2ee.png media/images/t-SNE plot_11_fd955bea2dc0a177f2ee.png
+2023-07-23 18:03:47,518 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_67_935ab47c62ba69ad6cf4.png media/images/t-SNE plot_67_935ab47c62ba69ad6cf4.png
+2023-07-23 18:03:47,518 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_44_dee9783197b501e88646.png media/images/t-SNE plot_44_dee9783197b501e88646.png
+2023-07-23 18:03:47,518 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_71_875f28a83f2f266856f5.png media/images/t-SNE plot_71_875f28a83f2f266856f5.png
+2023-07-23 18:03:47,519 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_37_5d8e7364af85409bcd22.png media/images/t-SNE plot_37_5d8e7364af85409bcd22.png
+2023-07-23 18:03:47,519 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_10_4179e5e5dcd207a968b6.png media/images/t-SNE plot_10_4179e5e5dcd207a968b6.png
+2023-07-23 18:03:47,519 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_9_c39ce330d5a28e6267db.png media/images/t-SNE plot_9_c39ce330d5a28e6267db.png
+2023-07-23 18:03:47,519 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_5_9034cf6b443a00bd7f6f.png media/images/t-SNE plot_5_9034cf6b443a00bd7f6f.png
+2023-07-23 18:03:47,519 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_69_5a66b2e6a29151eacfaf.png media/images/t-SNE plot_69_5a66b2e6a29151eacfaf.png
+2023-07-23 18:03:47,519 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_47_ca603adabd2a881aef61.png media/images/t-SNE plot_47_ca603adabd2a881aef61.png
+2023-07-23 18:03:47,519 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_13_db50a244bad7ea8aeceb.png media/images/t-SNE plot_13_db50a244bad7ea8aeceb.png
+2023-07-23 18:03:47,519 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_42_fbfc7ef797d12960ea05.png media/images/t-SNE plot_42_fbfc7ef797d12960ea05.png
+2023-07-23 18:03:47,519 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_50_549f7a0f965e8527d1c6.png media/images/t-SNE plot_50_549f7a0f965e8527d1c6.png
+2023-07-23 18:03:47,519 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_31_8a05468d6a4dd9d967ec.png media/images/t-SNE plot_31_8a05468d6a4dd9d967ec.png
+2023-07-23 18:03:47,519 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_68_cf707ee64b99c733d5eb.png media/images/t-SNE plot_68_cf707ee64b99c733d5eb.png
+2023-07-23 18:03:47,519 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_38_cf36739f74d35f4b48d6.png media/images/t-SNE plot_38_cf36739f74d35f4b48d6.png
+2023-07-23 18:03:47,519 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_21_ff59d5e235b798aa874b.png media/images/t-SNE plot_21_ff59d5e235b798aa874b.png
+2023-07-23 18:03:47,519 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_48_04d2dae8b8ab93a8fb7c.png media/images/t-SNE plot_48_04d2dae8b8ab93a8fb7c.png
+2023-07-23 18:03:47,519 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_49_3012fa9ccce074c83a11.png media/images/t-SNE plot_49_3012fa9ccce074c83a11.png
+2023-07-23 18:03:47,519 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_14_25a1d7384f9c07f4866f.png media/images/t-SNE plot_14_25a1d7384f9c07f4866f.png
+2023-07-23 18:03:47,520 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_40_1da6301a6c219e044650.png media/images/t-SNE plot_40_1da6301a6c219e044650.png
+2023-07-23 18:03:47,520 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_24_e86e086b2f54877bd5d7.png media/images/t-SNE plot_24_e86e086b2f54877bd5d7.png
+2023-07-23 18:03:47,520 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_12_412a7469e081af809b2e.png media/images/t-SNE plot_12_412a7469e081af809b2e.png
+2023-07-23 18:03:47,520 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_28_2fbc47ecd360d59e7a9c.png media/images/t-SNE plot_28_2fbc47ecd360d59e7a9c.png
+2023-07-23 18:03:47,520 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_73_78ea332c4a73c994620b.png media/images/t-SNE plot_73_78ea332c4a73c994620b.png
+2023-07-23 18:03:47,520 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_16_7c7d44e61b2b2bddf088.png media/images/t-SNE plot_16_7c7d44e61b2b2bddf088.png
+2023-07-23 18:03:47,520 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_53_977260763b9495c4083e.png media/images/t-SNE plot_53_977260763b9495c4083e.png
+2023-07-23 18:03:47,520 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_66_42effad0bc4f39f6a5de.png media/images/t-SNE plot_66_42effad0bc4f39f6a5de.png
+2023-07-23 18:03:47,520 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_22_0a1b335a8f58096dcd02.png media/images/t-SNE plot_22_0a1b335a8f58096dcd02.png
+2023-07-23 18:03:47,520 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_56_9237544d1923443eb580.png media/images/t-SNE plot_56_9237544d1923443eb580.png
+2023-07-23 18:03:47,520 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_74_29b163834b6726a83ec6.png media/images/t-SNE plot_74_29b163834b6726a83ec6.png
+2023-07-23 18:03:47,520 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_6_38d75a1f9cac8c18fee2.png media/images/t-SNE plot_6_38d75a1f9cac8c18fee2.png
+2023-07-23 18:03:47,520 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_46_e27088caaa144a52bf09.png media/images/t-SNE plot_46_e27088caaa144a52bf09.png
+2023-07-23 18:03:47,520 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_36_1557a5c21e6437e2a4d4.png media/images/t-SNE plot_36_1557a5c21e6437e2a4d4.png
+2023-07-23 18:03:47,520 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_64_c519554e8800d3291d11.png media/images/t-SNE plot_64_c519554e8800d3291d11.png
+2023-07-23 18:03:47,520 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_27_878414a9fc711a52fe93.png media/images/t-SNE plot_27_878414a9fc711a52fe93.png
+2023-07-23 18:03:47,521 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_29_094d997516ae1b5ce537.png media/images/t-SNE plot_29_094d997516ae1b5ce537.png
+2023-07-23 18:03:47,521 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_72_f63cc153707840d63994.png media/images/t-SNE plot_72_f63cc153707840d63994.png
+2023-07-23 18:03:47,521 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_62_8a90e43c4bd49f406eda.png media/images/t-SNE plot_62_8a90e43c4bd49f406eda.png
+2023-07-23 18:03:47,521 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_17_9d7d31ddf0ed85179e70.png media/images/t-SNE plot_17_9d7d31ddf0ed85179e70.png
+2023-07-23 18:03:47,521 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_15_2b29c6dd955ed50e104c.png media/images/t-SNE plot_15_2b29c6dd955ed50e104c.png
+2023-07-23 18:03:47,521 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_59_d406f46beecc4726ce27.png media/images/t-SNE plot_59_d406f46beecc4726ce27.png
+2023-07-23 18:03:47,521 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_4_fcd17af98fbacefc0606.png media/images/t-SNE plot_4_fcd17af98fbacefc0606.png
+2023-07-23 18:03:47,521 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_26_8bac8ecc7fc9d547086b.png media/images/t-SNE plot_26_8bac8ecc7fc9d547086b.png
+2023-07-23 18:03:47,521 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_57_df27143bc04d6edfdeb8.png media/images/t-SNE plot_57_df27143bc04d6edfdeb8.png
+2023-07-23 18:03:47,521 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_33_23b17bad85271c4c0bf2.png media/images/t-SNE plot_33_23b17bad85271c4c0bf2.png
+2023-07-23 18:03:47,521 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_60_c3c7e687007e3b191b3a.png media/images/t-SNE plot_60_c3c7e687007e3b191b3a.png
+2023-07-23 18:03:47,521 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_43_917a36086679282eafc8.png media/images/t-SNE plot_43_917a36086679282eafc8.png
+2023-07-23 18:03:47,521 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_23_e1554378fe6ea6e83a20.png media/images/t-SNE plot_23_e1554378fe6ea6e83a20.png
+2023-07-23 18:03:47,521 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_25_53d3e308b409c760d3e6.png media/images/t-SNE plot_25_53d3e308b409c760d3e6.png
+2023-07-23 18:03:47,521 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_7_25796e7353968b8811db.png media/images/t-SNE plot_7_25796e7353968b8811db.png
+2023-07-23 18:03:47,521 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_52_f50d4292208e8b53fc64.png media/images/t-SNE plot_52_f50d4292208e8b53fc64.png
+2023-07-23 18:03:47,522 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_39_1315853f357d87e5482c.png media/images/t-SNE plot_39_1315853f357d87e5482c.png
+2023-07-23 18:03:47,522 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_19_fa470b1919f3cc61c717.png media/images/t-SNE plot_19_fa470b1919f3cc61c717.png
+2023-07-23 18:03:47,522 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_32_8f996f93290cf2a2661b.png media/images/t-SNE plot_32_8f996f93290cf2a2661b.png
+2023-07-23 18:03:47,522 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_70_278cfee5bf5738dfca09.png media/images/t-SNE plot_70_278cfee5bf5738dfca09.png
+2023-07-23 18:03:47,522 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_55_e44af29c6833b5958426.png media/images/t-SNE plot_55_e44af29c6833b5958426.png
+2023-07-23 18:03:47,522 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_34_a16ca0147709bcbfe124.png media/images/t-SNE plot_34_a16ca0147709bcbfe124.png
+2023-07-23 18:03:47,522 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_65_7a39b83f7224408612ec.png media/images/t-SNE plot_65_7a39b83f7224408612ec.png
+2023-07-23 18:03:47,522 INFO    SenderThread:17285 [dir_watcher.py:finish():403] scan save: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/media/images/t-SNE plot_58_fb33483994abb6baac83.png media/images/t-SNE plot_58_fb33483994abb6baac83.png
+2023-07-23 18:03:47,522 INFO    SenderThread:17285 [sender.py:transition_state():602] send defer: 10
+2023-07-23 18:03:47,522 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: poll_exit
+2023-07-23 18:03:47,523 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: defer
+2023-07-23 18:03:47,523 INFO    HandlerThread:17285 [handler.py:handle_request_defer():170] handle defer: 10
+2023-07-23 18:03:47,523 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: defer
+2023-07-23 18:03:47,523 INFO    SenderThread:17285 [sender.py:send_request_defer():598] handle sender defer: 10
+2023-07-23 18:03:47,523 INFO    SenderThread:17285 [file_pusher.py:finish():159] shutting down file pusher
+2023-07-23 18:03:47,663 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: poll_exit
+2023-07-23 18:03:47,663 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: poll_exit
+2023-07-23 18:03:48,079 INFO    wandb-upload_1:17285 [upload_job.py:push():133] Uploaded file /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/output.log
+2023-07-23 18:03:48,102 INFO    wandb-upload_9:17285 [upload_job.py:push():133] Uploaded file /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/config.yaml
+2023-07-23 18:03:48,103 INFO    wandb-upload_6:17285 [upload_job.py:push():133] Uploaded file /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/wandb-summary.json
+2023-07-23 18:03:48,118 INFO    wandb-upload_2:17285 [upload_job.py:push():133] Uploaded file /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/files/requirements.txt
+2023-07-23 18:03:48,318 INFO    Thread-11 (_thread_body):17285 [sender.py:transition_state():602] send defer: 11
+2023-07-23 18:03:48,319 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: defer
+2023-07-23 18:03:48,319 INFO    HandlerThread:17285 [handler.py:handle_request_defer():170] handle defer: 11
+2023-07-23 18:03:48,319 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: defer
+2023-07-23 18:03:48,319 INFO    SenderThread:17285 [sender.py:send_request_defer():598] handle sender defer: 11
+2023-07-23 18:03:48,320 INFO    SenderThread:17285 [file_pusher.py:join():164] waiting for file pusher
+2023-07-23 18:03:48,320 INFO    SenderThread:17285 [sender.py:transition_state():602] send defer: 12
+2023-07-23 18:03:48,320 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: defer
+2023-07-23 18:03:48,320 INFO    HandlerThread:17285 [handler.py:handle_request_defer():170] handle defer: 12
+2023-07-23 18:03:48,320 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: defer
+2023-07-23 18:03:48,320 INFO    SenderThread:17285 [sender.py:send_request_defer():598] handle sender defer: 12
+2023-07-23 18:03:48,664 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: poll_exit
+2023-07-23 18:03:49,130 INFO    SenderThread:17285 [sender.py:transition_state():602] send defer: 13
+2023-07-23 18:03:49,131 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: poll_exit
+2023-07-23 18:03:49,131 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: defer
+2023-07-23 18:03:49,131 INFO    HandlerThread:17285 [handler.py:handle_request_defer():170] handle defer: 13
+2023-07-23 18:03:49,132 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: defer
+2023-07-23 18:03:49,132 INFO    SenderThread:17285 [sender.py:send_request_defer():598] handle sender defer: 13
+2023-07-23 18:03:49,132 INFO    SenderThread:17285 [sender.py:transition_state():602] send defer: 14
+2023-07-23 18:03:49,132 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: defer
+2023-07-23 18:03:49,132 INFO    HandlerThread:17285 [handler.py:handle_request_defer():170] handle defer: 14
+2023-07-23 18:03:49,132 DEBUG   SenderThread:17285 [sender.py:send():369] send: final
+2023-07-23 18:03:49,132 DEBUG   SenderThread:17285 [sender.py:send():369] send: footer
+2023-07-23 18:03:49,132 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: defer
+2023-07-23 18:03:49,132 INFO    SenderThread:17285 [sender.py:send_request_defer():598] handle sender defer: 14
+2023-07-23 18:03:49,133 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: poll_exit
+2023-07-23 18:03:49,133 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: server_info
+2023-07-23 18:03:49,134 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: get_summary
+2023-07-23 18:03:49,134 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: sampled_history
+2023-07-23 18:03:49,135 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: poll_exit
+2023-07-23 18:03:49,135 DEBUG   SenderThread:17285 [sender.py:send_request():396] send_request: server_info
+2023-07-23 18:03:49,623 DEBUG   HandlerThread:17285 [handler.py:handle_request():144] handle_request: shutdown
+2023-07-23 18:03:49,623 INFO    HandlerThread:17285 [handler.py:finish():854] shutting down handler
+2023-07-23 18:03:50,135 INFO    WriterThread:17285 [datastore.py:close():298] close: /content/openset_domain_adaptation/wandb/run-20230723_180022-2cu26tzk/run-2cu26tzk.wandb
+2023-07-23 18:03:50,622 INFO    SenderThread:17285 [sender.py:finish():1526] shutting down sender
+2023-07-23 18:03:50,622 INFO    SenderThread:17285 [file_pusher.py:finish():159] shutting down file pusher
+2023-07-23 18:03:50,622 INFO    SenderThread:17285 [file_pusher.py:join():164] waiting for file pusher
