@@ -1,0 +1,15 @@
+model config:
+baseline_or_proposed:  baseline
+adaptation_direction:  hmdb2ucf
+Epoch:  0
+pred_labels:  tensor([4, 4, 4, 4, 4, 4, 4, 4], device='cuda:0')
+pred_labels:  tensor([4, 4, 4, 4, 4, 4, 4, 4], device='cuda:0')
+pred_labels:  tensor([4, 4, 5, 5, 4, 4, 4, 4], device='cuda:0')
+pred_labels:  tensor([5, 4, 5, 4, 5, 5, 2, 5], device='cuda:0')
+pred_labels:  tensor([5, 5, 5, 5, 5, 5, 5, 4], device='cuda:0')
+pred_labels:  tensor([5, 2, 5, 2, 5, 2, 5, 5], device='cuda:0')
+pred_labels:  tensor([2, 2, 2, 5, 2, 2, 2, 5], device='cuda:0')
+pred_labels:  tensor([2, 5, 2, 2, 2, 2, 2, 2], device='cuda:0')
+pred_labels:  tensor([2, 2, 2, 2, 2, 2, 2, 2], device='cuda:0')
+pred_labels:  tensor([2, 2, 2, 2, 2, 2, 2, 5], device='cuda:0')
+pred_labels:

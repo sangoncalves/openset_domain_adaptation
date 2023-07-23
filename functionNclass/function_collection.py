@@ -63,6 +63,11 @@ def save_best_model(h_score, model, config, entropy_val):
         return
 
     model_list = [m for m in os.listdir(model_dir) if config['adaptation_direction'] and config['baseline_or_proposed'] and config['seed'] in m]
+    if(model_list==[]):
+      torch.save(model.state_dict(), model_path)
+      print(f"No previous model saved. Saving model with seed {config['seed']}, h_score {h_score}, entropy {entropy_val:.4f}, direction {config['adaptation_direction']}, and type {config['baseline_or_proposed']}")
+      return model_name
+
     # If there is a saved model, load it and compare the h_scores
     for file in model_list:
         saved_h_score = float(file.split('_')[-1][:-4])
@@ -137,7 +142,7 @@ def baseline(config, source_n_target_train_loader, target_test_loader, entropy_l
             loss.backward()
             optimizer.step()
             pred_labels = torch.argmax(pred_source, dim=1)
-            print('pred_labels: ', pred_labels)
+            # print('pred_labels: ', pred_labels)
             train_loss += loss.item() * X_source.size(0)
             train_total += y_source.size(0)
             train_correct += (pred_labels == y_source).sum().item()
