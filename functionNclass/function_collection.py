@@ -111,7 +111,7 @@ def plot_tsne(features, labels, epoch, entropy_val, config, filename, perplexity
 
 
 
-def baseline(config, source_n_target_train_loader, target_test_loader, entropy_val, filename, run_id):
+def baseline(config, source_n_target_train_loader, target_test_loader, entropy_list, filename, run_id):
   model = config["model"]
   criterion = config["criterion"]
   device = config["device"]
