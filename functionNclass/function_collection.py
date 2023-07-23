@@ -44,7 +44,7 @@ def set_seed(seed):
     if torch.cuda.is_available():
         torch.cuda.manual_seed_all(seed)
 
-def save_best_model(h_score, model, config, entropy_val):
+def save_best_model(h_score, model, config, entropy_val, str(epoch)):
     # Get the file path of the saved model
     model_path = config["model_dir"]
     if(config['baseline_or_proposed']=='baseline'):
@@ -53,8 +53,10 @@ def save_best_model(h_score, model, config, entropy_val):
       model_dir = os.path.join(model_path, 'proposed')
 
     os.makedirs(model_dir, exist_ok=True)
-    model_name = f"model_entropy_{entropy_val:.4f}_hscore_{h_score:.4f}_direction_{config['adaptation_direction']}_{config['baseline_or_proposed']}_seed_{config['seed']}.pth"
+    model_name = f"model_entropy_{entropy_val:.4f}_hscore_{h_score:.4f}_direction_{config['adaptation_direction']}_{config['baseline_or_proposed']}_seed_{config['seed']}_epoch_{epoch}.pth"
     model_path = os.path.join(model_dir, model_name)
+    model_id = model_name + '_' + config['run_id']
+    f = os.path.join("/content/drive/MyDrive/datasets-thesis/runs", model_id)
 
     # If there's no saved model yet, save the current model
     if not os.listdir(model_dir):
@@ -66,6 +68,8 @@ def save_best_model(h_score, model, config, entropy_val):
 
     if(model_list==[]):
       torch.save(model.state_dict(), model_path)
+      if not os.path.isdir(f):
+        os.mkdir(f)
       print(f"No previous model saved. Saving model with seed {config['seed']}, h_score {h_score}, entropy {entropy_val:.4f}, direction {config['adaptation_direction']}, and type {config['baseline_or_proposed']}")
       return model_name
 
@@ -77,6 +81,8 @@ def save_best_model(h_score, model, config, entropy_val):
             torch.save(model.state_dict(), model_path)
             # Remove the saved model with lower h_score
             os.remove(os.path.join(model_dir, file))
+            if not os.path.isdir(f):
+              os.mkdir(f)
 
 
             print(f"Previous model with seed {config['seed']}, h_score {saved_h_score}, entropy {entropy_val:.4f}, direction {config['adaptation_direction']}, and type {config['baseline_or_proposed']} replaced with model with h_score: {h_score} nd entropy {entropy_val:.4f} ")
@@ -218,6 +224,9 @@ def baseline(config, source_n_target_train_loader, target_test_loader, entropy_l
             if(model_name!='no_model'):
               model_id = model_name + '_' + run_id
               filename = os.path.join("/content/drive/MyDrive/datasets-thesis/runs", model_id)
+              if(not os.path.exists(filename)):
+                os.mkdir(filename)
+              
 
             wandb.log({
                 'Epoch': epoch,

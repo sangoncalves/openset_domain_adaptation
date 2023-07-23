@@ -1,0 +1,5 @@
+model config:
+baseline_or_proposed:  baseline
+adaptation_direction:  hmdb2ucf
+Epoch:  0
+No previous model saved. Saving model with seed 42, h_score 0.3191882126167766, entropy 0.0900, direction hmdb2ucf, and type baseline
