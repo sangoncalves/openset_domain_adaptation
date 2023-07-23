@@ -189,7 +189,7 @@ def baseline(config, source_n_target_train_loader, target_test_loader, entropy_l
 
                 probs = F.softmax(pred_target, dim=1)
                 entropy = torch.sum(-probs * torch.log(probs + 1e-6), dim=1)
-                print('entropy: ', entropy)
+                # print('entropy: ', entropy)
                 entropy_values.extend(entropy.tolist())
                 pred_labels = torch.argmax(pred_target, dim=1)
                 pred_labels_entrop = pred_labels.clone()
@@ -713,7 +713,7 @@ def eval_model(config, target_test_loader, entropy_val, filename, epoch):
 
 
 
-def plot_confusion_matrix(labels_all, predicted_all, all_classes, epoch, entropy_val):
+def plot_confusion_matrix(labels_all, predicted_all, all_classes, epoch, entropy_val, filename):
     cm = confusion_matrix(labels_all, predicted_all, labels=all_classes)
     df_cm = pd.DataFrame(cm, index=all_classes, columns=all_classes)
     plt.figure(figsize=(10,7))
@@ -721,9 +721,10 @@ def plot_confusion_matrix(labels_all, predicted_all, all_classes, epoch, entropy
     plt.xlabel('Predicted')
     plt.ylabel('Actual')
     plt.title('Confusion Matrix, Entropy: {}'.format(entropy_val))
-    plt.savefig("confusion_matrix.png")
+    cm_name = f'{filename}/confusion_matrix_{entropy_val}.png'
+    plt.savefig(cm_name)
     plt.close()
-    wandb.log({"confusion_matrix": wandb.Image("confusion_matrix.png")})
+    wandb.log({"confusion_matrix": wandb.Image(cm_name)})
 
 
 # def plot_confusion_matrix(y_true, y_pred, class_names):
