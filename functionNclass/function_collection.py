@@ -230,7 +230,7 @@ def baseline(config, source_n_target_train_loader, target_test_loader, entropy_l
             })
             all_classes = sorted(set(int(val) for val in config["target_test_classes"].values()))
             plot_confusion_matrix(labels_all, predicted_all, all_classes, epoch, entropy_val, filename)
-            wandb.log({"wandb_confusion_matrix": wandb.Image(f"{filename}/confusion_matrix_epoch_{epoch}.png")})
+            wandb.log({"wandb_confusion_matrix": wandb.Image(f"{filename}/confusion_matrix_entropy_val_{entropy_val}_epoch_{epoch}.png")})
 
             print("#################### - EVALUATION - ##########################")
             print(f'Entropy: {entropy_val}')
@@ -721,7 +721,7 @@ def plot_confusion_matrix(labels_all, predicted_all, all_classes, epoch, entropy
     plt.xlabel('Predicted')
     plt.ylabel('Actual')
     plt.title('Confusion Matrix, Entropy: {}'.format(entropy_val))
-    cm_name = f'{filename}/confusion_matrix_{entropy_val}.png'
+    cm_name = f'{filename}/confusion_matrix_entropy_val_{entropy_val}_epoch_{epoch}.png'
     plt.savefig(cm_name)
     plt.close()
     wandb.log({"confusion_matrix": wandb.Image(cm_name)})

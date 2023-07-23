@@ -1,0 +1,5 @@
+model config:
+baseline_or_proposed:  baseline
+adaptation_direction:  hmdb2ucf
+Epoch:  0
+Model not saved, h_score: 0.3104385919976405 is not better than existing model's h_score: 42.0, entropy 0.0900, direction hmdb2ucf, and type baseline
