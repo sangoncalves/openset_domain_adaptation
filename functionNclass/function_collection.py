@@ -44,7 +44,7 @@ def set_seed(seed):
     if torch.cuda.is_available():
         torch.cuda.manual_seed_all(seed)
 
-def save_best_model(h_score, model, config, entropy_val, str(epoch)):
+def save_best_model(h_score, model, config, entropy_val, epoch):
     # Get the file path of the saved model
     model_path = config["model_dir"]
     if(config['baseline_or_proposed']=='baseline'):
@@ -53,7 +53,7 @@ def save_best_model(h_score, model, config, entropy_val, str(epoch)):
       model_dir = os.path.join(model_path, 'proposed')
 
     os.makedirs(model_dir, exist_ok=True)
-    model_name = f"model_entropy_{entropy_val:.4f}_hscore_{h_score:.4f}_direction_{config['adaptation_direction']}_{config['baseline_or_proposed']}_seed_{config['seed']}_epoch_{epoch}.pth"
+    model_name = f"model_entropy_{entropy_val:.4f}_hscore_{h_score:.4f}_direction_{config['adaptation_direction']}_{config['baseline_or_proposed']}_seed_{config['seed']}_epoch_{str(epoch)}.pth"
     model_path = os.path.join(model_dir, model_name)
     model_id = model_name + '_' + config['run_id']
     f = os.path.join("/content/drive/MyDrive/datasets-thesis/runs", model_id)
