@@ -62,7 +62,8 @@ def save_best_model(h_score, model, config, entropy_val):
         print(f"Model saved with h_score: {h_score}")
         return
 
-    model_list = [m for m in os.listdir(model_dir) if config['adaptation_direction'] and config['baseline_or_proposed'] and str(config['seed']) in m]
+    model_list = [m for m in os.listdir(model_dir) if all(keyword in m for keyword in [config['adaptation_direction'], config['baseline_or_proposed'], str(config['seed'])])]
+
     if(model_list==[]):
       torch.save(model.state_dict(), model_path)
       print(f"No previous model saved. Saving model with seed {config['seed']}, h_score {h_score}, entropy {entropy_val:.4f}, direction {config['adaptation_direction']}, and type {config['baseline_or_proposed']}")

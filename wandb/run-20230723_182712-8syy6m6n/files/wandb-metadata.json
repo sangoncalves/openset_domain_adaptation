@@ -1,0 +1,105 @@
+{
+    "os": "Linux-5.15.109+-x86_64-with-glibc2.35",
+    "python": "3.10.6",
+    "heartbeatAt": "2023-07-23T18:27:16.581376",
+    "startedAt": "2023-07-23T18:27:12.785683",
+    "docker": null,
+    "cuda": null,
+    "args": null,
+    "state": "running",
+    "program": "OpenDomainAdaptation_Thesisv4.ipynb",
+    "colab": "https://colab.research.google.com/notebook#fileId=1AHs9TgV4WiWxx-aejdHJfHj5hkpO8WPT",
+    "git": {
+        "remote": "https://github.com/sangoncalves/openset_domain_adaptation.git",
+        "commit": "8032485d68de04e2b2ad832335ca02296b8c9647"
+    },
+    "email": "sander.martinsgoncalves@gmail.com",
+    "root": "/content/openset_domain_adaptation",
+    "host": "44b8f30a5b00",
+    "username": "root",
+    "executable": "/usr/bin/python3",
+    "cpu_count": 6,
+    "cpu_count_logical": 12,
+    "cpu_freq": {
+        "current": 2200.158,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2200.158,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2200.158,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2200.158,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2200.158,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2200.158,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2200.158,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2200.158,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2200.158,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2200.158,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2200.158,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2200.158,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2200.158,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "total": 166.77415084838867,
+        "used": 46.688232421875
+    },
+    "gpu": "NVIDIA A100-SXM4-40GB",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA A100-SXM4-40GB",
+            "memory_total": 42949672960
+        }
+    ],
+    "memory": {
+        "total": 83.48074722290039
+    }
+}
