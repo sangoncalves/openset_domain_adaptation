@@ -45,50 +45,46 @@ def set_seed(seed):
         torch.cuda.manual_seed_all(seed)
 
 def save_best_model(h_score, model, config, entropy_val, epoch):
-    # Get the file path of the saved model
     model_path = config["model_dir"]
     if(config['baseline_or_proposed']=='baseline'):
       model_dir = os.path.join(model_path, 'baseline')
     else:
       model_dir = os.path.join(model_path, 'proposed')
-
+      
     os.makedirs(model_dir, exist_ok=True)
-    model_name = f"model_entropy_{entropy_val:.4f}_hscore_{h_score:.4f}_direction_{config['adaptation_direction']}_{config['baseline_or_proposed']}_seed_{config['seed']}_epoch_{str(epoch)}.pth"
-    model_path = os.path.join(model_dir, model_name)
-    model_id = model_name + '_' + config['run_id']
-    f = os.path.join("/content/drive/MyDrive/datasets-thesis/runs", model_id)
 
-    # If there's no saved model yet, save the current model
-    if not os.listdir(model_dir):
-        torch.save(model.state_dict(), model_path)
-        print(f"Model saved with h_score: {h_score}")
-        return
+    entropy_folder = f"direction_{config['adaptation_direction']}_seed_{config['seed']}_entropy_{entropy_val:.4f}"
+    model_name = f"model_hscore_{h_score:.4f}_epoch_{epoch}.pth"
+    entropy_dir = os.path.join(model_dir, entropy_folder)
+    tmp_entropy_dir = os.path.join(model_dir, entropy_folder+"_tmp")
+    
+    # Create directory if not exists
+    os.makedirs(entropy_dir, exist_ok=True)
+    os.makedirs(tmp_entropy_dir, exist_ok=True)
+    
+    model_path = os.path.join(tmp_entropy_dir, model_name)
+    
+    torch.save(model.state_dict(), model_path)
+    print(f"Model of epoch {epoch} saved in temp folder with h_score: {h_score}")
 
-    model_list = [m for m in os.listdir(model_dir) if all(keyword in m for keyword in [config['adaptation_direction'], config['baseline_or_proposed'], str(config['seed'])])]
+    # After training ends and before validation, select best model and replace previous entropy folder
+    if epoch == config['num_epochs'] - 1:
+        tmp_model_list = [m for m in os.listdir(tmp_entropy_dir)]
+        prev_model_list = [m for m in os.listdir(entropy_dir)]
+        
+        # Extract h_scores from model names
+        tmp_h_scores = [float(model.split('_')[2]) for model in tmp_model_list]
+        prev_h_scores = [float(model.split('_')[2]) for model in prev_model_list] if prev_model_list else []
+        
+        # Check if there is a better model in the tmp folder
+        if max(tmp_h_scores, default=float('-inf')) > max(prev_h_scores, default=float('-inf')):
+            shutil.rmtree(entropy_dir)
+            os.rename(tmp_entropy_dir, entropy_dir)
+            print(f"Replaced model in {entropy_dir} with model from temp folder")
+        else:
+            shutil.rmtree(tmp_entropy_dir)
+            print(f"No improvement in h_score, temp folder removed")
 
-    if(model_list==[]):
-      torch.save(model.state_dict(), model_path)
-      if not os.path.isdir(f):
-        os.mkdir(f)
-      print(f"No previous model saved. Saving model with seed {config['seed']}, h_score {h_score}, entropy {entropy_val:.4f}, direction {config['adaptation_direction']}, and type {config['baseline_or_proposed']}")
-      return model_name
-
-    # If there is a saved model, load it and compare the h_scores
-    for file in model_list:
-        saved_h_score = float(file.split('_')[-1][:-4])
-        if h_score > saved_h_score:
-            # Save the current model with higher h_score
-            torch.save(model.state_dict(), model_path)
-            # Remove the saved model with lower h_score
-            os.remove(os.path.join(model_dir, file))
-            if not os.path.isdir(f):
-              os.mkdir(f)
-
-
-            print(f"Previous model with seed {config['seed']}, h_score {saved_h_score}, entropy {entropy_val:.4f}, direction {config['adaptation_direction']}, and type {config['baseline_or_proposed']} replaced with model with h_score: {h_score} nd entropy {entropy_val:.4f} ")
-            return model_name
-    print(f"Model not saved, h_score: {h_score} is not better than existing model's h_score: {saved_h_score}, entropy {entropy_val:.4f}, direction {config['adaptation_direction']}, and type {config['baseline_or_proposed']}")
-    return 'no_model'
 
 
 def plot_tsne(features, labels, epoch, entropy_val, config, filename, perplexity=30):
