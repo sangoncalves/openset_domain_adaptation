@@ -50,40 +50,41 @@ def save_best_model(h_score, model, config, entropy_val, epoch):
       model_dir = os.path.join(model_path, 'baseline')
     else:
       model_dir = os.path.join(model_path, 'proposed')
-      
+
     os.makedirs(model_dir, exist_ok=True)
 
-    entropy_folder = f"direction_{config['adaptation_direction']}_seed_{config['seed']}_entropy_{entropy_val:.4f}"
-    model_name = f"model_hscore_{h_score:.4f}_epoch_{epoch}.pth"
-    entropy_dir = os.path.join(model_dir, entropy_folder)
-    tmp_entropy_dir = os.path.join(model_dir, entropy_folder+"_tmp")
-    
-    # Create directory if not exists
-    os.makedirs(entropy_dir, exist_ok=True)
-    os.makedirs(tmp_entropy_dir, exist_ok=True)
-    
-    model_path = os.path.join(tmp_entropy_dir, model_name)
-    
-    torch.save(model.state_dict(), model_path)
-    print(f"Model of epoch {epoch} saved in temp folder with h_score: {h_score}")
+    model_name = f"model_entropy_{entropy_val:.4f}_hscore_{h_score:.4f}_direction_{config['adaptation_direction']}_{config['baseline_or_proposed']}_seed_{config['seed']}_epoch_{str(epoch)}.pth"
 
-    # After training ends and before validation, select best model and replace previous entropy folder
-    if epoch == config['num_epochs'] - 1:
-        tmp_model_list = [m for m in os.listdir(tmp_entropy_dir)]
-        prev_model_list = [m for m in os.listdir(entropy_dir)]
-        
-        # Extract h_scores from model names
-        tmp_h_scores = [float(model.split('_')[2]) for model in tmp_model_list]
-        prev_h_scores = [float(model.split('_')[2]) for model in prev_model_list] if prev_model_list else []
-        
-        # Check if there is a better model in the tmp folder
-        if max(tmp_h_scores, default=float('-inf')) > max(prev_h_scores, default=float('-inf')):
-            shutil.rmtree(entropy_dir)
-            os.rename(tmp_entropy_dir, entropy_dir)
-            print(f"Replaced model in {entropy_dir} with model from temp folder")
-        else:
-            shutil.rmtree(tmp_entropy_dir)
-            print(f"No improvement in h_score, temp folder removed")
+    current_run_tmp_dir = os.path.join(model_dir, f"{config['adaptation_direction']}_seed_{config['seed']}_entropy_{entropy_val}_tmp")
+    os.makedirs(current_run_tmp_dir, exist_ok=True)
+    
+    model_tmp_path = os.path.join(current_run_tmp_dir, model_name)
+    torch.save(model.state_dict(), model_tmp_path)
+
+    current_run_dir = os.path.join(model_dir, f"{config['adaptation_direction']}_seed_{config['seed']}_entropy_{entropy_val}")
+    
+    if not os.path.exists(current_run_dir):
+        os.rename(current_run_tmp_dir, current_run_dir)
+        print(f"First model saved with seed {config['seed']}, h_score {h_score}, entropy {entropy_val:.4f}, direction {config['adaptation_direction']}, and type {config['baseline_or_proposed']}")
+        return model_name
+    
+    saved_model_list = [m for m in os.listdir(current_run_dir) if m.endswith(".pth")]
+    saved_model_list_tmp = [m for m in os.listdir(current_run_tmp_dir) if m.endswith(".pth")]
+    
+    max_h_score_saved = max([float(m.split('_')[4]) for m in saved_model_list]) if saved_model_list else -1
+    max_h_score_tmp = max([float(m.split('_')[4]) for m in saved_model_list_tmp]) if saved_model_list_tmp else -1
+
+    if max_h_score_tmp > max_h_score_saved:
+        shutil.rmtree(current_run_dir)
+        os.rename(current_run_tmp_dir, current_run_dir)
+        print(f"Model saved with seed {config['seed']}, h_score {h_score}, entropy {entropy_val:.4f}, direction {config['adaptation_direction']}, and type {config['baseline_or_proposed']}")
+        return model_name
+    else:
+        shutil.rmtree(current_run_tmp_dir)
+        print(f"Model not saved, h_score: {h_score} is not better than existing model's h_score: {max_h_score_saved}, entropy {entropy_val:.4f}, direction {config['adaptation_direction']}, and type {config['baseline_or_proposed']}")
+        return 'no_model'
+
+
 
 
 

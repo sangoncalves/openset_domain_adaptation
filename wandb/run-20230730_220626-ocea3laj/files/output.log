@@ -1,0 +1,5 @@
+model config:
+baseline_or_proposed:  baseline
+adaptation_direction:  hmdb2ucf
+Epoch:  0
+Model of epoch 0 saved in temp folder with h_score: 0.32249208680938335
