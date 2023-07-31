@@ -47,9 +47,9 @@ def set_seed(seed):
 def save_best_model(h_score, model, config, entropy_val, epoch):
     model_path = config["model_dir"]
     if(config['baseline_or_proposed']=='baseline'):
-      model_dir = os.path.join(model_path, 'baseline')
+        model_dir = os.path.join(model_path, 'baseline')
     else:
-      model_dir = os.path.join(model_path, 'proposed')
+        model_dir = os.path.join(model_path, 'proposed')
 
     os.makedirs(model_dir, exist_ok=True)
 
@@ -57,32 +57,30 @@ def save_best_model(h_score, model, config, entropy_val, epoch):
 
     current_run_tmp_dir = os.path.join(model_dir, f"{config['adaptation_direction']}_seed_{config['seed']}_entropy_{entropy_val}_tmp")
     os.makedirs(current_run_tmp_dir, exist_ok=True)
-    
+
     model_tmp_path = os.path.join(current_run_tmp_dir, model_name)
     torch.save(model.state_dict(), model_tmp_path)
 
     current_run_dir = os.path.join(model_dir, f"{config['adaptation_direction']}_seed_{config['seed']}_entropy_{entropy_val}")
-    
-    if not os.path.exists(current_run_dir):
-        os.rename(current_run_tmp_dir, current_run_dir)
-        print(f"First model saved with seed {config['seed']}, h_score {h_score}, entropy {entropy_val:.4f}, direction {config['adaptation_direction']}, and type {config['baseline_or_proposed']}")
-        return model_name
-    
-    saved_model_list = [m for m in os.listdir(current_run_dir) if m.endswith(".pth")]
-    saved_model_list_tmp = [m for m in os.listdir(current_run_tmp_dir) if m.endswith(".pth")]
-    
-    max_h_score_saved = max([float(m.split('_')[4]) for m in saved_model_list]) if saved_model_list else -1
-    max_h_score_tmp = max([float(m.split('_')[4]) for m in saved_model_list_tmp]) if saved_model_list_tmp else -1
+    os.makedirs(current_run_dir, exist_ok=True)
 
-    if max_h_score_tmp > max_h_score_saved:
-        shutil.rmtree(current_run_dir)
-        os.rename(current_run_tmp_dir, current_run_dir)
-        print(f"Model saved with seed {config['seed']}, h_score {h_score}, entropy {entropy_val:.4f}, direction {config['adaptation_direction']}, and type {config['baseline_or_proposed']}")
-        return model_name
-    else:
-        shutil.rmtree(current_run_tmp_dir)
-        print(f"Model not saved, h_score: {h_score} is not better than existing model's h_score: {max_h_score_saved}, entropy {entropy_val:.4f}, direction {config['adaptation_direction']}, and type {config['baseline_or_proposed']}")
-        return 'no_model'
+    if epoch == config["num_epochs"] - 1:
+        saved_model_list = [m for m in os.listdir(current_run_dir) if m.endswith(".pth")]
+        saved_model_list_tmp = [m for m in os.listdir(current_run_tmp_dir) if m.endswith(".pth")]
+
+        max_h_score_saved = max([float(m.split('_')[4]) for m in saved_model_list]) if saved_model_list else -1
+        max_h_score_tmp = max([float(m.split('_')[4]) for m in saved_model_list_tmp]) if saved_model_list_tmp else -1
+
+        if max_h_score_tmp > max_h_score_saved:
+            shutil.rmtree(current_run_dir)
+            os.rename(current_run_tmp_dir, current_run_dir)
+            print(f"Model saved with seed {config['seed']}, h_score {h_score}, entropy {entropy_val:.4f}, direction {config['adaptation_direction']}, and type {config['baseline_or_proposed']}")
+        else:
+            shutil.rmtree(current_run_tmp_dir)
+            print(f"Model not saved, h_score: {h_score} is not better than existing model's h_score: {max_h_score_saved}, entropy {entropy_val:.4f}, direction {config['adaptation_direction']}, and type {config['baseline_or_proposed']}")
+            
+    return model_name
+
 
 
 

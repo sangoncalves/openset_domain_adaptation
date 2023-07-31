@@ -1,0 +1,65 @@
+2023-07-31 07:34:23,250 INFO    MainThread:598 [wandb_setup.py:_flush():76] Current SDK version is 0.15.7
+2023-07-31 07:34:23,250 INFO    MainThread:598 [wandb_setup.py:_flush():76] Configure stats pid to 598
+2023-07-31 07:34:23,250 INFO    MainThread:598 [wandb_setup.py:_flush():76] Loading settings from /root/.config/wandb/settings
+2023-07-31 07:34:23,251 INFO    MainThread:598 [wandb_setup.py:_flush():76] Loading settings from /content/openset_domain_adaptation/wandb/settings
+2023-07-31 07:34:23,251 INFO    MainThread:598 [wandb_setup.py:_flush():76] Loading settings from environment variables: {'api_key': '***REDACTED***'}
+2023-07-31 07:34:23,251 INFO    MainThread:598 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-07-31 07:34:23,251 INFO    MainThread:598 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2023-07-31 07:34:23,251 INFO    MainThread:598 [wandb_init.py:_log_setup():507] Logging user logs to /content/openset_domain_adaptation/wandb/run-20230731_073423-d8vfeveg/logs/debug.log
+2023-07-31 07:34:23,251 INFO    MainThread:598 [wandb_init.py:_log_setup():508] Logging internal logs to /content/openset_domain_adaptation/wandb/run-20230731_073423-d8vfeveg/logs/debug-internal.log
+2023-07-31 07:34:23,251 INFO    MainThread:598 [wandb_init.py:_jupyter_setup():453] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x7b23ed96cf70>
+2023-07-31 07:34:23,251 INFO    MainThread:598 [wandb_init.py:init():547] calling init triggers
+2023-07-31 07:34:23,251 INFO    MainThread:598 [wandb_init.py:init():554] wandb.init called with sweep_config: {}
+config: {}
+2023-07-31 07:34:23,251 INFO    MainThread:598 [wandb_init.py:init():596] starting backend
+2023-07-31 07:34:23,252 INFO    MainThread:598 [wandb_init.py:init():600] setting up manager
+2023-07-31 07:34:23,255 INFO    MainThread:598 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-07-31 07:34:23,256 INFO    MainThread:598 [wandb_init.py:init():606] backend started and connected
+2023-07-31 07:34:23,275 INFO    MainThread:598 [wandb_run.py:_label_probe_notebook():1234] probe notebook
+2023-07-31 07:34:25,828 INFO    MainThread:598 [wandb_init.py:init():697] updated telemetry
+2023-07-31 07:34:25,843 INFO    MainThread:598 [wandb_init.py:init():730] communicating run to backend with 60.0 second timeout
+2023-07-31 07:34:26,501 INFO    MainThread:598 [wandb_run.py:_on_init():2174] communicating current version
+2023-07-31 07:34:26,647 INFO    MainThread:598 [wandb_run.py:_on_init():2183] got version response 
+2023-07-31 07:34:26,647 INFO    MainThread:598 [wandb_init.py:init():781] starting run threads in backend
+2023-07-31 07:34:26,708 INFO    MainThread:598 [wandb_run.py:_console_start():2153] atexit reg
+2023-07-31 07:34:26,708 INFO    MainThread:598 [wandb_run.py:_redirect():2008] redirect: wrap_raw
+2023-07-31 07:34:26,709 INFO    MainThread:598 [wandb_run.py:_redirect():2073] Wrapping output streams.
+2023-07-31 07:34:26,709 INFO    MainThread:598 [wandb_run.py:_redirect():2098] Redirects installed.
+2023-07-31 07:34:26,710 INFO    MainThread:598 [wandb_init.py:init():822] run started, returning control to user process
+2023-07-31 07:34:26,716 INFO    MainThread:598 [wandb_config.py:__setitem__():151] config set num_epochs = 15 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7b23b4e53880>>
+2023-07-31 07:34:26,717 INFO    MainThread:598 [wandb_run.py:_config_callback():1282] config_cb num_epochs 15 None
+2023-07-31 07:34:26,717 INFO    MainThread:598 [wandb_config.py:__setitem__():151] config set criterion = CrossEntropyLoss() - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7b23b4e53880>>
+2023-07-31 07:34:26,717 INFO    MainThread:598 [wandb_run.py:_config_callback():1282] config_cb criterion CrossEntropyLoss() None
+2023-07-31 07:34:26,717 INFO    MainThread:598 [wandb_config.py:__setitem__():151] config set device = cuda - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7b23b4e53880>>
+2023-07-31 07:34:26,717 INFO    MainThread:598 [wandb_run.py:_config_callback():1282] config_cb device cuda None
+2023-07-31 07:34:26,718 INFO    MainThread:598 [wandb_config.py:__setitem__():151] config set batch_size = 8 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7b23b4e53880>>
+2023-07-31 07:34:26,718 INFO    MainThread:598 [wandb_run.py:_config_callback():1282] config_cb batch_size 8 None
+2023-07-31 07:34:26,718 INFO    MainThread:598 [wandb_config.py:__setitem__():151] config set dataset_choice = Giacomo - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7b23b4e53880>>
+2023-07-31 07:34:26,718 INFO    MainThread:598 [wandb_run.py:_config_callback():1282] config_cb dataset_choice Giacomo None
+2023-07-31 07:34:26,719 INFO    MainThread:598 [wandb_config.py:__setitem__():151] config set subset_flag = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7b23b4e53880>>
+2023-07-31 07:34:26,719 INFO    MainThread:598 [wandb_run.py:_config_callback():1282] config_cb subset_flag False None
+2023-07-31 07:34:26,719 INFO    MainThread:598 [wandb_config.py:__setitem__():151] config set obs_num = 30 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7b23b4e53880>>
+2023-07-31 07:34:26,719 INFO    MainThread:598 [wandb_run.py:_config_callback():1282] config_cb obs_num 30 None
+2023-07-31 07:34:26,720 INFO    MainThread:598 [wandb_config.py:__setitem__():151] config set num_classes_to_remove = 6 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7b23b4e53880>>
+2023-07-31 07:34:26,720 INFO    MainThread:598 [wandb_run.py:_config_callback():1282] config_cb num_classes_to_remove 6 None
+2023-07-31 07:34:26,720 INFO    MainThread:598 [wandb_config.py:__setitem__():151] config set g_open_set = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7b23b4e53880>>
+2023-07-31 07:34:26,720 INFO    MainThread:598 [wandb_run.py:_config_callback():1282] config_cb g_open_set False None
+2023-07-31 07:34:26,720 INFO    MainThread:598 [wandb_config.py:__setitem__():151] config set hard_reset = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7b23b4e53880>>
+2023-07-31 07:34:26,720 INFO    MainThread:598 [wandb_run.py:_config_callback():1282] config_cb hard_reset False None
+2023-07-31 07:34:26,721 INFO    MainThread:598 [wandb_config.py:__setitem__():151] config set class_validation = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7b23b4e53880>>
+2023-07-31 07:34:26,721 INFO    MainThread:598 [wandb_run.py:_config_callback():1282] config_cb class_validation False None
+2023-07-31 07:34:26,721 INFO    MainThread:598 [wandb_config.py:__setitem__():151] config set adaptation_direction = ucf2hmdb - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7b23b4e53880>>
+2023-07-31 07:34:26,721 INFO    MainThread:598 [wandb_run.py:_config_callback():1282] config_cb adaptation_direction ucf2hmdb None
+2023-07-31 07:34:26,722 INFO    MainThread:598 [wandb_config.py:__setitem__():151] config set baseline_or_proposed = baseline - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7b23b4e53880>>
+2023-07-31 07:34:26,722 INFO    MainThread:598 [wandb_run.py:_config_callback():1282] config_cb baseline_or_proposed baseline None
+2023-07-31 07:34:26,722 INFO    MainThread:598 [wandb_watch.py:watch():51] Watching
+2023-07-31 08:05:09,200 INFO    MainThread:598 [wandb_run.py:_finish():1888] finishing run sango/openset_domain_adaptation/d8vfeveg
+2023-07-31 08:05:09,200 INFO    MainThread:598 [jupyter.py:save_history():445] not saving jupyter history
+2023-07-31 08:05:09,200 INFO    MainThread:598 [jupyter.py:save_ipynb():373] not saving jupyter notebook
+2023-07-31 08:05:09,200 INFO    MainThread:598 [wandb_init.py:_jupyter_teardown():435] cleaning up jupyter logic
+2023-07-31 08:05:09,201 INFO    MainThread:598 [wandb_run.py:_atexit_cleanup():2122] got exitcode: 1
+2023-07-31 08:05:09,201 INFO    MainThread:598 [wandb_run.py:_restore():2105] restore
+2023-07-31 08:05:09,201 INFO    MainThread:598 [wandb_run.py:_restore():2111] restore done
+2023-07-31 08:05:13,585 INFO    MainThread:598 [wandb_run.py:_footer_history_summary_info():3475] rendering history
+2023-07-31 08:05:13,591 INFO    MainThread:598 [wandb_run.py:_footer_history_summary_info():3507] rendering summary
+2023-07-31 08:05:13,599 INFO    MainThread:598 [wandb_run.py:_footer_sync_info():3434] logging synced files
