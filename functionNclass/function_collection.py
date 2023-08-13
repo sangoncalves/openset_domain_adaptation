@@ -475,9 +475,10 @@ def create_datasets(config):
 
   if(config['g_open_set']==True): 
       num_classes_to_remove = config['num_classes_to_remove']
+force_remove_source_class = config['force_remove_source_class']
       source_old_mapping = map_classes_to_labels(path_source_train)
       target_old_mapping = map_classes_to_labels(path_target_train)
-      classes_to_remove, new_mapping, unknown_label = select_classes_to_remove_and_create_new_mapping(path_source_train,path_target_train, source_old_mapping, num_classes_to_remove)
+      classes_to_remove, new_mapping, unknown_label = select_classes_to_remove_and_create_new_mapping(path_source_train,path_target_train, source_old_mapping, num_classes_to_remove, force_remove_source_class)
       modify_labels_in_datasets(source_txt, target_train_txt, target_test_txt, source_old_mapping, target_old_mapping, new_mapping, classes_to_remove, unknown_label)
       #updating the class with new labels.
       source_n_target_train_dataset, target_test_dataset = prepare_datasets(path_source_train,
@@ -852,9 +853,28 @@ def get_classes_from_dir(dir_path):
     return sorted(os.listdir(dir_path))
 
 
-def select_classes_to_remove_and_create_new_mapping(source_train_dir, target_train_dir, old_mapping, num_classes_to_remove):
+def select_classes_to_remove_and_create_new_mapping(source_train_dir, target_train_dir, old_mapping, num_classes_to_remove, force_remove_source_class):
     all_classes_source = get_classes_from_dir(source_train_dir)
     all_classes_target = get_classes_from_dir(target_train_dir)
+    
+    if force_remove_source_class:
+      # Classes only in the source
+      only_in_source = list(set(all_classes_source) - set(all_classes_target))
+      # Classes common to both source and target
+      common_classes = list(set(all_classes_source).intersection(set(all_classes_target)))
+      
+      # Calculate the number of classes to remove from each category
+      num_from_source_only = round(0.1 * len(only_in_source)) if only_in_source else 0
+      num_from_both = round(0.1 * len(common_classes)) if common_classes else 0
+      
+      # Randomly select the desired number of classes from each category
+      classes_from_source_only = random.sample(only_in_source, num_from_source_only) if only_in_source else []
+      classes_from_both = random.sample(common_classes, num_from_both) if common_classes else []
+      
+      # Combine the two sets of selected classes
+      classes_to_remove = classes_from_source_only + classes_from_both
+
+
 
     # If classes in source and target are different, it's already an open set
     if set(all_classes_source) != set(all_classes_target):
