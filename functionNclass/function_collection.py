@@ -864,15 +864,30 @@ def select_classes_to_remove_and_create_new_mapping(source_train_dir, target_tra
       common_classes = list(set(all_classes_source).intersection(set(all_classes_target)))
       
       # Calculate the number of classes to remove from each category
-      num_from_source_only = round(0.1 * len(only_in_source)) if only_in_source else 0
-      num_from_both = round(0.1 * len(common_classes)) if common_classes else 0
+      half_classes_to_remove = num_classes_to_remove // 2
       
+      # If one category is empty, the entire num_classes_to_remove goes to the other category
+      num_from_source_only = half_classes_to_remove if only_in_source else num_classes_to_remove
+      num_from_both = half_classes_to_remove if common_classes else num_classes_to_remove
+      
+      # Adjust for rounding if num_classes_to_remove is odd
+      if num_classes_to_remove % 2 != 0:
+          if len(only_in_source) > len(common_classes):
+              num_from_source_only += 1
+          elif common_classes:  # Add extra to common_classes only if it's not empty
+              num_from_both += 1
+      
+      # Ensure we don't try to remove more classes than are available in each category
+      num_from_source_only = min(num_from_source_only, len(only_in_source))
+      num_from_both = min(num_from_both, len(common_classes))
+
       # Randomly select the desired number of classes from each category
       classes_from_source_only = random.sample(only_in_source, num_from_source_only) if only_in_source else []
       classes_from_both = random.sample(common_classes, num_from_both) if common_classes else []
       
       # Combine the two sets of selected classes
       classes_to_remove = classes_from_source_only + classes_from_both
+
 
 
 
