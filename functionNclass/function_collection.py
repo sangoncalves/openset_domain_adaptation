@@ -850,16 +850,19 @@ def select_classes_to_remove_and_create_new_mapping(source_train_dir, target_tra
     all_classes_source = get_classes_from_dir(source_train_dir)
     all_classes_target = get_classes_from_dir(target_train_dir)
     
+    # Start by handling forced removal from the source dataset
+    forcibly_removed_source_classes = []
     if force_remove_source_class:
       # Classes only in the source
       only_in_source = list(set(all_classes_source) - set(all_classes_target))
+      
       # Classes common to both source and target
       common_classes = list(set(all_classes_source).intersection(set(all_classes_target)))
       
       # Calculate the number of classes to remove from each category
       half_classes_to_remove = num_classes_to_remove // 2
       
-      # If one category is empty, the entire num_classes_to_remove goes to the other category
+      # Distribute the classes to remove between the two categories
       num_from_source_only = half_classes_to_remove if only_in_source else num_classes_to_remove
       num_from_both = half_classes_to_remove if common_classes else num_classes_to_remove
       
@@ -869,28 +872,26 @@ def select_classes_to_remove_and_create_new_mapping(source_train_dir, target_tra
               num_from_source_only += 1
           elif common_classes:  # Add extra to common_classes only if it's not empty
               num_from_both += 1
-      
-      # Ensure we don't try to remove more classes than are available in each category
+              
+      # Ensure we don't remove more classes than available
       num_from_source_only = min(num_from_source_only, len(only_in_source))
       num_from_both = min(num_from_both, len(common_classes))
-
-      # Randomly select the desired number of classes from each category
+      
+      # Randomly select classes to remove
       classes_from_source_only = random.sample(only_in_source, num_from_source_only) if only_in_source else []
       classes_from_both = random.sample(common_classes, num_from_both) if common_classes else []
       
-      # Combine the two sets of selected classes
-      classes_to_remove = classes_from_source_only + classes_from_both
+      # Combine the removed classes
+      forcibly_removed_source_classes = classes_from_source_only + classes_from_both
 
+    # Identify the target dataset classes that should be labeled as "unknown"
+    target_only_classes = list(set(all_classes_target) - set(all_classes_source))
+    all_unknown_classes_for_target = list(set(target_only_classes + forcibly_removed_source_classes))
 
+    # Update the classes to remove to include the forcibly removed classes and target only classes
+    classes_to_remove = forcibly_removed_source_classes + target_only_classes
 
-
-    # If classes in source and target are different, it's already an open set
-    if set(all_classes_source) != set(all_classes_target):
-        classes_to_remove = list(set(all_classes_target) - set(all_classes_source))
-    # Otherwise, we're transitioning from a closed set to an open set
-    else:
-        classes_to_remove = random.sample(all_classes_source, num_classes_to_remove)
-
+    # Construct the new mapping for the remaining classes
     classes_to_keep = [class_name for class_name in all_classes_source if class_name not in classes_to_remove]
     new_mapping = {class_name: i for i, class_name in enumerate(classes_to_keep)}
     unknown_label = max(new_mapping.values()) + 1
@@ -898,11 +899,14 @@ def select_classes_to_remove_and_create_new_mapping(source_train_dir, target_tra
     print("Summary of changes:")
     print("Label for unknown classes: ", unknown_label)
 
-    # Detailed label changes for each class
+    # Detailed label changes for each class in the source dataset
     print("\n###### SOURCE ######")
     print("Old mapping: ", old_mapping)
     print("New mapping: ", new_mapping)
     print("Classes removed: ", classes_to_remove)
+
+    print("Classes from source that will be labeled as unknown:")
+    print(forcibly_removed_source_classes)
 
     print("Classes that had changes:")
     for class_name in all_classes_source:
@@ -910,6 +914,8 @@ def select_classes_to_remove_and_create_new_mapping(source_train_dir, target_tra
         if class_name in new_mapping:
             new_label = new_mapping[class_name]
             print(f"[{class_name}, {old_label} -> {new_label}]")
+        elif class_name in forcibly_removed_source_classes:
+            print(f"[{class_name}, {old_label} -> Unknown]")
 
     return classes_to_remove, new_mapping, unknown_label
 
