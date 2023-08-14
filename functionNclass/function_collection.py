@@ -81,11 +81,6 @@ def save_best_model(h_score, model, config, entropy_val, epoch):
             
     return model_name
 
-
-
-
-
-
 def plot_tsne(features, labels, epoch, entropy_val, config, filename, perplexity=30):
     # Adapt perplexity according to the size of the input
     if len(features) <= perplexity:
@@ -115,8 +110,6 @@ def plot_tsne(features, labels, epoch, entropy_val, config, filename, perplexity
     # wandb.log({"t-SNE plot": wandb.Image(plt)})
     plt.close()
     wandb.log({"t-SNE plot": wandb.Image(tsne_name)})
-
-
 
 def baseline(config, source_n_target_train_loader, target_test_loader, entropy_list, filename, run_id):
   model = config["model"]
@@ -475,7 +468,7 @@ def create_datasets(config):
 
   if(config['g_open_set']==True): 
       num_classes_to_remove = config['num_classes_to_remove']
-force_remove_source_class = config['force_remove_source_class']
+      force_remove_source_class = config['force_remove_source_class']
       source_old_mapping = map_classes_to_labels(path_source_train)
       target_old_mapping = map_classes_to_labels(path_target_train)
       classes_to_remove, new_mapping, unknown_label = select_classes_to_remove_and_create_new_mapping(path_source_train,path_target_train, source_old_mapping, num_classes_to_remove, force_remove_source_class)
@@ -1017,8 +1010,6 @@ def modify_labels_in_file(file_path, old_mapping, new_mapping, unknown_label, cl
 
     return mod_lines
 
-
-
 def modify_labels_in_datasets(source_txt, target_train_txt, target_test_txt, source_old_mapping, target_old_mapping, new_mapping, classes_to_remove, unknown_label):
     # Modify labels in source text file
     mod_lines_source = modify_labels_in_file(source_txt, source_old_mapping, new_mapping, unknown_label, classes_to_remove, source=True)
@@ -1062,7 +1053,6 @@ def modify_labels_in_datasets(source_txt, target_train_txt, target_test_txt, sou
     mod_target_txt_path = target_test_txt.replace('.txt', '_mod.txt')
     with open(mod_target_txt_path , 'w') as f:
         f.writelines(mod_lines_target)
-
 
 def create_temp_file_with_new_labels(path, new_labels):
     # create a temporary file in the same directory as the original file
