@@ -466,16 +466,21 @@ def create_datasets(config):
                                                                       target_train_txt,
                                                                       target_test_txt)
 
-  if(config['g_open_set']==True): 
+  if(config['g_open_set'] == True): 
       source_classes = source_n_target_train_dataset.source_dataset.classes
       print('source_classes: ', source_classes)
-      target_classes = source_n_target_train_dataset.target_dataset.classes
-      print('target_classes: ', target_classes)
       num_classes_to_remove = config['num_classes_to_remove']
       fake_source_label_or_remove_class = config['fake_source_label_or_remove_class']
       source_old_mapping = map_classes_to_labels(path_source_train)
       target_old_mapping = map_classes_to_labels(path_target_train)
-      classes_to_remove, new_mapping, unknown_label = select_classes_to_remove_and_create_new_mapping(source_classes,target_classes, path_source_train,path_target_train, source_old_mapping, num_classes_to_remove, fake_source_label_or_remove_class)
+      classes_to_remove, new_mapping, unknown_label = select_classes_to_remove_and_create_new_mapping(
+          source_classes, 
+          path_source_train,
+          path_target_train,
+          source_old_mapping,
+          num_classes_to_remove,
+          fake_source_label_or_remove_class
+      )
       modify_labels_in_datasets(source_txt, target_train_txt, target_test_txt, source_old_mapping, target_old_mapping, new_mapping, classes_to_remove, unknown_label)
       #updating the class with new labels.
       source_n_target_train_dataset, target_test_dataset = prepare_datasets(path_source_train,
@@ -850,67 +855,81 @@ def get_classes_from_dir(dir_path):
     return sorted(os.listdir(dir_path))
 
 
+def select_classes_to_remove_and_create_new_mapping(all_classes_source, source_train_dir, target_train_dir, old_mapping, num_classes_to_remove, fake_source_label_or_remove_class='fake_source_label'):
+    all_classes_target = get_classes_from_dir(target_train_dir)
 
-
-def select_classes_to_remove_and_create_new_mapping(all_classes_source,all_classes_target,  source_train_dir, target_train_dir, old_mapping, num_classes_to_remove, fake_source_label_or_remove_class='fake_source_label'):
-    
-    # all_classes_target = get_classes_from_dir(target_train_dir)
-    
     # Get the intersection of classes from all_classes_source and old_mapping
-    common_classes = set(all_classes_source).intersection(old_mapping.keys())
-    
-    forcibly_removed_from_common = []
-    forcibly_removed_from_source_only = []
-
-    if fake_source_label_or_remove_class == 'fake_source_label':
-        # Classes only in the source
-        only_in_source = list(set(all_classes_source) - set(all_classes_target))
-        
-        # Classes common to both source and target
-        common_classes = list(set(all_classes_source).intersection(set(all_classes_target)))
-        
-        num_from_source_only = min(num_classes_to_remove // 2, len(only_in_source))
-        num_from_common = min(num_classes_to_remove - num_from_source_only, len(common_classes))
-
-        forcibly_removed_from_source_only = random.sample(only_in_source, num_from_source_only)
-        forcibly_removed_from_common = random.sample(common_classes, num_from_common)
-
-    # Identify classes in the target but not in the source and not in common
-    target_only_classes = list(set(all_classes_target) - set(all_classes_source) - set(common_classes))
+    common_classes = set(all_classes_source.keys()).intersection(old_mapping.keys())
 
     # Create a new mapping for the intersection classes with sequential labels
     new_mapping = {class_name: idx for idx, class_name in enumerate(sorted(common_classes))}
     
-    # Update mapping for the remaining source classes
-    last_idx = max(new_mapping.values())
-    for class_name in sorted(set(all_classes_source) - set(common_classes)):
-        last_idx += 1
-        new_mapping[class_name] = last_idx
+    # Identify classes in the target but not in the source
+    target_only_classes = list(set(all_classes_target.keys()) - set(all_classes_source.keys()))
+    
+    # Create lists for forcibly removed source classes
+    forcibly_removed_common_classes = []
+    forcibly_removed_distinct_source_classes = []
 
-    # Update mapping for target only classes
-    for class_name in sorted(target_only_classes):
-        last_idx += 1
-        new_mapping[class_name] = last_idx
+    if fake_source_label_or_remove_class == 'fake_source_label':
+        # Classes only in the source
+        only_in_source = list(set(all_classes_source.keys()) - set(all_classes_target.keys()))
+        
+        # Classes common to both source and target
+        common_classes = list(set(all_classes_source.keys()).intersection(set(all_classes_target.keys())))
+        
+        half_classes_to_remove = num_classes_to_remove // 2
+        
+        num_from_source_only = half_classes_to_remove if only_in_source else num_classes_to_remove
+        num_from_both = half_classes_to_remove if common_classes else num_classes_to_remove
+        
+        if num_classes_to_remove % 2 != 0:
+            if len(only_in_source) > len(common_classes):
+                num_from_source_only += 1
+            elif common_classes:
+                num_from_both += 1
+        
+        num_from_source_only = min(num_from_source_only, len(only_in_source))
+        num_from_both = min(num_from_both, len(common_classes))
 
+        forcibly_removed_distinct_source_classes = random.sample(only_in_source, num_from_source_only) if only_in_source else []
+        forcibly_removed_common_classes = random.sample(common_classes, num_from_both) if common_classes else []
+    
     # Adjust new mapping for forcibly removed source classes
+    for class_name in forcibly_removed_common_classes + forcibly_removed_distinct_source_classes:
+        del new_mapping[class_name]
+
+    for class_name in target_only_classes:
+        new_mapping[class_name] = max(new_mapping.values()) + 1
+
     unknown_label = max(new_mapping.values()) + 1
-    for class_name in forcibly_removed_from_source_only + forcibly_removed_from_common:
-        new_mapping[class_name] = unknown_label
 
     print("Summary of changes:")
     print("Label for unknown classes: ", unknown_label)
+
     print("\n###### SOURCE ######")
     print("Old mapping: ", old_mapping)
     print("New mapping: ", new_mapping)
-    print("Fake label common classes: ", forcibly_removed_from_common)
-    print("Fake label distinct source classes: ", forcibly_removed_from_source_only)
+    print("Fake label common classes: ", forcibly_removed_common_classes)
+    print("Fake label distinct source classes: ", forcibly_removed_distinct_source_classes)
     print("Classes that had changes:")
-    for class_name in all_classes_source:
-        old_label = old_mapping.get(class_name, "N/A")
+    for class_name in all_classes_source.keys():
+        old_label = old_mapping.get(class_name, "Not in Old Mapping")
         new_label = new_mapping.get(class_name, unknown_label)
         print(f"[{class_name}, {old_label} -> {new_label}]")
 
-    return forcibly_removed_from_source_only + forcibly_removed_from_common, new_mapping, unknown_label
+    print("\n###### TARGET ######")
+    print("Old mapping: ", old_mapping)
+    print("New mapping: ", new_mapping)
+    print("Classes that had changes:")
+    for class_name in all_classes_target.keys():
+        old_label = old_mapping.get(class_name, "Not in Old Mapping")
+        new_label = new_mapping.get(class_name, unknown_label)
+        print(f"[{class_name}, {old_label} -> {new_label}]")
+
+    return forcibly_removed_common_classes + forcibly_removed_distinct_source_classes, new_mapping, unknown_label
+
+
 
 
 
