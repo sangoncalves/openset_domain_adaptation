@@ -894,6 +894,8 @@ def select_classes_to_remove_and_create_new_mapping(all_classes_source, source_t
         # If forcibly_removed_distinct_source_classes is not empty but less than half_classes_to_remove
         if forcibly_removed_distinct_source_classes and len(forcibly_removed_distinct_source_classes) < half_classes_to_remove:
             num_from_both += half_classes_to_remove - len(forcibly_removed_distinct_source_classes)
+        elif not forcibly_removed_distinct_source_classes:
+            num_from_both = num_classes_to_remove
 
         forcibly_removed_common_classes = random.sample(common_classes, num_from_both) if common_classes else []
     
