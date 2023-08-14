@@ -899,14 +899,22 @@ def select_classes_to_remove_and_create_new_mapping(all_classes_source, source_t
 
         forcibly_removed_common_classes = random.sample(common_classes, num_from_both) if common_classes else []
     
-    # Adjust new mapping for forcibly removed source classes
+    unknown_label = len(all_classes_source) - len(forcibly_removed_common_classes) - len(forcibly_removed_distinct_source_classes)
+    
+    # Assign unknown_label to forcibly removed classes
     for class_name in forcibly_removed_common_classes + forcibly_removed_distinct_source_classes:
-        del new_mapping[class_name]
+        new_mapping[class_name] = unknown_label
 
+    # Assign unknown_label to target-only classes
     for class_name in target_only_classes:
-        new_mapping[class_name] = len(all_classes_source)
+        new_mapping[class_name] = unknown_label
 
-    unknown_label = len(all_classes_source)
+    # Re-sequence known classes to ensure no gaps in numbering
+    known_labels = sorted(set(new_mapping.values()) - {unknown_label})
+    remapped_labels = {old: new for new, old in enumerate(known_labels)}
+    for class_name, label in new_mapping.items():
+        if label != unknown_label:
+            new_mapping[class_name] = remapped_labels[label]
 
     print("Summary of changes:")
     print("Label for unknown classes: ", unknown_label)
