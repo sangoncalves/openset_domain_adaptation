@@ -485,7 +485,7 @@ def create_datasets(config):
           num_classes_to_remove,
           fake_source_label_or_remove_class
       )
-      modify_labels_in_datasets(source_txt, target_train_txt, target_test_txt, source_old_mapping, target_old_mapping, new_mapping, classes_to_remove, unknown_label)
+      modify_labels_in_datasets(source_txt, target_train_txt, target_test_txt, source_old_mapping, target_old_mapping, new_mapping, unknown_label)
       #updating the class with new labels.
       source_n_target_train_dataset, target_test_dataset = prepare_datasets(path_source_train,
                                                                           path_target_train,
@@ -858,8 +858,25 @@ def plot_confusion_matrix(labels_all, predicted_all, all_classes, epoch, entropy
 def get_classes_from_dir(dir_path):
     return sorted(os.listdir(dir_path))
 
-
 def select_classes_to_remove_and_create_new_mapping(all_classes_source, source_train_dir, target_train_dir, old_mapping, num_classes_to_remove, fake_source_label_or_remove_class='fake_source_label'):
+    """
+    Selects classes to be removed or faked (based on the "fake_source_label_or_remove_class" parameter) from the source dataset.
+    Creates a new mapping for the labels of the source and target datasets.
+    
+    Args:
+    - source_classes (dict): Old mapping of source class names to labels.
+    - target_classes (dict): Old mapping of target class names to labels.
+    - num_classes_to_remove (int): Number of classes to be removed or faked.
+    - fake_source_label_or_remove_class (str): Either "fake_source_label" or "remove_class".
+
+    Returns:
+    - Tuple of:
+        - New mapping for source dataset.
+        - New mapping for target dataset.
+        - List of classes to be removed or faked.
+    """
+
+    
     all_classes_target = get_classes_from_dir(target_train_dir)
 
     # Create a new mapping for the intersection classes with sequential labels
@@ -868,19 +885,14 @@ def select_classes_to_remove_and_create_new_mapping(all_classes_source, source_t
     # Identify classes in the target but not in the source
     target_only_classes = list(set(all_classes_target) - set(all_classes_source))
     
-    # Create lists for forcibly removed source classes
     forcibly_removed_common_classes = []
     forcibly_removed_distinct_source_classes = []
 
     if fake_source_label_or_remove_class == 'fake_source_label':
-        # Classes only in the source
         only_in_source = list(set(all_classes_source) - set(all_classes_target))
-        
-        # Classes common to both source and target
         common_classes = list(set(all_classes_source).intersection(set(all_classes_target)))
         
         half_classes_to_remove = num_classes_to_remove // 2
-        
         num_from_source_only = half_classes_to_remove if only_in_source else num_classes_to_remove
         num_from_both = half_classes_to_remove if common_classes else num_classes_to_remove
         
@@ -889,36 +901,35 @@ def select_classes_to_remove_and_create_new_mapping(all_classes_source, source_t
                 num_from_source_only += 1
             elif common_classes:
                 num_from_both += 1
-        
+
         num_from_source_only = min(num_from_source_only, len(only_in_source))
         num_from_both = min(num_from_both, len(common_classes))
 
         forcibly_removed_distinct_source_classes = random.sample(only_in_source, num_from_source_only) if only_in_source else []
-        
+
         # If forcibly_removed_distinct_source_classes is not empty but less than half_classes_to_remove
         if forcibly_removed_distinct_source_classes and len(forcibly_removed_distinct_source_classes) < half_classes_to_remove:
             num_from_both += half_classes_to_remove - len(forcibly_removed_distinct_source_classes)
         elif not forcibly_removed_distinct_source_classes:
             num_from_both = num_classes_to_remove
 
-        forcibly_removed_common_classes = random.sample(common_classes, num_from_both) if common_classes else []
-    
+        forcibly_removed_common_classes = random.sample(common_classes, num_from_both) if common_classes else [] #
+
     unknown_label = len(all_classes_source) - len(forcibly_removed_common_classes) - len(forcibly_removed_distinct_source_classes)
+
+
+    # Classes to consider as unknown
+    unknown_classes = forcibly_removed_common_classes + forcibly_removed_distinct_source_classes + target_only_classes
     
-    # Assign unknown_label to forcibly removed classes
-    for class_name in forcibly_removed_common_classes + forcibly_removed_distinct_source_classes:
-        new_mapping[class_name] = unknown_label
+    # Separate classes into known and unknown
+    known_classes = list(set(all_classes_source) - set(unknown_classes))
+    
+    # Create mappings for known and unknown classes
+    dict_known = {class_name: idx for idx, class_name in enumerate(known_classes)}
+    dict_unknown = {class_name: unknown_label for class_name in unknown_classes}
 
-    # Assign unknown_label to target-only classes
-    for class_name in target_only_classes:
-        new_mapping[class_name] = unknown_label
-
-    # Re-sequence known classes to ensure no gaps in numbering
-    known_labels = sorted(set(new_mapping.values()) - {unknown_label})
-    remapped_labels = {old: new for new, old in enumerate(known_labels)}
-    for class_name, label in new_mapping.items():
-        if label != unknown_label:
-            new_mapping[class_name] = remapped_labels[label]
+    # Merge the dictionaries
+    new_mapping = {**dict_known, **dict_unknown}
 
     print("Summary of changes:")
     print("Label for unknown classes: ", unknown_label)
@@ -944,14 +955,6 @@ def select_classes_to_remove_and_create_new_mapping(all_classes_source, source_t
         print(f"[{class_name}, {old_label} -> {new_label}]")
 
     return forcibly_removed_common_classes + forcibly_removed_distinct_source_classes, new_mapping, unknown_label
-
-
-
-
-
-
-
-
 
 
 # def select_classes_to_remove_and_create_new_mapping(source_train_dir, old_mapping, num_classes_to_remove):
@@ -1011,7 +1014,7 @@ def map_classes_to_labels(dir_path):
     classes = sorted(os.listdir(dir_path))
     return {class_name: i for i, class_name in enumerate(classes)}
 
-def modify_labels_in_file(filepath, new_mapping, unknown_label, delimiter=' '):
+def modify_labels_in_file(filepath, new_mapping, unknown_label):
     """
     Modify the labels in a file according to a given mapping.
 
@@ -1019,7 +1022,6 @@ def modify_labels_in_file(filepath, new_mapping, unknown_label, delimiter=' '):
     - filepath (str): Path to the file to be modified.
     - new_mapping (dict): A dictionary where keys are original class names and values are the new labels.
     - unknown_label (int): Label to assign to classes not found in the new mapping.
-    - delimiter (str, optional): Delimiter used in the file. Defaults to ' '.
 
     Returns:
     - List of modified lines.
@@ -1029,12 +1031,14 @@ def modify_labels_in_file(filepath, new_mapping, unknown_label, delimiter=' '):
 
     mod_lines = []
     for line in lines:
-        parts = line.strip().split(delimiter)
-        if parts[-1] in new_mapping:
-            parts[-1] = str(new_mapping[parts[-1]])
+        class_name, path, old_label = line.strip().split()
+        
+        if class_name in new_mapping:
+            new_label = str(new_mapping[class_name])
         else:
-            parts[-1] = str(unknown_label)
-        mod_line = delimiter.join(parts) + '\n'
+            new_label = str(unknown_label)
+        
+        mod_line = f"{class_name} {path} {new_label}\n"
         mod_lines.append(mod_line)
 
     # Overwrite the file with modified labels
@@ -1044,49 +1048,43 @@ def modify_labels_in_file(filepath, new_mapping, unknown_label, delimiter=' '):
     return mod_lines
 
 
-def modify_labels_in_datasets(source_txt, target_train_txt, target_test_txt, source_old_mapping, target_old_mapping, new_mapping, classes_to_remove, unknown_label):
-    # Modify labels in source text file
-    mod_lines_source = modify_labels_in_file(source_txt, new_mapping, unknown_label, delimiter=' ')
-    mod_source_txt_path = source_txt.replace('.txt', '_mod.txt')
-    with open(mod_source_txt_path , 'w') as f:
-        f.writelines(mod_lines_source)
+def modify_labels_in_datasets(source_txt, target_train_txt, target_test_txt, source_old_mapping, target_old_mapping, new_mapping, unknown_label):
+    """
+    Modify the labels in the dataset based on the new mapping.
 
-    print("\n###### TARGET ######")
-    print("Old mapping: ", target_old_mapping)
-    # Include classes mapped to the unknown label in the new mapping
-    new_mapping_with_unknown = new_mapping.copy()
-    for class_name in classes_to_remove:
-        new_mapping_with_unknown[class_name] = unknown_label
-    print("New mapping: ", new_mapping_with_unknown)
+    Args:
+    - source_txt (str): Path to the source dataset txt file.
+    - target_train_txt (str): Path to the target training dataset txt file.
+    - target_test_txt (str): Path to the target test dataset txt file.
+    - source_old_mapping (dict): Old mapping for the source dataset.
+    - target_old_mapping (dict): Old mapping for the target dataset.
+    - new_mapping (dict): New mapping for the classes.
+    - unknown_label (int): Label for the unknown classes.
 
-    print("Classes that had changes:")
-    known_classes = []
-    unknown_classes = []
-    for class_name in sorted(target_old_mapping.keys(), key=lambda x: (new_mapping_with_unknown.get(x, float('inf')) == unknown_label, target_old_mapping[x])):
-        old_label = target_old_mapping[class_name]
-        new_label = new_mapping_with_unknown[class_name]
-        if new_label == unknown_label:
-            unknown_classes.append(f"[{class_name}, {old_label} -> {new_label}]")
-        else:
-            known_classes.append(f"[{class_name}, {old_label} -> {new_label}]")
+    Returns:
+    - None
+    """
+    
+    # Define paths for the modified txt files
+    source_txt_mod = source_txt.replace('.txt', '_mod.txt')
+    target_train_txt_mod = target_train_txt.replace('.txt', '_mod.txt')
+    target_test_txt_mod = target_test_txt.replace('.txt', '_mod.txt')
 
-    for class_entry in known_classes:
-        print(class_entry)
+    # Modify labels in the source dataset and write to _mod.txt
+    mod_lines_source = modify_labels_in_file(source_txt, new_mapping, unknown_label)
+    with open(source_txt_mod, 'w') as file:
+        file.writelines(mod_lines_source)
 
-    print("---------------- UNKNOWN CLASSES ----------------")
-    for class_entry in unknown_classes:
-        print(class_entry)
+    # Modify labels in the target training dataset and write to _mod.txt
+    mod_lines_target_train = modify_labels_in_file(target_train_txt, new_mapping, unknown_label)
+    with open(target_train_txt_mod, 'w') as file:
+        file.writelines(mod_lines_target_train)
 
-    # Modify labels in target text file
-    mod_lines_target = modify_labels_in_file(target_train_txt, new_mapping, unknown_label, delimiter=' ')
-    mod_target_txt_path = target_train_txt.replace('.txt', '_mod.txt')
-    with open(mod_target_txt_path , 'w') as f:
-        f.writelines(mod_lines_target)
-        
-    mod_lines_target = modify_labels_in_file(target_test_txt, new_mapping, unknown_label, delimiter=' ')
-    mod_target_txt_path = target_test_txt.replace('.txt', '_mod.txt')
-    with open(mod_target_txt_path , 'w') as f:
-        f.writelines(mod_lines_target)
+    # Modify labels in the target test dataset and write to _mod.txt
+    mod_lines_target_test = modify_labels_in_file(target_test_txt, new_mapping, unknown_label)
+    with open(target_test_txt_mod, 'w') as file:
+        file.writelines(mod_lines_target_test)
+
 
 def create_temp_file_with_new_labels(path, new_labels):
     # create a temporary file in the same directory as the original file
