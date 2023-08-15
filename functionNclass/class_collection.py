@@ -30,12 +30,6 @@ def apply_data_augmentation(img):
     return img
 
 def get_frames_by_class(txt_file_path, n_frames):
-  # if(train):
-  #   # p = '/content/drive/MyDrive/datasets-thesis/ucf_train_source.txt'
-  #   p = '/content/ucf_train_source.txt'
-  # else:
-  #   p = '/content/hmdb_test_target.txt'
-  #   # p = '/content/drive/MyDrive/datasets-thesis/hmdb_test_target.txt'
   p = txt_file_path
 
   video_label = []
@@ -53,8 +47,6 @@ def get_frames_by_class(txt_file_path, n_frames):
   class_id_to_name = {v: k for k, v in classes.items()}
 
   return video_label, classes, class_id_to_name
-
-
 
 class VideoDatasetSourceAndTarget:
     def __init__(self, source_dataset, target_dataset):
@@ -175,8 +167,6 @@ class VideoDataset(Dataset):
         tensor = self.frame2video_tensor(reduced_frames)     
         return tensor, int(label) # return tensor
 
-
-
 class ExtendedSubset(Subset):
     def __init__(self, dataset, indices, classes, video_label, class_id_to_name):
         super().__init__(dataset, indices)
@@ -186,8 +176,6 @@ class ExtendedSubset(Subset):
         self.classes = classes
         self.video_label = [video_label[i] for i in self.indices]
         self.index_mapping = {original_idx: subset_idx for subset_idx, original_idx in enumerate(self.indices)}
-
-
 
 class ClassObservationsSamplerVideoDatasetSourceAndTarget:
     def __init__(self, video_dataset, num_observations):
@@ -250,10 +238,6 @@ class ClassObservationsSamplerVideoDatasetSourceAndTarget:
       target_data, target_label = self.target_dataset[target_subset_index]
 
       return source_index, source_data, source_label, target_index, target_data, target_label
-
-
-
-
 
 class ClassObservationsSamplerVideoDatasetTarget:
     def __init__(self, video_dataset, num_observations):
