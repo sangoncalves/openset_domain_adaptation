@@ -323,7 +323,8 @@ def prepare_datasets(
     n_frames=16, #4
     n_clips=1, #4
     frame_size=224,
-    normalize=True
+    normalize=True,
+    fake_label = False
 ):
     
     source_dataset = VideoDataset(
@@ -334,7 +335,8 @@ def prepare_datasets(
         n_clips=n_clips,
         normalize=normalize,
         train=True,
-        augmentation=True
+        augmentation=True,
+        fake_label = False
     )
 
     target_dataset = VideoDataset(
@@ -345,7 +347,8 @@ def prepare_datasets(
         n_clips=n_clips,
         normalize=normalize,
         train=False,
-        augmentation=True
+        augmentation=True,
+        fake_label = False
     )
     source_n_target_dataset = VideoDatasetSourceAndTarget(
         source_dataset, target_dataset
@@ -359,7 +362,8 @@ def prepare_datasets(
         n_clips=n_clips,
         normalize=normalize,
         train=False,
-        augmentation=False
+        augmentation=False,
+        fake_label = False
     )
 
     return source_n_target_dataset, val_dataset
