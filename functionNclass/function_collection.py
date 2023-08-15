@@ -313,19 +313,8 @@ def calculate_new_labels(source_dir, target_dir, source_txt, target_txt):
 
     print("Labels have been updated.")
 
-def prepare_datasets(
-    source_dataset,
-    target_dataset,
-    val_dataset,
-    source_txt_file_path,
-    target_train_txt,
-    target_test_txt,
-    n_frames=16, #4
-    n_clips=1, #4
-    frame_size=224,
-    normalize=True,
-    fake_label = False
-):
+#n_frames=16, #4 and n_clips=1, #4
+def prepare_datasets(source_dataset, target_dataset, val_dataset, source_txt_file_path, target_train_txt, target_test_txt, n_frames=16, n_clips=1, frame_size=224, normalize=True, fake_label = False):
     
     source_dataset = VideoDataset(
         source_dataset,
@@ -367,36 +356,6 @@ def prepare_datasets(
     )
 
     return source_n_target_dataset, val_dataset
-
-
-# # prepares datasets and dataloaders
-# def prepare_data(
-#     source_dataset,
-#     target_dataset,
-#     val_dataset,
-#     n_frames=16,
-#     n_clips=1,
-#     frame_size=224,
-#     normalize=True,
-#     batch_size=8,
-#     num_workers=2
-# ):
-#     source_n_target_dataset, val_dataset = prepare_datasets(
-#         source_dataset=source_dataset,
-#         target_dataset=target_dataset,
-#         val_dataset=val_dataset,
-#         n_frames=n_frames,
-#         n_clips=n_clips,
-#         frame_size=frame_size,
-#         normalize=normalize
-#     )
-#     source_n_target_loader, val_loader = prepare_dataloaders(
-#         source_n_target_dataset,
-#         val_dataset,
-#         batch_size=batch_size,
-#         num_workers=num_workers,
-#     )
-#     return source_n_target_loader, val_loader
 
 # prepares dataloaders given input datasets
 def prepare_dataloaders(train_dataset, val_dataset, batch_size=8, num_workers=2):
@@ -594,9 +553,6 @@ def train_model(config, source_n_target_train_loader, target_test_loader, entrop
 
         # Run evaluation only if the current epoch is a multiple of eval_interval
         eval_model(config, target_test_loader, entropy_val, filename, epoch)
-        # if (epoch + 1) % eval_interval == 0:
-        #   eval_model(config, dataset, target_test_loader, entropy_val, filename)
-
 
 def eval_model(config, target_test_loader, entropy_val, filename, epoch):
 
@@ -723,8 +679,6 @@ def eval_model(config, target_test_loader, entropy_val, filename, epoch):
         plot_confusion_matrix(labels_all, predicted_all, all_classes, epoch, entropy_val)
         print("#################### - EVALUATION - ##########################")
 
-
-
 def plot_confusion_matrix(labels_all, predicted_all, all_classes, epoch, entropy_val, filename):
     cm = confusion_matrix(labels_all, predicted_all, labels=all_classes)
     df_cm = pd.DataFrame(cm, index=all_classes, columns=all_classes)
@@ -737,123 +691,6 @@ def plot_confusion_matrix(labels_all, predicted_all, all_classes, epoch, entropy
     plt.savefig(cm_name)
     plt.close()
     wandb.log({"confusion_matrix": wandb.Image(cm_name)})
-
-
-# def plot_confusion_matrix(y_true, y_pred, class_names):
-#     cm = confusion_matrix(y_true, y_pred)
-#     df_cm = pd.DataFrame(cm, index=class_names, columns=class_names)
-#     plt.figure(figsize=(10,7))
-#     sn.heatmap(df_cm, annot=True, fmt='d')
-#     plt.xlabel('Predicted')
-#     plt.ylabel('Actual')
-#     plt.title('Confusion Matrix')
-
-
-# def are_classes_identical(dir1, dir2):
-#     classes_dir1 = set(os.listdir(dir1))
-#     classes_dir2 = set(os.listdir(dir2))
-
-#     return classes_dir1 == classes_dir2
-
-
-# def remove_random_classes_from_source(source_train_dir, hmdb_train_dir, num_classes_to_remove):
-#     # Check if classes in both directories are identical
-#     if not are_classes_identical(source_train_dir, hmdb_train_dir):
-#         print("Classes are not identical, skipping deletion.")
-#         return []
-
-#     # Get list of all classes
-#     all_classes = os.listdir(source_train_dir)
-
-#     # Randomly select certain classes to remove
-#     classes_to_remove = random.sample(all_classes, num_classes_to_remove)
-
-#     # Prepare class to label mappings
-#     class_label_map = {class_name: i for i, class_name in enumerate(all_classes)}
-#     unknown_class_label = max(class_label_map.values()) + 1
-#     old_new_label_map = {class_name: (class_label_map[class_name], unknown_class_label if class_name in classes_to_remove else class_label_map[class_name]) for class_name in all_classes}
-
-#     # Update labels in the txt files for source and target datasets
-#     txt_files = ['/content/ucf_train_source.txt', '/content/hmdb_test_target.txt']
-#     for txt_file_path in txt_files:
-#         with open(txt_file_path, 'r') as f:
-#             lines = f.readlines()
-#         new_lines = []
-#         for line in lines:
-#             class_name, path_to_observation, label = line.strip().split()
-#             old_label, new_label = old_new_label_map[class_name]
-#             if int(label) == old_label:
-#                 new_lines.append(f'{class_name} {path_to_observation} {new_label}\n')
-#             else:
-#                 print(f'Old and new labels do not match for class {class_name}. Label in file: {label}, Old label: {old_label}, New label: {new_label}')
-
-#         print(f'New lines for file {txt_file_path}: {new_lines}')
-        
-#         # Write new lines back to file
-#         txt_mod_path = txt_file_path.replace('.txt', '_mod.txt')
-#         with open(txt_mod_path, 'w') as f:
-#             f.writelines(new_lines)
-
-#     # Remove classes from the source directory
-#     for class_name in classes_to_remove:
-#         class_dir_train = os.path.join(source_train_dir, class_name)
-#         if os.path.exists(class_dir_train):
-#             shutil.rmtree(class_dir_train)
-
-#     return classes_to_remove
-
-
-# def update_class_labels(source_and_target_dataset, target_test_dataset):
-#     """
-#     Update class labels in source, target and validation datasets.
-
-#     Args:
-#         source_and_target_dataset (Dataset): The dataset containing both source and target datasets.
-#         target_test_dataset (Dataset): The target validation dataset.
-#     """
-
-#     # Get the sorted class names of the source dataset
-#     source_classes = sorted(list(source_and_target_dataset.source_dataset.classes.keys()))
-
-#     # Create a new mapping for the source dataset
-#     source_mapping = {class_name: str(i) for i, class_name in enumerate(source_classes)}
-
-#     # Update the classes in the source dataset
-#     source_and_target_dataset.source_dataset.classes = source_mapping
-
-#     # Get the sorted class names of the target datasets
-#     target_classes = sorted(list(source_and_target_dataset.target_dataset.classes.keys()))
-#     target_test_classes = sorted(list(target_test_dataset.classes.keys()))
-
-#     # Initialize the target mappings with the source mapping
-#     target_mapping = source_mapping.copy()
-#     target_test_mapping = source_mapping.copy()
-
-#     # The label for the classes that are not in the source dataset
-#     unknown_class_label = str(max(map(int, source_mapping.values())) + 1)
-
-#     # Update the target mappings with the classes that only exist in the target datasets
-#     for class_name in target_classes:
-#         if class_name not in target_mapping:
-#             target_mapping[class_name] = unknown_class_label
-
-#     for class_name in target_test_classes:
-#         if class_name not in target_test_mapping:
-#             target_test_mapping[class_name] = unknown_class_label
-
-#     # Update the classes in the target datasets
-#     source_and_target_dataset.target_dataset.classes = target_mapping
-#     target_test_dataset.classes = target_test_mapping
-
-#     # Update the video_label in the datasets
-#     for video in source_and_target_dataset.source_dataset.video_label:
-#         video[1] = source_and_target_dataset.source_dataset.classes[source_and_target_dataset.source_dataset.class_id_to_name[video[1]]]
-
-#     for video in source_and_target_dataset.target_dataset.video_label:
-#         video[1] = source_and_target_dataset.target_dataset.classes[source_and_target_dataset.target_dataset.class_id_to_name[video[1]]]
-
-#     for video in target_test_dataset.video_label:
-#         video[1] = target_test_dataset.classes[target_test_dataset.class_id_to_name[video[1]]]
 
 def get_classes_from_dir(dir_path):
     return sorted(os.listdir(dir_path))
@@ -956,60 +793,6 @@ def select_classes_to_remove_and_create_new_mapping(all_classes_source, source_t
 
     return forcibly_removed_common_classes + forcibly_removed_distinct_source_classes, new_mapping, unknown_label
 
-
-# def select_classes_to_remove_and_create_new_mapping(source_train_dir, old_mapping, num_classes_to_remove):
-#     all_classes = sorted(os.listdir(source_train_dir))
-#     classes_to_remove = random.sample(all_classes, num_classes_to_remove)
-#     classes_to_keep = [class_name for class_name in all_classes if class_name not in classes_to_remove]
-#     new_mapping = {class_name: i for i, class_name in enumerate(classes_to_keep)}
-#     unknown_label = max(new_mapping.values()) + 1
-
-#     print("Summary of changes:")
-#     print("Label for unknown classes: ", unknown_label)
-
-#     # Detailed label changes for each class
-#     print("\n###### SOURCE ######")
-#     print("Old mapping: ", old_mapping)
-#     print("New mapping: ", new_mapping)
-#     print("Classes removed: ", classes_to_remove)
-
-#     print("Classes that had changes:")
-#     for class_name in all_classes:
-#         old_label = old_mapping[class_name]
-#         if class_name in new_mapping:
-#             new_label = new_mapping[class_name]
-#             print(f"[{class_name}, {old_label} -> {new_label}]")
-
-#     return classes_to_remove, new_mapping, unknown_label
-
-#go back to this if something goes wrong!
-# def modify_labels_in_datasets(source_txt_path, target_txt_path, source_old_mapping, target_old_mapping, new_mapping, classes_to_remove, unknown_label):
-#     # Modify labels in source text file
-#     mod_lines_source = modify_labels_in_file(source_txt_path, source_old_mapping, new_mapping, unknown_label, classes_to_remove, source=True)
-#     mod_source_txt_path = source_txt_path.replace('.txt', '_mod.txt')
-#     with open(mod_source_txt_path , 'w') as f:
-#         f.writelines(mod_lines_source)
-
-#     print("\n###### TARGET ######")
-#     print("Old mapping: ", target_old_mapping)
-#     # Include classes mapped to the unknown label in the new mapping
-#     new_mapping_with_unknown = new_mapping.copy()
-#     for class_name in classes_to_remove:
-#         new_mapping_with_unknown[class_name] = unknown_label
-#     print("New mapping: ", new_mapping_with_unknown)
-
-#     print("Classes that had changes:")
-#     for class_name in sorted(target_old_mapping.keys()):
-#         old_label = target_old_mapping[class_name]
-#         new_label = new_mapping_with_unknown[class_name]
-#         print(f"[{class_name}, {old_label} -> {new_label}]")
-
-#     # Modify labels in target text file
-#     mod_lines_target = modify_labels_in_file(target_txt_path, target_old_mapping, new_mapping, unknown_label, classes_to_remove, source=False)
-#     mod_target_txt_path = target_txt_path.replace('.txt', '_mod.txt')
-#     with open(mod_target_txt_path , 'w') as f:
-#         f.writelines(mod_lines_target)
-
 def map_classes_to_labels(dir_path):
     classes = sorted(os.listdir(dir_path))
     return {class_name: i for i, class_name in enumerate(classes)}
@@ -1046,7 +829,6 @@ def modify_labels_in_file(filepath, new_mapping, unknown_label):
         file.writelines(mod_lines)
 
     return mod_lines
-
 
 def modify_labels_in_datasets(source_txt, target_train_txt, target_test_txt, source_old_mapping, target_old_mapping, new_mapping, unknown_label):
     """
@@ -1085,7 +867,6 @@ def modify_labels_in_datasets(source_txt, target_train_txt, target_test_txt, sou
     with open(target_test_txt_mod, 'w') as file:
         file.writelines(mod_lines_target_test)
 
-
 def create_temp_file_with_new_labels(path, new_labels):
     # create a temporary file in the same directory as the original file
     base_dir = os.path.dirname(path)
@@ -1120,27 +901,6 @@ def get_new_labels(source_mapping, target_mapping, source_validation_mapping, ta
             
     return new_labels
 
-
-# def open_set_loss(outputs, labels, num_classes, device):
-#     # Create a tensor of shape (batch_size, num_classes) with all zeros
-#     # This will be the target tensor for the source data
-#     source_targets = torch.zeros_like(outputs[:, :num_classes])
-
-#     # Create a tensor of shape (batch_size, 1) with all ones
-#     # This will be the target tensor for the target data
-#     target_targets = torch.ones_like(outputs[:, num_classes:])
-
-#     # Concatenate the source and target targets tensors along the second dimension
-#     targets = torch.cat([source_targets, target_targets], dim=1)
-
-#     # Move the targets tensor to the device
-#     targets = targets.to(device)
-
-#     # Calculate the cross-entropy loss between the outputs and targets tensors
-#     loss = nn.CrossEntropyLoss()(outputs, labels)
-
-#     return loss
-
 def apply_data_augmentation(img):
     # Define the data augmentation transformations
     augmentations = [
@@ -1156,27 +916,7 @@ def apply_data_augmentation(img):
 
     return img
 
-# def get_frames_by_class(dataset_path, n_frames):
-#     classes = {}
-#     video_label = []
-#     classes_root = sorted(os.listdir(dataset_path))
-#     for i, class_name in enumerate(classes_root):
-#         observation_folder = sorted(os.listdir(os.path.join(dataset_path, class_name)))
-#         classes[i] = class_name
-#         for obs in observation_folder:
-#             frames = os.listdir(os.path.join(dataset_path,class_name,obs))
-#             if len(frames) >= n_frames:
-#               class_obs = class_name + "/" + obs
-#               video_label.append((class_obs, i))
-#     return video_label, classes
-
 def get_frames_by_class(txt_file_path, n_frames):
-  # if(train):
-  #   # p = '/content/drive/MyDrive/datasets-thesis/ucf_train_source.txt'
-  #   p = '/content/ucf_train_source.txt'
-  # else:
-  #   p = '/content/hmdb_test_target.txt'
-  #   # p = '/content/drive/MyDrive/datasets-thesis/hmdb_test_target.txt'
   p = txt_file_path
 
   video_label = []
@@ -1195,23 +935,6 @@ def get_frames_by_class(txt_file_path, n_frames):
 
   return video_label, classes, class_id_to_name
 
-# def get_frames_by_class(train, n_frames, new_labels):
-#     if(train):
-#         p = '/content/ucf_train_source.txt'
-#     else:
-#         p = '/content/hmdb_test_target.txt'
-
-#     # create a temporary file with new labels
-#     temp_file_path = create_temp_file_with_new_labels(p, new_labels)
-
-#     video_label = []
-#     classes = {}
-#     with open(temp_file_path, 'r') as file:
-#         for line in file:
-#             line_split = line.strip().split()
-#             classes[line_split[0]] = line_split[-1]
-#             video_label.append(tuple(line_split[1:]))
-#     return video_label, classes
 def changeTXT(root = '/content/openset_domain_adaptation/paths', destination = '/content', pattern_search="/content/hmdb_ucf_giacomo/data", pattern_out="/content/openset_domain_adaptation/hmdb_ucf"):  
   for file_name in [file for file in os.listdir(root) if os.path.isfile(os.path.join(root, file))]:
     file_path = os.path.join(root, file_name)
@@ -1224,24 +947,6 @@ def changeTXT(root = '/content/openset_domain_adaptation/paths', destination = '
       for line in lines:
           f.write(line.replace(pattern_search, pattern_out))
 
-# def push(message):
-#   os.system('git config --global user.email "sander.martinsgoncalves@gmail.com"')
-#   os.system('git config --global user.name "sangoncalves"')
-#   os.system('git remote set-url origin https://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@github.com/sangoncalves/openset_domain_adaptation.git')
-#   os.system('git add /content/openset_domain_adaptation/')
-#   result = subprocess.run(['git', 'status'], stdout=subprocess.PIPE)
-#   print(result.stdout.decode('utf-8'))
-#   os.system(f'git commit -m "{message}"')
-#   print('#######################################')
-#   result = subprocess.run(['git', 'status'], stdout=subprocess.PIPE)
-#   print(result.stdout.decode('utf-8'))
-#   os.system('git push origin main')
-#   print('########## GIT PUSH COMPLETE ##########')
-#   result = subprocess.run(['git', 'status'], stdout=subprocess.PIPE)
-#   print(result.stdout.decode('utf-8'))
-
-
-         
 def get_txt_classes(txt_list, txt_folder):
   df = pd.DataFrame(columns=['txt_name', 'classes'])
   for f in txt_list:
@@ -1251,6 +956,3 @@ def get_txt_classes(txt_list, txt_folder):
       df = pd.concat([df, df_classes] , ignore_index=True)
   return df
 
-txt_folder ='/content/openset_domain_adaptation/paths' 
-txt_list = [f for f in os.listdir(txt_folder) if os.path.isfile(os.path.join(txt_folder,f))]
-# df = get_txt_classes(txt_list, txt_folder)
