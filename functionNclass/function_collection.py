@@ -1007,46 +1007,42 @@ def map_classes_to_labels(dir_path):
     classes = sorted(os.listdir(dir_path))
     return {class_name: i for i, class_name in enumerate(classes)}
 
-def modify_labels_in_file(file_path, old_mapping, new_mapping, unknown_label, classes_to_remove, source=True):
-    with open(file_path, 'r') as f:
-        lines = f.readlines()
+def modify_labels_in_file(filepath, new_mapping, unknown_label, delimiter=' '):
+    """
+    Modify the labels in a file according to a given mapping.
+
+    Args:
+    - filepath (str): Path to the file to be modified.
+    - new_mapping (dict): A dictionary where keys are original class names and values are the new labels.
+    - unknown_label (int): Label to assign to classes not found in the new mapping.
+    - delimiter (str, optional): Delimiter used in the file. Defaults to ' '.
+
+    Returns:
+    - List of modified lines.
+    """
+    with open(filepath, 'r') as file:
+        lines = file.readlines()
 
     mod_lines = []
     for line in lines:
-        class_name, path, old_label = line.strip().split()
-        old_label = int(old_label)
-
-        if source:
-            # Skip lines for classes to remove in source dataset
-            if class_name in classes_to_remove:
-                continue
+        parts = line.strip().split(delimiter)
+        if parts[-1] in new_mapping:
+            parts[-1] = str(new_mapping[parts[-1]])
         else:
-            # Assign unknown label to classes not in the new mapping in target dataset
-            if class_name not in new_mapping:
-                new_label = unknown_label
-                mod_line = f"{class_name} {path} {new_label}\n"
-                mod_lines.append(mod_line)
-                continue
-
-        # Confirm that the old label in the file matches the old label in the mapping
-        if old_mapping[class_name] != old_label:
-            print(f"Old labels do not match for class {class_name}. Label in file: {old_label}, Old label in mapping: {old_mapping[class_name]}")
-            continue
-
-        # Assign new label
-        if class_name in new_mapping:
-            new_label = new_mapping[class_name]
-        else:
-            new_label = unknown_label
-
-        mod_line = f"{class_name} {path} {new_label}\n"
+            parts[-1] = str(unknown_label)
+        mod_line = delimiter.join(parts) + '\n'
         mod_lines.append(mod_line)
+
+    # Overwrite the file with modified labels
+    with open(filepath, 'w') as file:
+        file.writelines(mod_lines)
 
     return mod_lines
 
+
 def modify_labels_in_datasets(source_txt, target_train_txt, target_test_txt, source_old_mapping, target_old_mapping, new_mapping, classes_to_remove, unknown_label):
     # Modify labels in source text file
-    mod_lines_source = modify_labels_in_file(source_txt, source_old_mapping, new_mapping, unknown_label, classes_to_remove, source=True)
+    mod_lines_source = modify_labels_in_file(source_txt, new_mapping, unknown_label, delimiter=' ')
     mod_source_txt_path = source_txt.replace('.txt', '_mod.txt')
     with open(mod_source_txt_path , 'w') as f:
         f.writelines(mod_lines_source)
@@ -1078,12 +1074,12 @@ def modify_labels_in_datasets(source_txt, target_train_txt, target_test_txt, sou
         print(class_entry)
 
     # Modify labels in target text file
-    mod_lines_target = modify_labels_in_file(target_train_txt, target_old_mapping, new_mapping, unknown_label, classes_to_remove, source=False)
+    mod_lines_target = modify_labels_in_file(target_train_txt, new_mapping, unknown_label, delimiter=' ')
     mod_target_txt_path = target_train_txt.replace('.txt', '_mod.txt')
     with open(mod_target_txt_path , 'w') as f:
         f.writelines(mod_lines_target)
         
-    mod_lines_target = modify_labels_in_file(target_test_txt, target_old_mapping, new_mapping, unknown_label, classes_to_remove, source=False)
+    mod_lines_target = modify_labels_in_file(target_test_txt, new_mapping, unknown_label, delimiter=' ')
     mod_target_txt_path = target_test_txt.replace('.txt', '_mod.txt')
     with open(mod_target_txt_path , 'w') as f:
         f.writelines(mod_lines_target)
