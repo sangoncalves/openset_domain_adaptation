@@ -82,7 +82,7 @@ class VideoDatasetSourceAndTarget:
 
 class VideoDataset(Dataset):
 
-    def __init__(self, dataset_path, txt_file_path, n_frames=16, n_clips=4, frame_size=224, normalize=True, train=True, augmentation=False):
+    def __init__(self, dataset_path, txt_file_path, n_frames=16, n_clips=4, frame_size=224, normalize=True, train=True, augmentation=False, fake_label=False):
         super().__init__()
         self.dataset_root = dataset_path
         self.n_frames = n_frames
@@ -91,7 +91,8 @@ class VideoDataset(Dataset):
         self.mean, self.std = None, None
         self.reorder_shape = False
         self.video_label, self.classes, self.class_id_to_name = get_frames_by_class(txt_file_path, n_frames)
-        self.output_dim = len(self.classes)
+        self.output_dim = len(self.classes) if not fake_label else max(self.classes.values()) + 1
+
         self.train = train
         self.augmentation = augmentation
 

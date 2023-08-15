@@ -488,7 +488,7 @@ def create_datasets(config):
                                                                           path_target_test, 
                                                                           source_txt,
                                                                           target_train_txt,
-                                                                          target_test_txt)  
+                                                                          target_test_txt, fake_label=False)  
 
   if(config['subset_flag']==True): ########################### ADDING A SAMPLER
     source_n_target_train_dataset = ClassObservationsSamplerVideoDatasetSourceAndTarget(source_n_target_train_dataset, config['obs_num'])
