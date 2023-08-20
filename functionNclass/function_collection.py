@@ -46,22 +46,28 @@ def set_seed(seed):
 
 def save_best_model(h_score, model, config, entropy_val, epoch):
     model_path = config["model_dir"]
-    if(config['baseline_or_proposed']=='baseline'):
+    if config['baseline_or_proposed'] == 'baseline':
         model_dir = os.path.join(model_path, 'baseline')
     else:
         model_dir = os.path.join(model_path, 'proposed')
 
     os.makedirs(model_dir, exist_ok=True)
 
-    model_name = f"model_entropy_{entropy_val:.4f}_hscore_{h_score:.4f}_direction_{config['adaptation_direction']}_{config['baseline_or_proposed']}_seed_{config['seed']}_epoch_{str(epoch)}.pth"
+    model_name = f"model_hscore_{h_score:.4f}_direction_{config['adaptation_direction']}_{config['baseline_or_proposed']}_seed_{config['seed']}_epoch_{str(epoch)}"
+    current_run_tmp_dir = f"{config['adaptation_direction']}_seed_{config['seed']}_tmp"
 
-    current_run_tmp_dir = os.path.join(model_dir, f"{config['adaptation_direction']}_seed_{config['seed']}_entropy_{entropy_val}_tmp")
+    if entropy_val is not None:
+        model_name += f"_entropy_{entropy_val:.4f}"
+        current_run_tmp_dir += f"_entropy_{entropy_val}"
+
+    model_name += ".pth"
+    current_run_tmp_dir = os.path.join(model_dir, current_run_tmp_dir)
     os.makedirs(current_run_tmp_dir, exist_ok=True)
 
     model_tmp_path = os.path.join(current_run_tmp_dir, model_name)
     torch.save(model.state_dict(), model_tmp_path)
 
-    current_run_dir = os.path.join(model_dir, f"{config['adaptation_direction']}_seed_{config['seed']}_entropy_{entropy_val}")
+    current_run_dir = os.path.join(model_dir, f"{config['adaptation_direction']}_seed_{config['seed']}_entropy_{entropy_val if entropy_val is not None else ''}")
     os.makedirs(current_run_dir, exist_ok=True)
 
     if epoch == config["num_epochs"] - 1:
@@ -74,11 +80,11 @@ def save_best_model(h_score, model, config, entropy_val, epoch):
         if max_h_score_tmp > max_h_score_saved:
             shutil.rmtree(current_run_dir)
             os.rename(current_run_tmp_dir, current_run_dir)
-            print(f"Model saved with seed {config['seed']}, h_score {h_score}, entropy {entropy_val:.4f}, direction {config['adaptation_direction']}, and type {config['baseline_or_proposed']}")
+            print(f"Model saved with seed {config['seed']}, h_score {h_score}, direction {config['adaptation_direction']}, and type {config['baseline_or_proposed']}")
         else:
             shutil.rmtree(current_run_tmp_dir)
-            print(f"Model not saved, h_score: {h_score} is not better than existing model's h_score: {max_h_score_saved}, entropy {entropy_val:.4f}, direction {config['adaptation_direction']}, and type {config['baseline_or_proposed']}")
-            
+            print(f"Model not saved, h_score: {h_score} is not better than existing model's h_score: {max_h_score_saved}, direction {config['adaptation_direction']}, and type {config['baseline_or_proposed']}")
+
     return model_name
 
 def plot_tsne(features, labels, epoch, entropy_val, config, filename, perplexity=30):
@@ -103,11 +109,14 @@ def plot_tsne(features, labels, epoch, entropy_val, config, filename, perplexity
         legend="full",
         alpha=0.6
     )
-    # tsne_name = f'{filename}/tsne_epoch_{epoch}_entropy_{entropy_val}.png'
-    tsne_name = f'{filename}/tsne_entropy_{entropy_val}.png'
-    plt.title(f't-SNE plot at epoch {epoch} with entropy {entropy_val}')
+    tsne_name = f'{filename}/tsne_epoch_{epoch}'
+    title = f't-SNE plot at epoch {epoch}'
+    if entropy_val is not None:
+        tsne_name += f'_entropy_{entropy_val}'
+        title += f' with entropy {entropy_val}'
+    tsne_name += '.png'
+    plt.title(title)
     plt.savefig(tsne_name)
-    # wandb.log({"t-SNE plot": wandb.Image(plt)})
     plt.close()
     wandb.log({"t-SNE plot": wandb.Image(tsne_name)})
 
@@ -686,8 +695,13 @@ def plot_confusion_matrix(labels_all, predicted_all, all_classes, epoch, entropy
     sn.heatmap(df_cm, annot=True, fmt='d')
     plt.xlabel('Predicted')
     plt.ylabel('Actual')
-    plt.title('Confusion Matrix, Entropy: {}'.format(entropy_val))
-    cm_name = f'{filename}/confusion_matrix_entropy_val_{entropy_val}_epoch_{epoch}.png'
+    title = 'Confusion Matrix'
+    cm_name = f'{filename}/confusion_matrix_epoch_{epoch}'
+    if entropy_val is not None:
+        title += f', Entropy: {entropy_val}'
+        cm_name += f'_entropy_val_{entropy_val}'
+    cm_name += '.png'
+    plt.title(title)
     plt.savefig(cm_name)
     plt.close()
     wandb.log({"confusion_matrix": wandb.Image(cm_name)})
