@@ -465,6 +465,8 @@ def create_datasets(config):
                                                                           source_txt,
                                                                           target_train_txt,
                                                                           target_test_txt, fake_label=False)  
+      source_n_target_train_dataset.unknown_label = unknown_label
+      target_test_dataset.unknown_label = unknown_label
 
   if(config['subset_flag']==True): ########################### ADDING A SAMPLER
     source_n_target_train_dataset = ClassObservationsSamplerVideoDatasetSourceAndTarget(source_n_target_train_dataset, config['obs_num'])

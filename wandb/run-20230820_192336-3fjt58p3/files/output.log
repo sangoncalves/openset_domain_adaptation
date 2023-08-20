@@ -1,0 +1,3 @@
+model config:
+baseline_or_proposed:  proposed
+adaptation_direction:  hmdb2ucf

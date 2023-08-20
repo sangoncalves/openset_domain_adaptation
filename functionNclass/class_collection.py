@@ -53,6 +53,7 @@ class VideoDatasetSourceAndTarget:
         self.source_dataset = source_dataset
         self.target_dataset = target_dataset
         self.output_dim = (source_dataset.output_dim, target_dataset.output_dim)
+        self.unknown_label=None
         # Get the size of the tensors for the first sample in the source and target datasets
         source_size = len(source_dataset[0][0]), *source_dataset[0][0].size()[1:]
         target_size = len(target_dataset[0][0]), *target_dataset[0][0].size()[1:]
