@@ -87,11 +87,10 @@ def save_best_model(h_score, model, config, entropy_val, epoch):
 
     return model_name
 
-def plot_tsne(features, labels, epoch, entropy_val, config, filename, perplexity=30):
+def plot_tsne(features, labels, epoch, entropy_val, config, filename, perplexity=30, known_unknown_labels=None):
     # Adapt perplexity according to the size of the input
     if len(features) <= perplexity:
         perplexity = len(features) - 1
-    # Set a seed for the t-SNE
     tsne = TSNE(n_components=2, verbose=0, perplexity=perplexity, n_iter=300, random_state=int(config['seed']))
     tsne_results = tsne.fit_transform(features)
 
@@ -100,10 +99,15 @@ def plot_tsne(features, labels, epoch, entropy_val, config, filename, perplexity
     df['y-tsne'] = tsne_results[:,1]
     df['labels'] = labels
 
+    # If known_unknown_labels is provided, add it to the DataFrame
+    if known_unknown_labels is not None:
+        df['known_unknown'] = known_unknown_labels
+
     plt.figure(figsize=(8,8))
     sns.scatterplot(
         x="x-tsne", y="y-tsne",
         hue="labels",
+        style="known_unknown" if known_unknown_labels is not None else None,
         palette=sns.color_palette("hsv", len(set(labels))),
         data=df,
         legend="full",
@@ -705,6 +709,7 @@ def plot_confusion_matrix(labels_all, predicted_all, all_classes, epoch, entropy
     plt.savefig(cm_name)
     plt.close()
     wandb.log({"confusion_matrix": wandb.Image(cm_name)})
+
 
 def get_classes_from_dir(dir_path):
     return sorted(os.listdir(dir_path))
