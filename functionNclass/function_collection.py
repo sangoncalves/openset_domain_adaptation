@@ -45,6 +45,13 @@ def set_seed(seed):
         torch.cuda.manual_seed_all(seed)
 
 def save_best_model(h_score, model, config, entropy_val, epoch):
+    def get_h_score(filename):
+        parts = filename.split('_')
+        if "entropy" in filename:
+            return float(parts[2])
+        else:
+            return float(parts[2])
+
     model_path = config["model_dir"]
     if config['baseline_or_proposed'] == 'baseline':
         model_dir = os.path.join(model_path, 'baseline')
@@ -74,8 +81,9 @@ def save_best_model(h_score, model, config, entropy_val, epoch):
         saved_model_list = [m for m in os.listdir(current_run_dir) if m.endswith(".pth")]
         saved_model_list_tmp = [m for m in os.listdir(current_run_tmp_dir) if m.endswith(".pth")]
 
-        max_h_score_saved = max([float(m.split('_')[4]) for m in saved_model_list]) if saved_model_list else -1
-        max_h_score_tmp = max([float(m.split('_')[4]) for m in saved_model_list_tmp]) if saved_model_list_tmp else -1
+        # Extract the h_score values using the get_h_score function
+        max_h_score_saved = max([get_h_score(m) for m in saved_model_list]) if saved_model_list else -1
+        max_h_score_tmp = max([get_h_score(m) for m in saved_model_list_tmp]) if saved_model_list_tmp else -1
 
         if max_h_score_tmp > max_h_score_saved:
             shutil.rmtree(current_run_dir)
