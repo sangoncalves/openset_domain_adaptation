@@ -1,0 +1,4 @@
+model config:
+baseline_or_proposed:  proposed
+adaptation_direction:  hmdb2ucf
+Epoch:  0

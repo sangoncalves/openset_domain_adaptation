@@ -1,0 +1,111 @@
+2023-08-23 20:24:49,017 INFO    MainThread:5899 [wandb_setup.py:_flush():76] Current SDK version is 0.15.8
+2023-08-23 20:24:49,017 INFO    MainThread:5899 [wandb_setup.py:_flush():76] Configure stats pid to 5899
+2023-08-23 20:24:49,018 INFO    MainThread:5899 [wandb_setup.py:_flush():76] Loading settings from /root/.config/wandb/settings
+2023-08-23 20:24:49,018 INFO    MainThread:5899 [wandb_setup.py:_flush():76] Loading settings from /content/openset_domain_adaptation/wandb/settings
+2023-08-23 20:24:49,018 INFO    MainThread:5899 [wandb_setup.py:_flush():76] Loading settings from environment variables: {'api_key': '***REDACTED***'}
+2023-08-23 20:24:49,018 INFO    MainThread:5899 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-08-23 20:24:49,018 INFO    MainThread:5899 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2023-08-23 20:24:49,018 INFO    MainThread:5899 [wandb_init.py:_log_setup():507] Logging user logs to /content/openset_domain_adaptation/wandb/run-20230823_202449-a7c2uphi/logs/debug.log
+2023-08-23 20:24:49,018 INFO    MainThread:5899 [wandb_init.py:_log_setup():508] Logging internal logs to /content/openset_domain_adaptation/wandb/run-20230823_202449-a7c2uphi/logs/debug-internal.log
+2023-08-23 20:24:49,018 INFO    MainThread:5899 [wandb_init.py:_jupyter_setup():453] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x7b535ef4ec80>
+2023-08-23 20:24:49,018 INFO    MainThread:5899 [wandb_init.py:init():547] calling init triggers
+2023-08-23 20:24:49,018 INFO    MainThread:5899 [wandb_init.py:init():554] wandb.init called with sweep_config: {}
+config: {}
+2023-08-23 20:24:49,018 INFO    MainThread:5899 [wandb_init.py:init():596] starting backend
+2023-08-23 20:24:49,018 INFO    MainThread:5899 [wandb_init.py:init():600] setting up manager
+2023-08-23 20:24:49,022 INFO    MainThread:5899 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-08-23 20:24:49,023 INFO    MainThread:5899 [wandb_init.py:init():606] backend started and connected
+2023-08-23 20:24:49,039 INFO    MainThread:5899 [wandb_run.py:_label_probe_notebook():1234] probe notebook
+2023-08-23 20:24:53,070 INFO    MainThread:5899 [wandb_init.py:init():697] updated telemetry
+2023-08-23 20:24:53,074 INFO    MainThread:5899 [wandb_init.py:init():730] communicating run to backend with 60.0 second timeout
+2023-08-23 20:24:53,629 INFO    MainThread:5899 [wandb_run.py:_on_init():2180] communicating current version
+2023-08-23 20:24:53,834 INFO    MainThread:5899 [wandb_run.py:_on_init():2189] got version response 
+2023-08-23 20:24:53,834 INFO    MainThread:5899 [wandb_init.py:init():781] starting run threads in backend
+2023-08-23 20:24:53,871 INFO    MainThread:5899 [wandb_run.py:_console_start():2159] atexit reg
+2023-08-23 20:24:53,871 INFO    MainThread:5899 [wandb_run.py:_redirect():2014] redirect: wrap_raw
+2023-08-23 20:24:53,872 INFO    MainThread:5899 [wandb_run.py:_redirect():2079] Wrapping output streams.
+2023-08-23 20:24:53,872 INFO    MainThread:5899 [wandb_run.py:_redirect():2104] Redirects installed.
+2023-08-23 20:24:53,872 INFO    MainThread:5899 [wandb_init.py:init():822] run started, returning control to user process
+2023-08-23 20:24:53,876 INFO    MainThread:5899 [wandb_config.py:__setitem__():151] config set num_epochs = 2 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7b535ed60fa0>>
+2023-08-23 20:24:53,876 INFO    MainThread:5899 [wandb_run.py:_config_callback():1282] config_cb num_epochs 2 None
+2023-08-23 20:24:53,877 INFO    MainThread:5899 [wandb_config.py:__setitem__():151] config set criterion_label_classifier = CrossEntropyLoss() - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7b535ed60fa0>>
+2023-08-23 20:24:53,877 INFO    MainThread:5899 [wandb_run.py:_config_callback():1282] config_cb criterion_label_classifier CrossEntropyLoss() None
+2023-08-23 20:24:53,877 INFO    MainThread:5899 [wandb_config.py:__setitem__():151] config set criterion_known_unknown_classifier = BCEWithLogitsLoss() - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7b535ed60fa0>>
+2023-08-23 20:24:53,877 INFO    MainThread:5899 [wandb_run.py:_config_callback():1282] config_cb criterion_known_unknown_classifier BCEWithLogitsLoss() None
+2023-08-23 20:24:53,877 INFO    MainThread:5899 [wandb_config.py:__setitem__():151] config set device = cuda - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7b535ed60fa0>>
+2023-08-23 20:24:53,877 INFO    MainThread:5899 [wandb_run.py:_config_callback():1282] config_cb device cuda None
+2023-08-23 20:24:53,878 INFO    MainThread:5899 [wandb_config.py:__setitem__():151] config set batch_size = 8 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7b535ed60fa0>>
+2023-08-23 20:24:53,878 INFO    MainThread:5899 [wandb_run.py:_config_callback():1282] config_cb batch_size 8 None
+2023-08-23 20:24:53,878 INFO    MainThread:5899 [wandb_config.py:__setitem__():151] config set dataset_choice = Giacomo - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7b535ed60fa0>>
+2023-08-23 20:24:53,878 INFO    MainThread:5899 [wandb_run.py:_config_callback():1282] config_cb dataset_choice Giacomo None
+2023-08-23 20:24:53,878 INFO    MainThread:5899 [wandb_config.py:__setitem__():151] config set subset_flag = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7b535ed60fa0>>
+2023-08-23 20:24:53,878 INFO    MainThread:5899 [wandb_run.py:_config_callback():1282] config_cb subset_flag False None
+2023-08-23 20:24:53,878 INFO    MainThread:5899 [wandb_config.py:__setitem__():151] config set obs_num = 30 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7b535ed60fa0>>
+2023-08-23 20:24:53,878 INFO    MainThread:5899 [wandb_run.py:_config_callback():1282] config_cb obs_num 30 None
+2023-08-23 20:24:53,878 INFO    MainThread:5899 [wandb_config.py:__setitem__():151] config set num_classes_to_remove = 2 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7b535ed60fa0>>
+2023-08-23 20:24:53,878 INFO    MainThread:5899 [wandb_run.py:_config_callback():1282] config_cb num_classes_to_remove 2 None
+2023-08-23 20:24:53,879 INFO    MainThread:5899 [wandb_config.py:__setitem__():151] config set g_open_set = True - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7b535ed60fa0>>
+2023-08-23 20:24:53,879 INFO    MainThread:5899 [wandb_run.py:_config_callback():1282] config_cb g_open_set True None
+2023-08-23 20:24:53,879 INFO    MainThread:5899 [wandb_config.py:__setitem__():151] config set hard_reset = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7b535ed60fa0>>
+2023-08-23 20:24:53,879 INFO    MainThread:5899 [wandb_run.py:_config_callback():1282] config_cb hard_reset False None
+2023-08-23 20:24:53,879 INFO    MainThread:5899 [wandb_config.py:__setitem__():151] config set class_validation = False - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7b535ed60fa0>>
+2023-08-23 20:24:53,879 INFO    MainThread:5899 [wandb_run.py:_config_callback():1282] config_cb class_validation False None
+2023-08-23 20:24:53,879 INFO    MainThread:5899 [wandb_config.py:__setitem__():151] config set adaptation_direction = hmdb2ucf - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7b535ed60fa0>>
+2023-08-23 20:24:53,879 INFO    MainThread:5899 [wandb_run.py:_config_callback():1282] config_cb adaptation_direction hmdb2ucf None
+2023-08-23 20:24:53,879 INFO    MainThread:5899 [wandb_config.py:__setitem__():151] config set baseline_or_proposed = proposed - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7b535ed60fa0>>
+2023-08-23 20:24:53,879 INFO    MainThread:5899 [wandb_run.py:_config_callback():1282] config_cb baseline_or_proposed proposed None
+2023-08-23 20:24:53,880 INFO    MainThread:5899 [wandb_config.py:__setitem__():151] config set optimizer_label = SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    lr: 0.001
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7b535ed60fa0>>
+2023-08-23 20:24:53,880 INFO    MainThread:5899 [wandb_run.py:_config_callback():1282] config_cb optimizer_label SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    lr: 0.001
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) None
+2023-08-23 20:24:53,880 INFO    MainThread:5899 [wandb_config.py:__setitem__():151] config set optimizer_known_unknown = SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    lr: 0.001
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x7b535ed60fa0>>
+2023-08-23 20:24:53,880 INFO    MainThread:5899 [wandb_run.py:_config_callback():1282] config_cb optimizer_known_unknown SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    lr: 0.001
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+) None
+2023-08-23 20:24:53,880 INFO    MainThread:5899 [wandb_watch.py:watch():51] Watching
+2023-08-23 20:28:09,361 INFO    MainThread:5899 [wandb_run.py:_finish():1894] finishing run sango/openset_domain_adaptation/a7c2uphi
+2023-08-23 20:28:09,362 INFO    MainThread:5899 [jupyter.py:save_history():445] not saving jupyter history
+2023-08-23 20:28:09,362 INFO    MainThread:5899 [jupyter.py:save_ipynb():373] not saving jupyter notebook
+2023-08-23 20:28:09,362 INFO    MainThread:5899 [wandb_init.py:_jupyter_teardown():435] cleaning up jupyter logic
+2023-08-23 20:28:09,362 INFO    MainThread:5899 [wandb_run.py:_atexit_cleanup():2128] got exitcode: 1
+2023-08-23 20:28:09,362 INFO    MainThread:5899 [wandb_run.py:_restore():2111] restore
+2023-08-23 20:28:09,362 INFO    MainThread:5899 [wandb_run.py:_restore():2117] restore done
+2023-08-23 20:28:15,227 INFO    MainThread:5899 [wandb_run.py:_footer_history_summary_info():3481] rendering history
+2023-08-23 20:28:15,227 INFO    MainThread:5899 [wandb_run.py:_footer_history_summary_info():3513] rendering summary
+2023-08-23 20:28:15,232 INFO    MainThread:5899 [wandb_run.py:_footer_sync_info():3440] logging synced files

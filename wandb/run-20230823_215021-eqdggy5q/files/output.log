@@ -1,0 +1,8 @@
+model config:
+baseline_or_proposed:  proposed
+adaptation_direction:  hmdb2ucf
+Epoch:  0
+Test Loss: 0.0, Test Accuracy: 0.0
+Epoch:  1
+Test Loss: 0.0, Test Accuracy: 0.0
+Model saved with seed 42, h_score 0, direction hmdb2ucf, and type proposed

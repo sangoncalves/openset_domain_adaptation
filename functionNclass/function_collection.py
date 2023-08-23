@@ -45,45 +45,39 @@ def set_seed(seed):
         torch.cuda.manual_seed_all(seed)
 
 def save_best_model(h_score, model, config, entropy_val, epoch):
-    def get_h_score(filename):
-        parts = filename.split('_')
-        if "entropy" in filename:
-            return float(parts[2])
-        else:
-            return float(parts[2])
-
     model_path = config["model_dir"]
     if config['baseline_or_proposed'] == 'baseline':
         model_dir = os.path.join(model_path, 'baseline')
+        model_name = f"model_entropy_{entropy_val:.4f}_hscore_{h_score:.4f}_direction_{config['adaptation_direction']}_{config['baseline_or_proposed']}_seed_{config['seed']}_epoch_{str(epoch)}.pth"
+        current_run_dir = os.path.join(model_dir, f"{config['adaptation_direction']}_seed_{config['seed']}_entropy_{entropy_val}")
     else:
         model_dir = os.path.join(model_path, 'proposed')
+        model_name = f"model_name_{entropy_val}_hscore_{h_score:.4f}_direction_{config['adaptation_direction']}_{config['baseline_or_proposed']}_seed_{config['seed']}_epoch_{str(epoch)}.pth"
+        current_run_dir = os.path.join(model_dir, f"{config['adaptation_direction']}_seed_{config['seed']}_model-name_{entropy_val}")
 
-    os.makedirs(model_dir, exist_ok=True)
+    current_run_tmp_dir = current_run_dir + f"_tmp"
+    
+    # If it's the beginning of the training (epoch 0), and the temporary directory already exists, remove its contents
+    if epoch == 0 and os.path.exists(current_run_tmp_dir):
+        shutil.rmtree(current_run_tmp_dir)
+        os.makedirs(current_run_tmp_dir)  # Recreate the directory after removing it
 
-    model_name = f"model_hscore_{h_score:.4f}_direction_{config['adaptation_direction']}_{config['baseline_or_proposed']}_seed_{config['seed']}_epoch_{str(epoch)}"
-    current_run_tmp_dir = f"{config['adaptation_direction']}_seed_{config['seed']}_tmp"
-
-    if entropy_val is not None:
-        model_name += f"_entropy_{entropy_val:.4f}"
-        current_run_tmp_dir += f"_entropy_{entropy_val}"
-
-    model_name += ".pth"
-    current_run_tmp_dir = os.path.join(model_dir, current_run_tmp_dir)
     os.makedirs(current_run_tmp_dir, exist_ok=True)
+    os.makedirs(model_dir, exist_ok=True)
 
     model_tmp_path = os.path.join(current_run_tmp_dir, model_name)
     torch.save(model.state_dict(), model_tmp_path)
 
-    current_run_dir = os.path.join(model_dir, f"{config['adaptation_direction']}_seed_{config['seed']}_entropy_{entropy_val if entropy_val is not None else ''}")
-    os.makedirs(current_run_dir, exist_ok=True)
 
     if epoch == config["num_epochs"] - 1:
         saved_model_list = [m for m in os.listdir(current_run_dir) if m.endswith(".pth")]
         saved_model_list_tmp = [m for m in os.listdir(current_run_tmp_dir) if m.endswith(".pth")]
-
-        # Extract the h_score values using the get_h_score function
-        max_h_score_saved = max([get_h_score(m) for m in saved_model_list]) if saved_model_list else -1
-        max_h_score_tmp = max([get_h_score(m) for m in saved_model_list_tmp]) if saved_model_list_tmp else -1
+        if config['baseline_or_proposed'] == 'baseline':
+          max_h_score_saved = max([float(m.split('_')[4]) for m in saved_model_list]) if saved_model_list else -1
+          max_h_score_tmp = max([float(m.split('_')[4]) for m in saved_model_list_tmp]) if saved_model_list_tmp else -1
+        else:
+          max_h_score_saved = max([float(m.split('_')[2]) for m in saved_model_list]) if saved_model_list else -1
+          max_h_score_tmp = max([float(m.split('_')[2]) for m in saved_model_list_tmp]) if saved_model_list_tmp else -1
 
         if max_h_score_tmp > max_h_score_saved:
             shutil.rmtree(current_run_dir)
@@ -94,6 +88,39 @@ def save_best_model(h_score, model, config, entropy_val, epoch):
             print(f"Model not saved, h_score: {h_score} is not better than existing model's h_score: {max_h_score_saved}, direction {config['adaptation_direction']}, and type {config['baseline_or_proposed']}")
 
     return model_name
+
+def plot_known_unknown_confusion_matrix(y_target, known_mask, unknown_label):
+    true_known_unknown_labels = (y_target != unknown_label)
+    predicted_known_unknown_labels = known_mask
+
+    # Compute the confusion matrix
+    cm_known_unknown = confusion_matrix(true_known_unknown_labels, predicted_known_unknown_labels)
+
+    fig, ax = plt.subplots(figsize=(10,7))
+    sns.heatmap(cm_known_unknown, annot=True, fmt='g', ax=ax)
+    ax.set_xlabel('Predicted')
+    ax.set_ylabel('True')
+    ax.set_title('Known/Unknown Confusion Matrix')
+    
+    wandb.log({"Known-Unknown Confusion Matrix": wandb.Image(fig)})
+    plt.close(fig)
+
+def plot_class_labels_confusion_matrix(y_target, pred_labels, true_known_unknown_labels, all_classes):
+    true_class_labels = y_target[true_known_unknown_labels]
+    predicted_class_labels = pred_labels[true_known_unknown_labels]
+
+    # Compute the confusion matrix
+    cm_class_labels = confusion_matrix(true_class_labels, predicted_class_labels, labels=all_classes)
+    
+    fig, ax = plt.subplots(figsize=(10,7))
+    sns.heatmap(cm_class_labels, annot=True, fmt='g', xticklabels=all_classes, yticklabels=all_classes, ax=ax)
+    ax.set_xlabel('Predicted')
+    ax.set_ylabel('True')
+    ax.set_title('Class Labels Confusion Matrix')
+
+    wandb.log({"Class Labels Confusion Matrix": wandb.Image(fig)})
+    plt.close(fig)
+
 
 def plot_tsne(features, labels, epoch, entropy_val, config, filename, perplexity=30, known_unknown_labels=None):
     # Adapt perplexity according to the size of the input

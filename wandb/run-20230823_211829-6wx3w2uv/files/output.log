@@ -1,0 +1,64 @@
+model config:
+baseline_or_proposed:  proposed
+adaptation_direction:  hmdb2ucf
+Epoch:  0
+Test Loss: 0.0, Test Accuracy: 0.0
+Epoch:  1
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+All elements are judged as unknown.
+Test Loss: 0.0, Test Accuracy: 0.0
