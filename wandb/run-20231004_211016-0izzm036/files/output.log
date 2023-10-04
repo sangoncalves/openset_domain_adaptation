@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "<ipython-input-43-aa436667b130>", line 21, in <cell line: 12>
+    result_proposed_train= proposed_train(config, source_n_target_train_loader, target_test_loader, filename, run_id1)
+NameError: name 'proposed_train' is not defined
