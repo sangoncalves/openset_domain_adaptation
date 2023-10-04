@@ -1,0 +1,10 @@
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+Epoch:  0
+
+  0%|          | 0/179 [00:04<?, ?it/s]
+Traceback (most recent call last):
+  File "<ipython-input-75-92757d50aab8>", line 20, in <cell line: 11>
+    result_proposed_train= proposed_train(config, source_n_target_train_loader, target_test_loader, filename, run_id1)
+  File "<ipython-input-71-8c034f456970>", line 119, in proposed_train
+    true_labels_all.extend(y_target.to(pred_labels.device).tolist())
+NameError: name 'y_target' is not defined
