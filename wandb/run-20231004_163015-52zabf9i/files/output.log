@@ -1,0 +1,678 @@
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+Epoch:  0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████| 179/179 [05:46<00:00,  1.94s/it]
+  1%|▏         | 1/72 [00:01<02:13,  1.89s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████| 72/72 [00:39<00:00,  1.84it/s]
+<ipython-input-234-dc3c7abfd27e>:66: RuntimeWarning: invalid value encountered in divide
+  precision = true_positive / (true_positive + false_positive)
+<ipython-input-234-dc3c7abfd27e>:67: RuntimeWarning: invalid value encountered in divide
+  recall = true_positive / (true_positive + false_negative)
+<ipython-input-234-dc3c7abfd27e>:68: RuntimeWarning: invalid value encountered in divide
+  accuracy_per_class = true_positive / (true_positive + false_positive + false_negative)
+  0%|          | 0/179 [00:00<?, ?it/s]
+Metrics Test:  {'Closed Accuracy Test': 0.0, 'Open Accuracy Test': 0.0, 'H-Score Test': 0}
+Progress: 100.00%, Elapsed Time: 386.99s, Estimated Remaining Time: 0.00s
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+  0%|          | 0/179 [00:00<?, ?it/s][34m[1mwandb[39m[22m: [33mWARNING[39m Step only supports monotonically increasing values, use define_metric to set a custom x axis. For details see: https://wandb.me/define-metric
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 2. Dropping entry: {'confusion_matrix Test': {'_type': 'image-file', 'sha256': '8888cf8d35aa7e7b7847c1e60a616bb904efea575a51628d2813147ebeb67523', 'size': 30044, 'path': 'media/images/confusion_matrix Test_2_8888cf8d35aa7e7b7847.png', 'format': 'png', 'width': 1200, 'height': 800, 'caption': 'Confusion Matrix Test at Epoch 0'}, '_timestamp': 1696437405.813078}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 2. Dropping entry: {'Closed Accuracy Test': 0.0, 'Open Accuracy Test': 0.0, 'H-Score Test': 0, '_timestamp': 1696437405.8322723}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 2. Dropping entry: {'Accuracy_Test_punch': 0, 'Accuracy_Test_golf': 0, 'Accuracy_Test_pullup': 0, 'Accuracy_Test_fencing': 0, '_timestamp': 1696437405.8331027}).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 99%|█████████▉| 178/179 [05:42<00:01,  1.77s/it]
+100%|██████████| 179/179 [05:44<00:00,  1.92s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 90%|█████████ | 65/72 [00:29<00:02,  3.01it/s]
+Metrics Test:  {'Closed Accuracy Test': 0.0, 'Open Accuracy Test': 0.0, 'H-Score Test': 0}
+Progress: 100.00%, Elapsed Time: 763.34s, Estimated Remaining Time: 0.00s
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+
+100%|██████████| 72/72 [00:31<00:00,  2.30it/s]
+<ipython-input-234-dc3c7abfd27e>:66: RuntimeWarning: invalid value encountered in divide
+  precision = true_positive / (true_positive + false_positive)
+<ipython-input-234-dc3c7abfd27e>:67: RuntimeWarning: invalid value encountered in divide
+  recall = true_positive / (true_positive + false_negative)
+<ipython-input-234-dc3c7abfd27e>:68: RuntimeWarning: invalid value encountered in divide
+  accuracy_per_class = true_positive / (true_positive + false_positive + false_negative)
+  0%|          | 0/179 [00:00<?, ?it/s][34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1 is less than current step: 3. Dropping entry: {'confusion_matrix Test': {'_type': 'image-file', 'sha256': '8888cf8d35aa7e7b7847c1e60a616bb904efea575a51628d2813147ebeb67523', 'size': 30044, 'path': 'media/images/confusion_matrix Test_3_8888cf8d35aa7e7b7847.png', 'format': 'png', 'width': 1200, 'height': 800, 'caption': 'Confusion Matrix Test at Epoch 1'}, '_timestamp': 1696437782.1830409}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1 is less than current step: 3. Dropping entry: {'Closed Accuracy Test': 0.0, 'Open Accuracy Test': 0.0, 'H-Score Test': 0, '_timestamp': 1696437782.1876385}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 1 is less than current step: 3. Dropping entry: {'Accuracy_Test_punch': 0, 'Accuracy_Test_golf': 0, 'Accuracy_Test_pullup': 0, 'Accuracy_Test_fencing': 0, '_timestamp': 1696437782.1880438}).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 99%|█████████▉| 178/179 [05:57<00:01,  1.42s/it]
+100%|██████████| 179/179 [05:58<00:00,  2.01s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████| 72/72 [00:34<00:00,  2.07it/s]
+<ipython-input-234-dc3c7abfd27e>:66: RuntimeWarning: invalid value encountered in divide
+  precision = true_positive / (true_positive + false_positive)
+<ipython-input-234-dc3c7abfd27e>:67: RuntimeWarning: invalid value encountered in divide
+  recall = true_positive / (true_positive + false_negative)
+<ipython-input-234-dc3c7abfd27e>:68: RuntimeWarning: invalid value encountered in divide
+  accuracy_per_class = true_positive / (true_positive + false_positive + false_negative)
+Metrics Test:  {'Closed Accuracy Test': 0.0, 'Open Accuracy Test': 0.0, 'H-Score Test': 0}
+Progress: 100.00%, Elapsed Time: 1157.77s, Estimated Remaining Time: 0.00s
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+Epoch:  3
+
+
+
+  3%|▎         | 6/179 [00:11<03:54,  1.35s/it][34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2 is less than current step: 4. Dropping entry: {'confusion_matrix Test': {'_type': 'image-file', 'sha256': '8888cf8d35aa7e7b7847c1e60a616bb904efea575a51628d2813147ebeb67523', 'size': 30044, 'path': 'media/images/confusion_matrix Test_4_8888cf8d35aa7e7b7847.png', 'format': 'png', 'width': 1200, 'height': 800, 'caption': 'Confusion Matrix Test at Epoch 2'}, '_timestamp': 1696438176.6093783}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2 is less than current step: 4. Dropping entry: {'Closed Accuracy Test': 0.0, 'Open Accuracy Test': 0.0, 'H-Score Test': 0, '_timestamp': 1696438176.6172283}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 2 is less than current step: 4. Dropping entry: {'Accuracy_Test_punch': 0, 'Accuracy_Test_golf': 0, 'Accuracy_Test_pullup': 0, 'Accuracy_Test_fencing': 0, '_timestamp': 1696438176.618019}).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 99%|█████████▉| 178/179 [05:37<00:02,  2.44s/it]
+100%|██████████| 179/179 [05:38<00:00,  1.89s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 89%|████████▉ | 64/72 [00:30<00:03,  2.17it/s]
+Metrics Test:  {'Closed Accuracy Test': 0.0, 'Open Accuracy Test': 0.0, 'H-Score Test': 0}
+Progress: 100.00%, Elapsed Time: 1530.18s, Estimated Remaining Time: 0.00s
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+
+100%|██████████| 72/72 [00:32<00:00,  2.19it/s]
+<ipython-input-234-dc3c7abfd27e>:66: RuntimeWarning: invalid value encountered in divide
+  precision = true_positive / (true_positive + false_positive)
+<ipython-input-234-dc3c7abfd27e>:67: RuntimeWarning: invalid value encountered in divide
+  recall = true_positive / (true_positive + false_negative)
+<ipython-input-234-dc3c7abfd27e>:68: RuntimeWarning: invalid value encountered in divide
+  accuracy_per_class = true_positive / (true_positive + false_positive + false_negative)
+
+
+
+  3%|▎         | 6/179 [00:12<05:43,  1.98s/it][34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 3 is less than current step: 5. Dropping entry: {'confusion_matrix Test': {'_type': 'image-file', 'sha256': '8888cf8d35aa7e7b7847c1e60a616bb904efea575a51628d2813147ebeb67523', 'size': 30044, 'path': 'media/images/confusion_matrix Test_5_8888cf8d35aa7e7b7847.png', 'format': 'png', 'width': 1200, 'height': 800, 'caption': 'Confusion Matrix Test at Epoch 3'}, '_timestamp': 1696438549.020048}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 3 is less than current step: 5. Dropping entry: {'Closed Accuracy Test': 0.0, 'Open Accuracy Test': 0.0, 'H-Score Test': 0, '_timestamp': 1696438549.0218227}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 3 is less than current step: 5. Dropping entry: {'Accuracy_Test_punch': 0, 'Accuracy_Test_golf': 0, 'Accuracy_Test_pullup': 0, 'Accuracy_Test_fencing': 0, '_timestamp': 1696438549.0220814}).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████| 179/179 [05:43<00:00,  1.37s/it]
+100%|██████████| 179/179 [05:44<00:00,  1.93s/it]
+  0%|          | 0/72 [00:03<?, ?it/s]
+Traceback (most recent call last):
+  File "<ipython-input-242-92757d50aab8>", line 20, in <cell line: 11>
+    result_proposed_train= proposed_train(config, source_n_target_train_loader, target_test_loader, filename, run_id1)
+  File "<ipython-input-240-2fde9da9e9eb>", line 130, in proposed_train
+    proposed_test(config, source_n_target_train_loader, target_test_loader, filename, run_id, epoch)
+  File "<ipython-input-241-e2dfb4578318>", line 39, in proposed_test
+    for batch in tqdm(target_test_loader, total=total_batches):
+  File "/usr/local/lib/python3.10/dist-packages/tqdm/std.py", line 1182, in __iter__
+    for obj in iterable:
+  File "/usr/local/lib/python3.10/dist-packages/torch/utils/data/dataloader.py", line 633, in __next__
+    data = self._next_data()
+  File "/usr/local/lib/python3.10/dist-packages/torch/utils/data/dataloader.py", line 1328, in _next_data
+    idx, data = self._get_data()
+  File "/usr/local/lib/python3.10/dist-packages/torch/utils/data/dataloader.py", line 1284, in _get_data
+    success, data = self._try_get_data()
+  File "/usr/local/lib/python3.10/dist-packages/torch/utils/data/dataloader.py", line 1132, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "/usr/lib/python3.10/queue.py", line 180, in get
+    self.not_empty.wait(remaining)
+  File "/usr/lib/python3.10/threading.py", line 324, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt
