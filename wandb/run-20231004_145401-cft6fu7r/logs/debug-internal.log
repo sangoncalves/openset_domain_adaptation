@@ -1,0 +1,477 @@
+2023-10-04 14:54:01,147 INFO    StreamThr :3637 [internal.py:wandb_internal():86] W&B internal server running at pid: 3637, started at: 2023-10-04 14:54:01.145848
+2023-10-04 14:54:01,160 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status
+2023-10-04 14:54:03,956 INFO    WriterThread:3637 [datastore.py:open_for_write():85] open: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/run-cft6fu7r.wandb
+2023-10-04 14:54:03,956 DEBUG   SenderThread:3637 [sender.py:send():380] send: header
+2023-10-04 14:54:03,961 DEBUG   SenderThread:3637 [sender.py:send():380] send: run
+2023-10-04 14:54:04,420 INFO    SenderThread:3637 [dir_watcher.py:__init__():211] watching files in: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files
+2023-10-04 14:54:04,420 INFO    SenderThread:3637 [sender.py:_start_run_threads():1122] run started: cft6fu7r with start time 1696431241.136081
+2023-10-04 14:54:04,430 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: check_version
+2023-10-04 14:54:04,430 DEBUG   SenderThread:3637 [sender.py:send_request():407] send_request: check_version
+2023-10-04 14:54:04,567 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: run_start
+2023-10-04 14:54:04,568 DEBUG   HandlerThread:3637 [system_info.py:__init__():32] System info init
+2023-10-04 14:54:04,569 DEBUG   HandlerThread:3637 [system_info.py:__init__():47] System info init done
+2023-10-04 14:54:04,569 INFO    HandlerThread:3637 [system_monitor.py:start():181] Starting system monitor
+2023-10-04 14:54:04,569 INFO    SystemMonitor:3637 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-10-04 14:54:04,569 INFO    HandlerThread:3637 [system_monitor.py:probe():201] Collecting system info
+2023-10-04 14:54:04,569 INFO    SystemMonitor:3637 [interfaces.py:start():190] Started cpu monitoring
+2023-10-04 14:54:04,570 INFO    SystemMonitor:3637 [interfaces.py:start():190] Started disk monitoring
+2023-10-04 14:54:04,571 INFO    SystemMonitor:3637 [interfaces.py:start():190] Started gpu monitoring
+2023-10-04 14:54:04,572 INFO    SystemMonitor:3637 [interfaces.py:start():190] Started memory monitoring
+2023-10-04 14:54:04,573 INFO    SystemMonitor:3637 [interfaces.py:start():190] Started network monitoring
+2023-10-04 14:54:04,573 DEBUG   HandlerThread:3637 [system_info.py:probe():196] Probing system
+2023-10-04 14:54:04,575 DEBUG   HandlerThread:3637 [system_info.py:_probe_git():181] Probing git
+2023-10-04 14:54:04,582 DEBUG   HandlerThread:3637 [system_info.py:_probe_git():189] Probing git done
+2023-10-04 14:54:04,582 DEBUG   HandlerThread:3637 [system_info.py:probe():244] Probing system done
+2023-10-04 14:54:04,582 DEBUG   HandlerThread:3637 [system_monitor.py:probe():210] {'os': 'Linux-5.15.120+-x86_64-with-glibc2.35', 'python': '3.10.12', 'heartbeatAt': '2023-10-04T14:54:04.573590', 'startedAt': '2023-10-04T14:54:01.124391', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'OpenDomainAdaptation_Thesisv4.ipynb', 'codePathLocal': 'OpenDomainAdaptation_Thesisv4.ipynb', 'colab': 'https://colab.research.google.com/notebook#fileId=1AHs9TgV4WiWxx-aejdHJfHj5hkpO8WPT', 'git': {'remote': 'https://github.com/sangoncalves/openset_domain_adaptation.git', 'commit': '7ae8d35e694ae8fecb12c829f183ff3c90628fae'}, 'email': 'sander.martinsgoncalves@gmail.com', 'root': '/content/openset_domain_adaptation', 'host': 'cd8f743f1d17', 'username': 'root', 'executable': '/usr/bin/python3', 'cpu_count': 1, 'cpu_count_logical': 2, 'cpu_freq': {'current': 2000.168, 'min': 0.0, 'max': 0.0}, 'cpu_freq_per_core': [{'current': 2000.168, 'min': 0.0, 'max': 0.0}, {'current': 2000.168, 'min': 0.0, 'max': 0.0}], 'disk': {'/': {'total': 166.77415084838867, 'used': 48.84562683105469}}, 'gpu': 'Tesla V100-SXM2-16GB', 'gpu_count': 1, 'gpu_devices': [{'name': 'Tesla V100-SXM2-16GB', 'memory_total': 17179869184}], 'memory': {'total': 12.6783447265625}}
+2023-10-04 14:54:04,582 INFO    HandlerThread:3637 [system_monitor.py:probe():211] Finished collecting system info
+2023-10-04 14:54:04,582 INFO    HandlerThread:3637 [system_monitor.py:probe():214] Publishing system info
+2023-10-04 14:54:04,582 DEBUG   HandlerThread:3637 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2023-10-04 14:54:04,583 DEBUG   HandlerThread:3637 [system_info.py:_save_pip():68] Saving pip packages done
+2023-10-04 14:54:04,583 INFO    HandlerThread:3637 [system_monitor.py:probe():216] Finished publishing system info
+2023-10-04 14:54:04,584 DEBUG   SenderThread:3637 [sender.py:send():380] send: files
+2023-10-04 14:54:04,584 INFO    SenderThread:3637 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2023-10-04 14:54:04,606 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-04 14:54:04,606 DEBUG   SenderThread:3637 [sender.py:send_request():407] send_request: stop_status
+2023-10-04 14:54:04,647 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: internal_messages
+2023-10-04 14:54:04,647 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: partial_history
+2023-10-04 14:54:04,957 DEBUG   SenderThread:3637 [sender.py:send():380] send: telemetry
+2023-10-04 14:54:04,957 DEBUG   SenderThread:3637 [sender.py:send():380] send: telemetry
+2023-10-04 14:54:04,958 DEBUG   SenderThread:3637 [sender.py:send():380] send: run
+2023-10-04 14:54:05,124 INFO    SenderThread:3637 [sender.py:send_run():1000] updated run: cft6fu7r
+2023-10-04 14:54:05,124 DEBUG   SenderThread:3637 [sender.py:send():380] send: history
+2023-10-04 14:54:05,125 DEBUG   SenderThread:3637 [sender.py:send_request():407] send_request: summary_record
+2023-10-04 14:54:05,125 INFO    SenderThread:3637 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-04 14:54:05,126 DEBUG   SenderThread:3637 [sender.py:send():380] send: telemetry
+2023-10-04 14:54:05,126 DEBUG   SenderThread:3637 [sender.py:send():380] send: config
+2023-10-04 14:54:05,126 DEBUG   SenderThread:3637 [sender.py:send():380] send: config
+2023-10-04 14:54:05,126 DEBUG   SenderThread:3637 [sender.py:send():380] send: config
+2023-10-04 14:54:05,126 DEBUG   SenderThread:3637 [sender.py:send():380] send: config
+2023-10-04 14:54:05,126 DEBUG   SenderThread:3637 [sender.py:send():380] send: config
+2023-10-04 14:54:05,126 DEBUG   SenderThread:3637 [sender.py:send():380] send: config
+2023-10-04 14:54:05,126 DEBUG   SenderThread:3637 [sender.py:send():380] send: config
+2023-10-04 14:54:05,127 DEBUG   SenderThread:3637 [sender.py:send():380] send: config
+2023-10-04 14:54:05,127 DEBUG   SenderThread:3637 [sender.py:send():380] send: config
+2023-10-04 14:54:05,127 DEBUG   SenderThread:3637 [sender.py:send():380] send: config
+2023-10-04 14:54:05,127 DEBUG   SenderThread:3637 [sender.py:send():380] send: config
+2023-10-04 14:54:05,127 DEBUG   SenderThread:3637 [sender.py:send():380] send: config
+2023-10-04 14:54:05,127 DEBUG   SenderThread:3637 [sender.py:send():380] send: config
+2023-10-04 14:54:05,127 DEBUG   SenderThread:3637 [sender.py:send():380] send: config
+2023-10-04 14:54:05,127 DEBUG   SenderThread:3637 [sender.py:send():380] send: telemetry
+2023-10-04 14:54:05,245 INFO    wandb-upload_0:3637 [upload_job.py:push():131] Uploaded file /tmp/tmpskw1k3wjwandb/3e607hi1-wandb-metadata.json
+2023-10-04 14:54:05,422 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/config.yaml
+2023-10-04 14:54:05,423 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_created():271] file/dir created: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:54:05,423 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_created():271] file/dir created: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/requirements.txt
+2023-10-04 14:54:05,423 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_created():271] file/dir created: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/wandb-summary.json
+2023-10-04 14:54:05,423 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_created():271] file/dir created: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/wandb-metadata.json
+2023-10-04 14:54:07,129 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:54:07,421 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:54:09,422 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:54:12,535 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:54:13,423 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:54:15,424 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:54:18,218 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:54:19,607 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-04 14:54:19,608 DEBUG   SenderThread:3637 [sender.py:send_request():407] send_request: stop_status
+2023-10-04 14:54:19,615 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: internal_messages
+2023-10-04 14:54:23,439 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:54:23,982 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:54:29,441 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:54:29,737 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:54:34,608 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-04 14:54:34,608 DEBUG   SenderThread:3637 [sender.py:send_request():407] send_request: stop_status
+2023-10-04 14:54:34,611 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: internal_messages
+2023-10-04 14:54:34,842 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:54:35,444 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/config.yaml
+2023-10-04 14:54:37,446 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:54:40,940 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:54:45,455 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:54:46,292 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:54:47,455 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:54:49,608 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-04 14:54:49,609 DEBUG   SenderThread:3637 [sender.py:send_request():407] send_request: stop_status
+2023-10-04 14:54:49,613 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: internal_messages
+2023-10-04 14:54:51,772 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:54:55,464 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:54:57,466 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:54:57,510 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:55:01,468 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:55:03,301 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:55:03,468 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:55:04,573 DEBUG   SystemMonitor:3637 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-10-04 14:55:04,574 DEBUG   SenderThread:3637 [sender.py:send():380] send: stats
+2023-10-04 14:55:04,608 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-04 14:55:04,609 DEBUG   SenderThread:3637 [sender.py:send_request():407] send_request: stop_status
+2023-10-04 14:55:04,611 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: internal_messages
+2023-10-04 14:55:05,470 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:55:07,471 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:55:08,553 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:55:09,471 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:55:11,472 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:55:13,473 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:55:13,981 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:55:15,474 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:55:17,478 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:55:19,344 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:55:19,608 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-04 14:55:19,609 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: internal_messages
+2023-10-04 14:55:19,609 DEBUG   SenderThread:3637 [sender.py:send_request():407] send_request: stop_status
+2023-10-04 14:55:21,479 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:55:23,480 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:55:24,393 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:55:25,481 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:55:27,482 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:55:29,470 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:55:29,483 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:55:33,487 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:55:34,576 DEBUG   SenderThread:3637 [sender.py:send():380] send: stats
+2023-10-04 14:55:34,576 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:55:34,608 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-04 14:55:34,609 DEBUG   SenderThread:3637 [sender.py:send_request():407] send_request: stop_status
+2023-10-04 14:55:34,617 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: internal_messages
+2023-10-04 14:55:35,488 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:55:37,489 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:55:39,490 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:55:40,408 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:55:41,490 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:55:43,491 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:55:45,492 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:55:45,579 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:55:47,495 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:55:49,496 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:55:49,609 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-04 14:55:49,610 DEBUG   SenderThread:3637 [sender.py:send_request():407] send_request: stop_status
+2023-10-04 14:55:49,620 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: internal_messages
+2023-10-04 14:55:50,786 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:55:53,498 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:55:55,499 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:55:56,395 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:55:57,500 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:55:59,501 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:56:01,501 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:56:02,176 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:56:03,502 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:56:04,576 DEBUG   SenderThread:3637 [sender.py:send():380] send: stats
+2023-10-04 14:56:04,608 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-04 14:56:04,609 DEBUG   SenderThread:3637 [sender.py:send_request():407] send_request: stop_status
+2023-10-04 14:56:04,614 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: internal_messages
+2023-10-04 14:56:05,503 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:56:07,504 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:56:07,653 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:56:11,506 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:56:12,789 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:56:13,507 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:56:15,508 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:56:17,508 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:56:18,385 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:56:19,509 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:56:19,610 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-04 14:56:19,610 DEBUG   SenderThread:3637 [sender.py:send_request():407] send_request: stop_status
+2023-10-04 14:56:19,614 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: internal_messages
+2023-10-04 14:56:21,515 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:56:23,496 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:56:25,519 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:56:29,062 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:56:31,521 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:56:34,228 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:56:34,581 DEBUG   SenderThread:3637 [sender.py:send():380] send: stats
+2023-10-04 14:56:34,610 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-04 14:56:34,611 DEBUG   SenderThread:3637 [sender.py:send_request():407] send_request: stop_status
+2023-10-04 14:56:34,614 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: internal_messages
+2023-10-04 14:56:35,525 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:56:37,526 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:56:40,072 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:56:41,529 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:56:45,532 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:56:45,606 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:56:49,534 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:56:49,610 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-04 14:56:49,611 DEBUG   SenderThread:3637 [sender.py:send_request():407] send_request: stop_status
+2023-10-04 14:56:49,614 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: internal_messages
+2023-10-04 14:56:50,801 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:56:53,536 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:56:55,539 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:56:56,325 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:56:57,540 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:56:59,541 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:57:01,590 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:57:03,543 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:57:04,579 DEBUG   SenderThread:3637 [sender.py:send():380] send: stats
+2023-10-04 14:57:04,610 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-04 14:57:04,611 DEBUG   SenderThread:3637 [sender.py:send_request():407] send_request: stop_status
+2023-10-04 14:57:04,614 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: internal_messages
+2023-10-04 14:57:07,237 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:57:07,544 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:57:09,548 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:57:11,549 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:57:12,759 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:57:13,550 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:57:15,557 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:57:17,824 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:57:19,611 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-04 14:57:19,611 DEBUG   SenderThread:3637 [sender.py:send_request():407] send_request: stop_status
+2023-10-04 14:57:19,614 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: internal_messages
+2023-10-04 14:57:21,560 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:57:23,659 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:57:25,562 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:57:27,563 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:57:29,314 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:57:31,564 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:57:33,566 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:57:34,581 DEBUG   SenderThread:3637 [sender.py:send():380] send: stats
+2023-10-04 14:57:34,582 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:57:34,615 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-04 14:57:34,615 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: internal_messages
+2023-10-04 14:57:34,615 DEBUG   SenderThread:3637 [sender.py:send_request():407] send_request: stop_status
+2023-10-04 14:57:37,570 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:57:40,516 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:57:43,572 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:57:45,576 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:57:45,956 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:57:47,577 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:57:49,615 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-04 14:57:49,615 DEBUG   SenderThread:3637 [sender.py:send_request():407] send_request: stop_status
+2023-10-04 14:57:49,620 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: internal_messages
+2023-10-04 14:57:50,976 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:57:51,578 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:57:55,980 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:57:57,587 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:58:01,394 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:58:01,588 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:58:03,589 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:58:04,581 DEBUG   SenderThread:3637 [sender.py:send():380] send: stats
+2023-10-04 14:58:04,615 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-04 14:58:04,616 DEBUG   SenderThread:3637 [sender.py:send_request():407] send_request: stop_status
+2023-10-04 14:58:04,618 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: internal_messages
+2023-10-04 14:58:06,822 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:58:07,590 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:58:09,591 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:58:12,603 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:58:15,594 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:58:17,851 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:58:19,596 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:58:19,615 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-04 14:58:19,616 DEBUG   SenderThread:3637 [sender.py:send_request():407] send_request: stop_status
+2023-10-04 14:58:19,619 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: internal_messages
+2023-10-04 14:58:21,596 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:58:22,906 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:58:25,598 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:58:27,599 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:58:28,523 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:58:33,601 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:58:33,736 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:58:34,582 DEBUG   SenderThread:3637 [sender.py:send():380] send: stats
+2023-10-04 14:58:34,615 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-04 14:58:34,615 DEBUG   SenderThread:3637 [sender.py:send_request():407] send_request: stop_status
+2023-10-04 14:58:34,619 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: internal_messages
+2023-10-04 14:58:37,603 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:58:39,494 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:58:39,603 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:58:43,606 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:58:45,089 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:58:45,607 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:58:49,615 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-04 14:58:49,616 DEBUG   SenderThread:3637 [sender.py:send_request():407] send_request: stop_status
+2023-10-04 14:58:49,619 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: internal_messages
+2023-10-04 14:58:50,883 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:58:51,610 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:58:55,611 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:58:56,577 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:58:57,612 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:59:01,616 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:59:02,547 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:59:03,617 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:59:04,584 DEBUG   SenderThread:3637 [sender.py:send():380] send: stats
+2023-10-04 14:59:04,615 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-04 14:59:04,616 DEBUG   SenderThread:3637 [sender.py:send_request():407] send_request: stop_status
+2023-10-04 14:59:04,621 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: internal_messages
+2023-10-04 14:59:07,758 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:59:09,622 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:59:12,869 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:59:13,624 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:59:15,625 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:59:18,731 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:59:19,615 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-04 14:59:19,616 DEBUG   SenderThread:3637 [sender.py:send_request():407] send_request: stop_status
+2023-10-04 14:59:19,620 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: internal_messages
+2023-10-04 14:59:19,626 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:59:23,628 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:59:24,579 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:59:27,630 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:59:29,631 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:59:30,359 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:59:31,631 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:59:34,584 DEBUG   SenderThread:3637 [sender.py:send():380] send: stats
+2023-10-04 14:59:34,615 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-04 14:59:34,616 DEBUG   SenderThread:3637 [sender.py:send_request():407] send_request: stop_status
+2023-10-04 14:59:34,620 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: internal_messages
+2023-10-04 14:59:35,633 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:59:35,758 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:59:37,634 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:59:41,029 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:59:41,636 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:59:46,030 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:59:47,638 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:59:49,616 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-04 14:59:49,616 DEBUG   SenderThread:3637 [sender.py:send_request():407] send_request: stop_status
+2023-10-04 14:59:49,620 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: internal_messages
+2023-10-04 14:59:51,640 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:59:51,847 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:59:53,642 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:59:57,645 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:59:57,762 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 14:59:58,312 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: partial_history
+2023-10-04 14:59:58,313 DEBUG   SenderThread:3637 [sender.py:send():380] send: history
+2023-10-04 14:59:58,313 DEBUG   SenderThread:3637 [sender.py:send_request():407] send_request: summary_record
+2023-10-04 14:59:58,314 INFO    SenderThread:3637 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-04 14:59:58,646 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/wandb-summary.json
+2023-10-04 14:59:58,863 DEBUG   SenderThread:3637 [sender.py:send():380] send: files
+2023-10-04 14:59:58,863 INFO    SenderThread:3637 [sender.py:_save_file():1378] saving file media/images/confusion_matrix Train_2_c3e6f2daf742b7ec9c14.png with policy now
+2023-10-04 14:59:58,870 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: partial_history
+2023-10-04 14:59:58,871 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: partial_history
+2023-10-04 14:59:58,871 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: partial_history
+2023-10-04 14:59:59,646 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 14:59:59,647 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_created():271] file/dir created: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/media/images/confusion_matrix Train_2_c3e6f2daf742b7ec9c14.png
+2023-10-04 14:59:59,648 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_created():271] file/dir created: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/media/images
+2023-10-04 14:59:59,648 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_created():271] file/dir created: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/media
+2023-10-04 14:59:59,683 INFO    wandb-upload_0:3637 [upload_job.py:push():131] Uploaded file /tmp/tmpskw1k3wjwandb/n68l207f-media/images/confusion_matrix Train_2_c3e6f2daf742b7ec9c14.png
+2023-10-04 15:00:00,156 INFO    wandb-upload_0:3637 [upload_job.py:push():131] Uploaded file /tmp/tmpskw1k3wjwandb/p08ljdjd-media/images/confusion_matrix Train_2_c3e6f2daf742b7ec9c14.png
+2023-10-04 15:00:02,274 DEBUG   SenderThread:3637 [sender.py:send():380] send: telemetry
+2023-10-04 15:00:02,275 DEBUG   SenderThread:3637 [sender.py:send():380] send: exit
+2023-10-04 15:00:02,275 INFO    SenderThread:3637 [sender.py:send_exit():585] handling exit code: 1
+2023-10-04 15:00:02,275 INFO    SenderThread:3637 [sender.py:send_exit():587] handling runtime: 357
+2023-10-04 15:00:02,275 INFO    SenderThread:3637 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-04 15:00:02,276 INFO    SenderThread:3637 [sender.py:send_exit():593] send defer
+2023-10-04 15:00:02,276 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: defer
+2023-10-04 15:00:02,276 INFO    HandlerThread:3637 [handler.py:handle_request_defer():170] handle defer: 0
+2023-10-04 15:00:02,277 DEBUG   SenderThread:3637 [sender.py:send_request():407] send_request: defer
+2023-10-04 15:00:02,277 INFO    SenderThread:3637 [sender.py:send_request_defer():609] handle sender defer: 0
+2023-10-04 15:00:02,277 INFO    SenderThread:3637 [sender.py:transition_state():613] send defer: 1
+2023-10-04 15:00:02,278 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: defer
+2023-10-04 15:00:02,278 INFO    HandlerThread:3637 [handler.py:handle_request_defer():170] handle defer: 1
+2023-10-04 15:00:02,278 DEBUG   SenderThread:3637 [sender.py:send_request():407] send_request: defer
+2023-10-04 15:00:02,278 INFO    SenderThread:3637 [sender.py:send_request_defer():609] handle sender defer: 1
+2023-10-04 15:00:02,278 INFO    SenderThread:3637 [sender.py:transition_state():613] send defer: 2
+2023-10-04 15:00:02,278 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: defer
+2023-10-04 15:00:02,278 INFO    HandlerThread:3637 [handler.py:handle_request_defer():170] handle defer: 2
+2023-10-04 15:00:02,278 INFO    HandlerThread:3637 [system_monitor.py:finish():190] Stopping system monitor
+2023-10-04 15:00:02,278 DEBUG   SystemMonitor:3637 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-10-04 15:00:02,278 DEBUG   SystemMonitor:3637 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-10-04 15:00:02,280 INFO    HandlerThread:3637 [interfaces.py:finish():202] Joined cpu monitor
+2023-10-04 15:00:02,280 INFO    HandlerThread:3637 [interfaces.py:finish():202] Joined disk monitor
+2023-10-04 15:00:02,299 INFO    HandlerThread:3637 [interfaces.py:finish():202] Joined gpu monitor
+2023-10-04 15:00:02,299 INFO    HandlerThread:3637 [interfaces.py:finish():202] Joined memory monitor
+2023-10-04 15:00:02,299 INFO    HandlerThread:3637 [interfaces.py:finish():202] Joined network monitor
+2023-10-04 15:00:02,300 DEBUG   SenderThread:3637 [sender.py:send_request():407] send_request: defer
+2023-10-04 15:00:02,300 INFO    SenderThread:3637 [sender.py:send_request_defer():609] handle sender defer: 2
+2023-10-04 15:00:02,300 INFO    SenderThread:3637 [sender.py:transition_state():613] send defer: 3
+2023-10-04 15:00:02,300 DEBUG   SenderThread:3637 [sender.py:send():380] send: stats
+2023-10-04 15:00:02,301 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: defer
+2023-10-04 15:00:02,301 INFO    HandlerThread:3637 [handler.py:handle_request_defer():170] handle defer: 3
+2023-10-04 15:00:02,301 DEBUG   SenderThread:3637 [sender.py:send_request():407] send_request: defer
+2023-10-04 15:00:02,301 INFO    SenderThread:3637 [sender.py:send_request_defer():609] handle sender defer: 3
+2023-10-04 15:00:02,301 INFO    SenderThread:3637 [sender.py:transition_state():613] send defer: 4
+2023-10-04 15:00:02,301 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: defer
+2023-10-04 15:00:02,301 INFO    HandlerThread:3637 [handler.py:handle_request_defer():170] handle defer: 4
+2023-10-04 15:00:02,301 DEBUG   SenderThread:3637 [sender.py:send_request():407] send_request: defer
+2023-10-04 15:00:02,302 INFO    SenderThread:3637 [sender.py:send_request_defer():609] handle sender defer: 4
+2023-10-04 15:00:02,302 INFO    SenderThread:3637 [sender.py:transition_state():613] send defer: 5
+2023-10-04 15:00:02,302 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: defer
+2023-10-04 15:00:02,302 INFO    HandlerThread:3637 [handler.py:handle_request_defer():170] handle defer: 5
+2023-10-04 15:00:02,302 DEBUG   SenderThread:3637 [sender.py:send():380] send: summary
+2023-10-04 15:00:02,302 INFO    SenderThread:3637 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-04 15:00:02,303 DEBUG   SenderThread:3637 [sender.py:send_request():407] send_request: defer
+2023-10-04 15:00:02,303 INFO    SenderThread:3637 [sender.py:send_request_defer():609] handle sender defer: 5
+2023-10-04 15:00:02,303 INFO    SenderThread:3637 [sender.py:transition_state():613] send defer: 6
+2023-10-04 15:00:02,303 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: defer
+2023-10-04 15:00:02,303 INFO    HandlerThread:3637 [handler.py:handle_request_defer():170] handle defer: 6
+2023-10-04 15:00:02,303 DEBUG   SenderThread:3637 [sender.py:send_request():407] send_request: defer
+2023-10-04 15:00:02,303 INFO    SenderThread:3637 [sender.py:send_request_defer():609] handle sender defer: 6
+2023-10-04 15:00:02,310 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: status_report
+2023-10-04 15:00:02,475 INFO    SenderThread:3637 [sender.py:transition_state():613] send defer: 7
+2023-10-04 15:00:02,476 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: defer
+2023-10-04 15:00:02,476 INFO    HandlerThread:3637 [handler.py:handle_request_defer():170] handle defer: 7
+2023-10-04 15:00:02,476 DEBUG   SenderThread:3637 [sender.py:send_request():407] send_request: defer
+2023-10-04 15:00:02,476 INFO    SenderThread:3637 [sender.py:send_request_defer():609] handle sender defer: 7
+2023-10-04 15:00:02,651 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/config.yaml
+2023-10-04 15:00:02,652 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/wandb-summary.json
+2023-10-04 15:00:03,295 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: poll_exit
+2023-10-04 15:00:03,792 INFO    SenderThread:3637 [sender.py:transition_state():613] send defer: 8
+2023-10-04 15:00:03,793 DEBUG   SenderThread:3637 [sender.py:send_request():407] send_request: poll_exit
+2023-10-04 15:00:03,793 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: defer
+2023-10-04 15:00:03,793 INFO    HandlerThread:3637 [handler.py:handle_request_defer():170] handle defer: 8
+2023-10-04 15:00:03,794 DEBUG   SenderThread:3637 [sender.py:send_request():407] send_request: defer
+2023-10-04 15:00:03,794 INFO    SenderThread:3637 [sender.py:send_request_defer():609] handle sender defer: 8
+2023-10-04 15:00:03,794 INFO    SenderThread:3637 [job_builder.py:build():281] Attempting to build job artifact
+2023-10-04 15:00:03,794 INFO    SenderThread:3637 [job_builder.py:_get_source_type():393] is repo sourced job
+2023-10-04 15:00:03,794 INFO    SenderThread:3637 [job_builder.py:_get_program_relpath():411] run is notebook based run
+2023-10-04 15:00:03,795 INFO    SenderThread:3637 [job_builder.py:build():369] adding wandb-job metadata file
+2023-10-04 15:00:03,804 INFO    SenderThread:3637 [sender.py:transition_state():613] send defer: 9
+2023-10-04 15:00:03,804 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: defer
+2023-10-04 15:00:03,804 INFO    HandlerThread:3637 [handler.py:handle_request_defer():170] handle defer: 9
+2023-10-04 15:00:03,805 DEBUG   SenderThread:3637 [sender.py:send():380] send: artifact
+2023-10-04 15:00:04,295 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: poll_exit
+2023-10-04 15:00:04,652 INFO    Thread-65 :3637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 15:00:04,777 INFO    wandb-upload_0:3637 [upload_job.py:push():86] Skipped uploading /root/.local/share/wandb/artifacts/staging/tmp3zjvjlsx
+2023-10-04 15:00:05,105 INFO    wandb-upload_1:3637 [upload_job.py:push():89] Uploaded file /root/.local/share/wandb/artifacts/staging/tmpdxnotsgf
+2023-10-04 15:00:06,273 INFO    SenderThread:3637 [sender.py:send_artifact():1456] sent artifact job-https___github.com_sangoncalves_openset_domain_adaptation.git_OpenDomainAdaptation_Thesisv4.ipynb - {'id': 'QXJ0aWZhY3Q6NTk0MTY0MDE1', 'state': 'PENDING', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjEwMTEzMjE1Nw==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6NTk0MTM1NDUx', 'versionIndex': 20}}}
+2023-10-04 15:00:06,274 DEBUG   SenderThread:3637 [sender.py:send_request():407] send_request: defer
+2023-10-04 15:00:06,274 INFO    SenderThread:3637 [sender.py:send_request_defer():609] handle sender defer: 9
+2023-10-04 15:00:06,274 INFO    SenderThread:3637 [dir_watcher.py:finish():358] shutting down directory watcher
+2023-10-04 15:00:06,653 INFO    SenderThread:3637 [dir_watcher.py:finish():388] scan: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files
+2023-10-04 15:00:06,653 INFO    SenderThread:3637 [dir_watcher.py:finish():402] scan save: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/config.yaml config.yaml
+2023-10-04 15:00:06,654 INFO    SenderThread:3637 [dir_watcher.py:finish():402] scan save: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log output.log
+2023-10-04 15:00:06,654 INFO    SenderThread:3637 [dir_watcher.py:finish():402] scan save: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/wandb-metadata.json wandb-metadata.json
+2023-10-04 15:00:06,654 INFO    SenderThread:3637 [dir_watcher.py:finish():402] scan save: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/wandb-summary.json wandb-summary.json
+2023-10-04 15:00:06,659 INFO    SenderThread:3637 [dir_watcher.py:finish():402] scan save: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/requirements.txt requirements.txt
+2023-10-04 15:00:06,660 INFO    SenderThread:3637 [dir_watcher.py:finish():402] scan save: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/media/images/confusion_matrix Train_2_c3e6f2daf742b7ec9c14.png media/images/confusion_matrix Train_2_c3e6f2daf742b7ec9c14.png
+2023-10-04 15:00:06,660 INFO    SenderThread:3637 [sender.py:transition_state():613] send defer: 10
+2023-10-04 15:00:06,661 DEBUG   SenderThread:3637 [sender.py:send_request():407] send_request: poll_exit
+2023-10-04 15:00:06,665 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: defer
+2023-10-04 15:00:06,665 INFO    HandlerThread:3637 [handler.py:handle_request_defer():170] handle defer: 10
+2023-10-04 15:00:06,669 DEBUG   SenderThread:3637 [sender.py:send_request():407] send_request: defer
+2023-10-04 15:00:06,669 INFO    SenderThread:3637 [sender.py:send_request_defer():609] handle sender defer: 10
+2023-10-04 15:00:06,669 INFO    SenderThread:3637 [file_pusher.py:finish():175] shutting down file pusher
+2023-10-04 15:00:07,031 INFO    wandb-upload_1:3637 [upload_job.py:push():131] Uploaded file /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/output.log
+2023-10-04 15:00:07,154 INFO    wandb-upload_0:3637 [upload_job.py:push():131] Uploaded file /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/config.yaml
+2023-10-04 15:00:07,381 INFO    wandb-upload_2:3637 [upload_job.py:push():131] Uploaded file /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/wandb-summary.json
+2023-10-04 15:00:07,401 INFO    wandb-upload_3:3637 [upload_job.py:push():131] Uploaded file /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/files/requirements.txt
+2023-10-04 15:00:07,602 INFO    Thread-64 (_thread_body):3637 [sender.py:transition_state():613] send defer: 11
+2023-10-04 15:00:07,602 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: defer
+2023-10-04 15:00:07,602 INFO    HandlerThread:3637 [handler.py:handle_request_defer():170] handle defer: 11
+2023-10-04 15:00:07,603 DEBUG   SenderThread:3637 [sender.py:send_request():407] send_request: defer
+2023-10-04 15:00:07,603 INFO    SenderThread:3637 [sender.py:send_request_defer():609] handle sender defer: 11
+2023-10-04 15:00:07,603 INFO    SenderThread:3637 [file_pusher.py:join():181] waiting for file pusher
+2023-10-04 15:00:07,603 INFO    SenderThread:3637 [sender.py:transition_state():613] send defer: 12
+2023-10-04 15:00:07,603 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: defer
+2023-10-04 15:00:07,603 INFO    HandlerThread:3637 [handler.py:handle_request_defer():170] handle defer: 12
+2023-10-04 15:00:07,603 DEBUG   SenderThread:3637 [sender.py:send_request():407] send_request: defer
+2023-10-04 15:00:07,603 INFO    SenderThread:3637 [sender.py:send_request_defer():609] handle sender defer: 12
+2023-10-04 15:00:07,603 INFO    SenderThread:3637 [file_stream.py:finish():595] file stream finish called
+2023-10-04 15:00:08,104 INFO    SenderThread:3637 [file_stream.py:finish():599] file stream finish is done
+2023-10-04 15:00:08,104 INFO    SenderThread:3637 [sender.py:transition_state():613] send defer: 13
+2023-10-04 15:00:08,104 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: defer
+2023-10-04 15:00:08,104 INFO    HandlerThread:3637 [handler.py:handle_request_defer():170] handle defer: 13
+2023-10-04 15:00:08,105 DEBUG   SenderThread:3637 [sender.py:send_request():407] send_request: defer
+2023-10-04 15:00:08,105 INFO    SenderThread:3637 [sender.py:send_request_defer():609] handle sender defer: 13
+2023-10-04 15:00:08,105 INFO    SenderThread:3637 [sender.py:transition_state():613] send defer: 14
+2023-10-04 15:00:08,105 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: defer
+2023-10-04 15:00:08,105 INFO    HandlerThread:3637 [handler.py:handle_request_defer():170] handle defer: 14
+2023-10-04 15:00:08,106 DEBUG   SenderThread:3637 [sender.py:send():380] send: final
+2023-10-04 15:00:08,106 DEBUG   SenderThread:3637 [sender.py:send():380] send: footer
+2023-10-04 15:00:08,106 DEBUG   SenderThread:3637 [sender.py:send_request():407] send_request: defer
+2023-10-04 15:00:08,106 INFO    SenderThread:3637 [sender.py:send_request_defer():609] handle sender defer: 14
+2023-10-04 15:00:08,107 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: internal_messages
+2023-10-04 15:00:08,108 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: poll_exit
+2023-10-04 15:00:08,108 DEBUG   SenderThread:3637 [sender.py:send_request():407] send_request: poll_exit
+2023-10-04 15:00:08,109 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: server_info
+2023-10-04 15:00:08,109 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: get_summary
+2023-10-04 15:00:08,110 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: sampled_history
+2023-10-04 15:00:08,110 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: job_info
+2023-10-04 15:00:08,110 DEBUG   SenderThread:3637 [sender.py:send_request():407] send_request: server_info
+2023-10-04 15:00:08,242 DEBUG   SenderThread:3637 [sender.py:send_request():407] send_request: job_info
+2023-10-04 15:00:08,243 DEBUG   HandlerThread:3637 [handler.py:handle_request():144] handle_request: shutdown
+2023-10-04 15:00:08,243 INFO    HandlerThread:3637 [handler.py:finish():844] shutting down handler
+2023-10-04 15:00:09,113 INFO    WriterThread:3637 [datastore.py:close():294] close: /content/openset_domain_adaptation/wandb/run-20231004_145401-cft6fu7r/run-cft6fu7r.wandb
+2023-10-04 15:00:09,243 INFO    SenderThread:3637 [sender.py:finish():1534] shutting down sender
+2023-10-04 15:00:09,243 INFO    SenderThread:3637 [file_pusher.py:finish():175] shutting down file pusher
+2023-10-04 15:00:09,243 INFO    SenderThread:3637 [file_pusher.py:join():181] waiting for file pusher
