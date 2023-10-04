@@ -1,0 +1,138 @@
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+Epoch:  0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 99%|█████████▉| 178/179 [06:15<00:01,  1.80s/it]
+Metrics Train:  {'Closed Accuracy Train': 0.1796545990468066, 'Open Accuracy Train': 0.050724637681159424, 'H-Score Train': 0.07911228957810855}
+100%|██████████| 179/179 [06:18<00:00,  2.12s/it]
+  0%|          | 0/72 [00:02<?, ?it/s]
+Traceback (most recent call last):
+  File "<ipython-input-100-92757d50aab8>", line 20, in <cell line: 11>
+    result_proposed_train= proposed_train(config, source_n_target_train_loader, target_test_loader, filename, run_id1)
+  File "<ipython-input-96-0d13a0288d68>", line 130, in proposed_train
+    proposed_test(config, source_n_target_train_loader, target_test_loader, filename, run_id, epoch)
+  File "<ipython-input-97-28c7bfefa899>", line 62, in proposed_test
+    batch_pred_labels_all.append(torch.argmax(pred_labels[pred_label_idx]))  # No dim=1 needed here
+TypeError: 'NoneType' object is not subscriptable
