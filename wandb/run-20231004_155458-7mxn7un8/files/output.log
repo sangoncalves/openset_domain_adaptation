@@ -1,0 +1,132 @@
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+Epoch:  0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 99%|█████████▉| 178/179 [05:57<00:01,  1.56s/it]
+Metrics Train:  {'Closed Accuracy Train': 0.1796545990468066, 'Open Accuracy Train': 0.050724637681159424, 'H-Score Train': 0.07911228957810855}
+100%|██████████| 179/179 [05:58<00:00,  2.00s/it]
+  0%|          | 0/72 [00:00<?, ?it/s][34m[1mwandb[39m[22m: [33mWARNING[39m Step only supports monotonically increasing values, use define_metric to set a custom x axis. For details see: https://wandb.me/define-metric
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 2. Dropping entry: {'confusion_matrix Train': {'_type': 'image-file', 'sha256': 'c3e6f2daf742b7ec9c142ebcf15704e47e2b4bebae8bc9a80e1351611c67d36c', 'size': 33160, 'path': 'media/images/confusion_matrix Train_2_c3e6f2daf742b7ec9c14.png', 'format': 'png', 'width': 1200, 'height': 800, 'caption': 'Confusion Matrix Train at Epoch 0'}, '_timestamp': 1696435261.7685304}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 2. Dropping entry: {'Closed Accuracy Train': 0.1796545990468066, 'Open Accuracy Train': 0.050724637681159424, 'H-Score Train': 0.07911228957810855, '_timestamp': 1696435261.7719307}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 2. Dropping entry: {'Accuracy_Train_punch': 0.3283582089552239, 'Accuracy_Train_golf': 0.2867383512544803, 'Accuracy_Train_pullup': 0.3843283582089552, 'Accuracy_Train_fencing': 0.06422018348623854, '_timestamp': 1696435261.7723384}).
+  0%|          | 0/72 [00:01<?, ?it/s]
+Traceback (most recent call last):
+  File "<ipython-input-196-92757d50aab8>", line 20, in <cell line: 11>
+    result_proposed_train= proposed_train(config, source_n_target_train_loader, target_test_loader, filename, run_id1)
+  File "<ipython-input-194-0d13a0288d68>", line 130, in proposed_train
+    proposed_test(config, source_n_target_train_loader, target_test_loader, filename, run_id, epoch)
+  File "<ipython-input-195-9cf5f7a354f2>", line 71, in proposed_test
+    batch_pred_labels_all.append(torch.argmax(pred_labels[pred_label_idx]))  # No dim=1 needed here
+TypeError: 'NoneType' object is not subscriptable
