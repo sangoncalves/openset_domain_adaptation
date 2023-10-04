@@ -1,0 +1,9 @@
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+Epoch:  0
+  0%|          | 0/179 [00:23<?, ?it/s]
+Traceback (most recent call last):
+  File "<ipython-input-25-92757d50aab8>", line 20, in <cell line: 11>
+    result_proposed_train= proposed_train(config, source_n_target_train_loader, target_test_loader, filename, run_id1)
+  File "<ipython-input-21-fa8899ba4284>", line 77, in proposed_train
+    y_known_unknown_source = y_known_unknown_source.float().to(device)
+UnboundLocalError: local variable 'y_known_unknown_source' referenced before assignment
