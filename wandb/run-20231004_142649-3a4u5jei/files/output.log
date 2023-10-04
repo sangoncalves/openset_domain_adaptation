@@ -1,0 +1,16 @@
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+Epoch:  0
+
+  0%|          | 0/179 [00:05<?, ?it/s]
+Traceback (most recent call last):
+  File "<ipython-input-50-92757d50aab8>", line 20, in <cell line: 11>
+    result_proposed_train= proposed_train(config, source_n_target_train_loader, target_test_loader, filename, run_id1)
+  File "<ipython-input-46-a056cdc216a1>", line 80, in proposed_train
+    loss_known_unknown_source = criterion_known_unknown_classifier(pred_known_unknown, known_unknown_binary_mask.float())
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/loss.py", line 720, in forward
+    return F.binary_cross_entropy_with_logits(input, target,
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/functional.py", line 3165, in binary_cross_entropy_with_logits
+    return torch.binary_cross_entropy_with_logits(input, target, weight, pos_weight, reduction_enum)
+RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cuda:0 and cpu!
