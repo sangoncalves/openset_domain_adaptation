@@ -1,0 +1,282 @@
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+Epoch:  0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 99%|█████████▉| 177/179 [06:48<00:03,  1.54s/it]
+Metrics Train:  {'Closed Accuracy Train': 0.1247383503126999, 'Open Accuracy Train': 0.9999999999997488, 'H-Score Train': 0.22180865492497284}
+100%|██████████| 179/179 [06:51<00:00,  2.30s/it]
+
+
+
+ 18%|█▊        | 13/72 [00:07<00:27,  2.11it/s][34m[1mwandb[39m[22m: [33mWARNING[39m Step only supports monotonically increasing values, use define_metric to set a custom x axis. For details see: https://wandb.me/define-metric
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 1. Dropping entry: {'Train Time': 411.64210271835327, '_timestamp': 1696579065.1927767}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 1. Dropping entry: {'confusion_matrix Train': {'_type': 'image-file', 'sha256': 'e1db734dbf0c881a2d29c6fbc8845e8f5c504c63b58c7470655d7881233be063', 'size': 37726, 'path': 'media/images/confusion_matrix Train_1_e1db734dbf0c881a2d29.png', 'format': 'png', 'width': 1200, 'height': 800, 'caption': 'Confusion Matrix Train at Epoch 0'}, '_timestamp': 1696579066.2268584}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 1. Dropping entry: {'Closed Accuracy Train': 0.1247383503126999, 'Open Accuracy Train': 0.9999999999997488, 'H-Score Train': 0.22180865492497284, '_timestamp': 1696579066.2286098}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 1. Dropping entry: {'Accuracy_Train_golf': 0.5827338129496403, 'Accuracy_Train_fencing': 0.0821917808219178, 'Accuracy_Train_punch': 0.1, 'Accuracy_Train_pullup': 0.2209737827715356, 'Accuracy_Train_unknown': 1.0, '_timestamp': 1696579066.2290611}).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████| 72/72 [00:45<00:00,  1.58it/s]
+Metrics Test:  {'Closed Accuracy Test': 0.0, 'Open Accuracy Test': 0.6042031523641673, 'H-Score Test': 0.0}
+Progress: 100.00%, Elapsed Time: 460.60s, Training Complete
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+Epoch:  1
+
+  1%|          | 2/179 [00:03<04:47,  1.63s/it][34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 1. Dropping entry: {'confusion_matrix Test': {'_type': 'image-file', 'sha256': '99e90d9daea6e035f948930eaceff401e04b97509d4d130ea6c5f1a53f873578', 'size': 31860, 'path': 'media/images/confusion_matrix Test_1_99e90d9daea6e035f948.png', 'format': 'png', 'width': 1200, 'height': 800, 'caption': 'Confusion Matrix Test at Epoch 0'}, '_timestamp': 1696579112.7609763}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 1. Dropping entry: {'Closed Accuracy Test': 0.0, 'Open Accuracy Test': 0.6042031523641673, 'H-Score Test': 0.0, '_timestamp': 1696579114.1418626}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 1. Dropping entry: {'Accuracy_Test_golf': 0.0, 'Accuracy_Test_fencing': 0.0, 'Accuracy_Test_punch': 0.0, 'Accuracy_Test_pullup': 0.0, 'Accuracy_Test_unknown': 1.0, '_timestamp': 1696579114.1426957}).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 81%|████████  | 145/179 [05:21<01:15,  2.22s/it]
+Traceback (most recent call last):
+  File "<ipython-input-47-aa436667b130>", line 21, in <cell line: 12>
+    result_proposed_train= proposed_train(config, source_n_target_train_loader, target_test_loader, filename, run_id1)
+  File "<ipython-input-45-31b227385d43>", line 65, in proposed_train
+    pred_labels, pred_known_unknown = model(X_source, known_unknown_binary_mask = known_unknown_binary_mask)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "<ipython-input-35-639dbd2fd678>", line 84, in forward
+    adapted_features = self.get_features(X)
+  File "<ipython-input-35-639dbd2fd678>", line 71, in get_features
+    features = self.feature_extractor(X_obs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torchvision/models/resnet.py", line 96, in forward
+    out = self.conv2(out)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/conv.py", line 463, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/conv.py", line 459, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+KeyboardInterrupt
