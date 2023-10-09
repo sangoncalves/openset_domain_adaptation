@@ -1,0 +1,653 @@
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+Epoch:  0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 99%|█████████▉| 178/179 [02:56<00:00,  1.11it/s]
+Metrics Train:  {'Closed Accuracy Train': 0.13060989038229748, 'Open Accuracy Train': 0.9999999999998044, 'H-Score Train': 0.23104324753099567}
+100%|██████████| 179/179 [02:57<00:00,  1.01it/s]
+ 10%|▉         | 7/72 [00:01<00:15,  4.07it/s][34m[1mwandb[39m[22m: [33mWARNING[39m Step only supports monotonically increasing values, use define_metric to set a custom x axis. For details see: https://wandb.me/define-metric
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 1. Dropping entry: {'Train Time': 177.22004652023315, '_timestamp': 1696882157.9959207}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 1. Dropping entry: {'confusion_matrix Train': {'_type': 'image-file', 'sha256': '66ab2e4f481eb36aa314e715b19e9d971a96042ad73f3454687f33e648322bd4', 'size': 36404, 'path': 'media/images/confusion_matrix Train_1_66ab2e4f481eb36aa314.png', 'format': 'png', 'width': 1200, 'height': 800, 'caption': 'Confusion Matrix Train at Epoch 0'}, '_timestamp': 1696882158.701503}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 1. Dropping entry: {'Closed Accuracy Train': 0.13060989038229748, 'Open Accuracy Train': 0.9999999999998044, 'H-Score Train': 0.23104324753099567, '_timestamp': 1696882158.7039685}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 1. Dropping entry: {'Accuracy_Train_punch': 0.3880597014925373, 'Accuracy_Train_fencing': 0.045871559633027525, 'Accuracy_Train_kick_ball': 0.02564102564102564, 'Accuracy_Train_golf': 0.5734767025089605, 'Accuracy_Train_unknown': 1.0, '_timestamp': 1696882158.7042153}).
+
+
+
+
+
+ 92%|█████████▏| 66/72 [00:14<00:01,  5.17it/s]
+Metrics Test:  {'Closed Accuracy Test': 0.0, 'Open Accuracy Test': 0.5814360770576915, 'H-Score Test': 0.0}
+Progress: 100.00%, Elapsed Time: 193.89s, Training Complete
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+100%|██████████| 72/72 [00:15<00:00,  4.65it/s]
+  0%|          | 0/179 [00:00<?, ?it/s][34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 1. Dropping entry: {'confusion_matrix Test': {'_type': 'image-file', 'sha256': 'ea7518aa2d3d54bed3f35329cac46bf67667ac6e777892f5c3732b9d739036a6', 'size': 32568, 'path': 'media/images/confusion_matrix Test_1_ea7518aa2d3d54bed3f3.png', 'format': 'png', 'width': 1200, 'height': 800, 'caption': 'Confusion Matrix Test at Epoch 0'}, '_timestamp': 1696882174.5232153}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 1. Dropping entry: {'Closed Accuracy Test': 0.0, 'Open Accuracy Test': 0.5814360770576915, 'H-Score Test': 0.0, '_timestamp': 1696882174.6623247}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 1. Dropping entry: {'Accuracy_Test_punch': 0.0, 'Accuracy_Test_fencing': 0.0, 'Accuracy_Test_kick_ball': 0.0, 'Accuracy_Test_golf': 0.0, 'Accuracy_Test_unknown': 1.0, '_timestamp': 1696882174.6628284}).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 99%|█████████▉| 177/179 [02:35<00:01,  1.38it/s]
+Metrics Train:  {'Closed Accuracy Train': 0.12844412302614425, 'Open Accuracy Train': 0.9999999999998036, 'H-Score Train': 0.22764817575848287}
+100%|██████████| 179/179 [02:37<00:00,  1.14it/s]
+
+
+
+
+
+
+
+ 93%|█████████▎| 67/72 [00:14<00:01,  4.93it/s]
+Metrics Test:  {'Closed Accuracy Test': 0.0, 'Open Accuracy Test': 0.5814360770576915, 'H-Score Test': 0.0}
+Progress: 100.00%, Elapsed Time: 367.57s, Training Complete
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+100%|██████████| 72/72 [00:15<00:00,  4.75it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 99%|█████████▉| 178/179 [02:38<00:00,  1.34it/s]
+Metrics Train:  {'Closed Accuracy Train': 0.1409840072630498, 'Open Accuracy Train': 0.9999999999998044, 'H-Score Train': 0.2471270523786457}
+100%|██████████| 179/179 [02:39<00:00,  1.12it/s]
+
+
+
+
+
+
+
+ 96%|█████████▌| 69/72 [00:14<00:00,  4.83it/s]
+Metrics Test:  {'Closed Accuracy Test': 0.0, 'Open Accuracy Test': 0.5814360770576915, 'H-Score Test': 0.0}
+Progress: 100.00%, Elapsed Time: 543.66s, Training Complete
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+100%|██████████| 72/72 [00:15<00:00,  4.73it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 99%|█████████▉| 178/179 [02:35<00:00,  1.36it/s]
+Metrics Train:  {'Closed Accuracy Train': 0.21582857251671517, 'Open Accuracy Train': 0.9999999999998032, 'H-Score Train': 0.35503125587837}
+100%|██████████| 179/179 [02:37<00:00,  1.14it/s]
+
+
+
+
+
+
+
+ 99%|█████████▊| 71/72 [00:15<00:00,  4.72it/s]
+Metrics Test:  {'Closed Accuracy Test': 0.053030303030249464, 'Open Accuracy Test': 0.5480225988699532, 'H-Score Test': 0.09670298369285243}
+Progress: 100.00%, Elapsed Time: 717.56s, Training Complete
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+100%|██████████| 72/72 [00:15<00:00,  4.64it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 99%|█████████▉| 178/179 [02:38<00:00,  1.38it/s]
+Metrics Train:  {'Closed Accuracy Train': 0.2487636148511944, 'Open Accuracy Train': 0.9999999999998036, 'H-Score Train': 0.3984158601239001}
+100%|██████████| 179/179 [02:40<00:00,  1.12it/s]
+
+
+
+
+
+
+
+ 99%|█████████▊| 71/72 [00:15<00:00,  4.76it/s]
+Metrics Test:  {'Closed Accuracy Test': 0.04193548387094069, 'Open Accuracy Test': 0.515936254979977, 'H-Score Test': 0.0775663472170554}
+Progress: 100.00%, Elapsed Time: 893.85s, Training Complete
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+100%|██████████| 72/72 [00:15<00:00,  4.76it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████| 179/179 [02:35<00:00,  1.15it/s]
+Metrics Train:  {'Closed Accuracy Train': 0.3173745888900148, 'Open Accuracy Train': 0.9999999999998036, 'H-Score Train': 0.4818289218063805}
+#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST
+
+
+
+
+
+
+
+100%|██████████| 72/72 [00:15<00:00,  4.69it/s]
+Metrics Test:  {'Closed Accuracy Test': 0.03614457831323124, 'Open Accuracy Test': 0.4891089108909923, 'H-Score Test': 0.06731468023251948}
+Progress: 100.00%, Elapsed Time: 1065.98s, Training Complete
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+Epoch:  6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 80%|████████  | 144/179 [02:07<00:31,  1.13it/s]
+Traceback (most recent call last):
+  File "<ipython-input-36-4e91df071ab2>", line 21, in <cell line: 12>
+    result_proposed_train= proposed_train(config, source_n_target_train_loader, target_test_loader, filename, run_id1)
+  File "<ipython-input-34-31b227385d43>", line 45, in proposed_train
+    for i, (X_index, X_source, y_source, x_index, _, _) in tqdm(enumerate(source_n_target_train_loader), total=total_batches):
+  File "/usr/local/lib/python3.10/dist-packages/tqdm/std.py", line 1182, in __iter__
+    for obj in iterable:
+  File "/usr/local/lib/python3.10/dist-packages/torch/utils/data/dataloader.py", line 633, in __next__
+    data = self._next_data()
+  File "/usr/local/lib/python3.10/dist-packages/torch/utils/data/dataloader.py", line 1328, in _next_data
+    idx, data = self._get_data()
+  File "/usr/local/lib/python3.10/dist-packages/torch/utils/data/dataloader.py", line 1284, in _get_data
+    success, data = self._try_get_data()
+  File "/usr/local/lib/python3.10/dist-packages/torch/utils/data/dataloader.py", line 1132, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "/usr/lib/python3.10/queue.py", line 180, in get
+    self.not_empty.wait(remaining)
+  File "/usr/lib/python3.10/threading.py", line 324, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt
