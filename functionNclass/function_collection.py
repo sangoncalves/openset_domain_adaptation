@@ -460,7 +460,7 @@ def get_paths_dataset(config):
   config['path_target_test'] = path_target_test
   return config
   
-def create_datasets(config):
+def create_datasets(config, n_frames=16):
 
   path_source_train = config['path_source_train']
   path_target_train = config['path_target_train']
@@ -475,7 +475,7 @@ def create_datasets(config):
                                                                       path_target_test, 
                                                                       source_txt,
                                                                       target_train_txt,
-                                                                      target_test_txt)
+                                                                      target_test_txt, n_frames=n_frames)
 
   if(config['g_open_set'] == True): 
       source_classes = source_n_target_train_dataset.source_dataset.classes
@@ -499,7 +499,7 @@ def create_datasets(config):
                                                                           path_target_test, 
                                                                           source_txt,
                                                                           target_train_txt,
-                                                                          target_test_txt, fake_label=False)  
+                                                                          target_test_txt, fake_label=False, n_frames=n_frames)  
       source_n_target_train_dataset.unknown_label = unknown_label
       target_test_dataset.unknown_label = unknown_label
 
