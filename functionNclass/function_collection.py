@@ -33,13 +33,13 @@ import subprocess
 from sklearn.manifold import TSNE
 import matplotlib.pyplot as plt
 from functionNclass.class_collection import VideoDataset, VideoDatasetSourceAndTarget, ClassObservationsSamplerVideoDatasetSourceAndTarget, ClassObservationsSamplerVideoDatasetTarget
+from functionNclass.class_collection import VideoDataset_frame_analysis
 from sklearn.manifold import TSNE
 import matplotlib.pyplot as plt
 import seaborn as sns
 
 def create_datasets_frame_analysis(config, n_frames=16, frame_strategy="uniform"):
     
-    #
     path_source_train = config['path_source_train']
     path_target_train = config['path_target_train']
     path_target_test = config['path_target_test']
@@ -48,8 +48,7 @@ def create_datasets_frame_analysis(config, n_frames=16, frame_strategy="uniform"
     target_test_txt =config['target_test_txt']
 
     # Create the datasets
-    # Here, we assume that you have a function prepare_datasets that accepts a parameter to specify the dataset class to use
-    source_n_target_train_dataset, target_test_dataset = prepare_datasets(
+    source_n_target_train_dataset, target_test_dataset = prepare_datasets_frame_analysis(
         path_source_train,
         path_target_train,
         path_target_test, 
@@ -86,10 +85,10 @@ def create_datasets_frame_analysis(config, n_frames=16, frame_strategy="uniform"
       source_n_target_train_dataset.unknown_label = unknown_label
       target_test_dataset.unknown_label = unknown_label
 
-  if(config['subset_flag']==True): ########################### ADDING A SAMPLER
-    source_n_target_train_dataset = ClassObservationsSamplerVideoDatasetSourceAndTarget(source_n_target_train_dataset, config['obs_num'])
-    target_test_dataset = ClassObservationsSamplerVideoDatasetTarget(target_test_dataset, config['obs_num'])
-    
+    if(config['subset_flag']==True): ########################### ADDING A SAMPLER
+      source_n_target_train_dataset = ClassObservationsSamplerVideoDatasetSourceAndTarget(source_n_target_train_dataset, config['obs_num'])
+      target_test_dataset = ClassObservationsSamplerVideoDatasetTarget(target_test_dataset, config['obs_num'])
+      
     return source_n_target_train_dataset, target_test_dataset
 
 

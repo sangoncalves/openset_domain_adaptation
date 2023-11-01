@@ -237,7 +237,7 @@ class VideoDataset(Dataset):
 #             return frame_selector.get_indices(self.frame_strategy, frames=frames)
 #         else:
 #             return frame_selector.get_indices(self.frame_strategy)
-class VideoDataset_frames_analysis(VideoDataset):  # Assuming VideoDataset is the original class
+class VideoDataset_frame_analysis(VideoDataset):  # Assuming VideoDataset is the original class
     def __init__(self, *args, frame_strategy="uniform", **kwargs):
         super().__init__(*args, **kwargs)
         self.frame_strategy = frame_strategy
