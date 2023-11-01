@@ -13,6 +13,60 @@ from torchvision.transforms import RandomHorizontalFlip, RandomCrop, RandomResiz
 import tempfile
 from collections import defaultdict
 from torch.utils.data import Subset
+from skimage.measure import compare_ssim as ssim  # Structural Similarity Index
+
+class FrameSelector:
+    def __init__(self, total_frames, n_frames):
+        self.total_frames = total_frames
+        self.n_frames = n_frames
+
+    def uniform_sampling(self):
+        indices = np.linspace(0, self.total_frames - 1, num=self.n_frames, dtype=int)
+        return indices
+
+    def sparse_sampling(self):
+        step = self.total_frames // self.n_frames
+        indices = np.arange(0, self.total_frames, step)[:self.n_frames]
+        return indices
+
+    def random_sampling(self):
+        indices = np.random.choice(self.total_frames, self.n_frames, replace=False)
+        return np.sort(indices)
+
+    def important_frames(self, video_path):
+        frame_paths = self.video2frames(video_path)  # Assume this function is available
+        frame_diffs = []
+        frames = [self.load_frame(frame_path) for frame_path in frame_paths]  # Assume load_frame is available
+
+        for i in range(len(frames) - 1):
+            frame1 = np.array(frames[i].convert('L'))
+            frame2 = np.array(frames[i + 1].convert('L'))
+            sim_index = ssim(frame1, frame2)
+
+            # Assuming the frames are more dissimilar, the lower the ssim index will be
+            frame_diffs.append((i, sim_index))
+
+        # Sort by similarity index and take the top n_frames
+        sorted_diffs = sorted(frame_diffs, key=lambda x: x[1])[:self.n_frames]
+        important_indices = [x[0] for x in sorted_diffs]
+
+        return np.array(important_indices)
+
+    def get_indices(self, strategy="uniform"):
+        if strategy == "uniform":
+            return self.uniform_sampling()
+        elif strategy == "sparse":
+            return self.sparse_sampling()
+        elif strategy == "random":
+            return self.random_sampling()
+        elif strategy == "important":
+            return self.important_frames()
+        else:
+            raise ValueError("Invalid strategy")
+
+
+
+
 
 def apply_data_augmentation(img):
     # Define the data augmentation transformations
