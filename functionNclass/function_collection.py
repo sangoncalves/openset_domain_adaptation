@@ -96,22 +96,22 @@ def prepare_datasets_frame_analysis(path_source_train, path_target_train, path_t
                                     source_txt, target_train_txt, target_test_txt,
                                     n_frames=16, frame_strategy="uniform"):
     
-    # Initialize the source and target datasets using the VideoDataset_frames_analysis class
-    source_dataset = VideoDataset_frames_analysis(
+    # Initialize the source and target datasets using the VideoDataset_frame_analysis class
+    source_dataset = VideoDataset_frame_analysis(
         dataset_path=path_source_train,
         txt_file_path=source_txt,
         n_frames=n_frames,
         frame_strategy=frame_strategy  # New parameter for frame strategy
     )
     
-    target_train_dataset = VideoDataset_frames_analysis(
+    target_train_dataset = VideoDataset_frame_analysis(
         dataset_path=path_target_train,
         txt_file_path=target_train_txt,
         n_frames=n_frames,
         frame_strategy=frame_strategy  # New parameter for frame strategy
     )
     
-    target_test_dataset = VideoDataset_frames_analysis(
+    target_test_dataset = VideoDataset_frame_analysis(
         dataset_path=path_target_test,
         txt_file_path=target_test_txt,
         n_frames=n_frames,
