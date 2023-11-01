@@ -1,0 +1,152 @@
+###############---------------#############----------------#####USING uniform FRAME STRATEGY!###############---------------#############----------------#####
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+Epoch:  0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████| 179/179 [01:06<00:00,  2.70it/s]
+Metrics Train:  {'Closed Accuracy Train': 0.08824014444863537, 'Open Accuracy Train': 0.0, 'H-Score Train': 0.0, 'strategy': 'uniform', 'train_or_test': 'Train'}
+#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST
+
+
+
+ 57%|█████▋    | 41/72 [00:07<00:05,  5.98it/s][34m[1mwandb[39m[22m: [33mWARNING[39m Step only supports monotonically increasing values, use define_metric to set a custom x axis. For details see: https://wandb.me/define-metric
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 1. Dropping entry: {'Train Time': 66.42432236671448, '_timestamp': 1698849463.389545}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 1. Dropping entry: {'confusion_matrix uniform Train': {'_type': 'image-file', 'sha256': 'e276d40a84b9e5350086fee1c16f2d68b21dfd9dcbc2470e2e622a85b7405a21', 'size': 44761, 'path': 'media/images/confusion_matrix uniform Train_1_e276d40a84b9e5350086.png', 'format': 'png', 'width': 1200, 'height': 800, 'caption': 'Confusion Matrix uniform Train at Epoch 0'}, '_timestamp': 1698849464.1836252}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 1. Dropping entry: {'Closed Accuracy Train': 0.08824014444863537, 'Open Accuracy Train': 0.0, 'H-Score Train': 0.0, 'strategy': 'uniform', 'train_or_test': 'Train', '_timestamp': 1698849464.1865199}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 1. Dropping entry: {'Accuracy_Train_uniform_climb': 0.2757201646090535, 'Accuracy_Train_uniform_fencing': 0.031818181818181815, 'Accuracy_Train_uniform_golf': 0.11510791366906475, 'Accuracy_Train_uniform_kick_ball': 0.09090909090909091, 'Accuracy_Train_uniform_pullup': 0.3246268656716418, 'Accuracy_Train_uniform_punch': 0.20074349442379183, 'Accuracy_Train_uniform_unknown': 0.0, '_timestamp': 1698849464.1868515}).
+
+
+100%|██████████| 72/72 [00:12<00:00,  5.71it/s]
+saving model...
+Metrics Test:  {'Closed Accuracy Test': 0.0, 'Open Accuracy Test': 0.40105078809099803, 'H-Score Test': 0.0, 'strategy': 'uniform', 'train_or_test': 'Test'}
+Progress: 100.00%, Elapsed Time: 91.48s, Training Complete
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+Epoch:  1
+
+
+
+ 15%|█▍        | 26/179 [00:09<00:45,  3.33it/s][34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 1. Dropping entry: {'confusion_matrix uniform Test': {'_type': 'image-file', 'sha256': '7a477d9cfcc76913f77045defed6fcaf2ac8f267bd48a5ea8419a77fa3c2d261', 'size': 35336, 'path': 'media/images/confusion_matrix uniform Test_1_7a477d9cfcc76913f770.png', 'format': 'png', 'width': 1200, 'height': 800, 'caption': 'Confusion Matrix uniform Test at Epoch 0'}, '_timestamp': 1698849477.1901753}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 1. Dropping entry: {'Closed Accuracy Test': 0.0, 'Open Accuracy Test': 0.40105078809099803, 'H-Score Test': 0.0, 'strategy': 'uniform', 'train_or_test': 'Test', '_timestamp': 1698849477.3408675}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 1. Dropping entry: {'Accuracy_Test_uniform_climb': 0.0, 'Accuracy_Test_uniform_fencing': 0.0, 'Accuracy_Test_uniform_golf': 0.0, 'Accuracy_Test_uniform_kick_ball': 0.0, 'Accuracy_Test_uniform_pullup': 0.0, 'Accuracy_Test_uniform_punch': 0.0, 'Accuracy_Test_uniform_unknown': 1.0, '_timestamp': 1698849477.341399}).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 98%|█████████▊| 176/179 [00:59<00:00,  3.15it/s]
+Metrics Train:  {'Closed Accuracy Train': 0.08914728195305673, 'Open Accuracy Train': 0.0, 'H-Score Train': 0.0, 'strategy': 'uniform', 'train_or_test': 'Train'}
+100%|██████████| 179/179 [01:00<00:00,  2.95it/s]
+
+
+
+
+
+
+100%|██████████| 72/72 [00:12<00:00,  5.90it/s]
+saving model...
+Metrics Test:  {'Closed Accuracy Test': 0.0, 'Open Accuracy Test': 0.40105078809099803, 'H-Score Test': 0.0, 'strategy': 'uniform', 'train_or_test': 'Test'}
+Progress: 100.00%, Elapsed Time: 165.47s, Training Complete
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+Epoch:  2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 97%|█████████▋| 173/179 [00:57<00:02,  2.99it/s]
+Traceback (most recent call last):
+  File "<ipython-input-26-860cfcc127ca>", line 29, in <cell line: 11>
+    result_proposed_strategy = proposed_train_frame_analysis(config, source_n_target_train_loader, target_test_loader, filename, run_id)
+  File "<ipython-input-25-a94343ae3d75>", line 45, in proposed_train_frame_analysis
+    for i, (X_index, X_source, y_source, x_index, _, _) in tqdm(enumerate(source_n_target_train_loader), total=total_batches):
+  File "/usr/local/lib/python3.10/dist-packages/tqdm/std.py", line 1192, in __iter__
+    self.update(n - last_print_n)
+  File "/usr/local/lib/python3.10/dist-packages/tqdm/std.py", line 1243, in update
+    self.refresh(lock_args=self.lock_args)
+  File "/usr/local/lib/python3.10/dist-packages/tqdm/std.py", line 1348, in refresh
+    self.display()
+  File "/usr/local/lib/python3.10/dist-packages/tqdm/std.py", line 1496, in display
+    self.sp(self.__str__() if msg is None else msg)
+  File "/usr/local/lib/python3.10/dist-packages/tqdm/std.py", line 462, in print_status
+    fp_write('\r' + s + (' ' * max(last_len[0] - len_s, 0)))
+  File "/usr/local/lib/python3.10/dist-packages/tqdm/std.py", line 456, in fp_write
+    fp_flush()
+  File "/usr/local/lib/python3.10/dist-packages/tqdm/utils.py", line 195, in inner
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/ipykernel/iostream.py", line 350, in flush
+    if not evt.wait(self.flush_timeout):
+  File "/usr/lib/python3.10/threading.py", line 604, in wait
+    with self._cond:
+  File "/usr/lib/python3.10/threading.py", line 268, in __exit__
+    return self._lock.__exit__(*args)
+KeyboardInterrupt
