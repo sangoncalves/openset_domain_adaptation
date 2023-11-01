@@ -223,20 +223,28 @@ class VideoDataset(Dataset):
 
 
 # Adding frame selection strategies to the VideoDataset class
-class VideoDataset_frames_analysis(VideoDataset):  
+# class VideoDataset_frames_analysis(VideoDataset):  
+#     def __init__(self, *args, frame_strategy="uniform", **kwargs):
+#         super().__init__(*args, **kwargs)
+#         self.frame_strategy = frame_strategy
+
+#     def frames2indices(self, num_frames):
+#         frame_selector = FrameSelector(num_frames, self.n_frames)
+#         if self.frame_strategy == "important":
+#             video_path, _ = self.video_label[0]  # Just for demonstration, you should select based on index
+#             frame_paths = self.video2frames(video_path)  
+#             frames = [self.load_frame(frame_path) for frame_path in frame_paths]  
+#             return frame_selector.get_indices(self.frame_strategy, frames=frames)
+#         else:
+#             return frame_selector.get_indices(self.frame_strategy)
+class VideoDataset_frames_analysis(VideoDataset):  # Assuming VideoDataset is the original class
     def __init__(self, *args, frame_strategy="uniform", **kwargs):
         super().__init__(*args, **kwargs)
         self.frame_strategy = frame_strategy
 
     def frames2indices(self, num_frames):
         frame_selector = FrameSelector(num_frames, self.n_frames)
-        if self.frame_strategy == "important":
-            video_path, _ = self.video_label[0]  # Just for demonstration, you should select based on index
-            frame_paths = self.video2frames(video_path)  
-            frames = [self.load_frame(frame_path) for frame_path in frame_paths]  
-            return frame_selector.get_indices(self.frame_strategy, frames=frames)
-        else:
-            return frame_selector.get_indices(self.frame_strategy)
+        return frame_selector.get_indices(self.frame_strategy)
 
 
 

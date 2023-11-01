@@ -37,6 +37,95 @@ from sklearn.manifold import TSNE
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+def create_datasets_frame_analysis(config, n_frames=16, frame_strategy="uniform"):
+    
+    #
+    path_source_train = config['path_source_train']
+    path_target_train = config['path_target_train']
+    path_target_test = config['path_target_test']
+    source_txt = config['source_train_txt']
+    target_train_txt = config['target_train_txt']
+    target_test_txt =config['target_test_txt']
+
+    # Create the datasets
+    # Here, we assume that you have a function prepare_datasets that accepts a parameter to specify the dataset class to use
+    source_n_target_train_dataset, target_test_dataset = prepare_datasets(
+        path_source_train,
+        path_target_train,
+        path_target_test, 
+        source_txt,
+        target_train_txt,
+        target_test_txt,
+        n_frames=n_frames,
+        frame_strategy=frame_strategy  # New parameter for frame strategy
+    )
+    
+    if(config['g_open_set'] == True): 
+      source_classes = source_n_target_train_dataset.source_dataset.classes
+      print('source_classes: ',type(source_classes), source_classes)
+      num_classes_to_remove = config['num_classes_to_remove']
+      fake_source_label_or_remove_class = config['fake_source_label_or_remove_class']
+      source_old_mapping = map_classes_to_labels(path_source_train)
+      target_old_mapping = map_classes_to_labels(path_target_train)
+      classes_to_remove, new_mapping, unknown_label = select_classes_to_remove_and_create_new_mapping(
+          list(source_classes.keys()), 
+          path_source_train,
+          path_target_train,
+          source_old_mapping,
+          num_classes_to_remove,
+          fake_source_label_or_remove_class
+      )
+      modify_labels_in_datasets(source_txt, target_train_txt, target_test_txt, source_old_mapping, target_old_mapping, new_mapping, unknown_label)
+      #updating the class with new labels.
+      source_n_target_train_dataset, target_test_dataset = prepare_datasets_frame_analysis(path_source_train,
+                                                                          path_target_train,
+                                                                          path_target_test, 
+                                                                          source_txt,
+                                                                          target_train_txt,
+                                                                          target_test_txt, fake_label=False, n_frames=n_frames)  
+      source_n_target_train_dataset.unknown_label = unknown_label
+      target_test_dataset.unknown_label = unknown_label
+
+  if(config['subset_flag']==True): ########################### ADDING A SAMPLER
+    source_n_target_train_dataset = ClassObservationsSamplerVideoDatasetSourceAndTarget(source_n_target_train_dataset, config['obs_num'])
+    target_test_dataset = ClassObservationsSamplerVideoDatasetTarget(target_test_dataset, config['obs_num'])
+    
+    return source_n_target_train_dataset, target_test_dataset
+
+
+def prepare_datasets_frame_analysis(path_source_train, path_target_train, path_target_test,
+                                    source_txt, target_train_txt, target_test_txt,
+                                    n_frames=16, frame_strategy="uniform"):
+    
+    # Initialize the source and target datasets using the VideoDataset_frames_analysis class
+    source_dataset = VideoDataset_frames_analysis(
+        dataset_path=path_source_train,
+        txt_file_path=source_txt,
+        n_frames=n_frames,
+        frame_strategy=frame_strategy  # New parameter for frame strategy
+    )
+    
+    target_train_dataset = VideoDataset_frames_analysis(
+        dataset_path=path_target_train,
+        txt_file_path=target_train_txt,
+        n_frames=n_frames,
+        frame_strategy=frame_strategy  # New parameter for frame strategy
+    )
+    
+    target_test_dataset = VideoDataset_frames_analysis(
+        dataset_path=path_target_test,
+        txt_file_path=target_test_txt,
+        n_frames=n_frames,
+        frame_strategy=frame_strategy  # New parameter for frame strategy
+    )
+
+    # Combine source and target train datasets
+    source_n_target_train_dataset = VideoDatasetSourceAndTarget(source_dataset, target_train_dataset)
+    
+    return source_n_target_train_dataset, target_test_dataset    
+
+
+
 def set_seed(seed):
     random.seed(seed)
     np.random.seed(seed)
