@@ -13,7 +13,8 @@ from torchvision.transforms import RandomHorizontalFlip, RandomCrop, RandomResiz
 import tempfile
 from collections import defaultdict
 from torch.utils.data import Subset
-from skimage.measure import compare_ssim as ssim  # Structural Similarity Index
+#from skimage.measure import compare_ssim as ssim  # Structural Similarity Index
+from skimage.metrics import structural_similarity as ssim
 
 
 class FrameSelector:
