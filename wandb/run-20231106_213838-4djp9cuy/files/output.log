@@ -1,0 +1,16 @@
+###############---------------#############----------------#####USING uniform FRAME STRATEGY!###############---------------#############----------------#####
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+Epoch:  0
+
+
+
+
+100%|██████████| 46/46 [00:15<00:00,  3.05it/s]
+Traceback (most recent call last):
+  File "<ipython-input-21-4226aa51af34>", line 34, in <cell line: 1>
+    result_proposed_strategy = train_frame_analysis_one_dataset(config, train_loader, test_loader, filename, run_id)
+  File "<ipython-input-19-feada8d75f6c>", line 77, in train_frame_analysis_one_dataset
+    metrics_train = log_metrics_and_plot_confusion_matrix(true_labels_all, pred_labels_all, config, epoch, train_or_test='Train')
+  File "<ipython-input-18-5f52515a06cb>", line 137, in log_metrics_and_plot_confusion_matrix
+    true_labels_all_cpu = true_labels_all.cpu().numpy()
+AttributeError: 'list' object has no attribute 'cpu'
