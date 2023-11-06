@@ -1,0 +1,37 @@
+###############---------------#############----------------#####USING uniform FRAME STRATEGY!###############---------------#############----------------#####
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+Epoch:  0
+
+
+
+  2%|▏         | 3/179 [02:05<2:02:54, 41.90s/it]
+Traceback (most recent call last):
+  File "<ipython-input-14-0e29cb71baa3>", line 31, in <cell line: 1>
+    result_proposed_strategy = proposed_train_frame_analysis(config, source_n_target_train_loader, target_test_loader, filename, run_id)
+  File "<ipython-input-13-05d3d8d433c7>", line 66, in proposed_train_frame_analysis
+    pred_labels, pred_known_unknown = model(X_source, known_unknown_binary_mask = known_unknown_binary_mask)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/content/openset_domain_adaptation/functionNclass/model_collection.py", line 112, in forward
+    adapted_features = self.get_features(X)
+  File "/content/openset_domain_adaptation/functionNclass/model_collection.py", line 99, in get_features
+    features = self.feature_extractor(X_obs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/container.py", line 215, in forward
+    input = module(input)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/pooling.py", line 166, in forward
+    return F.max_pool2d(input, self.kernel_size, self.stride,
+  File "/usr/local/lib/python3.10/dist-packages/torch/_jit_internal.py", line 488, in fn
+    return if_false(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/functional.py", line 791, in _max_pool2d
+    return torch.max_pool2d(input, kernel_size, stride, padding, dilation, ceil_mode)
+KeyboardInterrupt
