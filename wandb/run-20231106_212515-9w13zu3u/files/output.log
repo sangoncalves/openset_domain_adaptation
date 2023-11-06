@@ -1,0 +1,30 @@
+###############---------------#############----------------#####USING uniform FRAME STRATEGY!###############---------------#############----------------#####
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+Epoch:  0
+
+
+
+
+100%|██████████| 46/46 [00:15<00:00,  3.03it/s]
+Traceback (most recent call last):
+  File "<ipython-input-40-4226aa51af34>", line 34, in <cell line: 1>
+    result_proposed_strategy = train_frame_analysis_one_dataset(config, train_loader, test_loader, filename, run_id)
+  File "<ipython-input-38-168801c16121>", line 73, in train_frame_analysis_one_dataset
+    metrics_train = log_metrics_and_plot_confusion_matrix(true_labels_all, pred_labels_all, config, epoch, train_or_test='Train')
+  File "<ipython-input-37-c8d227905991>", line 139, in log_metrics_and_plot_confusion_matrix
+    cm = confusion_matrix(true_labels_all, pred_labels_all, labels=list(range(num_classes)))
+  File "/usr/local/lib/python3.10/dist-packages/sklearn/metrics/_classification.py", line 317, in confusion_matrix
+    y_type, y_true, y_pred = _check_targets(y_true, y_pred)
+  File "/usr/local/lib/python3.10/dist-packages/sklearn/metrics/_classification.py", line 87, in _check_targets
+    type_true = type_of_target(y_true, input_name="y_true")
+  File "/usr/local/lib/python3.10/dist-packages/sklearn/utils/multiclass.py", line 309, in type_of_target
+    if is_multilabel(y):
+  File "/usr/local/lib/python3.10/dist-packages/sklearn/utils/multiclass.py", line 169, in is_multilabel
+    y = check_array(y, dtype=None, **check_y_kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/sklearn/utils/validation.py", line 879, in check_array
+    array = _asarray_with_order(array, order=order, dtype=dtype, xp=xp)
+  File "/usr/local/lib/python3.10/dist-packages/sklearn/utils/_array_api.py", line 185, in _asarray_with_order
+    array = numpy.asarray(array, order=order, dtype=dtype)
+  File "/usr/local/lib/python3.10/dist-packages/torch/_tensor.py", line 1030, in __array__
+    return self.numpy()
+TypeError: can't convert cuda:0 device type tensor to numpy. Use Tensor.cpu() to copy the tensor to host memory first.
