@@ -6,7 +6,7 @@ class CEVTModel(nn.Module):
     def __init__(self, dataset, feature_extractor='resnet18', output_layer=102):
         super(CEVTModel, self).__init__()
 
-        source_index, source_data, source_label = dataset[0]
+        #source_index, source_data, source_label = dataset[0]
         # Load the desired feature extractor
         if feature_extractor == 'resnet18':
             self.feature_extractor = models.resnet18(weights=models.ResNet18_Weights.IMAGENET1K_V1)
