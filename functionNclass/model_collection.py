@@ -4,7 +4,7 @@ import torchvision.models as models
 
 class CEVTModel_one_dataset(nn.Module):
     def __init__(self, dataset, feature_extractor='resnet18', output_layer=102):
-        super(CEVTModel, self).__init__()
+        super(CEVTModel_one_dataset, self).__init__()
 
         source_index, source_data, source_label = dataset[0]
         # Load the desired feature extractor
