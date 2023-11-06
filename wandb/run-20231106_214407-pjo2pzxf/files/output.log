@@ -1,0 +1,19 @@
+###############---------------#############----------------#####USING uniform FRAME STRATEGY!###############---------------#############----------------#####
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+Epoch:  0
+
+
+
+100%|██████████| 46/46 [00:07<00:00,  5.79it/s]
+Traceback (most recent call last):
+  File "<ipython-input-42-4226aa51af34>", line 34, in <cell line: 1>
+    result_proposed_strategy = train_frame_analysis_one_dataset(config, train_loader, test_loader, filename, run_id)
+  File "<ipython-input-40-feada8d75f6c>", line 77, in train_frame_analysis_one_dataset
+    metrics_train = log_metrics_and_plot_confusion_matrix(true_labels_all, pred_labels_all, config, epoch, train_or_test='Train')
+  File "<ipython-input-39-540b0f270e2e>", line 138, in log_metrics_and_plot_confusion_matrix
+    cm = confusion_matrix(true_labels_all, pred_labels_all, labels=list(range(num_classes)))
+  File "/usr/local/lib/python3.10/dist-packages/sklearn/metrics/_classification.py", line 317, in confusion_matrix
+    y_type, y_true, y_pred = _check_targets(y_true, y_pred)
+  File "/usr/local/lib/python3.10/dist-packages/sklearn/metrics/_classification.py", line 95, in _check_targets
+    raise ValueError(
+ValueError: Classification metrics can't handle a mix of multiclass and continuous-multioutput targets
