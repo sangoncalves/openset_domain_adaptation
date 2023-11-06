@@ -48,7 +48,7 @@ def create_datasets_frame_analysis_one_dataset(config, n_frames=16, frame_strate
     test_txt =config['source_test_txt']
 
     # Create the datasets
-    train_data, test_data = prepare_datasets_frame_analysis(
+    train_data, test_data = prepare_datasets_frame_analysis_one_dataset(
         path_train,
         path_test, 
         source_txt,
