@@ -1,0 +1,20 @@
+
+  0%|          | 0/46 [00:00<?, ?it/s]
+###############---------------#############----------------#####USING uniform FRAME STRATEGY!###############---------------#############----------------#####
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+  0%|          | 0/46 [00:02<?, ?it/s]
+Traceback (most recent call last):
+  File "<ipython-input-22-4226aa51af34>", line 34, in <cell line: 1>
+    result_proposed_strategy = train_frame_analysis_one_dataset(config, train_loader, test_loader, filename, run_id)
+  File "<ipython-input-19-a104f22e1249>", line 55, in train_frame_analysis_one_dataset
+    loss_label_source = criterion_label_classifier(pred_labels, y_source)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/loss.py", line 1179, in forward
+    return F.cross_entropy(input, target, weight=self.weight,
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/functional.py", line 3053, in cross_entropy
+    return torch._C._nn.cross_entropy_loss(input, target, weight, _Reduction.get_enum(reduction), ignore_index, label_smoothing)
+RuntimeError: Expected floating point type for target with class probabilities, got Long
+pred_labels:  tensor([3, 4, 4, 1, 1, 4, 3, 3], device='cuda:0')
