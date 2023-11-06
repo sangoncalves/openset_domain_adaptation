@@ -22,7 +22,8 @@ class CEVTModel(nn.Module):
         features = features.view(b, frames, -1)
         features = torch.mean(features, dim=1)  # average pooling along temporal dimension
         features = self.classifier(features)
-        return features
+        values, indices  = torch.max(features.data, 1) # indices = predicted_labels 
+        return indices
 
 class CEVTModel_old(nn.Module):
     def __init__(self, dataset, feature_extractor='resnet18', output_layer=102):
