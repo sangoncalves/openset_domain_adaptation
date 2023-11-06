@@ -1,0 +1,88 @@
+{
+    "os": "Linux-5.15.120+-x86_64-with-glibc2.35",
+    "python": "3.10.12",
+    "heartbeatAt": "2023-11-06T22:19:27.035779",
+    "startedAt": "2023-11-06T22:19:22.794870",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "OpenDomainAdaptation_Thesisv4.ipynb",
+    "codePathLocal": "OpenDomainAdaptation_Thesisv4.ipynb",
+    "colab": "https://colab.research.google.com/notebook#fileId=1AHs9TgV4WiWxx-aejdHJfHj5hkpO8WPT",
+    "git": {
+        "remote": "https://github.com/sangoncalves/openset_domain_adaptation.git",
+        "commit": "b042c8320735dfc1f99c38a23b3c4887bcd63b8d"
+    },
+    "email": "sander.martinsgoncalves@gmail.com",
+    "root": "/content/openset_domain_adaptation",
+    "host": "6fa248b1eaa0",
+    "username": "root",
+    "executable": "/usr/bin/python3",
+    "cpu_count": 4,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 2199.998,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2199.998,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2199.998,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2199.998,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2199.998,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2199.998,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2199.998,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2199.998,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2199.998,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 166.77415084838867,
+            "used": 50.35881423950195
+        }
+    },
+    "gpu": "Tesla V100-SXM2-16GB",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "Tesla V100-SXM2-16GB",
+            "memory_total": 17179869184
+        }
+    ],
+    "memory": {
+        "total": 50.99726867675781
+    }
+}

@@ -1,0 +1,209 @@
+###############---------------#############----------------#####USING random FRAME STRATEGY!###############---------------#############----------------#####
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+
+
+ 83%|████████▎ | 38/46 [00:05<00:01,  7.25it/s]
+Metrics Train:  {'precision Train random': array([1., 1., 1., 1., 1., 1.]), 'recall Train random': array([1., 1., 1., 1., 1., 1.]), 'class_accuracy_dict Train random': {'Accuracy_Train_random_climb': 1.0, 'Accuracy_Train_random_fencing': 1.0, 'Accuracy_Train_random_golf': 1.0, 'Accuracy_Train_random_kick_ball': 1.0, 'Accuracy_Train_random_pullup': 1.0, 'Accuracy_Train_random_punch': 1.0}, 'standard_accuracy Train random': 1.0, 'Closed Accuracy Train random': 0.9999999999982988}
+100%|██████████| 46/46 [00:07<00:00,  6.44it/s]
+
+ 65%|██████▌   | 13/20 [00:02<00:01,  6.51it/s]
+Metrics Test:  {'precision Test random': array([0.85185185, 0.8       , 0.93333333, 0.4137931 , 0.92      ,
+       0.76470588]), 'recall Test random': array([0.95833333, 0.96      , 0.93333333, 0.54545455, 0.85185185,
+       0.43333333]), 'class_accuracy_dict Test random': {'Accuracy_Test_random_climb': 0.9583333333333334, 'Accuracy_Test_random_fencing': 0.96, 'Accuracy_Test_random_golf': 0.9333333333333333, 'Accuracy_Test_random_kick_ball': 0.5454545454545454, 'Accuracy_Test_random_pullup': 0.8518518518518519, 'Accuracy_Test_random_punch': 0.43333333333333335}, 'standard_accuracy Test random': 0.7784810126582279, 'Closed Accuracy Test random': 0.7142835751544299}
+Progress: 100.00%, Elapsed Time: 411.60s, Training Complete
+100%|██████████| 20/20 [00:03<00:00,  6.15it/s]
+
+ 46%|████▌     | 21/46 [00:03<00:03,  6.71it/s][34m[1mwandb[39m[22m: [33mWARNING[39m Step only supports monotonically increasing values, use define_metric to set a custom x axis. For details see: https://wandb.me/define-metric
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 1. Dropping entry: {'Train Time': 7.281345844268799, '_timestamp': 1699309563.7193835}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 1. Dropping entry: {'confusion_matrix Train random': {'_type': 'image-file', 'sha256': 'e015ce8dbfc7ed2c595cc42941d99f1cbdaa0851f8dc362c8ad54137b4fc7cf0', 'size': 34183, 'path': 'media/images/confusion_matrix Train random_1_e015ce8dbfc7ed2c595c.png', 'format': 'png', 'width': 1200, 'height': 800, 'caption': 'Confusion Matrix Train random at Epoch 0'}, '_timestamp': 1699309564.0247216}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 1. Dropping entry: {'precision Train random': [0.9999999999983333, 0.9999999999981481, 0.9999999999985507, 0.9999999999979999, 0.9999999999984616, 0.9999999999985714], 'recall Train random': [0.9999999999983333, 0.9999999999981481, 0.9999999999985507, 0.9999999999979999, 0.9999999999984616, 0.9999999999985714], 'class_accuracy_dict Train random': {'Accuracy_Train_random_climb': 1.0, 'Accuracy_Train_random_fencing': 1.0, 'Accuracy_Train_random_golf': 1.0, 'Accuracy_Train_random_kick_ball': 1.0, 'Accuracy_Train_random_pullup': 1.0, 'Accuracy_Train_random_punch': 1.0}, 'standard_accuracy Train random': 1.0, 'Closed Accuracy Train random': 0.9999999999982988, '_timestamp': 1699309564.0277915}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 1. Dropping entry: {'confusion_matrix Test random': {'_type': 'image-file', 'sha256': '4d1c7c99d2e71fef3354571231152f40bf8fd7d84bc1f9f3418a97314daf8944', 'size': 33980, 'path': 'media/images/confusion_matrix Test random_1_4d1c7c99d2e71fef3354.png', 'format': 'png', 'width': 1200, 'height': 800, 'caption': 'Confusion Matrix Test random at Epoch 0'}, '_timestamp': 1699309567.7570415}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 1. Dropping entry: {'precision Test random': [0.8518518518486969, 0.7999999999973334, 0.9333333333302223, 0.413793103446849, 0.9199999999963201, 0.764705882348443], 'recall Test random': [0.9583333333293403, 0.95999999999616, 0.9333333333302223, 0.5454545454520662, 0.8518518518486969, 0.4333333333318889], 'class_accuracy_dict Test random': {'Accuracy_Test_random_climb': 0.9583333333333334, 'Accuracy_Test_random_fencing': 0.96, 'Accuracy_Test_random_golf': 0.9333333333333333, 'Accuracy_Test_random_kick_ball': 0.5454545454545454, 'Accuracy_Test_random_pullup': 0.8518518518518519, 'Accuracy_Test_random_punch': 0.43333333333333335}, 'standard_accuracy Test random': 0.7784810126582279, 'Closed Accuracy Test random': 0.7142835751544299, '_timestamp': 1699309567.8825233}).
+
+ 91%|█████████▏| 42/46 [00:06<00:00,  7.43it/s]
+Metrics Train:  {'precision Train random': array([1., 1., 1., 1., 1., 1.]), 'recall Train random': array([1., 1., 1., 1., 1., 1.]), 'class_accuracy_dict Train random': {'Accuracy_Train_random_climb': 1.0, 'Accuracy_Train_random_fencing': 1.0, 'Accuracy_Train_random_golf': 1.0, 'Accuracy_Train_random_kick_ball': 1.0, 'Accuracy_Train_random_pullup': 1.0, 'Accuracy_Train_random_punch': 1.0}, 'standard_accuracy Train random': 1.0, 'Closed Accuracy Train random': 0.9999999999983112}
+100%|██████████| 46/46 [00:07<00:00,  6.46it/s]
+
+ 95%|█████████▌| 19/20 [00:03<00:00,  6.94it/s]
+Metrics Test:  {'precision Test random': array([0.84615385, 0.8       , 0.96666667, 0.41176471, 0.95652174,
+       0.73333333]), 'recall Test random': array([0.91666667, 0.96      , 0.96666667, 0.63636364, 0.81481481,
+       0.36666667]), 'class_accuracy_dict Test random': {'Accuracy_Test_random_climb': 0.9166666666666666, 'Accuracy_Test_random_fencing': 0.96, 'Accuracy_Test_random_golf': 0.9666666666666667, 'Accuracy_Test_random_kick_ball': 0.6363636363636364, 'Accuracy_Test_random_pullup': 0.8148148148148148, 'Accuracy_Test_random_punch': 0.36666666666666664}, 'standard_accuracy Test random': 0.7721518987341772, 'Closed Accuracy Test random': 0.7228878648209646}
+Progress: 100.00%, Elapsed Time: 422.85s, Training Complete
+100%|██████████| 20/20 [00:03<00:00,  6.39it/s]
+
+
+
+ 98%|█████████▊| 45/46 [00:07<00:00,  6.62it/s]
+Metrics Train:  {'precision Train random': array([1., 1., 1., 1., 1., 1.]), 'recall Train random': array([1., 1., 1., 1., 1., 1.]), 'class_accuracy_dict Train random': {'Accuracy_Train_random_climb': 1.0, 'Accuracy_Train_random_fencing': 1.0, 'Accuracy_Train_random_golf': 1.0, 'Accuracy_Train_random_kick_ball': 1.0, 'Accuracy_Train_random_pullup': 1.0, 'Accuracy_Train_random_punch': 1.0}, 'standard_accuracy Train random': 1.0, 'Closed Accuracy Train random': 0.9999999999982977}
+100%|██████████| 46/46 [00:07<00:00,  6.26it/s]
+ 35%|███▌      | 7/20 [00:01<00:02,  5.98it/s]
+Metrics Test:  {'precision Test random': array([0.82142857, 0.8       , 0.96551724, 0.41176471, 0.91666667,
+       0.84615385]), 'recall Test random': array([0.95833333, 0.96      , 0.93333333, 0.63636364, 0.81481481,
+       0.36666667]), 'class_accuracy_dict Test random': {'Accuracy_Test_random_climb': 0.9583333333333334, 'Accuracy_Test_random_fencing': 0.96, 'Accuracy_Test_random_golf': 0.9333333333333333, 'Accuracy_Test_random_kick_ball': 0.6363636363636364, 'Accuracy_Test_random_pullup': 0.8148148148148148, 'Accuracy_Test_random_punch': 0.36666666666666664}, 'standard_accuracy Test random': 0.7721518987341772, 'Closed Accuracy Test random': 0.7124953652183044}
+Progress: 100.00%, Elapsed Time: 434.31s, Training Complete
+
+100%|██████████| 20/20 [00:03<00:00,  6.35it/s]
+
+
+ 80%|████████  | 37/46 [00:05<00:01,  6.62it/s]
+Metrics Train:  {'precision Train random': array([1.        , 0.98214286, 1.        , 1.        , 1.        ,
+       1.        ]), 'recall Train random': array([1.        , 1.        , 1.        , 0.98039216, 1.        ,
+       1.        ]), 'class_accuracy_dict Train random': {'Accuracy_Train_random_climb': 1.0, 'Accuracy_Train_random_fencing': 1.0, 'Accuracy_Train_random_golf': 1.0, 'Accuracy_Train_random_kick_ball': 0.9803921568627451, 'Accuracy_Train_random_pullup': 1.0, 'Accuracy_Train_random_punch': 1.0}, 'standard_accuracy Train random': 0.9972826086956522, 'Closed Accuracy Train random': 0.9925070027994476}
+100%|██████████| 46/46 [00:07<00:00,  6.29it/s]
+
+ 65%|██████▌   | 13/20 [00:02<00:01,  6.62it/s]
+Metrics Test:  {'precision Test random': array([0.91304348, 0.82758621, 0.93548387, 0.38888889, 1.        ,
+       0.66666667]), 'recall Test random': array([0.875     , 0.96      , 0.96666667, 0.63636364, 0.77777778,
+       0.4       ]), 'class_accuracy_dict Test random': {'Accuracy_Test_random_climb': 0.875, 'Accuracy_Test_random_fencing': 0.96, 'Accuracy_Test_random_golf': 0.9666666666666667, 'Accuracy_Test_random_kick_ball': 0.6363636363636364, 'Accuracy_Test_random_pullup': 0.7777777777777778, 'Accuracy_Test_random_punch': 0.4}, 'standard_accuracy Test random': 0.7658227848101266, 'Closed Accuracy Test random': 0.721980380727939}
+Progress: 100.00%, Elapsed Time: 445.75s, Training Complete
+100%|██████████| 20/20 [00:03<00:00,  6.32it/s]
+
+
+
+ 89%|████████▉ | 41/46 [00:06<00:00,  6.37it/s]
+Metrics Train:  {'precision Train random': array([1., 1., 1., 1., 1., 1.]), 'recall Train random': array([1., 1., 1., 1., 1., 1.]), 'class_accuracy_dict Train random': {'Accuracy_Train_random_climb': 1.0, 'Accuracy_Train_random_fencing': 1.0, 'Accuracy_Train_random_golf': 1.0, 'Accuracy_Train_random_kick_ball': 1.0, 'Accuracy_Train_random_pullup': 1.0, 'Accuracy_Train_random_punch': 1.0}, 'standard_accuracy Train random': 1.0, 'Closed Accuracy Train random': 0.9999999999983112}
+100%|██████████| 46/46 [00:07<00:00,  6.43it/s]
+
+ 75%|███████▌  | 15/20 [00:02<00:00,  6.32it/s]
+Metrics Test:  {'precision Test random': array([0.95      , 0.8       , 0.85294118, 0.375     , 0.88461538,
+       0.75      ]), 'recall Test random': array([0.79166667, 0.96      , 0.96666667, 0.54545455, 0.85185185,
+       0.4       ]), 'class_accuracy_dict Test random': {'Accuracy_Test_random_climb': 0.7916666666666666, 'Accuracy_Test_random_fencing': 0.96, 'Accuracy_Test_random_golf': 0.9666666666666667, 'Accuracy_Test_random_kick_ball': 0.5454545454545454, 'Accuracy_Test_random_pullup': 0.8518518518518519, 'Accuracy_Test_random_punch': 0.4}, 'standard_accuracy Test random': 0.7531645569620253, 'Closed Accuracy Test random': 0.6830291858656674}
+Progress: 100.00%, Elapsed Time: 457.19s, Training Complete
+100%|██████████| 20/20 [00:03<00:00,  6.15it/s]
+
+
+
+100%|██████████| 46/46 [00:07<00:00,  6.52it/s]
+Metrics Train:  {'precision Train random': array([1., 1., 1., 1., 1., 1.]), 'recall Train random': array([1., 1., 1., 1., 1., 1.]), 'class_accuracy_dict Train random': {'Accuracy_Train_random_climb': 1.0, 'Accuracy_Train_random_fencing': 1.0, 'Accuracy_Train_random_golf': 1.0, 'Accuracy_Train_random_kick_ball': 1.0, 'Accuracy_Train_random_pullup': 1.0, 'Accuracy_Train_random_punch': 1.0}, 'standard_accuracy Train random': 1.0, 'Closed Accuracy Train random': 0.9999999999983098}
+#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST
+
+100%|██████████| 20/20 [00:03<00:00,  6.34it/s]
+Metrics Test:  {'precision Test random': array([0.81481481, 0.88888889, 0.96428571, 0.46341463, 0.95652174,
+       0.83333333]), 'recall Test random': array([0.91666667, 0.96      , 0.9       , 0.86363636, 0.81481481,
+       0.33333333]), 'class_accuracy_dict Test random': {'Accuracy_Test_random_climb': 0.9166666666666666, 'Accuracy_Test_random_fencing': 0.96, 'Accuracy_Test_random_golf': 0.9, 'Accuracy_Test_random_kick_ball': 0.8636363636363636, 'Accuracy_Test_random_pullup': 0.8148148148148148, 'Accuracy_Test_random_punch': 0.3333333333333333}, 'standard_accuracy Test random': 0.7848101265822784, 'Closed Accuracy Test random': 0.7408527512507413}
+Progress: 100.00%, Elapsed Time: 468.42s, Training Complete
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+
+
+ 83%|████████▎ | 38/46 [00:05<00:01,  7.14it/s]
+Metrics Train:  {'precision Train random': array([1.        , 1.        , 1.        , 1.        , 1.        ,
+       0.98550725]), 'recall Train random': array([1.        , 0.98181818, 1.        , 1.        , 1.        ,
+       1.        ]), 'class_accuracy_dict Train random': {'Accuracy_Train_random_climb': 1.0, 'Accuracy_Train_random_fencing': 0.9818181818181818, 'Accuracy_Train_random_golf': 1.0, 'Accuracy_Train_random_kick_ball': 1.0, 'Accuracy_Train_random_pullup': 1.0, 'Accuracy_Train_random_punch': 1.0}, 'standard_accuracy Train random': 0.9972826086956522, 'Closed Accuracy Train random': 0.9963636363619562}
+100%|██████████| 46/46 [00:07<00:00,  6.46it/s]
+
+ 65%|██████▌   | 13/20 [00:02<00:01,  6.54it/s]
+Metrics Test:  {'precision Test random': array([0.75862069, 0.82758621, 0.84848485, 0.34482759, 0.95652174,
+       0.66666667]), 'recall Test random': array([0.91666667, 0.96      , 0.93333333, 0.45454545, 0.81481481,
+       0.33333333]), 'class_accuracy_dict Test random': {'Accuracy_Test_random_climb': 0.9166666666666666, 'Accuracy_Test_random_fencing': 0.96, 'Accuracy_Test_random_golf': 0.9333333333333333, 'Accuracy_Test_random_kick_ball': 0.45454545454545453, 'Accuracy_Test_random_pullup': 0.8148148148148148, 'Accuracy_Test_random_punch': 0.3333333333333333}, 'standard_accuracy Test random': 0.7341772151898734, 'Closed Accuracy Test random': 0.6678588288165743}
+Progress: 100.00%, Elapsed Time: 479.71s, Training Complete
+100%|██████████| 20/20 [00:03<00:00,  6.28it/s]
+
+
+
+ 87%|████████▋ | 40/46 [00:06<00:00,  6.96it/s]
+Metrics Train:  {'precision Train random': array([1., 1., 1., 1., 1., 1.]), 'recall Train random': array([1., 1., 1., 1., 1., 1.]), 'class_accuracy_dict Train random': {'Accuracy_Train_random_climb': 1.0, 'Accuracy_Train_random_fencing': 1.0, 'Accuracy_Train_random_golf': 1.0, 'Accuracy_Train_random_kick_ball': 1.0, 'Accuracy_Train_random_pullup': 1.0, 'Accuracy_Train_random_punch': 1.0}, 'standard_accuracy Train random': 1.0, 'Closed Accuracy Train random': 0.9999999999983034}
+100%|██████████| 46/46 [00:07<00:00,  6.15it/s]
+
+ 75%|███████▌  | 15/20 [00:02<00:00,  6.54it/s]
+Metrics Test:  {'precision Test random': array([0.75862069, 0.82758621, 0.96551724, 0.4516129 , 0.95652174,
+       0.64705882]), 'recall Test random': array([0.91666667, 0.96      , 0.93333333, 0.63636364, 0.81481481,
+       0.36666667]), 'class_accuracy_dict Test random': {'Accuracy_Test_random_climb': 0.9166666666666666, 'Accuracy_Test_random_fencing': 0.96, 'Accuracy_Test_random_golf': 0.9333333333333333, 'Accuracy_Test_random_kick_ball': 0.6363636363636364, 'Accuracy_Test_random_pullup': 0.8148148148148148, 'Accuracy_Test_random_punch': 0.36666666666666664}, 'standard_accuracy Test random': 0.7658227848101266, 'Closed Accuracy Test random': 0.7115183740966999}
+Progress: 100.00%, Elapsed Time: 491.33s, Training Complete
+100%|██████████| 20/20 [00:03<00:00,  6.29it/s]
+
+
+
+ 96%|█████████▌| 44/46 [00:06<00:00,  6.92it/s]
+Metrics Train:  {'precision Train random': array([1., 1., 1., 1., 1., 1.]), 'recall Train random': array([1., 1., 1., 1., 1., 1.]), 'class_accuracy_dict Train random': {'Accuracy_Train_random_climb': 1.0, 'Accuracy_Train_random_fencing': 1.0, 'Accuracy_Train_random_golf': 1.0, 'Accuracy_Train_random_kick_ball': 1.0, 'Accuracy_Train_random_pullup': 1.0, 'Accuracy_Train_random_punch': 1.0}, 'standard_accuracy Train random': 1.0, 'Closed Accuracy Train random': 0.9999999999983127}
+100%|██████████| 46/46 [00:07<00:00,  6.29it/s]
+
+100%|██████████| 20/20 [00:03<00:00,  6.25it/s]
+Metrics Test:  {'precision Test random': array([0.84615385, 0.82758621, 0.96428571, 0.41176471, 0.95652174,
+       0.66666667]), 'recall Test random': array([0.91666667, 0.96      , 0.9       , 0.63636364, 0.81481481,
+       0.4       ]), 'class_accuracy_dict Test random': {'Accuracy_Test_random_climb': 0.9166666666666666, 'Accuracy_Test_random_fencing': 0.96, 'Accuracy_Test_random_golf': 0.9, 'Accuracy_Test_random_kick_ball': 0.6363636363636364, 'Accuracy_Test_random_pullup': 0.8148148148148148, 'Accuracy_Test_random_punch': 0.4}, 'standard_accuracy Test random': 0.7658227848101266, 'Closed Accuracy Test random': 0.7151459293371014}
+Progress: 100.00%, Elapsed Time: 502.87s, Training Complete
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+
+
+
+100%|██████████| 46/46 [00:07<00:00,  6.41it/s]
+Metrics Train:  {'precision Train random': array([1., 1., 1., 1., 1., 1.]), 'recall Train random': array([1., 1., 1., 1., 1., 1.]), 'class_accuracy_dict Train random': {'Accuracy_Train_random_climb': 1.0, 'Accuracy_Train_random_fencing': 1.0, 'Accuracy_Train_random_golf': 1.0, 'Accuracy_Train_random_kick_ball': 1.0, 'Accuracy_Train_random_pullup': 1.0, 'Accuracy_Train_random_punch': 1.0}, 'standard_accuracy Train random': 1.0, 'Closed Accuracy Train random': 0.9999999999983}
+#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST
+ 45%|████▌     | 9/20 [00:01<00:01,  6.13it/s]
+Metrics Test:  {'precision Test random': array([0.81481481, 0.85714286, 0.93548387, 0.45714286, 0.95652174,
+       0.78571429]), 'recall Test random': array([0.91666667, 0.96      , 0.96666667, 0.72727273, 0.81481481,
+       0.36666667]), 'class_accuracy_dict Test random': {'Accuracy_Test_random_climb': 0.9166666666666666, 'Accuracy_Test_random_fencing': 0.96, 'Accuracy_Test_random_golf': 0.9666666666666667, 'Accuracy_Test_random_kick_ball': 0.7272727272727273, 'Accuracy_Test_random_pullup': 0.8148148148148148, 'Accuracy_Test_random_punch': 0.36666666666666664}, 'standard_accuracy Test random': 0.7848101265822784, 'Closed Accuracy Test random': 0.733683016938595}
+Progress: 100.00%, Elapsed Time: 514.26s, Training Complete
+100%|██████████| 20/20 [00:03<00:00,  6.22it/s]
+
+
+
+ 85%|████████▍ | 39/46 [00:06<00:01,  6.54it/s]
+Metrics Train:  {'precision Train random': array([1., 1., 1., 1., 1., 1.]), 'recall Train random': array([1., 1., 1., 1., 1., 1.]), 'class_accuracy_dict Train random': {'Accuracy_Train_random_climb': 1.0, 'Accuracy_Train_random_fencing': 1.0, 'Accuracy_Train_random_golf': 1.0, 'Accuracy_Train_random_kick_ball': 1.0, 'Accuracy_Train_random_pullup': 1.0, 'Accuracy_Train_random_punch': 1.0}, 'standard_accuracy Train random': 1.0, 'Closed Accuracy Train random': 0.9999999999983163}
+100%|██████████| 46/46 [00:07<00:00,  6.45it/s]
+
+ 75%|███████▌  | 15/20 [00:02<00:00,  6.50it/s]
+Metrics Test:  {'precision Test random': array([0.84      , 0.82758621, 0.93333333, 0.4       , 0.95652174,
+       0.6875    ]), 'recall Test random': array([0.875     , 0.96      , 0.93333333, 0.63636364, 0.81481481,
+       0.36666667]), 'class_accuracy_dict Test random': {'Accuracy_Test_random_climb': 0.875, 'Accuracy_Test_random_fencing': 0.96, 'Accuracy_Test_random_golf': 0.9333333333333333, 'Accuracy_Test_random_kick_ball': 0.6363636363636364, 'Accuracy_Test_random_pullup': 0.8148148148148148, 'Accuracy_Test_random_punch': 0.36666666666666664}, 'standard_accuracy Test random': 0.759493670886076, 'Closed Accuracy Test random': 0.707259136210296}
+Progress: 100.00%, Elapsed Time: 525.62s, Training Complete
+100%|██████████| 20/20 [00:03<00:00,  6.26it/s]
+
+
+
+100%|██████████| 46/46 [00:07<00:00,  6.30it/s]
+ 25%|██▌       | 5/20 [00:01<00:02,  5.52it/s]
+Metrics Train:  {'precision Train random': array([1.        , 1.        , 1.        , 0.97959184, 1.        ,
+       1.        ]), 'recall Train random': array([0.98333333, 1.        , 1.        , 1.        , 1.        ,
+       1.        ]), 'class_accuracy_dict Train random': {'Accuracy_Train_random_climb': 0.9833333333333333, 'Accuracy_Train_random_fencing': 1.0, 'Accuracy_Train_random_golf': 1.0, 'Accuracy_Train_random_kick_ball': 1.0, 'Accuracy_Train_random_pullup': 1.0, 'Accuracy_Train_random_punch': 1.0}, 'standard_accuracy Train random': 0.9972826086956522, 'Closed Accuracy Train random': 0.992585034011919}
+
+100%|██████████| 20/20 [00:03<00:00,  6.31it/s]
+ 13%|█▎        | 6/46 [00:01<00:06,  6.22it/s]
+Metrics Test:  {'precision Test random': array([0.9047619 , 0.82758621, 0.93333333, 0.4516129 , 0.96      ,
+       0.63636364]), 'recall Test random': array([0.79166667, 0.96      , 0.93333333, 0.63636364, 0.88888889,
+       0.46666667]), 'class_accuracy_dict Test random': {'Accuracy_Test_random_climb': 0.7916666666666666, 'Accuracy_Test_random_fencing': 0.96, 'Accuracy_Test_random_golf': 0.9333333333333333, 'Accuracy_Test_random_kick_ball': 0.6363636363636364, 'Accuracy_Test_random_pullup': 0.8888888888888888, 'Accuracy_Test_random_punch': 0.4666666666666667}, 'standard_accuracy Test random': 0.7784810126582279, 'Closed Accuracy Test random': 0.7243772893748508}
+Progress: 100.00%, Elapsed Time: 537.07s, Training Complete
+
+
+
+100%|██████████| 46/46 [00:07<00:00,  6.99it/s]
+Metrics Train:  {'precision Train random': array([1., 1., 1., 1., 1., 1.]), 'recall Train random': array([1., 1., 1., 1., 1., 1.]), 'class_accuracy_dict Train random': {'Accuracy_Train_random_climb': 1.0, 'Accuracy_Train_random_fencing': 1.0, 'Accuracy_Train_random_golf': 1.0, 'Accuracy_Train_random_kick_ball': 1.0, 'Accuracy_Train_random_pullup': 1.0, 'Accuracy_Train_random_punch': 1.0}, 'standard_accuracy Train random': 1.0, 'Closed Accuracy Train random': 0.9999999999982953}
+100%|██████████| 46/46 [00:07<00:00,  6.21it/s]
+
+100%|██████████| 20/20 [00:03<00:00,  6.34it/s]
+Metrics Test:  {'precision Test random': array([0.79310345, 0.88461538, 0.90625   , 0.51724138, 0.96      ,
+       0.76470588]), 'recall Test random': array([0.95833333, 0.92      , 0.96666667, 0.68181818, 0.88888889,
+
+
+
+100%|██████████| 46/46 [00:07<00:00,  6.21it/s]
+       0.43333333]), 'class_accuracy_dict Test random': {'Accuracy_Test_random_climb': 0.9583333333333334, 'Accuracy_Test_random_fencing': 0.92, 'Accuracy_Test_random_golf': 0.9666666666666667, 'Accuracy_Test_random_kick_ball': 0.6818181818181818, 'Accuracy_Test_random_pullup': 0.8888888888888888, 'Accuracy_Test_random_punch': 0.43333333333333335}, 'standard_accuracy Test random': 0.8037974683544303, 'Closed Accuracy Test random': 0.7481385281360541}
+Progress: 100.00%, Elapsed Time: 548.67s, Training Complete
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+Metrics Train:  {'precision Train random': array([1., 1., 1., 1., 1., 1.]), 'recall Train random': array([1., 1., 1., 1., 1., 1.]), 'class_accuracy_dict Train random': {'Accuracy_Train_random_climb': 1.0, 'Accuracy_Train_random_fencing': 1.0, 'Accuracy_Train_random_golf': 1.0, 'Accuracy_Train_random_kick_ball': 1.0, 'Accuracy_Train_random_pullup': 1.0, 'Accuracy_Train_random_punch': 1.0}, 'standard_accuracy Train random': 1.0, 'Closed Accuracy Train random': 0.9999999999983169}
+#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST
+100%|██████████| 20/20 [00:03<00:00,  6.30it/s]
+  0%|          | 0/46 [00:00<?, ?it/s]
+Metrics Test:  {'precision Test random': array([0.81481481, 0.82758621, 0.85294118, 0.47619048, 0.95652174,
+       0.70833333]), 'recall Test random': array([0.91666667, 0.96      , 0.96666667, 0.45454545, 0.81481481,
+       0.56666667]), 'class_accuracy_dict Test random': {'Accuracy_Test_random_climb': 0.9166666666666666, 'Accuracy_Test_random_fencing': 0.96, 'Accuracy_Test_random_golf': 0.9666666666666667, 'Accuracy_Test_random_kick_ball': 0.45454545454545453, 'Accuracy_Test_random_pullup': 0.8148148148148148, 'Accuracy_Test_random_punch': 0.5666666666666667}, 'standard_accuracy Test random': 0.7848101265822784, 'Closed Accuracy Test random': 0.6951873413919631}
+Progress: 100.00%, Elapsed Time: 560.26s, Training Complete
+
+
+
+
+100%|██████████| 46/46 [00:07<00:00,  6.00it/s]
+ 25%|██▌       | 5/20 [00:01<00:03,  4.95it/s]
+Metrics Train:  {'precision Train random': array([1., 1., 1., 1., 1., 1.]), 'recall Train random': array([1., 1., 1., 1., 1., 1.]), 'class_accuracy_dict Train random': {'Accuracy_Train_random_climb': 1.0, 'Accuracy_Train_random_fencing': 1.0, 'Accuracy_Train_random_golf': 1.0, 'Accuracy_Train_random_kick_ball': 1.0, 'Accuracy_Train_random_pullup': 1.0, 'Accuracy_Train_random_punch': 1.0}, 'standard_accuracy Train random': 1.0, 'Closed Accuracy Train random': 0.9999999999983142}
+
+
+100%|██████████| 20/20 [00:03<00:00,  5.56it/s]
+Model saved with seed 42, h_score 0.5300087679657115, direction hmdb2ucf, and type proposed
+Metrics Test:  {'precision Test random': array([0.82142857, 0.82758621, 0.93548387, 0.48148148, 0.96      ,
+       0.77777778]), 'recall Test random': array([0.95833333, 0.96      , 0.96666667, 0.59090909, 0.88888889,
+       0.46666667]), 'class_accuracy_dict Test random': {'Accuracy_Test_random_climb': 0.9583333333333334, 'Accuracy_Test_random_fencing': 0.96, 'Accuracy_Test_random_golf': 0.9666666666666667, 'Accuracy_Test_random_kick_ball': 0.5909090909090909, 'Accuracy_Test_random_pullup': 0.8888888888888888, 'Accuracy_Test_random_punch': 0.4666666666666667}, 'standard_accuracy Test random': 0.8037974683544303, 'Closed Accuracy Test random': 0.7435214833035065}
+Progress: 100.00%, Elapsed Time: 573.27s, Training Complete
+Time needed for running the strategy random : 173.12125897407532
+Results for random: {'precision Test random': array([0.82142857, 0.82758621, 0.93548387, 0.48148148, 0.96      ,
+       0.77777778]), 'recall Test random': array([0.95833333, 0.96      , 0.96666667, 0.59090909, 0.88888889,
+       0.46666667]), 'class_accuracy_dict Test random': {'Accuracy_Test_random_climb': 0.9583333333333334, 'Accuracy_Test_random_fencing': 0.96, 'Accuracy_Test_random_golf': 0.9666666666666667, 'Accuracy_Test_random_kick_ball': 0.5909090909090909, 'Accuracy_Test_random_pullup': 0.8888888888888888, 'Accuracy_Test_random_punch': 0.4666666666666667}, 'standard_accuracy Test random': 0.8037974683544303, 'Closed Accuracy Test random': 0.7435214833035065}

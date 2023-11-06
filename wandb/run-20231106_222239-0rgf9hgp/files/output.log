@@ -1,0 +1,213 @@
+###############---------------#############----------------#####USING sparse FRAME STRATEGY!###############---------------#############----------------#####
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+
+
+ 78%|███████▊  | 36/46 [00:05<00:01,  7.33it/s]
+Metrics Train:  {'precision Train sparse': array([1., 1., 1., 1., 1., 1.]), 'recall Train sparse': array([1., 1., 1., 1., 1., 1.]), 'class_accuracy_dict Train sparse': {'Accuracy_Train_sparse_climb': 1.0, 'Accuracy_Train_sparse_fencing': 1.0, 'Accuracy_Train_sparse_golf': 1.0, 'Accuracy_Train_sparse_kick_ball': 1.0, 'Accuracy_Train_sparse_pullup': 1.0, 'Accuracy_Train_sparse_punch': 1.0}, 'standard_accuracy Train sparse': 1.0, 'Closed Accuracy Train sparse': 0.9999999999983018}
+100%|██████████| 46/46 [00:07<00:00,  6.21it/s]
+
+ 55%|█████▌    | 11/20 [00:01<00:01,  6.23it/s]
+Metrics Test:  {'precision Test sparse': array([1.        , 0.8       , 0.96774194, 0.4047619 , 0.88      ,
+       0.8       ]), 'recall Test sparse': array([0.625     , 0.96      , 1.        , 0.77272727, 0.81481481,
+       0.4       ]), 'class_accuracy_dict Test sparse': {'Accuracy_Test_sparse_climb': 0.625, 'Accuracy_Test_sparse_fencing': 0.96, 'Accuracy_Test_sparse_golf': 1.0, 'Accuracy_Test_sparse_kick_ball': 0.7727272727272727, 'Accuracy_Test_sparse_pullup': 0.8148148148148148, 'Accuracy_Test_sparse_punch': 0.4}, 'standard_accuracy Test sparse': 0.759493670886076, 'Closed Accuracy Test sparse': 0.6923941889704877}
+Progress: 100.00%, Elapsed Time: 218.88s, Training Complete
+100%|██████████| 20/20 [00:03<00:00,  6.06it/s]
+
+ 37%|███▋      | 17/46 [00:03<00:04,  6.24it/s][34m[1mwandb[39m[22m: [33mWARNING[39m Step only supports monotonically increasing values, use define_metric to set a custom x axis. For details see: https://wandb.me/define-metric
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 1. Dropping entry: {'Train Time': 7.539607763290405, '_timestamp': 1699309370.9104548}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 1. Dropping entry: {'confusion_matrix Train sparse': {'_type': 'image-file', 'sha256': '6651d80d640c896a6d2d3af2549f544208777dd4d06361f6d50a38343a3d2bbf', 'size': 34328, 'path': 'media/images/confusion_matrix Train sparse_1_6651d80d640c896a6d2d.png', 'format': 'png', 'width': 1200, 'height': 800, 'caption': 'Confusion Matrix Train sparse at Epoch 0'}, '_timestamp': 1699309371.211478}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 1. Dropping entry: {'precision Train sparse': [0.9999999999983333, 0.9999999999981481, 0.9999999999985507, 0.9999999999980392, 0.9999999999984375, 0.9999999999985714], 'recall Train sparse': [0.9999999999983333, 0.9999999999981481, 0.9999999999985507, 0.9999999999980392, 0.9999999999984375, 0.9999999999985714], 'class_accuracy_dict Train sparse': {'Accuracy_Train_sparse_climb': 1.0, 'Accuracy_Train_sparse_fencing': 1.0, 'Accuracy_Train_sparse_golf': 1.0, 'Accuracy_Train_sparse_kick_ball': 1.0, 'Accuracy_Train_sparse_pullup': 1.0, 'Accuracy_Train_sparse_punch': 1.0}, 'standard_accuracy Train sparse': 1.0, 'Closed Accuracy Train sparse': 0.9999999999983018, '_timestamp': 1699309371.2144382}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 1. Dropping entry: {'confusion_matrix Test sparse': {'_type': 'image-file', 'sha256': '9800146b9bc9bd16ef2f0c5dd0c27ab581fd9e8e12db6337758f3675fdd9a3a3', 'size': 34659, 'path': 'media/images/confusion_matrix Test sparse_1_9800146b9bc9bd16ef2f.png', 'format': 'png', 'width': 1200, 'height': 800, 'caption': 'Confusion Matrix Test sparse at Epoch 0'}, '_timestamp': 1699309374.999043}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 1. Dropping entry: {'precision Test sparse': [0.9999999999933333, 0.7999999999973334, 0.9677419354807493, 0.40476190476094104, 0.87999999999648, 0.7999999999946666], 'recall Test sparse': [0.6249999999973959, 0.95999999999616, 0.9999999999966668, 0.7727272727237604, 0.8148148148117971, 0.3999999999986667], 'class_accuracy_dict Test sparse': {'Accuracy_Test_sparse_climb': 0.625, 'Accuracy_Test_sparse_fencing': 0.96, 'Accuracy_Test_sparse_golf': 1.0, 'Accuracy_Test_sparse_kick_ball': 0.7727272727272727, 'Accuracy_Test_sparse_pullup': 0.8148148148148148, 'Accuracy_Test_sparse_punch': 0.4}, 'standard_accuracy Test sparse': 0.759493670886076, 'Closed Accuracy Test sparse': 0.6923941889704877, '_timestamp': 1699309375.1582372}).
+
+ 80%|████████  | 37/46 [00:06<00:01,  6.28it/s]
+Metrics Train:  {'precision Train sparse': array([0.98360656, 1.        , 0.97183099, 1.        , 1.        ,
+       0.98529412]), 'recall Train sparse': array([1.        , 0.98148148, 1.        , 0.98076923, 1.        ,
+       0.97101449]), 'class_accuracy_dict Train sparse': {'Accuracy_Train_sparse_climb': 1.0, 'Accuracy_Train_sparse_fencing': 0.9814814814814815, 'Accuracy_Train_sparse_golf': 1.0, 'Accuracy_Train_sparse_kick_ball': 0.9807692307692307, 'Accuracy_Train_sparse_pullup': 1.0, 'Accuracy_Train_sparse_punch': 0.9710144927536232}, 'standard_accuracy Train sparse': 0.9891304347826086, 'Closed Accuracy Train sparse': 0.9835376511070015}
+100%|██████████| 46/46 [00:07<00:00,  6.11it/s]
+
+ 55%|█████▌    | 11/20 [00:01<00:01,  6.27it/s]
+Metrics Test:  {'precision Test sparse': array([0.85714286, 0.8       , 0.96551724, 0.39393939, 0.92      ,
+       0.6       ]), 'recall Test sparse': array([0.75      , 0.96      , 0.93333333, 0.59090909, 0.85185185,
+       0.4       ]), 'class_accuracy_dict Test sparse': {'Accuracy_Test_sparse_climb': 0.75, 'Accuracy_Test_sparse_fencing': 0.96, 'Accuracy_Test_sparse_golf': 0.9333333333333333, 'Accuracy_Test_sparse_kick_ball': 0.5909090909090909, 'Accuracy_Test_sparse_pullup': 0.8518518518518519, 'Accuracy_Test_sparse_punch': 0.4}, 'standard_accuracy Test sparse': 0.7468354430379747, 'Closed Accuracy Test sparse': 0.6893426558587392}
+Progress: 100.00%, Elapsed Time: 230.71s, Training Complete
+100%|██████████| 20/20 [00:03<00:00,  6.05it/s]
+
+
+
+ 80%|████████  | 37/46 [00:06<00:01,  6.31it/s]
+Metrics Train:  {'precision Train sparse': array([1., 1., 1., 1., 1., 1.]), 'recall Train sparse': array([1., 1., 1., 1., 1., 1.]), 'class_accuracy_dict Train sparse': {'Accuracy_Train_sparse_climb': 1.0, 'Accuracy_Train_sparse_fencing': 1.0, 'Accuracy_Train_sparse_golf': 1.0, 'Accuracy_Train_sparse_kick_ball': 1.0, 'Accuracy_Train_sparse_pullup': 1.0, 'Accuracy_Train_sparse_punch': 1.0}, 'standard_accuracy Train sparse': 1.0, 'Closed Accuracy Train sparse': 0.9999999999983078}
+100%|██████████| 46/46 [00:07<00:00,  6.02it/s]
+
+ 65%|██████▌   | 13/20 [00:02<00:01,  6.37it/s]
+Metrics Test:  {'precision Test sparse': array([0.875     , 0.8       , 0.96551724, 0.46428571, 0.84375   ,
+       0.8       ]), 'recall Test sparse': array([0.875     , 0.96      , 0.93333333, 0.59090909, 1.        ,
+       0.4       ]), 'class_accuracy_dict Test sparse': {'Accuracy_Test_sparse_climb': 0.875, 'Accuracy_Test_sparse_fencing': 0.96, 'Accuracy_Test_sparse_golf': 0.9333333333333333, 'Accuracy_Test_sparse_kick_ball': 0.5909090909090909, 'Accuracy_Test_sparse_pullup': 1.0, 'Accuracy_Test_sparse_punch': 0.4}, 'standard_accuracy Test sparse': 0.7911392405063291, 'Closed Accuracy Test sparse': 0.7300596967911922}
+Progress: 100.00%, Elapsed Time: 242.58s, Training Complete
+100%|██████████| 20/20 [00:03<00:00,  6.18it/s]
+
+
+
+ 87%|████████▋ | 40/46 [00:06<00:00,  6.93it/s]
+Metrics Train:  {'precision Train sparse': array([1.        , 1.        , 1.        , 1.        , 0.98529412,
+       1.        ]), 'recall Train sparse': array([1.        , 1.        , 0.98571429, 1.        , 1.        ,
+       1.        ]), 'class_accuracy_dict Train sparse': {'Accuracy_Train_sparse_climb': 1.0, 'Accuracy_Train_sparse_fencing': 1.0, 'Accuracy_Train_sparse_golf': 0.9857142857142858, 'Accuracy_Train_sparse_kick_ball': 1.0, 'Accuracy_Train_sparse_pullup': 1.0, 'Accuracy_Train_sparse_punch': 1.0}, 'standard_accuracy Train sparse': 0.9972826086956522, 'Closed Accuracy Train sparse': 0.9942016806705809}
+100%|██████████| 46/46 [00:07<00:00,  6.25it/s]
+
+ 75%|███████▌  | 15/20 [00:02<00:00,  6.40it/s]
+Metrics Test:  {'precision Test sparse': array([0.81481481, 0.8       , 0.93333333, 0.42307692, 0.86666667,
+       0.8       ]), 'recall Test sparse': array([0.91666667, 0.96      , 0.93333333, 0.5       , 0.96296296,
+       0.4       ]), 'class_accuracy_dict Test sparse': {'Accuracy_Test_sparse_climb': 0.9166666666666666, 'Accuracy_Test_sparse_fencing': 0.96, 'Accuracy_Test_sparse_golf': 0.9333333333333333, 'Accuracy_Test_sparse_kick_ball': 0.5, 'Accuracy_Test_sparse_pullup': 0.9629629629629629, 'Accuracy_Test_sparse_punch': 0.4}, 'standard_accuracy Test sparse': 0.7784810126582279, 'Closed Accuracy Test sparse': 0.708764242549513}
+Progress: 100.00%, Elapsed Time: 254.20s, Training Complete
+100%|██████████| 20/20 [00:03<00:00,  6.21it/s]
+
+
+
+ 89%|████████▉ | 41/46 [00:06<00:00,  5.26it/s]
+Metrics Train:  {'precision Train sparse': array([1., 1., 1., 1., 1., 1.]), 'recall Train sparse': array([1., 1., 1., 1., 1., 1.]), 'class_accuracy_dict Train sparse': {'Accuracy_Train_sparse_climb': 1.0, 'Accuracy_Train_sparse_fencing': 1.0, 'Accuracy_Train_sparse_golf': 1.0, 'Accuracy_Train_sparse_kick_ball': 1.0, 'Accuracy_Train_sparse_pullup': 1.0, 'Accuracy_Train_sparse_punch': 1.0}, 'standard_accuracy Train sparse': 1.0, 'Closed Accuracy Train sparse': 0.9999999999983002}
+100%|██████████| 46/46 [00:07<00:00,  5.95it/s]
+
+ 55%|█████▌    | 11/20 [00:02<00:01,  5.20it/s]
+Metrics Test:  {'precision Test sparse': array([0.9       , 0.8       , 0.875     , 0.4       , 0.77142857,
+       0.75      ]), 'recall Test sparse': array([0.75      , 0.96      , 0.93333333, 0.45454545, 1.        ,
+       0.4       ]), 'class_accuracy_dict Test sparse': {'Accuracy_Test_sparse_climb': 0.75, 'Accuracy_Test_sparse_fencing': 0.96, 'Accuracy_Test_sparse_golf': 0.9333333333333333, 'Accuracy_Test_sparse_kick_ball': 0.45454545454545453, 'Accuracy_Test_sparse_pullup': 1.0, 'Accuracy_Test_sparse_punch': 0.4}, 'standard_accuracy Test sparse': 0.7531645569620253, 'Closed Accuracy Test sparse': 0.666345898829564}
+Progress: 100.00%, Elapsed Time: 266.93s, Training Complete
+100%|██████████| 20/20 [00:03<00:00,  5.23it/s]
+
+
+
+ 85%|████████▍ | 39/46 [00:06<00:01,  6.55it/s]
+Metrics Train:  {'precision Train sparse': array([1.        , 1.        , 1.        , 1.        , 1.        ,
+       0.98571429]), 'recall Train sparse': array([1.        , 0.98181818, 1.        , 1.        , 1.        ,
+       1.        ]), 'class_accuracy_dict Train sparse': {'Accuracy_Train_sparse_climb': 1.0, 'Accuracy_Train_sparse_fencing': 0.9818181818181818, 'Accuracy_Train_sparse_golf': 1.0, 'Accuracy_Train_sparse_kick_ball': 1.0, 'Accuracy_Train_sparse_pullup': 1.0, 'Accuracy_Train_sparse_punch': 1.0}, 'standard_accuracy Train sparse': 0.9972826086956522, 'Closed Accuracy Train sparse': 0.9963636363619548}
+100%|██████████| 46/46 [00:07<00:00,  6.41it/s]
+
+ 75%|███████▌  | 15/20 [00:02<00:00,  6.41it/s]
+Metrics Test:  {'precision Test sparse': array([0.80769231, 0.8       , 0.90625   , 0.42307692, 0.86206897,
+       0.73333333]), 'recall Test sparse': array([0.875     , 0.96      , 0.96666667, 0.5       , 0.92592593,
+       0.36666667]), 'class_accuracy_dict Test sparse': {'Accuracy_Test_sparse_climb': 0.875, 'Accuracy_Test_sparse_fencing': 0.96, 'Accuracy_Test_sparse_golf': 0.9666666666666667, 'Accuracy_Test_sparse_kick_ball': 0.5, 'Accuracy_Test_sparse_pullup': 0.9259259259259259, 'Accuracy_Test_sparse_punch': 0.36666666666666664}, 'standard_accuracy Test sparse': 0.7658227848101266, 'Closed Accuracy Test sparse': 0.6961736536797838}
+Progress: 100.00%, Elapsed Time: 278.36s, Training Complete
+100%|██████████| 20/20 [00:03<00:00,  6.19it/s]
+
+
+
+ 93%|█████████▎| 43/46 [00:06<00:00,  6.46it/s]
+Metrics Train:  {'precision Train sparse': array([1., 1., 1., 1., 1., 1.]), 'recall Train sparse': array([1., 1., 1., 1., 1., 1.]), 'class_accuracy_dict Train sparse': {'Accuracy_Train_sparse_climb': 1.0, 'Accuracy_Train_sparse_fencing': 1.0, 'Accuracy_Train_sparse_golf': 1.0, 'Accuracy_Train_sparse_kick_ball': 1.0, 'Accuracy_Train_sparse_pullup': 1.0, 'Accuracy_Train_sparse_punch': 1.0}, 'standard_accuracy Train sparse': 1.0, 'Closed Accuracy Train sparse': 0.9999999999982998}
+100%|██████████| 46/46 [00:07<00:00,  6.31it/s]
+
+ 85%|████████▌ | 17/20 [00:02<00:00,  6.35it/s]
+Metrics Test:  {'precision Test sparse': array([0.91304348, 0.75      , 0.90625   , 0.40740741, 0.86206897,
+       0.73333333]), 'recall Test sparse': array([0.875     , 0.96      , 0.96666667, 0.5       , 0.92592593,
+       0.36666667]), 'class_accuracy_dict Test sparse': {'Accuracy_Test_sparse_climb': 0.875, 'Accuracy_Test_sparse_fencing': 0.96, 'Accuracy_Test_sparse_golf': 0.9666666666666667, 'Accuracy_Test_sparse_kick_ball': 0.5, 'Accuracy_Test_sparse_pullup': 0.9259259259259259, 'Accuracy_Test_sparse_punch': 0.36666666666666664}, 'standard_accuracy Test sparse': 0.7658227848101266, 'Closed Accuracy Test sparse': 0.7019356421710659}
+Progress: 100.00%, Elapsed Time: 289.99s, Training Complete
+100%|██████████| 20/20 [00:03<00:00,  6.04it/s]
+
+
+
+ 83%|████████▎ | 38/46 [00:06<00:01,  6.66it/s]
+Metrics Train:  {'precision Train sparse': array([1., 1., 1., 1., 1., 1.]), 'recall Train sparse': array([1., 1., 1., 1., 1., 1.]), 'class_accuracy_dict Train sparse': {'Accuracy_Train_sparse_climb': 1.0, 'Accuracy_Train_sparse_fencing': 1.0, 'Accuracy_Train_sparse_golf': 1.0, 'Accuracy_Train_sparse_kick_ball': 1.0, 'Accuracy_Train_sparse_pullup': 1.0, 'Accuracy_Train_sparse_punch': 1.0}, 'standard_accuracy Train sparse': 1.0, 'Closed Accuracy Train sparse': 0.9999999999983071}
+100%|██████████| 46/46 [00:08<00:00,  5.61it/s]
+
+ 65%|██████▌   | 13/20 [00:02<00:01,  6.10it/s]
+Metrics Test:  {'precision Test sparse': array([0.78571429, 0.8       , 0.84375   , 0.40909091, 0.96153846,
+       0.7       ]), 'recall Test sparse': array([0.91666667, 0.96      , 0.9       , 0.40909091, 0.92592593,
+       0.46666667]), 'class_accuracy_dict Test sparse': {'Accuracy_Test_sparse_climb': 0.9166666666666666, 'Accuracy_Test_sparse_fencing': 0.96, 'Accuracy_Test_sparse_golf': 0.9, 'Accuracy_Test_sparse_kick_ball': 0.4090909090909091, 'Accuracy_Test_sparse_pullup': 0.9259259259259259, 'Accuracy_Test_sparse_punch': 0.4666666666666667}, 'standard_accuracy Test sparse': 0.7658227848101266, 'Closed Accuracy Test sparse': 0.6857910906275865}
+Progress: 100.00%, Elapsed Time: 302.53s, Training Complete
+100%|██████████| 20/20 [00:03<00:00,  5.96it/s]
+
+
+
+ 91%|█████████▏| 42/46 [00:06<00:00,  6.89it/s]
+Metrics Train:  {'precision Train sparse': array([1., 1., 1., 1., 1., 1.]), 'recall Train sparse': array([1., 1., 1., 1., 1., 1.]), 'class_accuracy_dict Train sparse': {'Accuracy_Train_sparse_climb': 1.0, 'Accuracy_Train_sparse_fencing': 1.0, 'Accuracy_Train_sparse_golf': 1.0, 'Accuracy_Train_sparse_kick_ball': 1.0, 'Accuracy_Train_sparse_pullup': 1.0, 'Accuracy_Train_sparse_punch': 1.0}, 'standard_accuracy Train sparse': 1.0, 'Closed Accuracy Train sparse': 0.9999999999983145}
+100%|██████████| 46/46 [00:07<00:00,  6.30it/s]
+
+100%|██████████| 20/20 [00:03<00:00,  6.30it/s]
+ 13%|█▎        | 6/46 [00:01<00:06,  6.30it/s]
+Metrics Test:  {'precision Test sparse': array([0.82608696, 0.8       , 0.96428571, 0.44827586, 0.86206897,
+       0.63157895]), 'recall Test sparse': array([0.79166667, 0.96      , 0.9       , 0.59090909, 0.92592593,
+       0.4       ]), 'class_accuracy_dict Test sparse': {'Accuracy_Test_sparse_climb': 0.7916666666666666, 'Accuracy_Test_sparse_fencing': 0.96, 'Accuracy_Test_sparse_golf': 0.9, 'Accuracy_Test_sparse_kick_ball': 0.5909090909090909, 'Accuracy_Test_sparse_pullup': 0.9259259259259259, 'Accuracy_Test_sparse_punch': 0.4}, 'standard_accuracy Test sparse': 0.759493670886076, 'Closed Accuracy Test sparse': 0.6944579189887795}
+Progress: 100.00%, Elapsed Time: 314.00s, Training Complete
+
+
+
+100%|██████████| 46/46 [00:07<00:00,  6.40it/s]
+Metrics Train:  {'precision Train sparse': array([1., 1., 1., 1., 1., 1.]), 'recall Train sparse': array([1., 1., 1., 1., 1., 1.]), 'class_accuracy_dict Train sparse': {'Accuracy_Train_sparse_climb': 1.0, 'Accuracy_Train_sparse_fencing': 1.0, 'Accuracy_Train_sparse_golf': 1.0, 'Accuracy_Train_sparse_kick_ball': 1.0, 'Accuracy_Train_sparse_pullup': 1.0, 'Accuracy_Train_sparse_punch': 1.0}, 'standard_accuracy Train sparse': 1.0, 'Closed Accuracy Train sparse': 0.9999999999983009}
+#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST
+
+100%|██████████| 20/20 [00:03<00:00,  6.15it/s]
+Metrics Test:  {'precision Test sparse': array([0.72413793, 0.8       , 0.96428571, 0.46428571, 0.89285714,
+       0.73333333]), 'recall Test sparse': array([0.875     , 0.96      , 0.9       , 0.59090909, 0.92592593,
+       0.36666667]), 'class_accuracy_dict Test sparse': {'Accuracy_Test_sparse_climb': 0.875, 'Accuracy_Test_sparse_fencing': 0.96, 'Accuracy_Test_sparse_golf': 0.9, 'Accuracy_Test_sparse_kick_ball': 0.5909090909090909, 'Accuracy_Test_sparse_pullup': 0.9259259259259259, 'Accuracy_Test_sparse_punch': 0.36666666666666664}, 'standard_accuracy Test sparse': 0.7658227848101266, 'Closed Accuracy Test sparse': 0.6972191949992361}
+Progress: 100.00%, Elapsed Time: 325.47s, Training Complete
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+
+
+100%|██████████| 46/46 [00:07<00:00,  6.43it/s]
+  0%|          | 0/20 [00:00<?, ?it/s]
+Metrics Train:  {'precision Train sparse': array([1., 1., 1., 1., 1., 1.]), 'recall Train sparse': array([1., 1., 1., 1., 1., 1.]), 'class_accuracy_dict Train sparse': {'Accuracy_Train_sparse_climb': 1.0, 'Accuracy_Train_sparse_fencing': 1.0, 'Accuracy_Train_sparse_golf': 1.0, 'Accuracy_Train_sparse_kick_ball': 1.0, 'Accuracy_Train_sparse_pullup': 1.0, 'Accuracy_Train_sparse_punch': 1.0}, 'standard_accuracy Train sparse': 1.0, 'Closed Accuracy Train sparse': 0.9999999999983101}
+
+100%|██████████| 20/20 [00:03<00:00,  6.25it/s]
+  2%|▏         | 1/46 [00:00<00:21,  2.07it/s]
+Metrics Test:  {'precision Test sparse': array([0.82608696, 0.77419355, 0.84375   , 0.42857143, 0.86206897,
+       0.68181818]), 'recall Test sparse': array([0.79166667, 0.96      , 0.9       , 0.40909091, 0.92592593,
+       0.5       ]), 'class_accuracy_dict Test sparse': {'Accuracy_Test_sparse_climb': 0.7916666666666666, 'Accuracy_Test_sparse_fencing': 0.96, 'Accuracy_Test_sparse_golf': 0.9, 'Accuracy_Test_sparse_kick_ball': 0.4090909090909091, 'Accuracy_Test_sparse_pullup': 0.9259259259259259, 'Accuracy_Test_sparse_punch': 0.5}, 'standard_accuracy Test sparse': 0.7531645569620253, 'Closed Accuracy Test sparse': 0.6542314990491632}
+Progress: 100.00%, Elapsed Time: 336.80s, Training Complete
+
+
+
+100%|██████████| 46/46 [00:07<00:00,  6.29it/s]
+ 15%|█▌        | 3/20 [00:00<00:03,  4.49it/s]
+Metrics Train:  {'precision Train sparse': array([1., 1., 1., 1., 1., 1.]), 'recall Train sparse': array([1., 1., 1., 1., 1., 1.]), 'class_accuracy_dict Train sparse': {'Accuracy_Train_sparse_climb': 1.0, 'Accuracy_Train_sparse_fencing': 1.0, 'Accuracy_Train_sparse_golf': 1.0, 'Accuracy_Train_sparse_kick_ball': 1.0, 'Accuracy_Train_sparse_pullup': 1.0, 'Accuracy_Train_sparse_punch': 1.0}, 'standard_accuracy Train sparse': 1.0, 'Closed Accuracy Train sparse': 0.9999999999983036}
+
+100%|██████████| 20/20 [00:03<00:00,  6.29it/s]
+  9%|▊         | 4/46 [00:00<00:07,  5.66it/s]
+Metrics Test:  {'precision Test sparse': array([1.        , 0.75      , 0.875     , 0.4       , 0.86206897,
+       0.63636364]), 'recall Test sparse': array([0.75      , 0.96      , 0.93333333, 0.45454545, 0.92592593,
+       0.46666667]), 'class_accuracy_dict Test sparse': {'Accuracy_Test_sparse_climb': 0.75, 'Accuracy_Test_sparse_fencing': 0.96, 'Accuracy_Test_sparse_golf': 0.9333333333333333, 'Accuracy_Test_sparse_kick_ball': 0.45454545454545453, 'Accuracy_Test_sparse_pullup': 0.9259259259259259, 'Accuracy_Test_sparse_punch': 0.4666666666666667}, 'standard_accuracy Test sparse': 0.7531645569620253, 'Closed Accuracy Test sparse': 0.6755048044399692}
+Progress: 100.00%, Elapsed Time: 348.26s, Training Complete
+
+
+
+100%|██████████| 46/46 [00:07<00:00,  6.16it/s]
+  5%|▌         | 1/20 [00:00<00:07,  2.44it/s]
+Metrics Train:  {'precision Train sparse': array([1., 1., 1., 1., 1., 1.]), 'recall Train sparse': array([1., 1., 1., 1., 1., 1.]), 'class_accuracy_dict Train sparse': {'Accuracy_Train_sparse_climb': 1.0, 'Accuracy_Train_sparse_fencing': 1.0, 'Accuracy_Train_sparse_golf': 1.0, 'Accuracy_Train_sparse_kick_ball': 1.0, 'Accuracy_Train_sparse_pullup': 1.0, 'Accuracy_Train_sparse_punch': 1.0}, 'standard_accuracy Train sparse': 1.0, 'Closed Accuracy Train sparse': 0.9999999999983114}
+
+100%|██████████| 20/20 [00:03<00:00,  6.11it/s]
+  4%|▍         | 2/46 [00:00<00:11,  3.86it/s]
+Metrics Test:  {'precision Test sparse': array([1.        , 0.75      , 0.93548387, 0.4137931 , 0.86206897,
+       0.68421053]), 'recall Test sparse': array([0.75      , 0.96      , 0.96666667, 0.54545455, 0.92592593,
+       0.43333333]), 'class_accuracy_dict Test sparse': {'Accuracy_Test_sparse_climb': 0.75, 'Accuracy_Test_sparse_fencing': 0.96, 'Accuracy_Test_sparse_golf': 0.9666666666666667, 'Accuracy_Test_sparse_kick_ball': 0.5454545454545454, 'Accuracy_Test_sparse_pullup': 0.9259259259259259, 'Accuracy_Test_sparse_punch': 0.43333333333333335}, 'standard_accuracy Test sparse': 0.7658227848101266, 'Closed Accuracy Test sparse': 0.699533329571342}
+Progress: 100.00%, Elapsed Time: 360.54s, Training Complete
+
+
+
+100%|██████████| 46/46 [00:07<00:00,  6.07it/s]
+ 15%|█▌        | 3/20 [00:00<00:04,  4.24it/s]
+Metrics Train:  {'precision Train sparse': array([1., 1., 1., 1., 1., 1.]), 'recall Train sparse': array([1., 1., 1., 1., 1., 1.]), 'class_accuracy_dict Train sparse': {'Accuracy_Train_sparse_climb': 1.0, 'Accuracy_Train_sparse_fencing': 1.0, 'Accuracy_Train_sparse_golf': 1.0, 'Accuracy_Train_sparse_kick_ball': 1.0, 'Accuracy_Train_sparse_pullup': 1.0, 'Accuracy_Train_sparse_punch': 1.0}, 'standard_accuracy Train sparse': 1.0, 'Closed Accuracy Train sparse': 0.9999999999983092}
+
+100%|██████████| 20/20 [00:03<00:00,  5.98it/s]
+  7%|▋         | 3/46 [00:00<00:10,  4.04it/s]
+Metrics Test:  {'precision Test sparse': array([0.95454545, 0.77419355, 0.87878788, 0.40740741, 0.95833333,
+       0.66666667]), 'recall Test sparse': array([0.875     , 0.96      , 0.96666667, 0.5       , 0.85185185,
+       0.46666667]), 'class_accuracy_dict Test sparse': {'Accuracy_Test_sparse_climb': 0.875, 'Accuracy_Test_sparse_fencing': 0.96, 'Accuracy_Test_sparse_golf': 0.9666666666666667, 'Accuracy_Test_sparse_kick_ball': 0.5, 'Accuracy_Test_sparse_pullup': 0.8518518518518519, 'Accuracy_Test_sparse_punch': 0.4666666666666667}, 'standard_accuracy Test sparse': 0.7721518987341772, 'Closed Accuracy Test sparse': 0.7107686864195557}
+Progress: 100.00%, Elapsed Time: 372.51s, Training Complete
+
+
+
+100%|██████████| 46/46 [00:07<00:00,  6.07it/s]
+ 15%|█▌        | 3/20 [00:00<00:04,  4.05it/s]
+Metrics Train:  {'precision Train sparse': array([1.        , 1.        , 0.98571429, 1.        , 1.        ,
+       1.        ]), 'recall Train sparse': array([0.98360656, 1.        , 1.        , 1.        , 1.        ,
+       1.        ]), 'class_accuracy_dict Train sparse': {'Accuracy_Train_sparse_climb': 0.9836065573770492, 'Accuracy_Train_sparse_fencing': 1.0, 'Accuracy_Train_sparse_golf': 1.0, 'Accuracy_Train_sparse_kick_ball': 1.0, 'Accuracy_Train_sparse_pullup': 1.0, 'Accuracy_Train_sparse_punch': 1.0}, 'standard_accuracy Train sparse': 0.9972826086956522, 'Closed Accuracy Train sparse': 0.9938641686165811}
+
+
+100%|██████████| 20/20 [00:03<00:00,  5.97it/s]
+Model saved with seed 42, h_score 0.4919592172252131, direction hmdb2ucf, and type proposed
+Metrics Test:  {'precision Test sparse': array([0.85185185, 0.8       , 0.96428571, 0.42424242, 0.88461538,
+       0.85714286]), 'recall Test sparse': array([0.95833333, 0.96      , 0.9       , 0.63636364, 0.85185185,
+       0.4       ]), 'class_accuracy_dict Test sparse': {'Accuracy_Test_sparse_climb': 0.9583333333333334, 'Accuracy_Test_sparse_fencing': 0.96, 'Accuracy_Test_sparse_golf': 0.9, 'Accuracy_Test_sparse_kick_ball': 0.6363636363636364, 'Accuracy_Test_sparse_pullup': 0.8518518518518519, 'Accuracy_Test_sparse_punch': 0.4}, 'standard_accuracy Test sparse': 0.7784810126582279, 'Closed Accuracy Test sparse': 0.7149439886080673}
+Progress: 100.00%, Elapsed Time: 384.48s, Training Complete
+Time needed for running the strategy sparse : 177.39895391464233
+Results for sparse: {'precision Test sparse': array([0.85185185, 0.8       , 0.96428571, 0.42424242, 0.88461538,
+       0.85714286]), 'recall Test sparse': array([0.95833333, 0.96      , 0.9       , 0.63636364, 0.85185185,
+       0.4       ]), 'class_accuracy_dict Test sparse': {'Accuracy_Test_sparse_climb': 0.9583333333333334, 'Accuracy_Test_sparse_fencing': 0.96, 'Accuracy_Test_sparse_golf': 0.9, 'Accuracy_Test_sparse_kick_ball': 0.6363636363636364, 'Accuracy_Test_sparse_pullup': 0.8518518518518519, 'Accuracy_Test_sparse_punch': 0.4}, 'standard_accuracy Test sparse': 0.7784810126582279, 'Closed Accuracy Test sparse': 0.7149439886080673}
