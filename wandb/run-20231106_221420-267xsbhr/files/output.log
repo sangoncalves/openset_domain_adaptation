@@ -1,0 +1,226 @@
+###############---------------#############----------------#####USING uniform FRAME STRATEGY!###############---------------#############----------------#####
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+
+
+
+
+100%|██████████| 46/46 [00:12<00:00,  3.73it/s]
+  5%|▌         | 1/20 [00:00<00:09,  1.90it/s]
+Metrics Train:  {'precision Train uniform': array([0.725     , 0.65789474, 0.58227848, 0.3125    , 0.54545455,
+       0.52325581]), 'recall Train uniform': array([0.48333333, 0.46296296, 0.66666667, 0.3       , 0.62686567,
+       0.66176471]), 'class_accuracy_dict Train uniform': {'Accuracy_Train_uniform_climb': 0.48333333333333334, 'Accuracy_Train_uniform_fencing': 0.46296296296296297, 'Accuracy_Train_uniform_golf': 0.6666666666666666, 'Accuracy_Train_uniform_kick_ball': 0.3, 'Accuracy_Train_uniform_pullup': 0.6268656716417911, 'Accuracy_Train_uniform_punch': 0.6617647058823529}, 'standard_accuracy Train uniform': 0.5489130434782609, 'Closed Accuracy Train uniform': 0.3650106044373692}
+ 25%|██▌       | 5/20 [00:01<00:03,  4.55it/s][34m[1mwandb[39m[22m: [33mWARNING[39m Step only supports monotonically increasing values, use define_metric to set a custom x axis. For details see: https://wandb.me/define-metric
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 1. Dropping entry: {'Train Time': 12.483963251113892, '_timestamp': 1699308879.0361357}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 1. Dropping entry: {'confusion_matrix Train uniform': {'_type': 'image-file', 'sha256': 'e5ad3581006f396ef4e44e7d333c3a5e314d191013e1fe3cdedf4ef1ad7e3136', 'size': 36905, 'path': 'media/images/confusion_matrix Train uniform_1_e5ad3581006f396ef4e4.png', 'format': 'png', 'width': 1200, 'height': 800, 'caption': 'Confusion Matrix Train uniform at Epoch 0'}, '_timestamp': 1699308879.8454106}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 1. Dropping entry: {'precision Train uniform': [0.7249999999981874, 0.6578947368403739, 0.5822784810119211, 0.31249999999934897, 0.5454545454538371, 0.5232558139528799], 'recall Train uniform': [0.48333333333252776, 0.4629629629621056, 0.6666666666657005, 0.29999999999939997, 0.6268656716408554, 0.6617647058813797], 'class_accuracy_dict Train uniform': {'Accuracy_Train_uniform_climb': 0.48333333333333334, 'Accuracy_Train_uniform_fencing': 0.46296296296296297, 'Accuracy_Train_uniform_golf': 0.6666666666666666, 'Accuracy_Train_uniform_kick_ball': 0.3, 'Accuracy_Train_uniform_pullup': 0.6268656716417911, 'Accuracy_Train_uniform_punch': 0.6617647058823529}, 'standard_accuracy Train uniform': 0.5489130434782609, 'Closed Accuracy Train uniform': 0.3650106044373692, '_timestamp': 1699308879.8488595}).
+ 65%|██████▌   | 13/20 [00:02<00:01,  5.36it/s]
+Metrics Test:  {'precision Test uniform': array([0.40816327, 0.81818182, 0.68292683, 0.        , 0.72972973,
+       0.77777778]), 'recall Test uniform': array([0.83333333, 0.72      , 0.93333333, 0.        , 1.        ,
+       0.23333333]), 'class_accuracy_dict Test uniform': {'Accuracy_Test_uniform_climb': 0.8333333333333334, 'Accuracy_Test_uniform_fencing': 0.72, 'Accuracy_Test_uniform_golf': 0.9333333333333333, 'Accuracy_Test_uniform_kick_ball': 0.0, 'Accuracy_Test_uniform_pullup': 1.0, 'Accuracy_Test_uniform_punch': 0.23333333333333334}, 'standard_accuracy Test uniform': 0.6329113924050633, 'Closed Accuracy Test uniform': 0.4757881332319034}
+Progress: 100.00%, Elapsed Time: 30.30s, Training Complete
+100%|██████████| 20/20 [00:04<00:00,  4.90it/s]
+
+
+
+ 87%|████████▋ | 40/46 [00:06<00:00,  7.40it/s]
+Metrics Train:  {'precision Train uniform': array([0.85245902, 0.82692308, 0.85135135, 0.875     , 0.92424242,
+       0.74666667]), 'recall Train uniform': array([0.86666667, 0.78181818, 0.92647059, 0.68627451, 0.93846154,
+       0.8115942 ]), 'class_accuracy_dict Train uniform': {'Accuracy_Train_uniform_climb': 0.8666666666666667, 'Accuracy_Train_uniform_fencing': 0.7818181818181819, 'Accuracy_Train_uniform_golf': 0.9264705882352942, 'Accuracy_Train_uniform_kick_ball': 0.6862745098039216, 'Accuracy_Train_uniform_pullup': 0.9384615384615385, 'Accuracy_Train_uniform_punch': 0.8115942028985508}, 'standard_accuracy Train uniform': 0.842391304347826, 'Closed Accuracy Train uniform': 0.7438790228518471}
+100%|██████████| 46/46 [00:06<00:00,  6.63it/s]
+
+ 75%|███████▌  | 15/20 [00:02<00:00,  6.74it/s]
+Metrics Test:  {'precision Test uniform': array([0.80769231, 0.86363636, 0.81818182, 0.78571429, 0.93103448,
+       0.76470588]), 'recall Test uniform': array([0.875     , 0.76      , 0.9       , 0.5       , 1.        ,
+       0.86666667]), 'class_accuracy_dict Test uniform': {'Accuracy_Test_uniform_climb': 0.875, 'Accuracy_Test_uniform_fencing': 0.76, 'Accuracy_Test_uniform_golf': 0.9, 'Accuracy_Test_uniform_kick_ball': 0.5, 'Accuracy_Test_uniform_pullup': 1.0, 'Accuracy_Test_uniform_punch': 0.8666666666666667}, 'standard_accuracy Test uniform': 0.8291139240506329, 'Closed Accuracy Test uniform': 0.7047487684705116}
+Progress: 100.00%, Elapsed Time: 41.37s, Training Complete
+100%|██████████| 20/20 [00:03<00:00,  6.39it/s]
+  7%|▋         | 3/46 [00:00<00:09,  4.38it/s][34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 1. Dropping entry: {'confusion_matrix Test uniform': {'_type': 'image-file', 'sha256': '37318a2a3bc1be439baf8abe6ac0f2cda6ef3a1b02d945e6906cf0240cebb6fa', 'size': 33273, 'path': 'media/images/confusion_matrix Test uniform_1_37318a2a3bc1be439baf.png', 'format': 'png', 'width': 1200, 'height': 800, 'caption': 'Confusion Matrix Test uniform at Epoch 0'}, '_timestamp': 1699308884.3812284}).
+[34m[1mwandb[39m[22m: [33mWARNING[39m (User provided step: 0 is less than current step: 1. Dropping entry: {'precision Test uniform': [0.40816326530528946, 0.8181818181780992, 0.682926829266627, 0.0, 0.7297297297277574, 0.7777777777691358], 'recall Test uniform': [0.8333333333298611, 0.71999999999712, 0.9333333333302223, 0.0, 0.9999999999962964, 0.23333333333255557], 'class_accuracy_dict Test uniform': {'Accuracy_Test_uniform_climb': 0.8333333333333334, 'Accuracy_Test_uniform_fencing': 0.72, 'Accuracy_Test_uniform_golf': 0.9333333333333333, 'Accuracy_Test_uniform_kick_ball': 0.0, 'Accuracy_Test_uniform_pullup': 1.0, 'Accuracy_Test_uniform_punch': 0.23333333333333334}, 'standard_accuracy Test uniform': 0.6329113924050633, 'Closed Accuracy Test uniform': 0.4757881332319034, '_timestamp': 1699308884.5146716}).
+
+
+ 98%|█████████▊| 45/46 [00:06<00:00,  7.25it/s]
+Metrics Train:  {'precision Train uniform': array([0.87692308, 0.89583333, 0.91666667, 0.89795918, 0.9375    ,
+       0.85714286]), 'recall Train uniform': array([0.93442623, 0.81132075, 0.94285714, 0.8627451 , 0.92307692,
+       0.88235294]), 'class_accuracy_dict Train uniform': {'Accuracy_Train_uniform_climb': 0.9344262295081968, 'Accuracy_Train_uniform_fencing': 0.8113207547169812, 'Accuracy_Train_uniform_golf': 0.9428571428571428, 'Accuracy_Train_uniform_kick_ball': 0.8627450980392157, 'Accuracy_Train_uniform_pullup': 0.9230769230769231, 'Accuracy_Train_uniform_punch': 0.8823529411764706}, 'standard_accuracy Train uniform': 0.8967391304347826, 'Closed Accuracy Train uniform': 0.8182333645194909}
+100%|██████████| 46/46 [00:07<00:00,  6.41it/s]
+
+ 95%|█████████▌| 19/20 [00:03<00:00,  7.01it/s]
+Metrics Test:  {'precision Test uniform': array([1.        , 0.82608696, 0.78378378, 0.6875    , 0.77142857,
+       0.78125   ]), 'recall Test uniform': array([0.625     , 0.76      , 0.96666667, 0.5       , 1.        ,
+       0.83333333]), 'class_accuracy_dict Test uniform': {'Accuracy_Test_uniform_climb': 0.625, 'Accuracy_Test_uniform_fencing': 0.76, 'Accuracy_Test_uniform_golf': 0.9666666666666667, 'Accuracy_Test_uniform_kick_ball': 0.5, 'Accuracy_Test_uniform_pullup': 1.0, 'Accuracy_Test_uniform_punch': 0.8333333333333334}, 'standard_accuracy Test uniform': 0.7974683544303798, 'Closed Accuracy Test uniform': 0.6444332574710679}
+Progress: 100.00%, Elapsed Time: 52.99s, Training Complete
+100%|██████████| 20/20 [00:03<00:00,  6.39it/s]
+
+
+
+100%|██████████| 46/46 [00:07<00:00,  6.31it/s]
+Metrics Train:  {'precision Train uniform': array([0.94915254, 0.94117647, 0.91780822, 1.        , 1.        ,
+       0.89473684]), 'recall Train uniform': array([0.93333333, 0.92307692, 0.98529412, 0.82692308, 0.98507463,
+       0.98550725]), 'class_accuracy_dict Train uniform': {'Accuracy_Train_uniform_climb': 0.9333333333333333, 'Accuracy_Train_uniform_fencing': 0.9230769230769231, 'Accuracy_Train_uniform_golf': 0.9852941176470589, 'Accuracy_Train_uniform_kick_ball': 0.8269230769230769, 'Accuracy_Train_uniform_pullup': 0.9850746268656716, 'Accuracy_Train_uniform_punch': 0.9855072463768116}, 'standard_accuracy Train uniform': 0.9456521739130435, 'Closed Accuracy Train uniform': 0.8958038541606067}
+#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST
+ 45%|████▌     | 9/20 [00:01<00:01,  6.38it/s]
+Metrics Test:  {'precision Test uniform': array([0.94736842, 0.84      , 0.90625   , 0.58064516, 0.89655172,
+       0.86363636]), 'recall Test uniform': array([0.75      , 0.84      , 0.96666667, 0.81818182, 0.96296296,
+       0.63333333]), 'class_accuracy_dict Test uniform': {'Accuracy_Test_uniform_climb': 0.75, 'Accuracy_Test_uniform_fencing': 0.84, 'Accuracy_Test_uniform_golf': 0.9666666666666667, 'Accuracy_Test_uniform_kick_ball': 0.8181818181818182, 'Accuracy_Test_uniform_pullup': 0.9629629629629629, 'Accuracy_Test_uniform_punch': 0.6333333333333333}, 'standard_accuracy Test uniform': 0.8291139240506329, 'Closed Accuracy Test uniform': 0.7407756381524688}
+Progress: 100.00%, Elapsed Time: 64.40s, Training Complete
+100%|██████████| 20/20 [00:03<00:00,  6.31it/s]
+
+
+
+ 83%|████████▎ | 38/46 [00:05<00:01,  6.80it/s]
+Metrics Train:  {'precision Train uniform': array([0.96721311, 0.98      , 0.98507463, 0.94339623, 1.        ,
+       0.93055556]), 'recall Train uniform': array([0.98333333, 0.90740741, 0.98507463, 0.98039216, 0.98484848,
+       0.95714286]), 'class_accuracy_dict Train uniform': {'Accuracy_Train_uniform_climb': 0.9833333333333333, 'Accuracy_Train_uniform_fencing': 0.9074074074074074, 'Accuracy_Train_uniform_golf': 0.9850746268656716, 'Accuracy_Train_uniform_kick_ball': 0.9803921568627451, 'Accuracy_Train_uniform_pullup': 0.9848484848484849, 'Accuracy_Train_uniform_punch': 0.9571428571428572}, 'standard_accuracy Train uniform': 0.967391304347826, 'Closed Accuracy Train uniform': 0.9447769280391274}
+100%|██████████| 46/46 [00:07<00:00,  6.37it/s]
+
+ 65%|██████▌   | 13/20 [00:02<00:01,  6.70it/s]
+Metrics Test:  {'precision Test uniform': array([1.        , 0.77419355, 0.82857143, 0.5       , 0.79411765,
+       0.81818182]), 'recall Test uniform': array([0.75      , 0.96      , 0.96666667, 0.40909091, 1.        ,
+       0.6       ]), 'class_accuracy_dict Test uniform': {'Accuracy_Test_uniform_climb': 0.75, 'Accuracy_Test_uniform_fencing': 0.96, 'Accuracy_Test_uniform_golf': 0.9666666666666667, 'Accuracy_Test_uniform_kick_ball': 0.4090909090909091, 'Accuracy_Test_uniform_pullup': 1.0, 'Accuracy_Test_uniform_punch': 0.6}, 'standard_accuracy Test uniform': 0.7911392405063291, 'Closed Accuracy Test uniform': 0.6779991566497123}
+Progress: 100.00%, Elapsed Time: 75.77s, Training Complete
+100%|██████████| 20/20 [00:03<00:00,  6.36it/s]
+
+
+
+ 89%|████████▉ | 41/46 [00:06<00:00,  6.76it/s]
+Metrics Train:  {'precision Train uniform': array([0.98333333, 0.96296296, 1.        , 1.        , 0.98507463,
+       0.95774648]), 'recall Train uniform': array([0.98333333, 0.98113208, 1.        , 0.93877551, 1.        ,
+       0.97142857]), 'class_accuracy_dict Train uniform': {'Accuracy_Train_uniform_climb': 0.9833333333333333, 'Accuracy_Train_uniform_fencing': 0.9811320754716981, 'Accuracy_Train_uniform_golf': 1.0, 'Accuracy_Train_uniform_kick_ball': 0.9387755102040817, 'Accuracy_Train_uniform_pullup': 1.0, 'Accuracy_Train_uniform_punch': 0.9714285714285714}, 'standard_accuracy Train uniform': 0.9809782608695652, 'Closed Accuracy Train uniform': 0.9673035594540556}
+100%|██████████| 46/46 [00:07<00:00,  6.26it/s]
+
+ 85%|████████▌ | 17/20 [00:02<00:00,  6.53it/s]
+Metrics Test:  {'precision Test uniform': array([1.        , 0.88      , 0.84848485, 0.5       , 0.84375   ,
+       0.76      ]), 'recall Test uniform': array([0.875     , 0.88      , 0.93333333, 0.5       , 1.        ,
+       0.63333333]), 'class_accuracy_dict Test uniform': {'Accuracy_Test_uniform_climb': 0.875, 'Accuracy_Test_uniform_fencing': 0.88, 'Accuracy_Test_uniform_golf': 0.9333333333333333, 'Accuracy_Test_uniform_kick_ball': 0.5, 'Accuracy_Test_uniform_pullup': 1.0, 'Accuracy_Test_uniform_punch': 0.6333333333333333}, 'standard_accuracy Test uniform': 0.810126582278481, 'Closed Accuracy Test uniform': 0.7275595238070469}
+Progress: 100.00%, Elapsed Time: 87.31s, Training Complete
+100%|██████████| 20/20 [00:03<00:00,  6.23it/s]
+
+
+
+100%|██████████| 46/46 [00:06<00:00,  6.59it/s]
+Metrics Train:  {'precision Train uniform': array([1.        , 0.98039216, 1.        , 1.        , 1.        ,
+       0.91780822]), 'recall Train uniform': array([0.98360656, 0.92592593, 1.        , 1.        , 0.98484848,
+       0.98529412]), 'class_accuracy_dict Train uniform': {'Accuracy_Train_uniform_climb': 0.9836065573770492, 'Accuracy_Train_uniform_fencing': 0.9259259259259259, 'Accuracy_Train_uniform_golf': 1.0, 'Accuracy_Train_uniform_kick_ball': 1.0, 'Accuracy_Train_uniform_pullup': 0.9848484848484849, 'Accuracy_Train_uniform_punch': 0.9852941176470589}, 'standard_accuracy Train uniform': 0.9809782608695652, 'Closed Accuracy Train uniform': 0.9755091902616471}
+#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST
+ 45%|████▌     | 9/20 [00:01<00:01,  6.61it/s]
+Metrics Test:  {'precision Test uniform': array([0.94444444, 0.95833333, 0.875     , 0.56      , 0.93103448,
+       0.63333333]), 'recall Test uniform': array([0.70833333, 0.92      , 0.93333333, 0.63636364, 1.        ,
+       0.63333333]), 'class_accuracy_dict Test uniform': {'Accuracy_Test_uniform_climb': 0.7083333333333334, 'Accuracy_Test_uniform_fencing': 0.92, 'Accuracy_Test_uniform_golf': 0.9333333333333333, 'Accuracy_Test_uniform_kick_ball': 0.6363636363636364, 'Accuracy_Test_uniform_pullup': 1.0, 'Accuracy_Test_uniform_punch': 0.6333333333333333}, 'standard_accuracy Test uniform': 0.810126582278481, 'Closed Accuracy Test uniform': 0.748684340673619}
+Progress: 100.00%, Elapsed Time: 98.39s, Training Complete
+100%|██████████| 20/20 [00:03<00:00,  6.45it/s]
+
+
+
+ 83%|████████▎ | 38/46 [00:06<00:01,  7.18it/s]
+Metrics Train:  {'precision Train uniform': array([1.        , 0.96491228, 0.98571429, 1.        , 1.        ,
+       1.        ]), 'recall Train uniform': array([0.96666667, 1.        , 1.        , 0.98      , 1.        ,
+       1.        ]), 'class_accuracy_dict Train uniform': {'Accuracy_Train_uniform_climb': 0.9666666666666667, 'Accuracy_Train_uniform_fencing': 1.0, 'Accuracy_Train_uniform_golf': 1.0, 'Accuracy_Train_uniform_kick_ball': 0.98, 'Accuracy_Train_uniform_pullup': 1.0, 'Accuracy_Train_uniform_punch': 1.0}, 'standard_accuracy Train uniform': 0.9918478260869565, 'Closed Accuracy Train uniform': 0.9794586466148992}
+100%|██████████| 46/46 [00:07<00:00,  6.35it/s]
+
+100%|██████████| 20/20 [00:03<00:00,  6.37it/s]
+  7%|▋         | 3/46 [00:00<00:09,  4.58it/s]
+Metrics Test:  {'precision Test uniform': array([0.71875   , 0.88461538, 0.9       , 0.42424242, 0.95652174,
+       0.85714286]), 'recall Test uniform': array([0.95833333, 0.92      , 0.9       , 0.63636364, 0.81481481,
+       0.4       ]), 'class_accuracy_dict Test uniform': {'Accuracy_Test_uniform_climb': 0.9583333333333334, 'Accuracy_Test_uniform_fencing': 0.92, 'Accuracy_Test_uniform_golf': 0.9, 'Accuracy_Test_uniform_kick_ball': 0.6363636363636364, 'Accuracy_Test_uniform_pullup': 0.8148148148148148, 'Accuracy_Test_uniform_punch': 0.4}, 'standard_accuracy Test uniform': 0.7658227848101266, 'Closed Accuracy Test uniform': 0.6927515573834709}
+Progress: 100.00%, Elapsed Time: 109.71s, Training Complete
+
+
+
+ 93%|█████████▎| 43/46 [00:06<00:00,  7.01it/s]
+Metrics Train:  {'precision Train uniform': array([1.        , 1.        , 1.        , 0.98113208, 1.        ,
+       0.97183099]), 'recall Train uniform': array([1.        , 0.96363636, 0.98550725, 1.        , 1.        ,
+       1.        ]), 'class_accuracy_dict Train uniform': {'Accuracy_Train_uniform_climb': 1.0, 'Accuracy_Train_uniform_fencing': 0.9636363636363636, 'Accuracy_Train_uniform_golf': 0.9855072463768116, 'Accuracy_Train_uniform_kick_ball': 1.0, 'Accuracy_Train_uniform_pullup': 1.0, 'Accuracy_Train_uniform_punch': 1.0}, 'standard_accuracy Train uniform': 0.9918478260869565, 'Closed Accuracy Train uniform': 0.9860551370953174}
+100%|██████████| 46/46 [00:07<00:00,  6.36it/s]
+
+100%|██████████| 20/20 [00:03<00:00,  6.46it/s]
+Metrics Test:  {'precision Test uniform': array([0.75      , 0.88      , 0.93103448, 0.46875   , 0.95652174,
+       0.76190476]), 'recall Test uniform': array([0.875     , 0.88      , 0.9       , 0.68181818, 0.81481481,
+       0.53333333]), 'class_accuracy_dict Test uniform': {'Accuracy_Test_uniform_climb': 0.875, 'Accuracy_Test_uniform_fencing': 0.88, 'Accuracy_Test_uniform_golf': 0.9, 'Accuracy_Test_uniform_kick_ball': 0.6818181818181818, 'Accuracy_Test_uniform_pullup': 0.8148148148148148, 'Accuracy_Test_uniform_punch': 0.5333333333333333}, 'standard_accuracy Test uniform': 0.7784810126582279, 'Closed Accuracy Test uniform': 0.695442662174249}
+Progress: 100.00%, Elapsed Time: 120.99s, Training Complete
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+
+
+ 78%|███████▊  | 36/46 [00:05<00:01,  7.10it/s]
+Metrics Train:  {'precision Train uniform': array([0.98360656, 1.        , 1.        , 1.        , 1.        ,
+       1.        ]), 'recall Train uniform': array([1.        , 1.        , 1.        , 1.        , 1.        ,
+       0.98529412]), 'class_accuracy_dict Train uniform': {'Accuracy_Train_uniform_climb': 1.0, 'Accuracy_Train_uniform_fencing': 1.0, 'Accuracy_Train_uniform_golf': 1.0, 'Accuracy_Train_uniform_kick_ball': 1.0, 'Accuracy_Train_uniform_pullup': 1.0, 'Accuracy_Train_uniform_punch': 0.9852941176470589}, 'standard_accuracy Train uniform': 0.9972826086956522, 'Closed Accuracy Train uniform': 0.9967213114737348}
+
+100%|██████████| 46/46 [00:07<00:00,  6.45it/s]
+ 55%|█████▌    | 11/20 [00:01<00:01,  6.36it/s]
+Metrics Test:  {'precision Test uniform': array([1.        , 0.8       , 0.82857143, 0.47058824, 0.77142857,
+       0.79166667]), 'recall Test uniform': array([0.70833333, 0.96      , 0.96666667, 0.36363636, 1.        ,
+       0.63333333]), 'class_accuracy_dict Test uniform': {'Accuracy_Test_uniform_climb': 0.7083333333333334, 'Accuracy_Test_uniform_fencing': 0.96, 'Accuracy_Test_uniform_golf': 0.9666666666666667, 'Accuracy_Test_uniform_kick_ball': 0.36363636363636365, 'Accuracy_Test_uniform_pullup': 1.0, 'Accuracy_Test_uniform_punch': 0.6333333333333333}, 'standard_accuracy Test uniform': 0.7848101265822784, 'Closed Accuracy Test uniform': 0.6635151049645732}
+Progress: 100.00%, Elapsed Time: 132.34s, Training Complete
+100%|██████████| 20/20 [00:03<00:00,  6.24it/s]
+
+
+
+ 87%|████████▋ | 40/46 [00:06<00:00,  7.16it/s]
+Metrics Train:  {'precision Train uniform': array([1.        , 1.        , 1.        , 1.        , 1.        ,
+       0.98591549]), 'recall Train uniform': array([1.        , 0.98113208, 1.        , 1.        , 1.        ,
+       1.        ]), 'class_accuracy_dict Train uniform': {'Accuracy_Train_uniform_climb': 1.0, 'Accuracy_Train_uniform_fencing': 0.9811320754716981, 'Accuracy_Train_uniform_golf': 1.0, 'Accuracy_Train_uniform_kick_ball': 1.0, 'Accuracy_Train_uniform_pullup': 1.0, 'Accuracy_Train_uniform_punch': 1.0}, 'standard_accuracy Train uniform': 0.9972826086956522, 'Closed Accuracy Train uniform': 0.9962264150926483}
+100%|██████████| 46/46 [00:07<00:00,  6.49it/s]
+
+100%|██████████| 20/20 [00:03<00:00,  6.35it/s]
+  9%|▊         | 4/46 [00:00<00:07,  5.42it/s]
+Metrics Test:  {'precision Test uniform': array([0.95454545, 0.8       , 0.96428571, 0.57692308, 0.9       ,
+       0.77272727]), 'recall Test uniform': array([0.875     , 0.96      , 0.9       , 0.68181818, 1.        ,
+       0.56666667]), 'class_accuracy_dict Test uniform': {'Accuracy_Test_uniform_climb': 0.875, 'Accuracy_Test_uniform_fencing': 0.96, 'Accuracy_Test_uniform_golf': 0.9, 'Accuracy_Test_uniform_kick_ball': 0.6818181818181818, 'Accuracy_Test_uniform_pullup': 1.0, 'Accuracy_Test_uniform_punch': 0.5666666666666667}, 'standard_accuracy Test uniform': 0.8291139240506329, 'Closed Accuracy Test uniform': 0.7679413489709982}
+Progress: 100.00%, Elapsed Time: 143.57s, Training Complete
+
+
+
+100%|██████████| 46/46 [00:07<00:00,  6.40it/s]
+ 35%|███▌      | 7/20 [00:01<00:02,  6.26it/s]
+Metrics Train:  {'precision Train uniform': array([1., 1., 1., 1., 1., 1.]), 'recall Train uniform': array([1., 1., 1., 1., 1., 1.]), 'class_accuracy_dict Train uniform': {'Accuracy_Train_uniform_climb': 1.0, 'Accuracy_Train_uniform_fencing': 1.0, 'Accuracy_Train_uniform_golf': 1.0, 'Accuracy_Train_uniform_kick_ball': 1.0, 'Accuracy_Train_uniform_pullup': 1.0, 'Accuracy_Train_uniform_punch': 1.0}, 'standard_accuracy Train uniform': 1.0, 'Closed Accuracy Train uniform': 0.9999999999983011}
+
+100%|██████████| 20/20 [00:03<00:00,  6.44it/s]
+ 22%|██▏       | 10/46 [00:01<00:05,  6.63it/s]
+Metrics Test:  {'precision Test uniform': array([1.        , 0.75      , 0.87878788, 0.39285714, 0.95652174,
+       0.75      ]), 'recall Test uniform': array([0.91666667, 0.96      , 0.96666667, 0.5       , 0.81481481,
+       0.5       ]), 'class_accuracy_dict Test uniform': {'Accuracy_Test_uniform_climb': 0.9166666666666666, 'Accuracy_Test_uniform_fencing': 0.96, 'Accuracy_Test_uniform_golf': 0.9666666666666667, 'Accuracy_Test_uniform_kick_ball': 0.5, 'Accuracy_Test_uniform_pullup': 0.8148148148148148, 'Accuracy_Test_uniform_punch': 0.5}, 'standard_accuracy Test uniform': 0.7784810126582279, 'Closed Accuracy Test uniform': 0.7129292276326977}
+Progress: 100.00%, Elapsed Time: 154.81s, Training Complete
+
+
+100%|██████████| 46/46 [00:07<00:00,  6.37it/s]
+  0%|          | 0/20 [00:00<?, ?it/s]
+Metrics Train:  {'precision Train uniform': array([1., 1., 1., 1., 1., 1.]), 'recall Train uniform': array([1., 1., 1., 1., 1., 1.]), 'class_accuracy_dict Train uniform': {'Accuracy_Train_uniform_climb': 1.0, 'Accuracy_Train_uniform_fencing': 1.0, 'Accuracy_Train_uniform_golf': 1.0, 'Accuracy_Train_uniform_kick_ball': 1.0, 'Accuracy_Train_uniform_pullup': 1.0, 'Accuracy_Train_uniform_punch': 1.0}, 'standard_accuracy Train uniform': 1.0, 'Closed Accuracy Train uniform': 0.9999999999983112}
+
+100%|██████████| 20/20 [00:03<00:00,  6.31it/s]
+  2%|▏         | 1/46 [00:00<00:20,  2.20it/s]
+Metrics Test:  {'precision Test uniform': array([1.        , 0.75      , 0.87878788, 0.47619048, 0.88      ,
+       0.65384615]), 'recall Test uniform': array([0.875     , 0.96      , 0.96666667, 0.45454545, 0.81481481,
+       0.56666667]), 'class_accuracy_dict Test uniform': {'Accuracy_Test_uniform_climb': 0.875, 'Accuracy_Test_uniform_fencing': 0.96, 'Accuracy_Test_uniform_golf': 0.9666666666666667, 'Accuracy_Test_uniform_kick_ball': 0.45454545454545453, 'Accuracy_Test_uniform_pullup': 0.8148148148148148, 'Accuracy_Test_uniform_punch': 0.5666666666666667}, 'standard_accuracy Test uniform': 0.7784810126582279, 'Closed Accuracy Test uniform': 0.6983155080190462}
+Progress: 100.00%, Elapsed Time: 166.16s, Training Complete
+
+
+
+100%|██████████| 46/46 [00:07<00:00,  6.39it/s]
+ 15%|█▌        | 3/20 [00:00<00:03,  4.44it/s]
+Metrics Train:  {'precision Train uniform': array([0.98360656, 1.        , 1.        , 1.        , 1.        ,
+       0.98529412]), 'recall Train uniform': array([1.        , 0.98181818, 1.        , 0.98      , 1.        ,
+       1.        ]), 'class_accuracy_dict Train uniform': {'Accuracy_Train_uniform_climb': 1.0, 'Accuracy_Train_uniform_fencing': 0.9818181818181818, 'Accuracy_Train_uniform_golf': 1.0, 'Accuracy_Train_uniform_kick_ball': 0.98, 'Accuracy_Train_uniform_pullup': 1.0, 'Accuracy_Train_uniform_punch': 1.0}, 'standard_accuracy Train uniform': 0.9945652173913043, 'Closed Accuracy Train uniform': 0.9890849478373862}
+
+100%|██████████| 20/20 [00:03<00:00,  6.42it/s]
+  7%|▋         | 3/46 [00:00<00:09,  4.48it/s]
+Metrics Test:  {'precision Test uniform': array([0.86956522, 0.82758621, 0.87878788, 0.4137931 , 0.85714286,
+       0.75      ]), 'recall Test uniform': array([0.83333333, 0.96      , 0.96666667, 0.54545455, 0.88888889,
+       0.4       ]), 'class_accuracy_dict Test uniform': {'Accuracy_Test_uniform_climb': 0.8333333333333334, 'Accuracy_Test_uniform_fencing': 0.96, 'Accuracy_Test_uniform_golf': 0.9666666666666667, 'Accuracy_Test_uniform_kick_ball': 0.5454545454545454, 'Accuracy_Test_uniform_pullup': 0.8888888888888888, 'Accuracy_Test_uniform_punch': 0.4}, 'standard_accuracy Test uniform': 0.7658227848101266, 'Closed Accuracy Test uniform': 0.6951135546559057}
+Progress: 100.00%, Elapsed Time: 177.89s, Training Complete
+
+
+
+100%|██████████| 46/46 [00:07<00:00,  6.57it/s]
+ 35%|███▌      | 7/20 [00:01<00:02,  6.03it/s]
+Metrics Train:  {'precision Train uniform': array([0.98333333, 1.        , 1.        , 1.        , 1.        ,
+       0.98529412]), 'recall Train uniform': array([1.        , 1.        , 0.98550725, 1.        , 0.98484848,
+       1.        ]), 'class_accuracy_dict Train uniform': {'Accuracy_Train_uniform_climb': 1.0, 'Accuracy_Train_uniform_fencing': 1.0, 'Accuracy_Train_uniform_golf': 0.9855072463768116, 'Accuracy_Train_uniform_kick_ball': 1.0, 'Accuracy_Train_uniform_pullup': 0.9848484848484849, 'Accuracy_Train_uniform_punch': 1.0}, 'standard_accuracy Train uniform': 0.9945652173913043, 'Closed Accuracy Train uniform': 0.9907378129100657}
+
+100%|██████████| 20/20 [00:03<00:00,  6.31it/s]
+Model saved with seed 42, h_score 0.4690470432431687, direction hmdb2ucf, and type proposed
+Metrics Test:  {'precision Test uniform': array([0.88      , 0.84615385, 0.81081081, 0.41935484, 0.95652174,
+       0.75      ]), 'recall Test uniform': array([0.91666667, 0.88      , 1.        , 0.59090909, 0.81481481,
+       0.4       ]), 'class_accuracy_dict Test uniform': {'Accuracy_Test_uniform_climb': 0.9166666666666666, 'Accuracy_Test_uniform_fencing': 0.88, 'Accuracy_Test_uniform_golf': 1.0, 'Accuracy_Test_uniform_kick_ball': 0.5909090909090909, 'Accuracy_Test_uniform_pullup': 0.8148148148148148, 'Accuracy_Test_uniform_punch': 0.4}, 'standard_accuracy Test uniform': 0.7658227848101266, 'Closed Accuracy Test uniform': 0.6989921201967281}
+Progress: 100.00%, Elapsed Time: 189.05s, Training Complete
+Time needed for running the strategy uniform : 176.71801733970642
+Results for uniform: None
