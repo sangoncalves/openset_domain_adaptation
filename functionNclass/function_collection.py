@@ -38,6 +38,56 @@ from sklearn.manifold import TSNE
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+
+
+def create_datasets_frame_analysis_one_datset(config, n_frames=16, frame_strategy="uniform"):
+    
+    path_train = config['path_source_train']
+    path_test = config['path_source_test']
+    source_txt = config['source_train_txt']
+    test_txt =config['source_test_txt']
+
+    # Create the datasets
+    train_data, test_data = prepare_datasets_frame_analysis(
+        path_train,
+        path_test, 
+        source_txt,
+        test_txt,
+        n_frames=n_frames,
+        frame_strategy=frame_strategy  # New parameter for frame strategy
+    )
+    
+    if(config['subset_flag']==True): ########################### ADDING A SAMPLER
+      train_data = ClassObservationsSamplerVideoDatasetSourceAndTarget(train_data, config['obs_num'])
+      test_data = ClassObservationsSamplerVideoDatasetTarget(test_data, config['obs_num'])
+      
+    return train_data, test_data
+
+
+def prepare_datasets_frame_analysis_one_dataset(path_train,  path_test,
+                                    source_txt,  test_txt,
+                                    n_frames=16, frame_strategy="uniform"):
+    
+    # Initialize the source and target datasets using the VideoDataset_frame_analysis class
+    train_data = VideoDataset_frame_analysis(
+        dataset_path=path_train,
+        txt_file_path=source_txt,
+        n_frames=n_frames,
+        frame_strategy=frame_strategy  # New parameter for frame strategy
+    )
+    
+    
+    test_data = VideoDataset_frame_analysis(
+        dataset_path=path_test,
+        txt_file_path=test_txt,
+        n_frames=n_frames,
+        frame_strategy=frame_strategy  # New parameter for frame strategy
+    )
+    
+    return train_data, test_data    
+
+
+
 def create_datasets_frame_analysis(config, n_frames=16, frame_strategy="uniform"):
     
     path_source_train = config['path_source_train']
@@ -122,6 +172,8 @@ def prepare_datasets_frame_analysis(path_source_train, path_target_train, path_t
     source_n_target_train_dataset = VideoDatasetSourceAndTarget(source_dataset, target_train_dataset)
     
     return source_n_target_train_dataset, target_test_dataset    
+
+
 
 
 
