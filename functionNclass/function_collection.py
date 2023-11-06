@@ -40,7 +40,7 @@ import seaborn as sns
 
 
 
-def create_datasets_frame_analysis_one_datset(config, n_frames=16, frame_strategy="uniform"):
+def create_datasets_frame_analysis_one_dataset(config, n_frames=16, frame_strategy="uniform"):
     
     path_train = config['path_source_train']
     path_test = config['path_source_test']
