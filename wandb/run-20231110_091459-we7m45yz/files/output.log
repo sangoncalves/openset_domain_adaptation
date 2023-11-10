@@ -1,0 +1,221 @@
+###############---------------#############----------------#####USING uniform FRAME STRATEGY!###############---------------#############----------------#####
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+
+
+
+
+
+
+
+
+
+100%|██████████| 46/46 [00:22<00:00,  2.01it/s]
+  5%|▌         | 1/20 [00:01<00:22,  1.19s/it]
+{'train_or_test-accuracy-strategy-nFrames': 'Train-0.5543478260869565-uniform-6'}
+
+
+
+
+
+100%|██████████| 20/20 [00:11<00:00,  1.73it/s]
+  0%|          | 0/46 [00:00<?, ?it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Test-0.6139240506329114-uniform-6'}
+Progress: 100.00%, Elapsed Time: 47.81s, Training Complete
+
+
+
+
+
+
+100%|██████████| 46/46 [00:12<00:00,  3.69it/s]
+  5%|▌         | 1/20 [00:00<00:15,  1.23it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Train-0.8206521739130435-uniform-6'}
+
+
+100%|██████████| 20/20 [00:04<00:00,  4.00it/s]
+ 15%|█▌        | 7/46 [00:01<00:07,  5.39it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Test-0.7848101265822784-uniform-6'}
+Progress: 100.00%, Elapsed Time: 66.74s, Training Complete
+
+
+
+100%|██████████| 46/46 [00:08<00:00,  5.62it/s]
+  0%|          | 0/20 [00:00<?, ?it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Train-0.8940217391304348-uniform-6'}
+
+
+
+100%|██████████| 20/20 [00:06<00:00,  3.28it/s]
+  7%|▋         | 3/46 [00:01<00:14,  2.88it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Test-0.7658227848101266-uniform-6'}
+Progress: 100.00%, Elapsed Time: 83.01s, Training Complete
+
+
+
+100%|██████████| 46/46 [00:08<00:00,  5.39it/s]
+  0%|          | 0/20 [00:00<?, ?it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Train-0.9538043478260869-uniform-6'}
+
+
+100%|██████████| 20/20 [00:04<00:00,  4.47it/s]
+  2%|▏         | 1/46 [00:00<00:39,  1.14it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Test-0.7974683544303798-uniform-6'}
+Progress: 100.00%, Elapsed Time: 97.35s, Training Complete
+
+
+
+
+
+100%|██████████| 46/46 [00:10<00:00,  4.28it/s]
+ 45%|████▌     | 9/20 [00:01<00:01,  5.66it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Train-0.970108695652174-uniform-6'}
+100%|██████████| 20/20 [00:03<00:00,  6.02it/s]
+  0%|          | 0/46 [00:00<?, ?it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Test-0.7784810126582279-uniform-6'}
+Progress: 100.00%, Elapsed Time: 112.56s, Training Complete
+
+
+
+
+
+
+100%|██████████| 46/46 [00:12<00:00,  3.71it/s]
+ 15%|█▌        | 3/20 [00:00<00:04,  4.05it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Train-0.9809782608695652-uniform-6'}
+
+100%|██████████| 20/20 [00:03<00:00,  5.92it/s]
+ 11%|█         | 5/46 [00:01<00:08,  4.85it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Test-0.8354430379746836-uniform-6'}
+Progress: 100.00%, Elapsed Time: 129.42s, Training Complete
+
+
+
+
+
+
+100%|██████████| 46/46 [00:12<00:00,  3.73it/s]
+ 35%|███▌      | 7/20 [00:01<00:02,  5.74it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Train-0.9836956521739131-uniform-6'}
+
+100%|██████████| 20/20 [00:03<00:00,  5.96it/s]
+ 15%|█▌        | 7/46 [00:01<00:07,  4.95it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Test-0.7911392405063291-uniform-6'}
+Progress: 100.00%, Elapsed Time: 147.08s, Training Complete
+
+
+
+
+
+100%|██████████| 46/46 [00:10<00:00,  4.21it/s]
+ 20%|██        | 4/20 [00:01<00:05,  3.00it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Train-0.9891304347826086-uniform-6'}
+
+
+
+100%|██████████| 20/20 [00:07<00:00,  2.86it/s]
+  7%|▋         | 3/46 [00:01<00:19,  2.19it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Test-0.759493670886076-uniform-6'}
+Progress: 100.00%, Elapsed Time: 166.93s, Training Complete
+
+
+
+
+100%|██████████| 46/46 [00:09<00:00,  4.77it/s]
+  5%|▌         | 1/20 [00:00<00:15,  1.21it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Train-0.9891304347826086-uniform-6'}
+
+
+
+100%|██████████| 20/20 [00:06<00:00,  2.94it/s]
+ 11%|█         | 5/46 [00:01<00:11,  3.68it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Test-0.7784810126582279-uniform-6'}
+Progress: 100.00%, Elapsed Time: 184.87s, Training Complete
+
+
+
+100%|██████████| 46/46 [00:08<00:00,  5.27it/s]
+  5%|▌         | 1/20 [00:00<00:08,  2.26it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Train-1.0-uniform-6'}
+
+
+100%|██████████| 20/20 [00:04<00:00,  4.03it/s]
+  2%|▏         | 1/46 [00:00<00:31,  1.42it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Test-0.7848101265822784-uniform-6'}
+Progress: 100.00%, Elapsed Time: 199.95s, Training Complete
+
+
+
+
+
+100%|██████████| 46/46 [00:10<00:00,  4.30it/s]
+ 35%|███▌      | 7/20 [00:01<00:02,  5.53it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Train-0.9972826086956522-uniform-6'}
+
+100%|██████████| 20/20 [00:03<00:00,  5.91it/s]
+  7%|▋         | 3/46 [00:01<00:17,  2.44it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Test-0.7658227848101266-uniform-6'}
+Progress: 100.00%, Elapsed Time: 215.20s, Training Complete
+
+
+
+
+
+100%|██████████| 46/46 [00:12<00:00,  3.61it/s]
+  0%|          | 0/20 [00:00<?, ?it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Train-1.0-uniform-6'}
+
+100%|██████████| 20/20 [00:03<00:00,  5.84it/s]
+  0%|          | 0/46 [00:00<?, ?it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Test-0.759493670886076-uniform-6'}
+Progress: 100.00%, Elapsed Time: 232.49s, Training Complete
+
+
+
+
+
+
+
+100%|██████████| 46/46 [00:14<00:00,  3.23it/s]
+ 45%|████▌     | 9/20 [00:01<00:01,  6.09it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Train-1.0-uniform-6'}
+
+100%|██████████| 20/20 [00:03<00:00,  5.92it/s]
+ 15%|█▌        | 7/46 [00:01<00:08,  4.66it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Test-0.810126582278481-uniform-6'}
+Progress: 100.00%, Elapsed Time: 251.23s, Training Complete
+
+
+
+
+
+100%|██████████| 46/46 [00:12<00:00,  3.80it/s]
+  0%|          | 0/20 [00:00<?, ?it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Train-0.9972826086956522-uniform-6'}
+
+100%|██████████| 20/20 [00:03<00:00,  5.80it/s]
+  0%|          | 0/46 [00:00<?, ?it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Test-0.759493670886076-uniform-6'}
+Progress: 100.00%, Elapsed Time: 268.65s, Training Complete
+
+
+
+
+
+100%|██████████| 46/46 [00:10<00:00,  4.51it/s]
+  5%|▌         | 1/20 [00:00<00:15,  1.23it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Train-0.9945652173913043-uniform-6'}
+
+
+100%|██████████| 20/20 [00:05<00:00,  3.66it/s]
+Traceback (most recent call last):
+  File "<ipython-input-24-373f15f34577>", line 46, in <cell line: 1>
+    performance_df_all_classes = result2df(list_result_proposed_strategy, config)
+  File "<ipython-input-20-f7d299ae16a9>", line 105, in result2df
+    performance_df_all_classes = process_data_to_df_all_classes(data_from_file, class_label = config['test_classes'])
+  File "<ipython-input-20-f7d299ae16a9>", line 41, in process_data_to_df_all_classes
+    precision_array = [[round(float(value), 2) for value in inner_list] for inner_list in entry[precision_key]]
+KeyError: 'precisionTest-nFrames:22-train_or_test-accuracy-strategy-nFrames'
+{'train_or_test-accuracy-strategy-nFrames': 'Test-0.759493670886076-uniform-6'}
+Progress: 100.00%, Elapsed Time: 285.76s, Training Complete
+Time needed for running the strategy uniform : 275.62297534942627
+Results for uniform: {'train_or_test-accuracy-strategy-nFrames': 'Test-0.759493670886076-uniform-6'}
