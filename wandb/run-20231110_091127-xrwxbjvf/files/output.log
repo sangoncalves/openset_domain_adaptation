@@ -1,0 +1,32 @@
+###############---------------#############----------------#####USING uniform FRAME STRATEGY!###############---------------#############----------------#####
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+
+
+
+
+
+
+
+
+
+
+100%|██████████| 46/46 [00:25<00:00,  1.83it/s]
+{'train_or_test-accuracy-nFrames-strategy: Train-0.5543478260869565-6-uniform'}
+Traceback (most recent call last):
+  File "<ipython-input-24-373f15f34577>", line 37, in <cell line: 1>
+    result_proposed_strategy = train_frame_analysis_one_dataset(config, train_loader, test_loader, filename, run_id)
+  File "<ipython-input-21-17b282e8619f>", line 79, in train_frame_analysis_one_dataset
+    metrics_train = log_metrics_and_plot_confusion_matrix(true_labels_all, pred_labels_all, config, epoch, train_or_test='Train')
+  File "<ipython-input-20-209e749f8df0>", line 339, in log_metrics_and_plot_confusion_matrix
+    wandb.log( metrics_dict, step=epoch)
+  File "/usr/local/lib/python3.10/dist-packages/wandb/sdk/wandb_run.py", line 420, in wrapper
+    return func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/wandb/sdk/wandb_run.py", line 371, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/wandb/sdk/wandb_run.py", line 361, in wrapper
+    return func(self, *args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/wandb/sdk/wandb_run.py", line 1820, in log
+    self._log(data=data, step=step, commit=commit)
+  File "/usr/local/lib/python3.10/dist-packages/wandb/sdk/wandb_run.py", line 1590, in _log
+    raise ValueError("wandb.log must be passed a dictionary")
+ValueError: wandb.log must be passed a dictionary
