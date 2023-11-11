@@ -37,7 +37,7 @@ from functionNclass.class_collection import VideoDataset_frame_analysis
 from sklearn.manifold import TSNE
 import matplotlib.pyplot as plt
 import seaborn as sns
-
+import json
 
 
 def create_datasets_frame_analysis_one_dataset(config, n_frames=16, frame_strategy="uniform"):
@@ -85,6 +85,71 @@ def prepare_datasets_frame_analysis_one_dataset(path_train,  path_test,
     )
     
     return train_data, test_data    
+
+
+
+def load_or_create_class_to_label_map(base_path, output_path):
+    mapping_file_path = os.path.join(output_path, 'class_to_label_map.json')
+
+    # Check if the mapping file already exists
+    if os.path.isfile(mapping_file_path):
+        # Load the existing mapping
+        with open(mapping_file_path, 'r') as file:
+            return json.load(file)
+    else:
+        # Generate a new mapping
+        unique_classes = set(os.listdir(base_path))
+        class_to_label_map = {class_name: i for i, class_name in enumerate(sorted(unique_classes))}
+
+        # Save the new mapping
+        with open(mapping_file_path, 'w') as file:
+            json.dump(class_to_label_map, file)
+
+        return class_to_label_map
+
+def generate_dataset_labels(base_path, output_path):
+    # Extract dataset name and category from the path
+    parts = base_path.split('/')
+    dataset_name = parts[-2] # Extract dataset name
+    category = 'train' if 'train' in base_path else 'test'
+
+    # Load or create the class-to-label map
+    class_to_label_map = load_or_create_class_to_label_map(base_path, output_path)
+
+    # Output file name
+    output_file_name = f"{dataset_name}_{category}.txt"
+
+    # Full path for the output file
+    full_output_path = os.path.join(output_path, output_file_name)
+
+    # Open the output file
+    with open(full_output_path, 'w') as file:
+        # Iterate through each class folder
+        for class_folder in os.listdir(base_path):
+            class_folder_path = os.path.join(base_path, class_folder)
+            if os.path.isdir(class_folder_path):
+                # Check if class is in the map
+                if class_folder not in class_to_label_map:
+                    print(f"Warning: Class '{class_folder}' not found in the class-to-label map. Skipping.")
+                    continue  # Skip this class
+
+                # Get the class label from the mapping
+                class_label = class_to_label_map[class_folder]
+
+                # Iterate through each observation in the class
+                for observation_folder in os.listdir(class_folder_path):
+                    # Writing the pattern "class_folder/observation_folder class_label"
+                    file.write(f"{class_folder}/{observation_folder} {class_label}\n")
+
+    return full_output_path
+
+
+# generate_dataset_labels('/content/openset_domain_adaptation/hmdb_ucf/ucf/test','/content/drive/MyDrive/datasets-thesis/path_datasets')
+# generate_dataset_labels('/content/openset_domain_adaptation/hmdb_ucf/ucf/train','/content/drive/MyDrive/datasets-thesis/path_datasets')
+# generate_dataset_labels('/content/openset_domain_adaptation/hmdb_ucf/hmdb/test','/content/drive/MyDrive/datasets-thesis/path_datasets')
+# generate_dataset_labels('/content/openset_domain_adaptation/hmdb_ucf/hmdb/train','/content/drive/MyDrive/datasets-thesis/path_datasets')
+
+
 
 
 
