@@ -635,28 +635,35 @@ def get_paths_dataset(config):
     #source  UCF
     path_source_train = '/content/openset_domain_adaptation/hmdb_ucf/ucf/train'
     path_source_test = '/content/openset_domain_adaptation/hmdb_ucf/ucf/test'
-    config['source_train_txt'] = '/content/openset_domain_adaptation/paths/ucf_train_source.txt'
-    config['source_test_txt'] = '/content/openset_domain_adaptation/paths/ucf_test_source.txt'
+    # config['source_train_txt'] = '/content/openset_domain_adaptation/paths/ucf_train_source.txt'
+    # config['source_test_txt'] = '/content/openset_domain_adaptation/paths/ucf_test_source.txt'
+    config['source_train_txt'] = '/content/openset_domain_adaptation/paths/ucf_train.txt'
+    config['source_test_txt'] = '/content/openset_domain_adaptation/paths/ucf_test.txt'
 
     #target HMDB
     path_target_train = '/content/openset_domain_adaptation/hmdb_ucf/hmdb/train'
     path_target_test = '/content/openset_domain_adaptation/hmdb_ucf/hmdb/test'
-    config['target_train_txt'] = '/content/openset_domain_adaptation/paths/hmdb_train_target.txt'
-    config['target_test_txt'] = '/content/openset_domain_adaptation/paths/hmdb_test_target.txt'
+    # config['target_train_txt'] = '/content/openset_domain_adaptation/paths/hmdb_train_target.txt'
+    # config['target_test_txt'] = '/content/openset_domain_adaptation/paths/hmdb_test_target.txt'
+    config['target_train_txt'] = '/content/openset_domain_adaptation/paths/hmdb_train.txt'
+    config['target_test_txt'] = '/content/openset_domain_adaptation/paths/hmdb_test.txt'
 
   else:
     #source HMDB
     path_source_train = '/content/openset_domain_adaptation/hmdb_ucf/hmdb/train'
     path_source_test = '/content/openset_domain_adaptation/hmdb_ucf/hmdb/test'
-    config['source_train_txt'] = '/content/openset_domain_adaptation/paths/hmdb_train_source.txt'
-    config['source_test_txt'] = '/content/openset_domain_adaptation/paths/hmdb_test_source.txt'
+    # config['source_train_txt'] = '/content/openset_domain_adaptation/paths/hmdb_train_source.txt'
+    # config['source_test_txt'] = '/content/openset_domain_adaptation/paths/hmdb_test_source.txt'
+    config['source_train_txt'] = '/content/openset_domain_adaptation/paths/hmdb_train.txt'
+    config['source_test_txt'] = '/content/openset_domain_adaptation/paths/hmdb_test.txt'    
     
     #target UCF
     path_target_train = '/content/openset_domain_adaptation/hmdb_ucf/ucf/train'
     path_target_test = '/content/openset_domain_adaptation/hmdb_ucf/ucf/test' 
-    config['target_train_txt'] = '/content/openset_domain_adaptation/paths/ucf_train_target.txt'
-    config['target_test_txt'] = '/content/openset_domain_adaptation/paths/ucf_test_target.txt'   
-
+    # config['target_train_txt'] = '/content/openset_domain_adaptation/paths/ucf_train_target.txt'
+    # config['target_test_txt'] = '/content/openset_domain_adaptation/paths/ucf_test_target.txt'   
+    config['target_train_txt'] = '/content/openset_domain_adaptation/paths/ucf_train.txt'
+    config['target_test_txt'] = '/content/openset_domain_adaptation/paths/ucf_test.txt' 
 
 
   config['path_source_train'] = path_source_train
@@ -664,6 +671,7 @@ def get_paths_dataset(config):
   config['path_target_train'] = path_target_train
   config['path_target_test'] = path_target_test
   return config
+  
   
 def create_datasets(config, n_frames=16):
 
