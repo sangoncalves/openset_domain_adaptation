@@ -139,7 +139,7 @@ def generate_dataset_labels(base_path, output_path):
                 # Iterate through each observation in the class
                 for observation_folder in os.listdir(class_folder_path):
                     # Writing the pattern "class_folder/observation_folder class_label"
-                    file.write(f"{class_folder}/{observation_folder} {class_label}\n")
+                     file.write(f"{class_folder} {base_path}/{class_folder}/{observation_folder} {class_label}\n")
 
     return full_output_path
 
