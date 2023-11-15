@@ -1,0 +1,6 @@
+###############---------------#############----------------#####USING uniform FRAME STRATEGY!###############---------------#############----------------#####
+Using device: cuda
+Traceback (most recent call last):
+  File "<ipython-input-25-fb185da5f56b>", line 35, in <cell line: 1>
+    print(f'config["direction"]: {config["direction"]}, config["n_frames"]: {config["n_frames"]}, config["strategy"]: {config["strategy"]}')
+KeyError: 'direction'
