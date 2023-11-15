@@ -1,0 +1,13 @@
+2023-11-15 08:51:25,506 INFO    StreamThr :17467 [internal.py:wandb_internal():86] W&B internal server running at pid: 17467, started at: 2023-11-15 08:51:25.505757
+2023-11-15 08:51:25,507 DEBUG   HandlerThread:17467 [handler.py:handle_request():146] handle_request: status
+2023-11-15 08:51:30,509 DEBUG   HandlerThread:17467 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 08:51:30,509 INFO    WriterThread:17467 [datastore.py:open_for_write():85] open: /content/openset_domain_adaptation/wandb/run-20231115_085125-y3y591q2/run-y3y591q2.wandb
+2023-11-15 08:51:35,510 DEBUG   HandlerThread:17467 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 08:51:40,511 DEBUG   HandlerThread:17467 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 08:51:45,512 DEBUG   HandlerThread:17467 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 08:51:50,513 DEBUG   HandlerThread:17467 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 08:51:55,514 DEBUG   HandlerThread:17467 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 08:51:59,329 DEBUG   HandlerThread:17467 [handler.py:handle_request():146] handle_request: shutdown
+2023-11-15 08:51:59,329 INFO    HandlerThread:17467 [handler.py:finish():866] shutting down handler
+2023-11-15 08:51:59,515 INFO    SenderThread:17467 [sender.py:finish():1536] shutting down sender
+2023-11-15 08:51:59,516 INFO    WriterThread:17467 [datastore.py:close():294] close: /content/openset_domain_adaptation/wandb/run-20231115_085125-y3y591q2/run-y3y591q2.wandb

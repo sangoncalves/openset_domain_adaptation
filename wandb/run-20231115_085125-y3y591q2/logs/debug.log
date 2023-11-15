@@ -1,0 +1,36 @@
+2023-11-15 08:51:25,498 INFO    MainThread:17141 [wandb_setup.py:_flush():76] Current SDK version is 0.16.0
+2023-11-15 08:51:25,498 INFO    MainThread:17141 [wandb_setup.py:_flush():76] Configure stats pid to 17141
+2023-11-15 08:51:25,498 INFO    MainThread:17141 [wandb_setup.py:_flush():76] Loading settings from /root/.config/wandb/settings
+2023-11-15 08:51:25,498 INFO    MainThread:17141 [wandb_setup.py:_flush():76] Loading settings from /content/openset_domain_adaptation/wandb/settings
+2023-11-15 08:51:25,498 INFO    MainThread:17141 [wandb_setup.py:_flush():76] Loading settings from environment variables: {'api_key': '***REDACTED***'}
+2023-11-15 08:51:25,498 INFO    MainThread:17141 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-11-15 08:51:25,498 INFO    MainThread:17141 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2023-11-15 08:51:25,498 INFO    MainThread:17141 [wandb_init.py:_log_setup():524] Logging user logs to /content/openset_domain_adaptation/wandb/run-20231115_085125-y3y591q2/logs/debug.log
+2023-11-15 08:51:25,498 INFO    MainThread:17141 [wandb_init.py:_log_setup():525] Logging internal logs to /content/openset_domain_adaptation/wandb/run-20231115_085125-y3y591q2/logs/debug-internal.log
+2023-11-15 08:51:25,498 INFO    MainThread:17141 [wandb_init.py:_jupyter_setup():470] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x78edb191c130>
+2023-11-15 08:51:25,499 INFO    MainThread:17141 [wandb_init.py:init():564] calling init triggers
+2023-11-15 08:51:25,499 INFO    MainThread:17141 [wandb_init.py:init():571] wandb.init called with sweep_config: {}
+config: {}
+2023-11-15 08:51:25,499 INFO    MainThread:17141 [wandb_init.py:init():614] starting backend
+2023-11-15 08:51:25,499 INFO    MainThread:17141 [wandb_init.py:init():618] setting up manager
+2023-11-15 08:51:25,504 INFO    MainThread:17141 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-11-15 08:51:25,504 INFO    MainThread:17141 [wandb_init.py:init():624] backend started and connected
+2023-11-15 08:51:25,522 INFO    MainThread:17141 [wandb_run.py:_label_probe_notebook():1294] probe notebook
+2023-11-15 08:51:30,177 WARNING MainThread:17141 [wandb_init.py:init():1188] interrupted
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/wandb/sdk/wandb_init.py", line 1166, in init
+    run = wi.init()
+  File "/usr/local/lib/python3.10/dist-packages/wandb/sdk/wandb_init.py", line 704, in init
+    run._label_probe_notebook(self.notebook)
+  File "/usr/local/lib/python3.10/dist-packages/wandb/sdk/wandb_run.py", line 1297, in _label_probe_notebook
+    data = notebook.probe_ipynb()
+  File "/usr/local/lib/python3.10/dist-packages/wandb/jupyter.py", line 361, in probe_ipynb
+    colab_ipynb = attempt_colab_load_ipynb()
+  File "/usr/local/lib/python3.10/dist-packages/wandb/jupyter.py", line 263, in attempt_colab_load_ipynb
+    response = colab._message.blocking_request("get_ipynb", timeout_sec=5)
+  File "/usr/local/lib/python3.10/dist-packages/google/colab/_message.py", line 176, in blocking_request
+    return read_reply_from_input(request_id, timeout_sec)
+  File "/usr/local/lib/python3.10/dist-packages/google/colab/_message.py", line 96, in read_reply_from_input
+    time.sleep(0.025)
+KeyboardInterrupt
+2023-11-15 08:52:00,330 WARNING MsgRouterThr:17141 [router.py:message_loop():77] message_loop has been closed
