@@ -1,0 +1,804 @@
+2023-11-15 10:05:30,664 INFO    StreamThr :18658 [internal.py:wandb_internal():86] W&B internal server running at pid: 18658, started at: 2023-11-15 10:05:30.663321
+2023-11-15 10:05:30,666 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: status
+2023-11-15 10:05:34,806 INFO    WriterThread:18658 [datastore.py:open_for_write():85] open: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/run-llb9vdt4.wandb
+2023-11-15 10:05:34,807 DEBUG   SenderThread:18658 [sender.py:send():380] send: header
+2023-11-15 10:05:34,812 DEBUG   SenderThread:18658 [sender.py:send():380] send: run
+2023-11-15 10:05:38,209 INFO    SenderThread:18658 [dir_watcher.py:__init__():211] watching files in: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files
+2023-11-15 10:05:38,209 INFO    SenderThread:18658 [sender.py:_start_run_threads():1124] run started: llb9vdt4 with start time 1700042729.786384
+2023-11-15 10:05:38,210 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 10:05:38,220 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: check_version
+2023-11-15 10:05:38,221 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: check_version
+2023-11-15 10:05:38,347 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: run_start
+2023-11-15 10:05:38,348 DEBUG   HandlerThread:18658 [system_info.py:__init__():32] System info init
+2023-11-15 10:05:38,348 DEBUG   HandlerThread:18658 [system_info.py:__init__():47] System info init done
+2023-11-15 10:05:38,348 INFO    HandlerThread:18658 [system_monitor.py:start():194] Starting system monitor
+2023-11-15 10:05:38,348 INFO    SystemMonitor:18658 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2023-11-15 10:05:38,349 INFO    HandlerThread:18658 [system_monitor.py:probe():214] Collecting system info
+2023-11-15 10:05:38,349 INFO    SystemMonitor:18658 [interfaces.py:start():190] Started cpu monitoring
+2023-11-15 10:05:38,349 INFO    SystemMonitor:18658 [interfaces.py:start():190] Started disk monitoring
+2023-11-15 10:05:38,350 INFO    SystemMonitor:18658 [interfaces.py:start():190] Started gpu monitoring
+2023-11-15 10:05:38,350 INFO    SystemMonitor:18658 [interfaces.py:start():190] Started memory monitoring
+2023-11-15 10:05:38,350 INFO    SystemMonitor:18658 [interfaces.py:start():190] Started network monitoring
+2023-11-15 10:05:38,355 DEBUG   HandlerThread:18658 [system_info.py:probe():196] Probing system
+2023-11-15 10:05:38,356 DEBUG   HandlerThread:18658 [system_info.py:_probe_git():181] Probing git
+2023-11-15 10:05:38,361 DEBUG   HandlerThread:18658 [system_info.py:_probe_git():189] Probing git done
+2023-11-15 10:05:38,361 DEBUG   HandlerThread:18658 [system_info.py:probe():244] Probing system done
+2023-11-15 10:05:38,361 DEBUG   HandlerThread:18658 [system_monitor.py:probe():223] {'os': 'Linux-5.15.120+-x86_64-with-glibc2.35', 'python': '3.10.12', 'heartbeatAt': '2023-11-15T10:05:38.355633', 'startedAt': '2023-11-15T10:05:29.777421', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'OpenDomainAdaptation_Thesisv4.ipynb', 'codePathLocal': 'OpenDomainAdaptation_Thesisv4.ipynb', 'colab': 'https://colab.research.google.com/notebook#fileId=1AHs9TgV4WiWxx-aejdHJfHj5hkpO8WPT', 'git': {'remote': 'https://github.com/sangoncalves/openset_domain_adaptation.git', 'commit': 'f378ad949c4cb6be69272837b5fdc3ec266613d7'}, 'email': 'sander.martinsgoncalves@gmail.com', 'root': '/content/openset_domain_adaptation', 'host': '457c50a74b0a', 'username': 'root', 'executable': '/usr/bin/python3', 'cpu_count': 4, 'cpu_count_logical': 8, 'cpu_freq': {'current': 2000.2119999999998, 'min': 0.0, 'max': 0.0}, 'cpu_freq_per_core': [{'current': 2000.212, 'min': 0.0, 'max': 0.0}, {'current': 2000.212, 'min': 0.0, 'max': 0.0}, {'current': 2000.212, 'min': 0.0, 'max': 0.0}, {'current': 2000.212, 'min': 0.0, 'max': 0.0}, {'current': 2000.212, 'min': 0.0, 'max': 0.0}, {'current': 2000.212, 'min': 0.0, 'max': 0.0}, {'current': 2000.212, 'min': 0.0, 'max': 0.0}, {'current': 2000.212, 'min': 0.0, 'max': 0.0}], 'disk': {'/': {'total': 166.77415084838867, 'used': 49.2579460144043}}, 'gpu': 'Tesla V100-SXM2-16GB', 'gpu_count': 1, 'gpu_devices': [{'name': 'Tesla V100-SXM2-16GB', 'memory_total': 17179869184}], 'memory': {'total': 50.99726867675781}}
+2023-11-15 10:05:38,362 INFO    HandlerThread:18658 [system_monitor.py:probe():224] Finished collecting system info
+2023-11-15 10:05:38,362 INFO    HandlerThread:18658 [system_monitor.py:probe():227] Publishing system info
+2023-11-15 10:05:38,362 DEBUG   HandlerThread:18658 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2023-11-15 10:05:38,362 DEBUG   HandlerThread:18658 [system_info.py:_save_pip():68] Saving pip packages done
+2023-11-15 10:05:38,363 INFO    HandlerThread:18658 [system_monitor.py:probe():229] Finished publishing system info
+2023-11-15 10:05:38,363 DEBUG   SenderThread:18658 [sender.py:send():380] send: files
+2023-11-15 10:05:38,363 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file wandb-metadata.json with policy now
+2023-11-15 10:05:38,377 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 10:05:38,378 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 10:05:38,419 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:05:38,420 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 10:05:39,211 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_created():271] file/dir created: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/wandb-metadata.json
+2023-11-15 10:05:39,212 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_created():271] file/dir created: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/requirements.txt
+2023-11-15 10:05:39,680 DEBUG   SenderThread:18658 [sender.py:send():380] send: telemetry
+2023-11-15 10:05:39,680 DEBUG   SenderThread:18658 [sender.py:send():380] send: telemetry
+2023-11-15 10:05:39,680 DEBUG   SenderThread:18658 [sender.py:send():380] send: run
+2023-11-15 10:05:40,210 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/config.yaml
+2023-11-15 10:05:40,344 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/e8pkdib6-wandb-metadata.json
+2023-11-15 10:05:41,521 INFO    SenderThread:18658 [sender.py:send_run():1002] updated run: llb9vdt4
+2023-11-15 10:05:41,521 DEBUG   SenderThread:18658 [sender.py:send():380] send: history
+2023-11-15 10:05:41,521 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: summary_record
+2023-11-15 10:05:41,523 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-15 10:05:41,523 DEBUG   SenderThread:18658 [sender.py:send():380] send: telemetry
+2023-11-15 10:05:41,523 DEBUG   SenderThread:18658 [sender.py:send():380] send: config
+2023-11-15 10:05:41,523 DEBUG   SenderThread:18658 [sender.py:send():380] send: config
+2023-11-15 10:05:41,524 DEBUG   SenderThread:18658 [sender.py:send():380] send: config
+2023-11-15 10:05:41,524 DEBUG   SenderThread:18658 [sender.py:send():380] send: config
+2023-11-15 10:05:41,524 DEBUG   SenderThread:18658 [sender.py:send():380] send: config
+2023-11-15 10:05:41,524 DEBUG   SenderThread:18658 [sender.py:send():380] send: config
+2023-11-15 10:05:41,524 DEBUG   SenderThread:18658 [sender.py:send():380] send: config
+2023-11-15 10:05:41,524 DEBUG   SenderThread:18658 [sender.py:send():380] send: config
+2023-11-15 10:05:41,524 DEBUG   SenderThread:18658 [sender.py:send():380] send: config
+2023-11-15 10:05:41,524 DEBUG   SenderThread:18658 [sender.py:send():380] send: config
+2023-11-15 10:05:41,524 DEBUG   SenderThread:18658 [sender.py:send():380] send: config
+2023-11-15 10:05:41,524 DEBUG   SenderThread:18658 [sender.py:send():380] send: config
+2023-11-15 10:05:41,524 DEBUG   SenderThread:18658 [sender.py:send():380] send: config
+2023-11-15 10:05:41,525 DEBUG   SenderThread:18658 [sender.py:send():380] send: telemetry
+2023-11-15 10:05:42,295 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_created():271] file/dir created: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/wandb-summary.json
+2023-11-15 10:05:42,305 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_created():271] file/dir created: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:05:43,292 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 10:05:44,285 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:05:46,286 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:05:47,205 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:05:47,665 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:05:47,665 DEBUG   SenderThread:18658 [sender.py:send():380] send: files
+2023-11-15 10:05:47,666 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file media/images/confusion_matrix Train - nFrames: 6 - uniform_1_d364c343c1129489ea2d.png with policy now
+2023-11-15 10:05:47,667 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:05:48,287 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:05:48,288 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_created():271] file/dir created: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Train - nFrames: 6 - uniform_1_d364c343c1129489ea2d.png
+2023-11-15 10:05:48,288 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_created():271] file/dir created: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media
+2023-11-15 10:05:48,288 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_created():271] file/dir created: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images
+2023-11-15 10:05:48,297 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 10:05:49,222 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/51m7i7j3-media/images/confusion_matrix Train - nFrames: 6 - uniform_1_d364c343c1129489ea2d.png
+2023-11-15 10:05:50,288 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:05:50,454 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/b3459935-media/images/confusion_matrix Train - nFrames: 6 - uniform_1_d364c343c1129489ea2d.png
+2023-11-15 10:05:52,289 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:05:52,353 DEBUG   SenderThread:18658 [sender.py:send():380] send: files
+2023-11-15 10:05:52,353 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:05:52,353 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file media/images/confusion_matrix Test - nFrames: 6 - uniform_1_05475ee8929137ffae44.png with policy now
+2023-11-15 10:05:52,355 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:05:53,290 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_created():271] file/dir created: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Test - nFrames: 6 - uniform_1_05475ee8929137ffae44.png
+2023-11-15 10:05:53,290 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images
+2023-11-15 10:05:53,378 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 10:05:53,381 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 10:05:53,381 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 10:05:53,418 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/qbf3oq0r-media/images/confusion_matrix Test - nFrames: 6 - uniform_1_05475ee8929137ffae44.png
+2023-11-15 10:05:53,421 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 10:05:54,290 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:05:54,580 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/9ns22t8c-media/images/confusion_matrix Test - nFrames: 6 - uniform_1_05475ee8929137ffae44.png
+2023-11-15 10:05:56,291 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:05:58,292 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:05:58,385 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 10:06:00,293 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:06:00,819 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:06:00,820 DEBUG   SenderThread:18658 [sender.py:send():380] send: history
+2023-11-15 10:06:00,820 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: summary_record
+2023-11-15 10:06:00,821 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-15 10:06:01,280 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:06:01,280 DEBUG   SenderThread:18658 [sender.py:send():380] send: files
+2023-11-15 10:06:01,281 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file media/images/confusion_matrix Train - nFrames: 6 - uniform_2_711c0ff0cb0edc5ff637.png with policy now
+2023-11-15 10:06:01,282 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:06:01,293 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/wandb-summary.json
+2023-11-15 10:06:01,294 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_created():271] file/dir created: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Train - nFrames: 6 - uniform_2_711c0ff0cb0edc5ff637.png
+2023-11-15 10:06:01,294 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images
+2023-11-15 10:06:02,294 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:06:02,392 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/4bgz0lbp-media/images/confusion_matrix Train - nFrames: 6 - uniform_2_711c0ff0cb0edc5ff637.png
+2023-11-15 10:06:03,531 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 10:06:03,564 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/97abjshc-media/images/confusion_matrix Train - nFrames: 6 - uniform_2_711c0ff0cb0edc5ff637.png
+2023-11-15 10:06:04,295 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:06:05,296 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/config.yaml
+2023-11-15 10:06:05,591 DEBUG   SenderThread:18658 [sender.py:send():380] send: files
+2023-11-15 10:06:05,592 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file media/images/confusion_matrix Test - nFrames: 6 - uniform_2_2838b7182e3ce9a28a84.png with policy now
+2023-11-15 10:06:05,592 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:06:05,594 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:06:06,296 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:06:06,297 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_created():271] file/dir created: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Test - nFrames: 6 - uniform_2_2838b7182e3ce9a28a84.png
+2023-11-15 10:06:06,297 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images
+2023-11-15 10:06:06,653 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/493tbk9r-media/images/confusion_matrix Test - nFrames: 6 - uniform_2_2838b7182e3ce9a28a84.png
+2023-11-15 10:06:07,826 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/sdj93qm9-media/images/confusion_matrix Test - nFrames: 6 - uniform_2_2838b7182e3ce9a28a84.png
+2023-11-15 10:06:08,297 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:06:08,379 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 10:06:08,380 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 10:06:08,380 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 10:06:09,773 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 10:06:10,298 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:06:12,299 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:06:14,134 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:06:14,135 DEBUG   SenderThread:18658 [sender.py:send():380] send: history
+2023-11-15 10:06:14,135 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: summary_record
+2023-11-15 10:06:14,137 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-15 10:06:14,301 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/wandb-summary.json
+2023-11-15 10:06:14,301 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:06:14,564 DEBUG   SenderThread:18658 [sender.py:send():380] send: files
+2023-11-15 10:06:14,564 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file media/images/confusion_matrix Train - nFrames: 6 - uniform_3_9b519313d9fd8a463645.png with policy now
+2023-11-15 10:06:14,564 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:06:14,565 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:06:14,987 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 10:06:15,301 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_created():271] file/dir created: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Train - nFrames: 6 - uniform_3_9b519313d9fd8a463645.png
+2023-11-15 10:06:15,302 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images
+2023-11-15 10:06:15,549 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/vho6l17t-media/images/confusion_matrix Train - nFrames: 6 - uniform_3_9b519313d9fd8a463645.png
+2023-11-15 10:06:16,302 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:06:16,637 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/0xhf6tb9-media/images/confusion_matrix Train - nFrames: 6 - uniform_3_9b519313d9fd8a463645.png
+2023-11-15 10:06:18,302 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:06:18,868 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:06:18,868 DEBUG   SenderThread:18658 [sender.py:send():380] send: files
+2023-11-15 10:06:18,869 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file media/images/confusion_matrix Test - nFrames: 6 - uniform_3_9c7168e1d5b2d896f4e4.png with policy now
+2023-11-15 10:06:18,870 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:06:19,303 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_created():271] file/dir created: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Test - nFrames: 6 - uniform_3_9c7168e1d5b2d896f4e4.png
+2023-11-15 10:06:19,303 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images
+2023-11-15 10:06:19,807 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/6oqvjzua-media/images/confusion_matrix Test - nFrames: 6 - uniform_3_9c7168e1d5b2d896f4e4.png
+2023-11-15 10:06:20,130 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 10:06:20,304 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:06:21,065 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/385f266f-media/images/confusion_matrix Test - nFrames: 6 - uniform_3_9c7168e1d5b2d896f4e4.png
+2023-11-15 10:06:22,305 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:06:23,379 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 10:06:23,380 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 10:06:23,383 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 10:06:24,306 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:06:25,138 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 10:06:26,307 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:06:27,316 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:06:27,317 DEBUG   SenderThread:18658 [sender.py:send():380] send: history
+2023-11-15 10:06:27,317 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: summary_record
+2023-11-15 10:06:27,318 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-15 10:06:27,766 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:06:27,766 DEBUG   SenderThread:18658 [sender.py:send():380] send: files
+2023-11-15 10:06:27,767 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file media/images/confusion_matrix Train - nFrames: 6 - uniform_4_aeae94b16d9dd248a688.png with policy now
+2023-11-15 10:06:27,768 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:06:28,308 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/wandb-summary.json
+2023-11-15 10:06:28,309 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:06:28,309 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_created():271] file/dir created: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Train - nFrames: 6 - uniform_4_aeae94b16d9dd248a688.png
+2023-11-15 10:06:28,309 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images
+2023-11-15 10:06:28,508 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/ktv89mmj-media/images/confusion_matrix Train - nFrames: 6 - uniform_4_aeae94b16d9dd248a688.png
+2023-11-15 10:06:29,464 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/zc9dik89-media/images/confusion_matrix Train - nFrames: 6 - uniform_4_aeae94b16d9dd248a688.png
+2023-11-15 10:06:30,265 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 10:06:30,310 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:06:31,963 DEBUG   SenderThread:18658 [sender.py:send():380] send: files
+2023-11-15 10:06:31,963 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file media/images/confusion_matrix Test - nFrames: 6 - uniform_4_c840971839b2605bfb4a.png with policy now
+2023-11-15 10:06:31,964 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:06:31,965 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:06:32,311 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:06:32,311 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_created():271] file/dir created: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Test - nFrames: 6 - uniform_4_c840971839b2605bfb4a.png
+2023-11-15 10:06:32,312 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images
+2023-11-15 10:06:32,978 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/x7vsvoad-media/images/confusion_matrix Test - nFrames: 6 - uniform_4_c840971839b2605bfb4a.png
+2023-11-15 10:06:34,297 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/ue8qtn19-media/images/confusion_matrix Test - nFrames: 6 - uniform_4_c840971839b2605bfb4a.png
+2023-11-15 10:06:34,312 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:06:35,364 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 10:06:36,313 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:06:38,315 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:06:38,351 DEBUG   SystemMonitor:18658 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2023-11-15 10:06:38,352 DEBUG   SenderThread:18658 [sender.py:send():380] send: stats
+2023-11-15 10:06:38,379 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 10:06:38,379 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 10:06:38,382 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 10:06:40,316 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:06:40,378 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 10:06:40,654 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:06:40,655 DEBUG   SenderThread:18658 [sender.py:send():380] send: history
+2023-11-15 10:06:40,656 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: summary_record
+2023-11-15 10:06:40,656 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-15 10:06:41,097 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:06:41,097 DEBUG   SenderThread:18658 [sender.py:send():380] send: files
+2023-11-15 10:06:41,097 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file media/images/confusion_matrix Train - nFrames: 6 - uniform_5_e2530dbf515ebc30b130.png with policy now
+2023-11-15 10:06:41,099 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:06:41,317 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/wandb-summary.json
+2023-11-15 10:06:41,317 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_created():271] file/dir created: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Train - nFrames: 6 - uniform_5_e2530dbf515ebc30b130.png
+2023-11-15 10:06:41,318 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images
+2023-11-15 10:06:42,318 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:06:42,397 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/4w7tgw92-media/images/confusion_matrix Train - nFrames: 6 - uniform_5_e2530dbf515ebc30b130.png
+2023-11-15 10:06:43,671 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/nn1sxpsi-media/images/confusion_matrix Train - nFrames: 6 - uniform_5_e2530dbf515ebc30b130.png
+2023-11-15 10:06:44,319 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:06:45,283 DEBUG   SenderThread:18658 [sender.py:send():380] send: files
+2023-11-15 10:06:45,283 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:06:45,284 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file media/images/confusion_matrix Test - nFrames: 6 - uniform_5_3048637f7396748b3996.png with policy now
+2023-11-15 10:06:45,285 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:06:45,319 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_created():271] file/dir created: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Test - nFrames: 6 - uniform_5_3048637f7396748b3996.png
+2023-11-15 10:06:45,319 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images
+2023-11-15 10:06:45,457 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 10:06:46,320 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:06:46,484 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/rrsvtt5k-media/images/confusion_matrix Test - nFrames: 6 - uniform_5_3048637f7396748b3996.png
+2023-11-15 10:06:47,786 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/nzirrzp2-media/images/confusion_matrix Test - nFrames: 6 - uniform_5_3048637f7396748b3996.png
+2023-11-15 10:06:48,321 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:06:50,323 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:06:50,512 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 10:06:52,324 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:06:53,379 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 10:06:53,380 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 10:06:53,382 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 10:06:53,692 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:06:54,189 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:06:54,191 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:06:54,196 DEBUG   SenderThread:18658 [sender.py:send():380] send: history
+2023-11-15 10:06:54,197 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: summary_record
+2023-11-15 10:06:54,197 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-15 10:06:54,198 DEBUG   SenderThread:18658 [sender.py:send():380] send: files
+2023-11-15 10:06:54,198 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file media/images/confusion_matrix Train - nFrames: 6 - uniform_6_da4ae0d030b7943d8cfb.png with policy now
+2023-11-15 10:06:54,326 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/wandb-summary.json
+2023-11-15 10:06:54,326 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:06:54,326 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_created():271] file/dir created: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Train - nFrames: 6 - uniform_6_da4ae0d030b7943d8cfb.png
+2023-11-15 10:06:54,326 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images
+2023-11-15 10:06:55,190 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/eq62x5su-media/images/confusion_matrix Train - nFrames: 6 - uniform_6_da4ae0d030b7943d8cfb.png
+2023-11-15 10:06:55,633 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 10:06:56,215 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/3jg5ivxw-media/images/confusion_matrix Train - nFrames: 6 - uniform_6_da4ae0d030b7943d8cfb.png
+2023-11-15 10:06:56,327 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:06:58,328 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:06:58,565 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:06:58,565 DEBUG   SenderThread:18658 [sender.py:send():380] send: files
+2023-11-15 10:06:58,566 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file media/images/confusion_matrix Test - nFrames: 6 - uniform_6_e253a6e39992afb18ed2.png with policy now
+2023-11-15 10:06:58,567 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:06:59,329 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_created():271] file/dir created: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Test - nFrames: 6 - uniform_6_e253a6e39992afb18ed2.png
+2023-11-15 10:06:59,329 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images
+2023-11-15 10:06:59,814 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/e8rcss8e-media/images/confusion_matrix Test - nFrames: 6 - uniform_6_e253a6e39992afb18ed2.png
+2023-11-15 10:07:00,330 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:07:00,749 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 10:07:00,894 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/vlus80og-media/images/confusion_matrix Test - nFrames: 6 - uniform_6_e253a6e39992afb18ed2.png
+2023-11-15 10:07:02,331 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:07:04,332 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:07:05,805 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 10:07:06,333 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:07:06,897 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:06,898 DEBUG   SenderThread:18658 [sender.py:send():380] send: history
+2023-11-15 10:07:06,898 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: summary_record
+2023-11-15 10:07:06,898 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-15 10:07:07,334 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/wandb-summary.json
+2023-11-15 10:07:07,370 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:07,371 DEBUG   SenderThread:18658 [sender.py:send():380] send: files
+2023-11-15 10:07:07,371 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file media/images/confusion_matrix Train - nFrames: 6 - uniform_7_e6b5289f4c5af69c324d.png with policy now
+2023-11-15 10:07:07,372 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:08,281 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/sgq5enfm-media/images/confusion_matrix Train - nFrames: 6 - uniform_7_e6b5289f4c5af69c324d.png
+2023-11-15 10:07:08,335 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:07:08,335 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_created():271] file/dir created: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Train - nFrames: 6 - uniform_7_e6b5289f4c5af69c324d.png
+2023-11-15 10:07:08,336 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images
+2023-11-15 10:07:08,353 DEBUG   SenderThread:18658 [sender.py:send():380] send: stats
+2023-11-15 10:07:08,380 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 10:07:08,380 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 10:07:08,384 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 10:07:09,382 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/jkf1ngu1-media/images/confusion_matrix Train - nFrames: 6 - uniform_7_e6b5289f4c5af69c324d.png
+2023-11-15 10:07:10,337 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:07:10,932 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 10:07:11,705 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:11,705 DEBUG   SenderThread:18658 [sender.py:send():380] send: files
+2023-11-15 10:07:11,705 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file media/images/confusion_matrix Test - nFrames: 6 - uniform_7_141b97e1d7b305268319.png with policy now
+2023-11-15 10:07:11,707 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:12,338 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:07:12,339 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_created():271] file/dir created: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Test - nFrames: 6 - uniform_7_141b97e1d7b305268319.png
+2023-11-15 10:07:12,339 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images
+2023-11-15 10:07:12,629 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/66zvnsl8-media/images/confusion_matrix Test - nFrames: 6 - uniform_7_141b97e1d7b305268319.png
+2023-11-15 10:07:13,694 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/ovn5252e-media/images/confusion_matrix Test - nFrames: 6 - uniform_7_141b97e1d7b305268319.png
+2023-11-15 10:07:14,340 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:07:16,066 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 10:07:16,341 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:07:18,343 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:07:20,019 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:20,020 DEBUG   SenderThread:18658 [sender.py:send():380] send: history
+2023-11-15 10:07:20,021 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: summary_record
+2023-11-15 10:07:20,021 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-15 10:07:20,344 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/wandb-summary.json
+2023-11-15 10:07:20,345 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:07:20,487 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:20,488 DEBUG   SenderThread:18658 [sender.py:send():380] send: files
+2023-11-15 10:07:20,488 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file media/images/confusion_matrix Train - nFrames: 6 - uniform_8_e2dcdae2f7a72b1863af.png with policy now
+2023-11-15 10:07:20,489 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:21,220 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 10:07:21,345 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_created():271] file/dir created: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Train - nFrames: 6 - uniform_8_e2dcdae2f7a72b1863af.png
+2023-11-15 10:07:21,345 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images
+2023-11-15 10:07:21,430 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/ca4d0orq-media/images/confusion_matrix Train - nFrames: 6 - uniform_8_e2dcdae2f7a72b1863af.png
+2023-11-15 10:07:22,346 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:07:22,375 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/6mrcpkmy-media/images/confusion_matrix Train - nFrames: 6 - uniform_8_e2dcdae2f7a72b1863af.png
+2023-11-15 10:07:23,380 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 10:07:23,380 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 10:07:23,383 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 10:07:24,347 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:07:24,798 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:24,798 DEBUG   SenderThread:18658 [sender.py:send():380] send: files
+2023-11-15 10:07:24,799 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file media/images/confusion_matrix Test - nFrames: 6 - uniform_8_7ddfe13f51a28e7951ed.png with policy now
+2023-11-15 10:07:24,800 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:25,348 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_created():271] file/dir created: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Test - nFrames: 6 - uniform_8_7ddfe13f51a28e7951ed.png
+2023-11-15 10:07:25,349 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images
+2023-11-15 10:07:25,752 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/3al6fc7c-media/images/confusion_matrix Test - nFrames: 6 - uniform_8_7ddfe13f51a28e7951ed.png
+2023-11-15 10:07:26,254 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 10:07:26,349 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:07:27,079 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/97u4p3fw-media/images/confusion_matrix Test - nFrames: 6 - uniform_8_7ddfe13f51a28e7951ed.png
+2023-11-15 10:07:28,350 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:07:30,351 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:07:31,299 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 10:07:32,353 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:07:33,149 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:33,150 DEBUG   SenderThread:18658 [sender.py:send():380] send: history
+2023-11-15 10:07:33,150 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: summary_record
+2023-11-15 10:07:33,151 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-15 10:07:33,353 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/wandb-summary.json
+2023-11-15 10:07:33,583 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:33,583 DEBUG   SenderThread:18658 [sender.py:send():380] send: files
+2023-11-15 10:07:33,584 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file media/images/confusion_matrix Train - nFrames: 6 - uniform_9_46cdbb6c11305feec795.png with policy now
+2023-11-15 10:07:33,585 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:34,354 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:07:34,355 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_created():271] file/dir created: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Train - nFrames: 6 - uniform_9_46cdbb6c11305feec795.png
+2023-11-15 10:07:34,355 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images
+2023-11-15 10:07:34,549 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/sl9vdqk6-media/images/confusion_matrix Train - nFrames: 6 - uniform_9_46cdbb6c11305feec795.png
+2023-11-15 10:07:35,555 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/jzesbgpf-media/images/confusion_matrix Train - nFrames: 6 - uniform_9_46cdbb6c11305feec795.png
+2023-11-15 10:07:36,355 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:07:36,420 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 10:07:37,773 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:37,773 DEBUG   SenderThread:18658 [sender.py:send():380] send: files
+2023-11-15 10:07:37,774 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file media/images/confusion_matrix Test - nFrames: 6 - uniform_9_8a8740c818cd5c8444b9.png with policy now
+2023-11-15 10:07:37,774 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:38,354 DEBUG   SenderThread:18658 [sender.py:send():380] send: stats
+2023-11-15 10:07:38,356 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:07:38,357 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_created():271] file/dir created: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Test - nFrames: 6 - uniform_9_8a8740c818cd5c8444b9.png
+2023-11-15 10:07:38,357 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images
+2023-11-15 10:07:38,380 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 10:07:38,380 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 10:07:38,383 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 10:07:38,756 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/25vqdozq-media/images/confusion_matrix Test - nFrames: 6 - uniform_9_8a8740c818cd5c8444b9.png
+2023-11-15 10:07:39,848 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/9hztib6w-media/images/confusion_matrix Test - nFrames: 6 - uniform_9_8a8740c818cd5c8444b9.png
+2023-11-15 10:07:40,358 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:07:41,431 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 10:07:42,360 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:07:44,361 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:07:46,122 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:46,122 DEBUG   SenderThread:18658 [sender.py:send():380] send: history
+2023-11-15 10:07:46,123 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: summary_record
+2023-11-15 10:07:46,123 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-15 10:07:46,362 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/wandb-summary.json
+2023-11-15 10:07:46,363 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:07:46,618 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:46,618 DEBUG   SenderThread:18658 [sender.py:send():380] send: files
+2023-11-15 10:07:46,618 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file media/images/confusion_matrix Train - nFrames: 6 - uniform_10_57b507e145595dd8223a.png with policy now
+2023-11-15 10:07:46,619 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 10:07:46,619 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:47,363 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_created():271] file/dir created: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Train - nFrames: 6 - uniform_10_57b507e145595dd8223a.png
+2023-11-15 10:07:47,364 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images
+2023-11-15 10:07:47,663 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/a5t1q0td-media/images/confusion_matrix Train - nFrames: 6 - uniform_10_57b507e145595dd8223a.png
+2023-11-15 10:07:48,364 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:07:48,747 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/t8efgqss-media/images/confusion_matrix Train - nFrames: 6 - uniform_10_57b507e145595dd8223a.png
+2023-11-15 10:07:50,365 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:07:50,771 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:50,772 DEBUG   SenderThread:18658 [sender.py:send():380] send: files
+2023-11-15 10:07:50,772 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file media/images/confusion_matrix Test - nFrames: 6 - uniform_10_45c14d4ae6fc3d86b139.png with policy now
+2023-11-15 10:07:50,773 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:51,366 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_created():271] file/dir created: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Test - nFrames: 6 - uniform_10_45c14d4ae6fc3d86b139.png
+2023-11-15 10:07:51,366 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images
+2023-11-15 10:07:51,690 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/b9xamp21-media/images/confusion_matrix Test - nFrames: 6 - uniform_10_45c14d4ae6fc3d86b139.png
+2023-11-15 10:07:51,710 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 10:07:52,367 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:07:52,687 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/qnqwdijp-media/images/confusion_matrix Test - nFrames: 6 - uniform_10_45c14d4ae6fc3d86b139.png
+2023-11-15 10:07:53,380 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 10:07:53,381 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 10:07:53,384 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 10:07:53,539 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,539 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,539 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,540 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,540 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,540 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,540 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,540 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,541 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,541 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,541 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,541 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,541 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,542 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,542 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,542 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,542 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,542 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,543 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,543 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,543 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,544 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,544 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,544 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,545 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,547 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,547 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,548 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,550 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,551 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,551 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,554 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,554 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,555 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,557 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,558 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,559 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,561 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,562 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,563 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,565 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,566 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,568 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,569 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,570 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,571 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,574 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,575 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,576 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,578 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,580 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,580 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,583 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,585 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,585 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,588 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,589 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,590 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,593 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,598 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,598 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:53,602 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:54,368 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:07:56,370 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:07:56,832 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 10:07:58,372 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:07:59,123 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:59,143 DEBUG   SenderThread:18658 [sender.py:send():380] send: history
+2023-11-15 10:07:59,150 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: summary_record
+2023-11-15 10:07:59,157 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-15 10:07:59,373 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/wandb-summary.json
+2023-11-15 10:07:59,606 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:07:59,607 DEBUG   SenderThread:18658 [sender.py:send():380] send: files
+2023-11-15 10:07:59,607 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file media/images/confusion_matrix Train - nFrames: 6 - uniform_11_0497aca8b6e767d1f5aa.png with policy now
+2023-11-15 10:07:59,608 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:08:00,373 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:08:00,374 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_created():271] file/dir created: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Train - nFrames: 6 - uniform_11_0497aca8b6e767d1f5aa.png
+2023-11-15 10:08:00,374 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images
+2023-11-15 10:08:00,704 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/hcvx4rgc-media/images/confusion_matrix Train - nFrames: 6 - uniform_11_0497aca8b6e767d1f5aa.png
+2023-11-15 10:08:01,823 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/orzukrdx-media/images/confusion_matrix Train - nFrames: 6 - uniform_11_0497aca8b6e767d1f5aa.png
+2023-11-15 10:08:01,841 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 10:08:02,375 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:08:03,851 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:08:03,852 DEBUG   SenderThread:18658 [sender.py:send():380] send: files
+2023-11-15 10:08:03,852 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file media/images/confusion_matrix Test - nFrames: 6 - uniform_11_192a1b683a34b096ef74.png with policy now
+2023-11-15 10:08:03,853 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:08:04,377 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:08:04,377 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_created():271] file/dir created: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Test - nFrames: 6 - uniform_11_192a1b683a34b096ef74.png
+2023-11-15 10:08:04,377 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images
+2023-11-15 10:08:04,939 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/xwiqa5nb-media/images/confusion_matrix Test - nFrames: 6 - uniform_11_192a1b683a34b096ef74.png
+2023-11-15 10:08:06,030 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/vwd5cm0e-media/images/confusion_matrix Test - nFrames: 6 - uniform_11_192a1b683a34b096ef74.png
+2023-11-15 10:08:06,378 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:08:06,880 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 10:08:08,355 DEBUG   SenderThread:18658 [sender.py:send():380] send: stats
+2023-11-15 10:08:08,380 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:08:08,381 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 10:08:08,381 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 10:08:08,384 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 10:08:10,381 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:08:11,945 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 10:08:12,064 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:08:12,065 DEBUG   SenderThread:18658 [sender.py:send():380] send: history
+2023-11-15 10:08:12,065 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: summary_record
+2023-11-15 10:08:12,073 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-15 10:08:12,383 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/wandb-summary.json
+2023-11-15 10:08:12,384 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:08:12,505 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:08:12,505 DEBUG   SenderThread:18658 [sender.py:send():380] send: files
+2023-11-15 10:08:12,505 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file media/images/confusion_matrix Train - nFrames: 6 - uniform_12_de5499fc0019fc5c2f85.png with policy now
+2023-11-15 10:08:12,507 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:08:13,384 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_created():271] file/dir created: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Train - nFrames: 6 - uniform_12_de5499fc0019fc5c2f85.png
+2023-11-15 10:08:13,385 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images
+2023-11-15 10:08:13,439 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/ozm8rb74-media/images/confusion_matrix Train - nFrames: 6 - uniform_12_de5499fc0019fc5c2f85.png
+2023-11-15 10:08:14,385 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:08:14,479 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/n2t21ovf-media/images/confusion_matrix Train - nFrames: 6 - uniform_12_de5499fc0019fc5c2f85.png
+2023-11-15 10:08:16,387 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:08:16,846 DEBUG   SenderThread:18658 [sender.py:send():380] send: files
+2023-11-15 10:08:16,846 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file media/images/confusion_matrix Test - nFrames: 6 - uniform_12_284d7495d602024495e7.png with policy now
+2023-11-15 10:08:16,847 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:08:16,848 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:08:17,026 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 10:08:17,388 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_created():271] file/dir created: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Test - nFrames: 6 - uniform_12_284d7495d602024495e7.png
+2023-11-15 10:08:17,388 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images
+2023-11-15 10:08:18,186 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/gnkkmdbl-media/images/confusion_matrix Test - nFrames: 6 - uniform_12_284d7495d602024495e7.png
+2023-11-15 10:08:18,388 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:08:19,308 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/19puma3k-media/images/confusion_matrix Test - nFrames: 6 - uniform_12_284d7495d602024495e7.png
+2023-11-15 10:08:20,390 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:08:22,083 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 10:08:22,392 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:08:23,381 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 10:08:23,382 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 10:08:23,384 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 10:08:24,393 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:08:25,496 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:08:25,497 DEBUG   SenderThread:18658 [sender.py:send():380] send: history
+2023-11-15 10:08:25,497 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: summary_record
+2023-11-15 10:08:25,502 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-15 10:08:25,940 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:08:25,940 DEBUG   SenderThread:18658 [sender.py:send():380] send: files
+2023-11-15 10:08:25,941 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file media/images/confusion_matrix Train - nFrames: 6 - uniform_13_5f2d80d0893610c3e3e3.png with policy now
+2023-11-15 10:08:25,942 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:08:26,395 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/wandb-summary.json
+2023-11-15 10:08:26,395 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:08:26,396 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_created():271] file/dir created: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Train - nFrames: 6 - uniform_13_5f2d80d0893610c3e3e3.png
+2023-11-15 10:08:26,396 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images
+2023-11-15 10:08:27,089 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/eobqu7tv-media/images/confusion_matrix Train - nFrames: 6 - uniform_13_5f2d80d0893610c3e3e3.png
+2023-11-15 10:08:27,135 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 10:08:28,088 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/zig5ix9o-media/images/confusion_matrix Train - nFrames: 6 - uniform_13_5f2d80d0893610c3e3e3.png
+2023-11-15 10:08:28,397 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:08:30,215 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:08:30,215 DEBUG   SenderThread:18658 [sender.py:send():380] send: files
+2023-11-15 10:08:30,216 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file media/images/confusion_matrix Test - nFrames: 6 - uniform_13_5be6c024f60bb47bbf94.png with policy now
+2023-11-15 10:08:30,217 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:08:30,399 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:08:30,399 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_created():271] file/dir created: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Test - nFrames: 6 - uniform_13_5be6c024f60bb47bbf94.png
+2023-11-15 10:08:30,399 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images
+2023-11-15 10:08:31,239 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/3y2j2ebo-media/images/confusion_matrix Test - nFrames: 6 - uniform_13_5be6c024f60bb47bbf94.png
+2023-11-15 10:08:32,214 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/7n75u66r-media/images/confusion_matrix Test - nFrames: 6 - uniform_13_5be6c024f60bb47bbf94.png
+2023-11-15 10:08:32,219 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 10:08:32,400 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:08:34,402 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:08:36,404 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:08:37,329 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 10:08:38,362 DEBUG   SenderThread:18658 [sender.py:send():380] send: stats
+2023-11-15 10:08:38,381 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 10:08:38,381 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 10:08:38,384 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 10:08:38,406 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:08:38,568 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:08:39,012 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:08:39,013 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:08:39,330 DEBUG   SenderThread:18658 [sender.py:send():380] send: history
+2023-11-15 10:08:39,330 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: summary_record
+2023-11-15 10:08:39,335 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-15 10:08:39,335 DEBUG   SenderThread:18658 [sender.py:send():380] send: files
+2023-11-15 10:08:39,335 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file media/images/confusion_matrix Train - nFrames: 6 - uniform_14_078dcfe1d1a3bb60a59f.png with policy now
+2023-11-15 10:08:39,407 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/wandb-summary.json
+2023-11-15 10:08:39,408 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_created():271] file/dir created: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Train - nFrames: 6 - uniform_14_078dcfe1d1a3bb60a59f.png
+2023-11-15 10:08:39,408 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images
+2023-11-15 10:08:40,408 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:08:40,434 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/01byrkmt-media/images/confusion_matrix Train - nFrames: 6 - uniform_14_078dcfe1d1a3bb60a59f.png
+2023-11-15 10:08:41,617 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/b4haz20z-media/images/confusion_matrix Train - nFrames: 6 - uniform_14_078dcfe1d1a3bb60a59f.png
+2023-11-15 10:08:42,410 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:08:42,470 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 10:08:43,208 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:08:43,208 DEBUG   SenderThread:18658 [sender.py:send():380] send: files
+2023-11-15 10:08:43,209 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file media/images/confusion_matrix Test - nFrames: 6 - uniform_14_0c3182bbdbafde384f52.png with policy now
+2023-11-15 10:08:43,210 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:08:43,411 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_created():271] file/dir created: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Test - nFrames: 6 - uniform_14_0c3182bbdbafde384f52.png
+2023-11-15 10:08:43,412 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images
+2023-11-15 10:08:44,289 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/z5idocqi-media/images/confusion_matrix Test - nFrames: 6 - uniform_14_0c3182bbdbafde384f52.png
+2023-11-15 10:08:44,413 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:08:45,527 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/s4zqmas5-media/images/confusion_matrix Test - nFrames: 6 - uniform_14_0c3182bbdbafde384f52.png
+2023-11-15 10:08:46,415 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:08:47,480 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 10:08:48,417 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:08:50,419 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:08:51,756 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:08:51,757 DEBUG   SenderThread:18658 [sender.py:send():380] send: history
+2023-11-15 10:08:51,758 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: summary_record
+2023-11-15 10:08:51,762 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-15 10:08:52,195 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:08:52,196 DEBUG   SenderThread:18658 [sender.py:send():380] send: files
+2023-11-15 10:08:52,196 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file media/images/confusion_matrix Train - nFrames: 6 - uniform_15_e80bc38e086aeb2462b0.png with policy now
+2023-11-15 10:08:52,197 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:08:52,421 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/wandb-summary.json
+2023-11-15 10:08:52,422 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:08:52,422 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_created():271] file/dir created: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Train - nFrames: 6 - uniform_15_e80bc38e086aeb2462b0.png
+2023-11-15 10:08:52,422 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images
+2023-11-15 10:08:52,600 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 10:08:53,055 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/z9f1j8he-media/images/confusion_matrix Train - nFrames: 6 - uniform_15_e80bc38e086aeb2462b0.png
+2023-11-15 10:08:53,382 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 10:08:53,382 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 10:08:53,384 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 10:08:54,095 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/q2zrw09q-media/images/confusion_matrix Train - nFrames: 6 - uniform_15_e80bc38e086aeb2462b0.png
+2023-11-15 10:08:54,423 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:08:56,352 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:08:56,352 DEBUG   SenderThread:18658 [sender.py:send():380] send: files
+2023-11-15 10:08:56,353 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file media/images/confusion_matrix Test - nFrames: 6 - uniform_15_63e288ddfc364383d938.png with policy now
+2023-11-15 10:08:56,353 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:08:56,357 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 10:08:56,359 DEBUG   SenderThread:18658 [sender.py:send():380] send: history
+2023-11-15 10:08:56,359 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: summary_record
+2023-11-15 10:08:56,364 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-15 10:08:56,365 DEBUG   SenderThread:18658 [sender.py:send():380] send: config
+2023-11-15 10:08:56,365 DEBUG   SenderThread:18658 [sender.py:send():380] send: telemetry
+2023-11-15 10:08:56,365 DEBUG   SenderThread:18658 [sender.py:send():380] send: exit
+2023-11-15 10:08:56,365 INFO    SenderThread:18658 [sender.py:send_exit():585] handling exit code: 0
+2023-11-15 10:08:56,365 INFO    SenderThread:18658 [sender.py:send_exit():587] handling runtime: 198
+2023-11-15 10:08:56,369 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-15 10:08:56,370 INFO    SenderThread:18658 [sender.py:send_exit():593] send defer
+2023-11-15 10:08:56,370 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 10:08:56,370 INFO    HandlerThread:18658 [handler.py:handle_request_defer():172] handle defer: 0
+2023-11-15 10:08:56,370 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: defer
+2023-11-15 10:08:56,370 INFO    SenderThread:18658 [sender.py:send_request_defer():609] handle sender defer: 0
+2023-11-15 10:08:56,370 INFO    SenderThread:18658 [sender.py:transition_state():613] send defer: 1
+2023-11-15 10:08:56,370 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 10:08:56,371 INFO    HandlerThread:18658 [handler.py:handle_request_defer():172] handle defer: 1
+2023-11-15 10:08:56,371 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: defer
+2023-11-15 10:08:56,371 INFO    SenderThread:18658 [sender.py:send_request_defer():609] handle sender defer: 1
+2023-11-15 10:08:56,371 INFO    SenderThread:18658 [sender.py:transition_state():613] send defer: 2
+2023-11-15 10:08:56,371 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 10:08:56,371 INFO    HandlerThread:18658 [handler.py:handle_request_defer():172] handle defer: 2
+2023-11-15 10:08:56,371 INFO    HandlerThread:18658 [system_monitor.py:finish():203] Stopping system monitor
+2023-11-15 10:08:56,372 INFO    HandlerThread:18658 [interfaces.py:finish():202] Joined cpu monitor
+2023-11-15 10:08:56,372 INFO    HandlerThread:18658 [interfaces.py:finish():202] Joined disk monitor
+2023-11-15 10:08:56,372 DEBUG   SystemMonitor:18658 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2023-11-15 10:08:56,372 DEBUG   SystemMonitor:18658 [system_monitor.py:_start():183] Publishing last batch of metrics
+2023-11-15 10:08:56,380 INFO    HandlerThread:18658 [interfaces.py:finish():202] Joined gpu monitor
+2023-11-15 10:08:56,380 INFO    HandlerThread:18658 [interfaces.py:finish():202] Joined memory monitor
+2023-11-15 10:08:56,380 INFO    HandlerThread:18658 [interfaces.py:finish():202] Joined network monitor
+2023-11-15 10:08:56,381 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: defer
+2023-11-15 10:08:56,381 INFO    SenderThread:18658 [sender.py:send_request_defer():609] handle sender defer: 2
+2023-11-15 10:08:56,381 INFO    SenderThread:18658 [sender.py:transition_state():613] send defer: 3
+2023-11-15 10:08:56,381 DEBUG   SenderThread:18658 [sender.py:send():380] send: stats
+2023-11-15 10:08:56,381 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 10:08:56,381 INFO    HandlerThread:18658 [handler.py:handle_request_defer():172] handle defer: 3
+2023-11-15 10:08:56,381 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: defer
+2023-11-15 10:08:56,381 INFO    SenderThread:18658 [sender.py:send_request_defer():609] handle sender defer: 3
+2023-11-15 10:08:56,381 INFO    SenderThread:18658 [sender.py:transition_state():613] send defer: 4
+2023-11-15 10:08:56,382 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 10:08:56,382 INFO    HandlerThread:18658 [handler.py:handle_request_defer():172] handle defer: 4
+2023-11-15 10:08:56,382 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: defer
+2023-11-15 10:08:56,382 INFO    SenderThread:18658 [sender.py:send_request_defer():609] handle sender defer: 4
+2023-11-15 10:08:56,382 INFO    SenderThread:18658 [sender.py:transition_state():613] send defer: 5
+2023-11-15 10:08:56,382 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 10:08:56,382 INFO    HandlerThread:18658 [handler.py:handle_request_defer():172] handle defer: 5
+2023-11-15 10:08:56,395 DEBUG   SenderThread:18658 [sender.py:send():380] send: summary
+2023-11-15 10:08:56,401 INFO    SenderThread:18658 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-15 10:08:56,401 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: defer
+2023-11-15 10:08:56,401 INFO    SenderThread:18658 [sender.py:send_request_defer():609] handle sender defer: 5
+2023-11-15 10:08:56,401 INFO    SenderThread:18658 [sender.py:transition_state():613] send defer: 6
+2023-11-15 10:08:56,401 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 10:08:56,401 INFO    HandlerThread:18658 [handler.py:handle_request_defer():172] handle defer: 6
+2023-11-15 10:08:56,402 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: defer
+2023-11-15 10:08:56,402 INFO    SenderThread:18658 [sender.py:send_request_defer():609] handle sender defer: 6
+2023-11-15 10:08:56,405 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 10:08:56,424 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/wandb-summary.json
+2023-11-15 10:08:56,424 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:08:56,425 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_created():271] file/dir created: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Test - nFrames: 6 - uniform_15_63e288ddfc364383d938.png
+2023-11-15 10:08:56,425 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images
+2023-11-15 10:08:57,361 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-15 10:08:57,420 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/kdmdszxp-media/images/confusion_matrix Test - nFrames: 6 - uniform_15_63e288ddfc364383d938.png
+2023-11-15 10:08:58,426 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:08:58,513 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /tmp/tmp8htrehq4wandb/bhb8ljel-media/images/confusion_matrix Test - nFrames: 6 - uniform_15_63e288ddfc364383d938.png
+2023-11-15 10:08:58,607 INFO    SenderThread:18658 [sender.py:transition_state():613] send defer: 7
+2023-11-15 10:08:58,608 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: poll_exit
+2023-11-15 10:08:58,608 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 10:08:58,608 INFO    HandlerThread:18658 [handler.py:handle_request_defer():172] handle defer: 7
+2023-11-15 10:08:58,609 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: defer
+2023-11-15 10:08:58,609 INFO    SenderThread:18658 [sender.py:send_request_defer():609] handle sender defer: 7
+2023-11-15 10:08:59,362 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-15 10:08:59,426 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/config.yaml
+2023-11-15 10:09:01,828 INFO    SenderThread:18658 [sender.py:transition_state():613] send defer: 8
+2023-11-15 10:09:01,828 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: poll_exit
+2023-11-15 10:09:01,828 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 10:09:01,828 INFO    HandlerThread:18658 [handler.py:handle_request_defer():172] handle defer: 8
+2023-11-15 10:09:01,829 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: defer
+2023-11-15 10:09:01,829 INFO    SenderThread:18658 [sender.py:send_request_defer():609] handle sender defer: 8
+2023-11-15 10:09:01,829 INFO    SenderThread:18658 [job_builder.py:build():298] Attempting to build job artifact
+2023-11-15 10:09:01,844 INFO    SenderThread:18658 [job_builder.py:_get_source_type():428] is repo sourced job
+2023-11-15 10:09:01,844 INFO    SenderThread:18658 [job_builder.py:_get_program_relpath():446] run is notebook based run
+2023-11-15 10:09:01,845 INFO    SenderThread:18658 [job_builder.py:build():404] adding wandb-job metadata file
+2023-11-15 10:09:01,855 INFO    SenderThread:18658 [sender.py:transition_state():613] send defer: 9
+2023-11-15 10:09:01,855 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 10:09:01,855 INFO    HandlerThread:18658 [handler.py:handle_request_defer():172] handle defer: 9
+2023-11-15 10:09:01,855 DEBUG   SenderThread:18658 [sender.py:send():380] send: artifact
+2023-11-15 10:09:02,365 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-15 10:09:02,429 INFO    Thread-91 :18658 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:09:06,409 INFO    wandb-upload_0:18658 [upload_job.py:push():86] Skipped uploading /root/.local/share/wandb/artifacts/staging/tmprlqoe5yy
+2023-11-15 10:09:06,807 INFO    wandb-upload_1:18658 [upload_job.py:push():89] Uploaded file /root/.local/share/wandb/artifacts/staging/tmp_7dydhic
+2023-11-15 10:09:07,367 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: keepalive
+2023-11-15 10:09:10,674 INFO    SenderThread:18658 [sender.py:send_artifact():1458] sent artifact job-https___github.com_sangoncalves_openset_domain_adaptation.git_OpenDomainAdaptation_Thesisv4.ipynb - {'id': 'QXJ0aWZhY3Q6NjM4OTM5NjE2', 'state': 'PENDING', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjEwMTEzMjE1Nw==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6NjM4OTM3Mjgz', 'versionIndex': 127}}}
+2023-11-15 10:09:10,674 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: defer
+2023-11-15 10:09:10,675 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 10:09:10,675 INFO    SenderThread:18658 [sender.py:send_request_defer():609] handle sender defer: 9
+2023-11-15 10:09:10,675 INFO    SenderThread:18658 [dir_watcher.py:finish():358] shutting down directory watcher
+2023-11-15 10:09:11,431 INFO    SenderThread:18658 [dir_watcher.py:finish():388] scan: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files
+2023-11-15 10:09:11,431 INFO    SenderThread:18658 [dir_watcher.py:finish():402] scan save: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log output.log
+2023-11-15 10:09:11,432 INFO    SenderThread:18658 [dir_watcher.py:finish():402] scan save: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/wandb-metadata.json wandb-metadata.json
+2023-11-15 10:09:11,432 INFO    SenderThread:18658 [dir_watcher.py:finish():402] scan save: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/config.yaml config.yaml
+2023-11-15 10:09:11,432 INFO    SenderThread:18658 [dir_watcher.py:finish():402] scan save: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/requirements.txt requirements.txt
+2023-11-15 10:09:11,432 INFO    SenderThread:18658 [dir_watcher.py:finish():402] scan save: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/wandb-summary.json wandb-summary.json
+2023-11-15 10:09:11,441 INFO    SenderThread:18658 [dir_watcher.py:finish():402] scan save: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Test - nFrames: 6 - uniform_13_5be6c024f60bb47bbf94.png media/images/confusion_matrix Test - nFrames: 6 - uniform_13_5be6c024f60bb47bbf94.png
+2023-11-15 10:09:11,442 INFO    SenderThread:18658 [dir_watcher.py:finish():402] scan save: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Test - nFrames: 6 - uniform_8_7ddfe13f51a28e7951ed.png media/images/confusion_matrix Test - nFrames: 6 - uniform_8_7ddfe13f51a28e7951ed.png
+2023-11-15 10:09:11,442 INFO    SenderThread:18658 [dir_watcher.py:finish():402] scan save: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Train - nFrames: 6 - uniform_11_0497aca8b6e767d1f5aa.png media/images/confusion_matrix Train - nFrames: 6 - uniform_11_0497aca8b6e767d1f5aa.png
+2023-11-15 10:09:11,442 INFO    SenderThread:18658 [dir_watcher.py:finish():402] scan save: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Train - nFrames: 6 - uniform_3_9b519313d9fd8a463645.png media/images/confusion_matrix Train - nFrames: 6 - uniform_3_9b519313d9fd8a463645.png
+2023-11-15 10:09:11,442 INFO    SenderThread:18658 [dir_watcher.py:finish():402] scan save: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Test - nFrames: 6 - uniform_9_8a8740c818cd5c8444b9.png media/images/confusion_matrix Test - nFrames: 6 - uniform_9_8a8740c818cd5c8444b9.png
+2023-11-15 10:09:11,442 INFO    SenderThread:18658 [dir_watcher.py:finish():402] scan save: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Test - nFrames: 6 - uniform_14_0c3182bbdbafde384f52.png media/images/confusion_matrix Test - nFrames: 6 - uniform_14_0c3182bbdbafde384f52.png
+2023-11-15 10:09:11,442 INFO    SenderThread:18658 [dir_watcher.py:finish():402] scan save: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Train - nFrames: 6 - uniform_1_d364c343c1129489ea2d.png media/images/confusion_matrix Train - nFrames: 6 - uniform_1_d364c343c1129489ea2d.png
+2023-11-15 10:09:11,442 INFO    SenderThread:18658 [dir_watcher.py:finish():402] scan save: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Test - nFrames: 6 - uniform_11_192a1b683a34b096ef74.png media/images/confusion_matrix Test - nFrames: 6 - uniform_11_192a1b683a34b096ef74.png
+2023-11-15 10:09:11,442 INFO    SenderThread:18658 [dir_watcher.py:finish():402] scan save: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Train - nFrames: 6 - uniform_14_078dcfe1d1a3bb60a59f.png media/images/confusion_matrix Train - nFrames: 6 - uniform_14_078dcfe1d1a3bb60a59f.png
+2023-11-15 10:09:11,442 INFO    SenderThread:18658 [dir_watcher.py:finish():402] scan save: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Test - nFrames: 6 - uniform_2_2838b7182e3ce9a28a84.png media/images/confusion_matrix Test - nFrames: 6 - uniform_2_2838b7182e3ce9a28a84.png
+2023-11-15 10:09:11,442 INFO    SenderThread:18658 [dir_watcher.py:finish():402] scan save: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Test - nFrames: 6 - uniform_5_3048637f7396748b3996.png media/images/confusion_matrix Test - nFrames: 6 - uniform_5_3048637f7396748b3996.png
+2023-11-15 10:09:11,442 INFO    SenderThread:18658 [dir_watcher.py:finish():402] scan save: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Test - nFrames: 6 - uniform_4_c840971839b2605bfb4a.png media/images/confusion_matrix Test - nFrames: 6 - uniform_4_c840971839b2605bfb4a.png
+2023-11-15 10:09:11,442 INFO    SenderThread:18658 [dir_watcher.py:finish():402] scan save: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Train - nFrames: 6 - uniform_4_aeae94b16d9dd248a688.png media/images/confusion_matrix Train - nFrames: 6 - uniform_4_aeae94b16d9dd248a688.png
+2023-11-15 10:09:11,442 INFO    SenderThread:18658 [dir_watcher.py:finish():402] scan save: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Train - nFrames: 6 - uniform_15_e80bc38e086aeb2462b0.png media/images/confusion_matrix Train - nFrames: 6 - uniform_15_e80bc38e086aeb2462b0.png
+2023-11-15 10:09:11,442 INFO    SenderThread:18658 [dir_watcher.py:finish():402] scan save: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Test - nFrames: 6 - uniform_6_e253a6e39992afb18ed2.png media/images/confusion_matrix Test - nFrames: 6 - uniform_6_e253a6e39992afb18ed2.png
+2023-11-15 10:09:11,442 INFO    SenderThread:18658 [dir_watcher.py:finish():402] scan save: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Test - nFrames: 6 - uniform_15_63e288ddfc364383d938.png media/images/confusion_matrix Test - nFrames: 6 - uniform_15_63e288ddfc364383d938.png
+2023-11-15 10:09:11,442 INFO    SenderThread:18658 [dir_watcher.py:finish():402] scan save: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Train - nFrames: 6 - uniform_9_46cdbb6c11305feec795.png media/images/confusion_matrix Train - nFrames: 6 - uniform_9_46cdbb6c11305feec795.png
+2023-11-15 10:09:11,442 INFO    SenderThread:18658 [dir_watcher.py:finish():402] scan save: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Train - nFrames: 6 - uniform_2_711c0ff0cb0edc5ff637.png media/images/confusion_matrix Train - nFrames: 6 - uniform_2_711c0ff0cb0edc5ff637.png
+2023-11-15 10:09:11,443 INFO    SenderThread:18658 [dir_watcher.py:finish():402] scan save: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Test - nFrames: 6 - uniform_3_9c7168e1d5b2d896f4e4.png media/images/confusion_matrix Test - nFrames: 6 - uniform_3_9c7168e1d5b2d896f4e4.png
+2023-11-15 10:09:11,443 INFO    SenderThread:18658 [dir_watcher.py:finish():402] scan save: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Train - nFrames: 6 - uniform_12_de5499fc0019fc5c2f85.png media/images/confusion_matrix Train - nFrames: 6 - uniform_12_de5499fc0019fc5c2f85.png
+2023-11-15 10:09:11,443 INFO    SenderThread:18658 [dir_watcher.py:finish():402] scan save: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Test - nFrames: 6 - uniform_10_45c14d4ae6fc3d86b139.png media/images/confusion_matrix Test - nFrames: 6 - uniform_10_45c14d4ae6fc3d86b139.png
+2023-11-15 10:09:11,443 INFO    SenderThread:18658 [dir_watcher.py:finish():402] scan save: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Train - nFrames: 6 - uniform_7_e6b5289f4c5af69c324d.png media/images/confusion_matrix Train - nFrames: 6 - uniform_7_e6b5289f4c5af69c324d.png
+2023-11-15 10:09:11,443 INFO    SenderThread:18658 [dir_watcher.py:finish():402] scan save: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Test - nFrames: 6 - uniform_1_05475ee8929137ffae44.png media/images/confusion_matrix Test - nFrames: 6 - uniform_1_05475ee8929137ffae44.png
+2023-11-15 10:09:11,443 INFO    SenderThread:18658 [dir_watcher.py:finish():402] scan save: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Train - nFrames: 6 - uniform_6_da4ae0d030b7943d8cfb.png media/images/confusion_matrix Train - nFrames: 6 - uniform_6_da4ae0d030b7943d8cfb.png
+2023-11-15 10:09:11,443 INFO    SenderThread:18658 [dir_watcher.py:finish():402] scan save: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Test - nFrames: 6 - uniform_12_284d7495d602024495e7.png media/images/confusion_matrix Test - nFrames: 6 - uniform_12_284d7495d602024495e7.png
+2023-11-15 10:09:11,443 INFO    SenderThread:18658 [dir_watcher.py:finish():402] scan save: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Train - nFrames: 6 - uniform_10_57b507e145595dd8223a.png media/images/confusion_matrix Train - nFrames: 6 - uniform_10_57b507e145595dd8223a.png
+2023-11-15 10:09:11,443 INFO    SenderThread:18658 [dir_watcher.py:finish():402] scan save: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Test - nFrames: 6 - uniform_7_141b97e1d7b305268319.png media/images/confusion_matrix Test - nFrames: 6 - uniform_7_141b97e1d7b305268319.png
+2023-11-15 10:09:11,443 INFO    SenderThread:18658 [dir_watcher.py:finish():402] scan save: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Train - nFrames: 6 - uniform_8_e2dcdae2f7a72b1863af.png media/images/confusion_matrix Train - nFrames: 6 - uniform_8_e2dcdae2f7a72b1863af.png
+2023-11-15 10:09:11,443 INFO    SenderThread:18658 [dir_watcher.py:finish():402] scan save: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Train - nFrames: 6 - uniform_13_5f2d80d0893610c3e3e3.png media/images/confusion_matrix Train - nFrames: 6 - uniform_13_5f2d80d0893610c3e3e3.png
+2023-11-15 10:09:11,443 INFO    SenderThread:18658 [dir_watcher.py:finish():402] scan save: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/media/images/confusion_matrix Train - nFrames: 6 - uniform_5_e2530dbf515ebc30b130.png media/images/confusion_matrix Train - nFrames: 6 - uniform_5_e2530dbf515ebc30b130.png
+2023-11-15 10:09:11,443 INFO    SenderThread:18658 [sender.py:transition_state():613] send defer: 10
+2023-11-15 10:09:11,443 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: poll_exit
+2023-11-15 10:09:11,444 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 10:09:11,444 INFO    HandlerThread:18658 [handler.py:handle_request_defer():172] handle defer: 10
+2023-11-15 10:09:11,444 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: defer
+2023-11-15 10:09:11,445 INFO    SenderThread:18658 [sender.py:send_request_defer():609] handle sender defer: 10
+2023-11-15 10:09:11,445 INFO    SenderThread:18658 [file_pusher.py:finish():175] shutting down file pusher
+2023-11-15 10:09:12,247 INFO    wandb-upload_0:18658 [upload_job.py:push():131] Uploaded file /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/config.yaml
+2023-11-15 10:09:12,368 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: keepalive
+2023-11-15 10:09:12,369 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-15 10:09:12,369 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: poll_exit
+2023-11-15 10:09:12,541 INFO    wandb-upload_1:18658 [upload_job.py:push():131] Uploaded file /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/requirements.txt
+2023-11-15 10:09:12,580 INFO    wandb-upload_2:18658 [upload_job.py:push():131] Uploaded file /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/output.log
+2023-11-15 10:09:13,147 INFO    wandb-upload_3:18658 [upload_job.py:push():131] Uploaded file /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/files/wandb-summary.json
+2023-11-15 10:09:13,348 INFO    Thread-90 (_thread_body):18658 [sender.py:transition_state():613] send defer: 11
+2023-11-15 10:09:13,348 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 10:09:13,349 INFO    HandlerThread:18658 [handler.py:handle_request_defer():172] handle defer: 11
+2023-11-15 10:09:13,349 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: defer
+2023-11-15 10:09:13,349 INFO    SenderThread:18658 [sender.py:send_request_defer():609] handle sender defer: 11
+2023-11-15 10:09:13,349 INFO    SenderThread:18658 [file_pusher.py:join():181] waiting for file pusher
+2023-11-15 10:09:13,349 INFO    SenderThread:18658 [sender.py:transition_state():613] send defer: 12
+2023-11-15 10:09:13,349 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 10:09:13,349 INFO    HandlerThread:18658 [handler.py:handle_request_defer():172] handle defer: 12
+2023-11-15 10:09:13,350 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: defer
+2023-11-15 10:09:13,350 INFO    SenderThread:18658 [sender.py:send_request_defer():609] handle sender defer: 12
+2023-11-15 10:09:13,350 INFO    SenderThread:18658 [file_stream.py:finish():595] file stream finish called
+2023-11-15 10:09:13,369 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-15 10:09:13,977 INFO    SenderThread:18658 [file_stream.py:finish():599] file stream finish is done
+2023-11-15 10:09:13,978 INFO    SenderThread:18658 [sender.py:transition_state():613] send defer: 13
+2023-11-15 10:09:13,978 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: poll_exit
+2023-11-15 10:09:13,978 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 10:09:13,979 INFO    HandlerThread:18658 [handler.py:handle_request_defer():172] handle defer: 13
+2023-11-15 10:09:13,979 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: defer
+2023-11-15 10:09:13,979 INFO    SenderThread:18658 [sender.py:send_request_defer():609] handle sender defer: 13
+2023-11-15 10:09:13,979 INFO    SenderThread:18658 [sender.py:transition_state():613] send defer: 14
+2023-11-15 10:09:13,979 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 10:09:13,979 INFO    HandlerThread:18658 [handler.py:handle_request_defer():172] handle defer: 14
+2023-11-15 10:09:13,980 DEBUG   SenderThread:18658 [sender.py:send():380] send: final
+2023-11-15 10:09:13,980 DEBUG   SenderThread:18658 [sender.py:send():380] send: footer
+2023-11-15 10:09:13,980 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: defer
+2023-11-15 10:09:13,980 INFO    SenderThread:18658 [sender.py:send_request_defer():609] handle sender defer: 14
+2023-11-15 10:09:13,981 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-15 10:09:13,981 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: poll_exit
+2023-11-15 10:09:13,982 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 10:09:13,983 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: server_info
+2023-11-15 10:09:13,984 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: server_info
+2023-11-15 10:09:14,024 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: get_summary
+2023-11-15 10:09:14,028 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: sampled_history
+2023-11-15 10:09:14,029 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: job_info
+2023-11-15 10:09:14,984 DEBUG   SenderThread:18658 [sender.py:send_request():407] send_request: job_info
+2023-11-15 10:09:14,986 DEBUG   HandlerThread:18658 [handler.py:handle_request():146] handle_request: shutdown
+2023-11-15 10:09:14,986 INFO    HandlerThread:18658 [handler.py:finish():866] shutting down handler
+2023-11-15 10:09:15,029 INFO    WriterThread:18658 [datastore.py:close():294] close: /content/openset_domain_adaptation/wandb/run-20231115_100529-llb9vdt4/run-llb9vdt4.wandb
+2023-11-15 10:09:15,985 INFO    SenderThread:18658 [sender.py:finish():1536] shutting down sender
+2023-11-15 10:09:15,985 INFO    SenderThread:18658 [file_pusher.py:finish():175] shutting down file pusher
+2023-11-15 10:09:15,985 INFO    SenderThread:18658 [file_pusher.py:join():181] waiting for file pusher
