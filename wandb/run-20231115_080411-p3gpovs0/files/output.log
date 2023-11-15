@@ -1,0 +1,194 @@
+
+  0%|          | 0/97 [00:00<?, ?it/s]
+###############---------------#############----------------#####USING uniform FRAME STRATEGY!###############---------------#############----------------#####
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+
+
+
+
+
+
+ 91%|█████████ | 88/97 [00:21<00:01,  7.10it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Train-0.4265463917525773-uniform-6'}
+100%|██████████| 97/97 [00:22<00:00,  4.24it/s]
+
+
+ 72%|███████▏  | 31/43 [00:04<00:01,  8.24it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Test-0.7032640949554896-uniform-6'}
+Progress: 100.00%, Elapsed Time: 40.68s, Training Complete
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+100%|██████████| 43/43 [00:05<00:00,  7.87it/s]
+
+
+
+
+100%|██████████| 97/97 [00:08<00:00, 11.94it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Train-0.8118556701030928-uniform-6'}
+#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST
+
+ 91%|█████████ | 39/43 [00:03<00:00, 13.18it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Test-0.7507418397626113-uniform-6'}
+Progress: 100.00%, Elapsed Time: 53.52s, Training Complete
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+100%|██████████| 43/43 [00:03<00:00, 12.65it/s]
+
+
+
+ 92%|█████████▏| 89/97 [00:07<00:00, 12.74it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Train-0.8865979381443299-uniform-6'}
+100%|██████████| 97/97 [00:08<00:00, 12.07it/s]
+
+ 72%|███████▏  | 31/43 [00:02<00:00, 12.88it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Test-0.7893175074183977-uniform-6'}
+Progress: 100.00%, Elapsed Time: 66.18s, Training Complete
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+100%|██████████| 43/43 [00:03<00:00, 12.23it/s]
+
+
+
+ 86%|████████▌ | 83/97 [00:06<00:01, 12.96it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Train-0.9458762886597938-uniform-6'}
+100%|██████████| 97/97 [00:07<00:00, 12.34it/s]
+
+
+100%|██████████| 43/43 [00:03<00:00, 11.26it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Test-0.8100890207715133-uniform-6'}
+Progress: 100.00%, Elapsed Time: 78.99s, Training Complete
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+Epoch:  5
+
+
+
+100%|██████████| 97/97 [00:07<00:00, 12.40it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Train-0.9690721649484536-uniform-6'}
+#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST
+
+100%|██████████| 43/43 [00:03<00:00, 12.45it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Test-0.8100890207715133-uniform-6'}
+Progress: 100.00%, Elapsed Time: 91.37s, Training Complete
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+Epoch:  6
+
+
+
+ 94%|█████████▍| 91/97 [00:07<00:00, 12.88it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Train-0.979381443298969-uniform-6'}
+100%|██████████| 97/97 [00:08<00:00, 12.03it/s]
+
+ 81%|████████▏ | 35/43 [00:02<00:00, 12.77it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Test-0.8071216617210683-uniform-6'}
+Progress: 100.00%, Elapsed Time: 103.92s, Training Complete
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+100%|██████████| 43/43 [00:03<00:00, 12.55it/s]
+
+
+
+ 88%|████████▊ | 85/97 [00:07<00:01, 11.52it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Train-0.9884020618556701-uniform-6'}
+100%|██████████| 97/97 [00:08<00:00, 11.91it/s]
+
+ 67%|██████▋   | 29/43 [00:02<00:01, 12.69it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Test-0.8249258160237388-uniform-6'}
+Progress: 100.00%, Elapsed Time: 116.88s, Training Complete
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+100%|██████████| 43/43 [00:03<00:00, 12.74it/s]
+
+
+
+
+100%|██████████| 97/97 [00:07<00:00, 12.17it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Train-0.9935567010309279-uniform-6'}
+#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST
+
+100%|██████████| 43/43 [00:03<00:00, 12.05it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Test-0.8249258160237388-uniform-6'}
+Progress: 100.00%, Elapsed Time: 129.50s, Training Complete
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+Epoch:  9
+
+
+
+ 98%|█████████▊| 95/97 [00:07<00:00, 12.82it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Train-0.9948453608247423-uniform-6'}
+100%|██████████| 97/97 [00:07<00:00, 12.49it/s]
+
+ 86%|████████▌ | 37/43 [00:03<00:00, 12.05it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Test-0.798219584569733-uniform-6'}
+Progress: 100.00%, Elapsed Time: 141.94s, Training Complete
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+100%|██████████| 43/43 [00:03<00:00, 12.08it/s]
+
+
+
+ 86%|████████▌ | 83/97 [00:07<00:01, 12.57it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Train-0.9896907216494846-uniform-6'}
+100%|██████████| 97/97 [00:08<00:00, 11.86it/s]
+
+ 63%|██████▎   | 27/43 [00:02<00:01, 12.68it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Test-0.8100890207715133-uniform-6'}
+Progress: 100.00%, Elapsed Time: 154.72s, Training Complete
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+100%|██████████| 43/43 [00:03<00:00, 12.20it/s]
+
+
+
+
+100%|██████████| 97/97 [00:08<00:00, 12.04it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Train-0.9922680412371134-uniform-6'}
+#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST#### - TEST
+
+100%|██████████| 43/43 [00:03<00:00, 12.53it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Test-0.8249258160237388-uniform-6'}
+Progress: 100.00%, Elapsed Time: 167.27s, Training Complete
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+Epoch:  12
+
+
+
+ 98%|█████████▊| 95/97 [00:07<00:00, 12.57it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Train-0.9987113402061856-uniform-6'}
+100%|██████████| 97/97 [00:07<00:00, 12.14it/s]
+
+ 91%|█████████ | 39/43 [00:03<00:00, 13.05it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Test-0.8338278931750742-uniform-6'}
+Progress: 100.00%, Elapsed Time: 179.80s, Training Complete
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+100%|██████████| 43/43 [00:03<00:00, 12.54it/s]
+
+
+
+ 94%|█████████▍| 91/97 [00:07<00:00, 12.88it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Train-0.9974226804123711-uniform-6'}
+100%|██████████| 97/97 [00:07<00:00, 12.30it/s]
+
+ 67%|██████▋   | 29/43 [00:02<00:01, 10.74it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Test-0.8219584569732937-uniform-6'}
+Progress: 100.00%, Elapsed Time: 192.80s, Training Complete
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+100%|██████████| 43/43 [00:03<00:00, 10.77it/s]
+
+
+
+100%|██████████| 97/97 [00:07<00:00, 12.27it/s]
+  0%|          | 0/43 [00:00<?, ?it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Train-0.9987113402061856-uniform-6'}
+
+
+100%|██████████| 43/43 [00:03<00:00, 12.26it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Test-0.8367952522255193-uniform-6'}
+Progress: 100.00%, Elapsed Time: 205.32s, Training Complete
+#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN#### - TRAIN
+Epoch:  15
+
+
+
+ 98%|█████████▊| 95/97 [00:07<00:00, 12.49it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Train-0.9987113402061856-uniform-6'}
+100%|██████████| 97/97 [00:08<00:00, 12.06it/s]
+
+ 77%|███████▋  | 33/43 [00:02<00:00, 11.72it/s]
+{'train_or_test-accuracy-strategy-nFrames': 'Test-0.8160237388724035-uniform-6'}
+Progress: 100.00%, Elapsed Time: 218.52s, Training Complete
+Time needed for running the strategy uniform : 207.6653380393982
+
+100%|██████████| 43/43 [00:03<00:00, 12.04it/s]
