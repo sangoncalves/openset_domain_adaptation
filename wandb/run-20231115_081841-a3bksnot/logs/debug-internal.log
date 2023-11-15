@@ -1,0 +1,246 @@
+2023-11-15 08:18:41,996 INFO    StreamThr :7637 [internal.py:wandb_internal():86] W&B internal server running at pid: 7637, started at: 2023-11-15 08:18:41.995576
+2023-11-15 08:18:41,997 DEBUG   HandlerThread:7637 [handler.py:handle_request():146] handle_request: status
+2023-11-15 08:18:45,139 INFO    WriterThread:7637 [datastore.py:open_for_write():85] open: /content/openset_domain_adaptation/wandb/run-20231115_081841-a3bksnot/run-a3bksnot.wandb
+2023-11-15 08:18:45,140 DEBUG   SenderThread:7637 [sender.py:send():380] send: header
+2023-11-15 08:18:45,145 DEBUG   SenderThread:7637 [sender.py:send():380] send: run
+2023-11-15 08:18:45,544 INFO    SenderThread:7637 [dir_watcher.py:__init__():211] watching files in: /content/openset_domain_adaptation/wandb/run-20231115_081841-a3bksnot/files
+2023-11-15 08:18:45,545 INFO    SenderThread:7637 [sender.py:_start_run_threads():1124] run started: a3bksnot with start time 1700036321.995529
+2023-11-15 08:18:45,549 DEBUG   HandlerThread:7637 [handler.py:handle_request():146] handle_request: check_version
+2023-11-15 08:18:45,549 DEBUG   SenderThread:7637 [sender.py:send_request():407] send_request: check_version
+2023-11-15 08:18:45,671 DEBUG   HandlerThread:7637 [handler.py:handle_request():146] handle_request: run_start
+2023-11-15 08:18:45,678 DEBUG   HandlerThread:7637 [system_info.py:__init__():32] System info init
+2023-11-15 08:18:45,678 DEBUG   HandlerThread:7637 [system_info.py:__init__():47] System info init done
+2023-11-15 08:18:45,678 INFO    HandlerThread:7637 [system_monitor.py:start():194] Starting system monitor
+2023-11-15 08:18:45,678 INFO    SystemMonitor:7637 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2023-11-15 08:18:45,679 INFO    HandlerThread:7637 [system_monitor.py:probe():214] Collecting system info
+2023-11-15 08:18:45,679 INFO    SystemMonitor:7637 [interfaces.py:start():190] Started cpu monitoring
+2023-11-15 08:18:45,680 INFO    SystemMonitor:7637 [interfaces.py:start():190] Started disk monitoring
+2023-11-15 08:18:45,681 INFO    SystemMonitor:7637 [interfaces.py:start():190] Started gpu monitoring
+2023-11-15 08:18:45,681 INFO    SystemMonitor:7637 [interfaces.py:start():190] Started memory monitoring
+2023-11-15 08:18:45,683 INFO    SystemMonitor:7637 [interfaces.py:start():190] Started network monitoring
+2023-11-15 08:18:45,691 DEBUG   HandlerThread:7637 [system_info.py:probe():196] Probing system
+2023-11-15 08:18:45,693 DEBUG   HandlerThread:7637 [system_info.py:_probe_git():181] Probing git
+2023-11-15 08:18:45,699 DEBUG   HandlerThread:7637 [system_info.py:_probe_git():189] Probing git done
+2023-11-15 08:18:45,699 DEBUG   HandlerThread:7637 [system_info.py:probe():244] Probing system done
+2023-11-15 08:18:45,699 DEBUG   HandlerThread:7637 [system_monitor.py:probe():223] {'os': 'Linux-5.15.120+-x86_64-with-glibc2.35', 'python': '3.10.12', 'heartbeatAt': '2023-11-15T08:18:45.692040', 'startedAt': '2023-11-15T08:18:41.988457', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'OpenDomainAdaptation_Thesisv4.ipynb', 'codePathLocal': 'OpenDomainAdaptation_Thesisv4.ipynb', 'colab': 'https://colab.research.google.com/notebook#fileId=1AHs9TgV4WiWxx-aejdHJfHj5hkpO8WPT', 'git': {'remote': 'https://github.com/sangoncalves/openset_domain_adaptation.git', 'commit': 'cd048ce9f3873ee09d2deb18b8feb7b181779a5d'}, 'email': 'sander.martinsgoncalves@gmail.com', 'root': '/content/openset_domain_adaptation', 'host': '457c50a74b0a', 'username': 'root', 'executable': '/usr/bin/python3', 'cpu_count': 4, 'cpu_count_logical': 8, 'cpu_freq': {'current': 2000.2119999999998, 'min': 0.0, 'max': 0.0}, 'cpu_freq_per_core': [{'current': 2000.212, 'min': 0.0, 'max': 0.0}, {'current': 2000.212, 'min': 0.0, 'max': 0.0}, {'current': 2000.212, 'min': 0.0, 'max': 0.0}, {'current': 2000.212, 'min': 0.0, 'max': 0.0}, {'current': 2000.212, 'min': 0.0, 'max': 0.0}, {'current': 2000.212, 'min': 0.0, 'max': 0.0}, {'current': 2000.212, 'min': 0.0, 'max': 0.0}, {'current': 2000.212, 'min': 0.0, 'max': 0.0}], 'disk': {'/': {'total': 166.77415084838867, 'used': 49.21861267089844}}, 'gpu': 'Tesla V100-SXM2-16GB', 'gpu_count': 1, 'gpu_devices': [{'name': 'Tesla V100-SXM2-16GB', 'memory_total': 17179869184}], 'memory': {'total': 50.99726867675781}}
+2023-11-15 08:18:45,699 INFO    HandlerThread:7637 [system_monitor.py:probe():224] Finished collecting system info
+2023-11-15 08:18:45,699 INFO    HandlerThread:7637 [system_monitor.py:probe():227] Publishing system info
+2023-11-15 08:18:45,699 DEBUG   HandlerThread:7637 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2023-11-15 08:18:45,700 DEBUG   HandlerThread:7637 [system_info.py:_save_pip():68] Saving pip packages done
+2023-11-15 08:18:45,700 INFO    HandlerThread:7637 [system_monitor.py:probe():229] Finished publishing system info
+2023-11-15 08:18:45,704 DEBUG   SenderThread:7637 [sender.py:send():380] send: files
+2023-11-15 08:18:45,704 INFO    SenderThread:7637 [sender.py:_save_file():1380] saving file wandb-metadata.json with policy now
+2023-11-15 08:18:45,718 DEBUG   HandlerThread:7637 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 08:18:45,718 DEBUG   SenderThread:7637 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 08:18:45,759 DEBUG   HandlerThread:7637 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 08:18:45,760 DEBUG   HandlerThread:7637 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 08:18:45,990 DEBUG   SenderThread:7637 [sender.py:send():380] send: telemetry
+2023-11-15 08:18:45,990 DEBUG   SenderThread:7637 [sender.py:send():380] send: telemetry
+2023-11-15 08:18:45,991 DEBUG   SenderThread:7637 [sender.py:send():380] send: run
+2023-11-15 08:18:46,169 INFO    SenderThread:7637 [sender.py:send_run():1002] updated run: a3bksnot
+2023-11-15 08:18:46,169 DEBUG   SenderThread:7637 [sender.py:send():380] send: history
+2023-11-15 08:18:46,169 DEBUG   SenderThread:7637 [sender.py:send_request():407] send_request: summary_record
+2023-11-15 08:18:46,170 INFO    SenderThread:7637 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-15 08:18:46,170 DEBUG   SenderThread:7637 [sender.py:send():380] send: telemetry
+2023-11-15 08:18:46,170 DEBUG   SenderThread:7637 [sender.py:send():380] send: config
+2023-11-15 08:18:46,170 DEBUG   SenderThread:7637 [sender.py:send():380] send: config
+2023-11-15 08:18:46,170 DEBUG   SenderThread:7637 [sender.py:send():380] send: config
+2023-11-15 08:18:46,170 DEBUG   SenderThread:7637 [sender.py:send():380] send: config
+2023-11-15 08:18:46,170 DEBUG   SenderThread:7637 [sender.py:send():380] send: config
+2023-11-15 08:18:46,170 DEBUG   SenderThread:7637 [sender.py:send():380] send: config
+2023-11-15 08:18:46,170 DEBUG   SenderThread:7637 [sender.py:send():380] send: config
+2023-11-15 08:18:46,170 DEBUG   SenderThread:7637 [sender.py:send():380] send: config
+2023-11-15 08:18:46,170 DEBUG   SenderThread:7637 [sender.py:send():380] send: config
+2023-11-15 08:18:46,170 DEBUG   SenderThread:7637 [sender.py:send():380] send: config
+2023-11-15 08:18:46,171 DEBUG   SenderThread:7637 [sender.py:send():380] send: config
+2023-11-15 08:18:46,171 DEBUG   SenderThread:7637 [sender.py:send():380] send: config
+2023-11-15 08:18:46,171 DEBUG   SenderThread:7637 [sender.py:send():380] send: config
+2023-11-15 08:18:46,172 DEBUG   SenderThread:7637 [sender.py:send():380] send: telemetry
+2023-11-15 08:18:46,300 INFO    wandb-upload_0:7637 [upload_job.py:push():131] Uploaded file /tmp/tmp3i5fhba8wandb/30yzm3wj-wandb-metadata.json
+2023-11-15 08:18:46,546 INFO    Thread-12 :7637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_081841-a3bksnot/files/config.yaml
+2023-11-15 08:18:46,547 INFO    Thread-12 :7637 [dir_watcher.py:_on_file_created():271] file/dir created: /content/openset_domain_adaptation/wandb/run-20231115_081841-a3bksnot/files/requirements.txt
+2023-11-15 08:18:46,547 INFO    Thread-12 :7637 [dir_watcher.py:_on_file_created():271] file/dir created: /content/openset_domain_adaptation/wandb/run-20231115_081841-a3bksnot/files/wandb-metadata.json
+2023-11-15 08:18:46,547 INFO    Thread-12 :7637 [dir_watcher.py:_on_file_created():271] file/dir created: /content/openset_domain_adaptation/wandb/run-20231115_081841-a3bksnot/files/output.log
+2023-11-15 08:18:46,547 INFO    Thread-12 :7637 [dir_watcher.py:_on_file_created():271] file/dir created: /content/openset_domain_adaptation/wandb/run-20231115_081841-a3bksnot/files/wandb-summary.json
+2023-11-15 08:18:47,244 DEBUG   HandlerThread:7637 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 08:18:48,608 INFO    Thread-12 :7637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_081841-a3bksnot/files/output.log
+2023-11-15 08:18:52,368 DEBUG   HandlerThread:7637 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 08:18:52,609 INFO    Thread-12 :7637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_081841-a3bksnot/files/output.log
+2023-11-15 08:18:54,610 INFO    Thread-12 :7637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_081841-a3bksnot/files/output.log
+2023-11-15 08:18:56,611 INFO    Thread-12 :7637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_081841-a3bksnot/files/output.log
+2023-11-15 08:18:57,374 DEBUG   HandlerThread:7637 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 08:18:58,612 INFO    Thread-12 :7637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_081841-a3bksnot/files/output.log
+2023-11-15 08:19:00,613 INFO    Thread-12 :7637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_081841-a3bksnot/files/output.log
+2023-11-15 08:19:00,719 DEBUG   HandlerThread:7637 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 08:19:00,719 DEBUG   SenderThread:7637 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 08:19:00,722 DEBUG   HandlerThread:7637 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 08:19:02,386 DEBUG   HandlerThread:7637 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 08:19:02,613 INFO    Thread-12 :7637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_081841-a3bksnot/files/output.log
+2023-11-15 08:19:04,614 INFO    Thread-12 :7637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_081841-a3bksnot/files/output.log
+2023-11-15 08:19:06,615 INFO    Thread-12 :7637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_081841-a3bksnot/files/output.log
+2023-11-15 08:19:07,479 DEBUG   HandlerThread:7637 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 08:19:08,616 INFO    Thread-12 :7637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_081841-a3bksnot/files/output.log
+2023-11-15 08:19:10,617 INFO    Thread-12 :7637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_081841-a3bksnot/files/output.log
+2023-11-15 08:19:12,606 DEBUG   HandlerThread:7637 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 08:19:12,617 INFO    Thread-12 :7637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_081841-a3bksnot/files/output.log
+2023-11-15 08:19:13,618 INFO    Thread-12 :7637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_081841-a3bksnot/files/config.yaml
+2023-11-15 08:19:14,618 INFO    Thread-12 :7637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_081841-a3bksnot/files/output.log
+2023-11-15 08:19:15,718 DEBUG   HandlerThread:7637 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-15 08:19:15,719 DEBUG   SenderThread:7637 [sender.py:send_request():407] send_request: stop_status
+2023-11-15 08:19:15,719 DEBUG   HandlerThread:7637 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 08:19:16,619 INFO    Thread-12 :7637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_081841-a3bksnot/files/output.log
+2023-11-15 08:19:17,953 DEBUG   HandlerThread:7637 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 08:19:18,620 INFO    Thread-12 :7637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_081841-a3bksnot/files/output.log
+2023-11-15 08:19:20,621 INFO    Thread-12 :7637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_081841-a3bksnot/files/output.log
+2023-11-15 08:19:22,622 INFO    Thread-12 :7637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_081841-a3bksnot/files/output.log
+2023-11-15 08:19:23,161 DEBUG   HandlerThread:7637 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 08:19:24,358 DEBUG   HandlerThread:7637 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-15 08:19:24,622 INFO    Thread-12 :7637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_081841-a3bksnot/files/output.log
+2023-11-15 08:19:24,642 DEBUG   SenderThread:7637 [sender.py:send():380] send: telemetry
+2023-11-15 08:19:24,644 DEBUG   SenderThread:7637 [sender.py:send():380] send: exit
+2023-11-15 08:19:24,644 INFO    SenderThread:7637 [sender.py:send_exit():585] handling exit code: 1
+2023-11-15 08:19:24,644 INFO    SenderThread:7637 [sender.py:send_exit():587] handling runtime: 38
+2023-11-15 08:19:24,644 INFO    SenderThread:7637 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-15 08:19:24,644 INFO    SenderThread:7637 [sender.py:send_exit():593] send defer
+2023-11-15 08:19:24,645 DEBUG   HandlerThread:7637 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 08:19:24,645 INFO    HandlerThread:7637 [handler.py:handle_request_defer():172] handle defer: 0
+2023-11-15 08:19:24,645 DEBUG   SenderThread:7637 [sender.py:send_request():407] send_request: defer
+2023-11-15 08:19:24,645 INFO    SenderThread:7637 [sender.py:send_request_defer():609] handle sender defer: 0
+2023-11-15 08:19:24,645 INFO    SenderThread:7637 [sender.py:transition_state():613] send defer: 1
+2023-11-15 08:19:24,645 DEBUG   HandlerThread:7637 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 08:19:24,645 INFO    HandlerThread:7637 [handler.py:handle_request_defer():172] handle defer: 1
+2023-11-15 08:19:24,645 DEBUG   SenderThread:7637 [sender.py:send_request():407] send_request: defer
+2023-11-15 08:19:24,646 INFO    SenderThread:7637 [sender.py:send_request_defer():609] handle sender defer: 1
+2023-11-15 08:19:24,646 INFO    SenderThread:7637 [sender.py:transition_state():613] send defer: 2
+2023-11-15 08:19:24,646 DEBUG   HandlerThread:7637 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 08:19:24,646 INFO    HandlerThread:7637 [handler.py:handle_request_defer():172] handle defer: 2
+2023-11-15 08:19:24,646 INFO    HandlerThread:7637 [system_monitor.py:finish():203] Stopping system monitor
+2023-11-15 08:19:24,646 DEBUG   SystemMonitor:7637 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2023-11-15 08:19:24,646 DEBUG   SystemMonitor:7637 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2023-11-15 08:19:24,646 DEBUG   SystemMonitor:7637 [system_monitor.py:_start():183] Publishing last batch of metrics
+2023-11-15 08:19:24,647 INFO    HandlerThread:7637 [interfaces.py:finish():202] Joined cpu monitor
+2023-11-15 08:19:24,647 INFO    HandlerThread:7637 [interfaces.py:finish():202] Joined disk monitor
+2023-11-15 08:19:24,654 INFO    HandlerThread:7637 [interfaces.py:finish():202] Joined gpu monitor
+2023-11-15 08:19:24,654 INFO    HandlerThread:7637 [interfaces.py:finish():202] Joined memory monitor
+2023-11-15 08:19:24,654 INFO    HandlerThread:7637 [interfaces.py:finish():202] Joined network monitor
+2023-11-15 08:19:24,655 DEBUG   SenderThread:7637 [sender.py:send_request():407] send_request: defer
+2023-11-15 08:19:24,655 INFO    SenderThread:7637 [sender.py:send_request_defer():609] handle sender defer: 2
+2023-11-15 08:19:24,655 INFO    SenderThread:7637 [sender.py:transition_state():613] send defer: 3
+2023-11-15 08:19:24,655 DEBUG   HandlerThread:7637 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 08:19:24,655 INFO    HandlerThread:7637 [handler.py:handle_request_defer():172] handle defer: 3
+2023-11-15 08:19:24,798 DEBUG   SenderThread:7637 [sender.py:send():380] send: stats
+2023-11-15 08:19:24,798 DEBUG   SenderThread:7637 [sender.py:send():380] send: history
+2023-11-15 08:19:24,798 DEBUG   SenderThread:7637 [sender.py:send_request():407] send_request: summary_record
+2023-11-15 08:19:24,799 INFO    SenderThread:7637 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-15 08:19:24,799 DEBUG   SenderThread:7637 [sender.py:send_request():407] send_request: defer
+2023-11-15 08:19:24,799 INFO    SenderThread:7637 [sender.py:send_request_defer():609] handle sender defer: 3
+2023-11-15 08:19:24,799 INFO    SenderThread:7637 [sender.py:transition_state():613] send defer: 4
+2023-11-15 08:19:24,799 DEBUG   HandlerThread:7637 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 08:19:24,799 INFO    HandlerThread:7637 [handler.py:handle_request_defer():172] handle defer: 4
+2023-11-15 08:19:24,799 DEBUG   SenderThread:7637 [sender.py:send_request():407] send_request: defer
+2023-11-15 08:19:24,799 INFO    SenderThread:7637 [sender.py:send_request_defer():609] handle sender defer: 4
+2023-11-15 08:19:24,799 INFO    SenderThread:7637 [sender.py:transition_state():613] send defer: 5
+2023-11-15 08:19:24,800 DEBUG   HandlerThread:7637 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 08:19:24,800 INFO    HandlerThread:7637 [handler.py:handle_request_defer():172] handle defer: 5
+2023-11-15 08:19:24,800 DEBUG   SenderThread:7637 [sender.py:send():380] send: summary
+2023-11-15 08:19:24,800 INFO    SenderThread:7637 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-15 08:19:24,800 DEBUG   SenderThread:7637 [sender.py:send_request():407] send_request: defer
+2023-11-15 08:19:24,800 INFO    SenderThread:7637 [sender.py:send_request_defer():609] handle sender defer: 5
+2023-11-15 08:19:24,801 INFO    SenderThread:7637 [sender.py:transition_state():613] send defer: 6
+2023-11-15 08:19:24,801 DEBUG   HandlerThread:7637 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 08:19:24,801 INFO    HandlerThread:7637 [handler.py:handle_request_defer():172] handle defer: 6
+2023-11-15 08:19:24,801 DEBUG   SenderThread:7637 [sender.py:send_request():407] send_request: defer
+2023-11-15 08:19:24,801 INFO    SenderThread:7637 [sender.py:send_request_defer():609] handle sender defer: 6
+2023-11-15 08:19:24,804 DEBUG   HandlerThread:7637 [handler.py:handle_request():146] handle_request: status_report
+2023-11-15 08:19:24,955 INFO    SenderThread:7637 [sender.py:transition_state():613] send defer: 7
+2023-11-15 08:19:24,955 DEBUG   HandlerThread:7637 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 08:19:24,955 INFO    HandlerThread:7637 [handler.py:handle_request_defer():172] handle defer: 7
+2023-11-15 08:19:24,956 DEBUG   SenderThread:7637 [sender.py:send_request():407] send_request: defer
+2023-11-15 08:19:24,956 INFO    SenderThread:7637 [sender.py:send_request_defer():609] handle sender defer: 7
+2023-11-15 08:19:25,623 INFO    Thread-12 :7637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_081841-a3bksnot/files/config.yaml
+2023-11-15 08:19:25,623 INFO    Thread-12 :7637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_081841-a3bksnot/files/wandb-summary.json
+2023-11-15 08:19:25,644 DEBUG   HandlerThread:7637 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-15 08:19:26,623 INFO    Thread-12 :7637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_081841-a3bksnot/files/output.log
+2023-11-15 08:19:28,258 INFO    SenderThread:7637 [sender.py:transition_state():613] send defer: 8
+2023-11-15 08:19:28,258 DEBUG   SenderThread:7637 [sender.py:send_request():407] send_request: poll_exit
+2023-11-15 08:19:28,259 DEBUG   HandlerThread:7637 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 08:19:28,259 INFO    HandlerThread:7637 [handler.py:handle_request_defer():172] handle defer: 8
+2023-11-15 08:19:28,259 DEBUG   SenderThread:7637 [sender.py:send_request():407] send_request: defer
+2023-11-15 08:19:28,259 INFO    SenderThread:7637 [sender.py:send_request_defer():609] handle sender defer: 8
+2023-11-15 08:19:28,259 INFO    SenderThread:7637 [job_builder.py:build():298] Attempting to build job artifact
+2023-11-15 08:19:28,259 INFO    SenderThread:7637 [job_builder.py:_get_source_type():428] is repo sourced job
+2023-11-15 08:19:28,259 INFO    SenderThread:7637 [job_builder.py:_get_program_relpath():446] run is notebook based run
+2023-11-15 08:19:28,294 INFO    SenderThread:7637 [job_builder.py:build():404] adding wandb-job metadata file
+2023-11-15 08:19:28,300 INFO    SenderThread:7637 [sender.py:transition_state():613] send defer: 9
+2023-11-15 08:19:28,301 DEBUG   HandlerThread:7637 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 08:19:28,301 INFO    HandlerThread:7637 [handler.py:handle_request_defer():172] handle defer: 9
+2023-11-15 08:19:28,301 DEBUG   SenderThread:7637 [sender.py:send():380] send: artifact
+2023-11-15 08:19:28,624 INFO    Thread-12 :7637 [dir_watcher.py:_on_file_modified():288] file/dir modified: /content/openset_domain_adaptation/wandb/run-20231115_081841-a3bksnot/files/output.log
+2023-11-15 08:19:28,645 DEBUG   HandlerThread:7637 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-15 08:19:29,356 INFO    wandb-upload_1:7637 [upload_job.py:push():86] Skipped uploading /root/.local/share/wandb/artifacts/staging/tmp3togjqnk
+2023-11-15 08:19:29,682 INFO    wandb-upload_0:7637 [upload_job.py:push():89] Uploaded file /root/.local/share/wandb/artifacts/staging/tmpxqhctnrj
+2023-11-15 08:19:30,735 INFO    SenderThread:7637 [sender.py:send_artifact():1458] sent artifact job-https___github.com_sangoncalves_openset_domain_adaptation.git_OpenDomainAdaptation_Thesisv4.ipynb - {'id': 'QXJ0aWZhY3Q6NjM4ODcwNjE2', 'state': 'PENDING', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjEwMTEzMjE1Nw==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6NjM4ODY2NzU4', 'versionIndex': 115}}}
+2023-11-15 08:19:30,735 DEBUG   SenderThread:7637 [sender.py:send_request():407] send_request: defer
+2023-11-15 08:19:30,735 INFO    SenderThread:7637 [sender.py:send_request_defer():609] handle sender defer: 9
+2023-11-15 08:19:30,735 INFO    SenderThread:7637 [dir_watcher.py:finish():358] shutting down directory watcher
+2023-11-15 08:19:31,625 INFO    SenderThread:7637 [dir_watcher.py:finish():388] scan: /content/openset_domain_adaptation/wandb/run-20231115_081841-a3bksnot/files
+2023-11-15 08:19:31,626 INFO    SenderThread:7637 [dir_watcher.py:finish():402] scan save: /content/openset_domain_adaptation/wandb/run-20231115_081841-a3bksnot/files/output.log output.log
+2023-11-15 08:19:31,626 INFO    SenderThread:7637 [dir_watcher.py:finish():402] scan save: /content/openset_domain_adaptation/wandb/run-20231115_081841-a3bksnot/files/wandb-metadata.json wandb-metadata.json
+2023-11-15 08:19:31,626 INFO    SenderThread:7637 [dir_watcher.py:finish():402] scan save: /content/openset_domain_adaptation/wandb/run-20231115_081841-a3bksnot/files/config.yaml config.yaml
+2023-11-15 08:19:31,626 INFO    SenderThread:7637 [dir_watcher.py:finish():402] scan save: /content/openset_domain_adaptation/wandb/run-20231115_081841-a3bksnot/files/requirements.txt requirements.txt
+2023-11-15 08:19:31,629 INFO    SenderThread:7637 [dir_watcher.py:finish():402] scan save: /content/openset_domain_adaptation/wandb/run-20231115_081841-a3bksnot/files/wandb-summary.json wandb-summary.json
+2023-11-15 08:19:31,631 INFO    SenderThread:7637 [sender.py:transition_state():613] send defer: 10
+2023-11-15 08:19:31,631 DEBUG   SenderThread:7637 [sender.py:send_request():407] send_request: poll_exit
+2023-11-15 08:19:31,631 DEBUG   HandlerThread:7637 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 08:19:31,632 INFO    HandlerThread:7637 [handler.py:handle_request_defer():172] handle defer: 10
+2023-11-15 08:19:31,634 DEBUG   SenderThread:7637 [sender.py:send_request():407] send_request: defer
+2023-11-15 08:19:31,634 INFO    SenderThread:7637 [sender.py:send_request_defer():609] handle sender defer: 10
+2023-11-15 08:19:31,634 INFO    SenderThread:7637 [file_pusher.py:finish():175] shutting down file pusher
+2023-11-15 08:19:31,649 DEBUG   HandlerThread:7637 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-15 08:19:31,649 DEBUG   SenderThread:7637 [sender.py:send_request():407] send_request: poll_exit
+2023-11-15 08:19:32,140 INFO    wandb-upload_0:7637 [upload_job.py:push():131] Uploaded file /content/openset_domain_adaptation/wandb/run-20231115_081841-a3bksnot/files/config.yaml
+2023-11-15 08:19:32,232 INFO    wandb-upload_1:7637 [upload_job.py:push():131] Uploaded file /content/openset_domain_adaptation/wandb/run-20231115_081841-a3bksnot/files/output.log
+2023-11-15 08:19:32,318 INFO    wandb-upload_2:7637 [upload_job.py:push():131] Uploaded file /content/openset_domain_adaptation/wandb/run-20231115_081841-a3bksnot/files/requirements.txt
+2023-11-15 08:19:32,351 INFO    wandb-upload_3:7637 [upload_job.py:push():131] Uploaded file /content/openset_domain_adaptation/wandb/run-20231115_081841-a3bksnot/files/wandb-summary.json
+2023-11-15 08:19:32,552 INFO    Thread-11 (_thread_body):7637 [sender.py:transition_state():613] send defer: 11
+2023-11-15 08:19:32,552 DEBUG   HandlerThread:7637 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 08:19:32,552 INFO    HandlerThread:7637 [handler.py:handle_request_defer():172] handle defer: 11
+2023-11-15 08:19:32,553 DEBUG   SenderThread:7637 [sender.py:send_request():407] send_request: defer
+2023-11-15 08:19:32,553 INFO    SenderThread:7637 [sender.py:send_request_defer():609] handle sender defer: 11
+2023-11-15 08:19:32,553 INFO    SenderThread:7637 [file_pusher.py:join():181] waiting for file pusher
+2023-11-15 08:19:32,553 INFO    SenderThread:7637 [sender.py:transition_state():613] send defer: 12
+2023-11-15 08:19:32,553 DEBUG   HandlerThread:7637 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 08:19:32,553 INFO    HandlerThread:7637 [handler.py:handle_request_defer():172] handle defer: 12
+2023-11-15 08:19:32,554 DEBUG   SenderThread:7637 [sender.py:send_request():407] send_request: defer
+2023-11-15 08:19:32,554 INFO    SenderThread:7637 [sender.py:send_request_defer():609] handle sender defer: 12
+2023-11-15 08:19:32,554 INFO    SenderThread:7637 [file_stream.py:finish():595] file stream finish called
+2023-11-15 08:19:32,650 DEBUG   HandlerThread:7637 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-15 08:19:32,732 INFO    SenderThread:7637 [file_stream.py:finish():599] file stream finish is done
+2023-11-15 08:19:32,732 INFO    SenderThread:7637 [sender.py:transition_state():613] send defer: 13
+2023-11-15 08:19:32,733 DEBUG   SenderThread:7637 [sender.py:send_request():407] send_request: poll_exit
+2023-11-15 08:19:32,733 DEBUG   HandlerThread:7637 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 08:19:32,733 INFO    HandlerThread:7637 [handler.py:handle_request_defer():172] handle defer: 13
+2023-11-15 08:19:32,733 DEBUG   SenderThread:7637 [sender.py:send_request():407] send_request: defer
+2023-11-15 08:19:32,734 INFO    SenderThread:7637 [sender.py:send_request_defer():609] handle sender defer: 13
+2023-11-15 08:19:32,734 INFO    SenderThread:7637 [sender.py:transition_state():613] send defer: 14
+2023-11-15 08:19:32,734 DEBUG   HandlerThread:7637 [handler.py:handle_request():146] handle_request: defer
+2023-11-15 08:19:32,734 INFO    HandlerThread:7637 [handler.py:handle_request_defer():172] handle defer: 14
+2023-11-15 08:19:32,734 DEBUG   SenderThread:7637 [sender.py:send():380] send: final
+2023-11-15 08:19:32,734 DEBUG   SenderThread:7637 [sender.py:send():380] send: footer
+2023-11-15 08:19:32,734 DEBUG   SenderThread:7637 [sender.py:send_request():407] send_request: defer
+2023-11-15 08:19:32,734 INFO    SenderThread:7637 [sender.py:send_request_defer():609] handle sender defer: 14
+2023-11-15 08:19:32,735 DEBUG   HandlerThread:7637 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-15 08:19:32,736 DEBUG   SenderThread:7637 [sender.py:send_request():407] send_request: poll_exit
+2023-11-15 08:19:32,740 DEBUG   HandlerThread:7637 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-15 08:19:32,741 DEBUG   HandlerThread:7637 [handler.py:handle_request():146] handle_request: server_info
+2023-11-15 08:19:32,742 DEBUG   SenderThread:7637 [sender.py:send_request():407] send_request: server_info
+2023-11-15 08:19:32,782 DEBUG   HandlerThread:7637 [handler.py:handle_request():146] handle_request: get_summary
+2023-11-15 08:19:32,783 DEBUG   HandlerThread:7637 [handler.py:handle_request():146] handle_request: sampled_history
+2023-11-15 08:19:32,783 DEBUG   HandlerThread:7637 [handler.py:handle_request():146] handle_request: job_info
+2023-11-15 08:19:32,886 DEBUG   SenderThread:7637 [sender.py:send_request():407] send_request: job_info
+2023-11-15 08:19:32,887 DEBUG   HandlerThread:7637 [handler.py:handle_request():146] handle_request: shutdown
+2023-11-15 08:19:32,887 INFO    HandlerThread:7637 [handler.py:finish():866] shutting down handler
+2023-11-15 08:19:33,783 INFO    WriterThread:7637 [datastore.py:close():294] close: /content/openset_domain_adaptation/wandb/run-20231115_081841-a3bksnot/run-a3bksnot.wandb
+2023-11-15 08:19:33,886 INFO    SenderThread:7637 [sender.py:finish():1536] shutting down sender
+2023-11-15 08:19:33,887 INFO    SenderThread:7637 [file_pusher.py:finish():175] shutting down file pusher
+2023-11-15 08:19:33,887 INFO    SenderThread:7637 [file_pusher.py:join():181] waiting for file pusher
