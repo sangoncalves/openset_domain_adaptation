@@ -2,6 +2,60 @@ import torch.nn as nn
 import torch
 import torchvision.models as models
 
+import torch
+import torch.nn as nn
+from torchvision import models
+
+class CEVTModel_frame_agg(nn.Module):
+    def __init__(self, dataset, feature_extractor='resnet18', output_layer=102, frame_agg='mean', hidden_size=256):
+        super(CEVTModel_frame_agg, self).__init__()
+
+        # Feature extractor setup
+        if feature_extractor == 'resnet18':
+            self.feature_extractor = models.resnet18(weights=models.ResNet18_Weights.IMAGENET1K_V1)
+            self.feature_extractor = nn.Sequential(*list(self.feature_extractor.children())[:-1])
+            feature_size = 512
+        else:
+            raise ValueError(f"Unsupported feature extractor: {feature_extractor}")
+
+        # Frame aggregation setup
+        self.frame_agg = frame_agg
+        if frame_agg == 'lstm':
+            self.lstm = nn.LSTM(feature_size, hidden_size, batch_first=True)
+            feature_size = hidden_size
+        elif frame_agg == 'attention':
+            self.attention = nn.Sequential(
+                nn.Linear(feature_size, feature_size),
+                nn.Tanh(),
+                nn.Linear(feature_size, 1)
+            )
+
+        # Classifier setup
+        self.classifier = nn.Linear(feature_size, output_layer)
+
+    def forward(self, X):
+        b, frames, c, h, w = X.size()
+        X = X.view(b * frames, c, h, w)
+        features = self.feature_extractor(X)  # features size b*frames, features
+        features = features.view(b, frames, -1)
+
+        # Frame aggregation
+        if self.frame_agg == 'mean':
+            features = torch.mean(features, dim=1)
+        elif self.frame_agg == 'max':
+            features = torch.max(features, dim=1)[0]
+        elif self.frame_agg == 'lstm':
+            features, _ = self.lstm(features)
+            features = features[:, -1, :]  # Take last output of LSTM
+        elif self.frame_agg == 'attention':
+            attn_weights = torch.softmax(self.attention(features), dim=1)
+            features = torch.sum(features * attn_weights, dim=1)
+
+        features = self.classifier(features)
+        return features
+
+
+
 class CEVTModel(nn.Module):
     def __init__(self, dataset, feature_extractor='resnet18', output_layer=102):
         super(CEVTModel, self).__init__()
@@ -23,6 +77,7 @@ class CEVTModel(nn.Module):
         features = torch.mean(features, dim=1)  # average pooling along temporal dimension
         features = self.classifier(features)
         return features
+
 
 class CEVTModel_old(nn.Module):
     def __init__(self, dataset, feature_extractor='resnet18', output_layer=102):
