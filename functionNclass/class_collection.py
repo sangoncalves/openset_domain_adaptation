@@ -32,8 +32,13 @@ class FrameSelector:
         return indices
 
     def random_sampling(self):
-        indices = np.random.choice(self.total_frames, self.n_frames, replace=False)
-        return np.sort(indices)
+      if self.n_frames > self.total_frames:
+          # Adjust n_frames or allow replacement
+          indices = np.random.choice(self.total_frames, self.n_frames, replace=True)
+      else:
+          indices = np.random.choice(self.total_frames, self.n_frames, replace=False)
+      return np.sort(indices)
+
 
     def important_frames(self, frames):
         frame_diffs = []

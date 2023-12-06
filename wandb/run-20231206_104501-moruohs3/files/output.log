@@ -1,0 +1,40 @@
+###############---------------#############----------------#####USING random FRAME STRATEGY!###############---------------#############----------------#####
+Using device: cuda
+config["adaptation_direction"]: ucf2hmdb, config["n_frames"]: 30, config["strategy"]: random
+config["num_classes"]):  12
+Train
+
+  2%|▏         | 4/179 [00:13<10:12,  3.50s/it]
+Traceback (most recent call last):
+  File "<ipython-input-30-6a551ae1284d>", line 83, in <cell line: 1>
+    result_proposed_strategy, _, _ = train_frame_analysis_one_dataset(config, train_loader, test_loader, filename, run_id)
+  File "<ipython-input-23-6773c2daecfc>", line 42, in train_frame_analysis_one_dataset
+    for i, (X_index, X_source, y_source) in tqdm(enumerate(train_loader), total=total_batches):
+  File "/usr/local/lib/python3.10/dist-packages/tqdm/std.py", line 1182, in __iter__
+    for obj in iterable:
+  File "/usr/local/lib/python3.10/dist-packages/torch/utils/data/dataloader.py", line 630, in __next__
+    data = self._next_data()
+  File "/usr/local/lib/python3.10/dist-packages/torch/utils/data/dataloader.py", line 1345, in _next_data
+    return self._process_data(data)
+  File "/usr/local/lib/python3.10/dist-packages/torch/utils/data/dataloader.py", line 1371, in _process_data
+    data.reraise()
+  File "/usr/local/lib/python3.10/dist-packages/torch/_utils.py", line 694, in reraise
+    raise exception
+ValueError: Caught ValueError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/torch/utils/data/_utils/worker.py", line 308, in _worker_loop
+    data = fetcher.fetch(index)
+  File "/usr/local/lib/python3.10/dist-packages/torch/utils/data/_utils/fetch.py", line 51, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/usr/local/lib/python3.10/dist-packages/torch/utils/data/_utils/fetch.py", line 51, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/content/openset_domain_adaptation/functionNclass/class_collection.py", line 297, in __getitem__
+    indices = self.frames2indices(n_frames) #choose "relevant" indexes. Closer frames are too similar and can be discarded. #uniform dist according the frames
+  File "/content/openset_domain_adaptation/functionNclass/class_collection.py", line 334, in frames2indices
+    return frame_selector.get_indices(self.frame_strategy)
+  File "/content/openset_domain_adaptation/functionNclass/class_collection.py", line 60, in get_indices
+    return self.random_sampling()
+  File "/content/openset_domain_adaptation/functionNclass/class_collection.py", line 35, in random_sampling
+    indices = np.random.choice(self.total_frames, self.n_frames, replace=False)
+  File "mtrand.pyx", line 965, in numpy.random.mtrand.RandomState.choice
+ValueError: Cannot take a larger sample than population when 'replace=False'
