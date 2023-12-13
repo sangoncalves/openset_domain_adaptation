@@ -26,7 +26,7 @@ class CEVTModel_frame_agg(nn.Module):
         elif frame_agg == 'mlp':
             # Define an MLP for frame aggregation
             self.mlp = nn.Sequential(
-                nn.Linear(feature_size * frames, hidden_size),  # Assuming 'frames' is known at this point
+                nn.Linear(feature_size * frames, hidden_size), 
                 nn.ReLU(),
                 nn.Linear(hidden_size, hidden_size),
                 nn.ReLU(),
