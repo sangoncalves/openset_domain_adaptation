@@ -7,7 +7,7 @@ import torch.nn as nn
 from torchvision import models
 
 class CEVTModel_frame_agg(nn.Module):
-    def __init__(self, dataset, feature_extractor='resnet18', output_layer=102, frame_agg='mean', hidden_size=256):
+    def __init__(self, dataset, feature_extractor='resnet18', output_layer=102, frame_agg='mean', hidden_size=256, frames = None):
         super(CEVTModel_frame_agg, self).__init__()
 
         # Feature extractor setup
@@ -23,12 +23,15 @@ class CEVTModel_frame_agg(nn.Module):
         if frame_agg == 'lstm':
             self.lstm = nn.LSTM(feature_size, hidden_size, batch_first=True)
             feature_size = hidden_size
-        elif frame_agg == 'attention':
-            self.attention = nn.Sequential(
-                nn.Linear(feature_size, feature_size),
-                nn.Tanh(),
-                nn.Linear(feature_size, 1)
+        elif frame_agg == 'mlp':
+            # Define an MLP for frame aggregation
+            self.mlp = nn.Sequential(
+                nn.Linear(feature_size * frames, hidden_size),  # Assuming 'frames' is known at this point
+                nn.ReLU(),
+                nn.Linear(hidden_size, hidden_size),
+                nn.ReLU(),
             )
+            feature_size = hidden_size
 
         # Classifier setup
         self.classifier = nn.Linear(feature_size, output_layer)
@@ -47,9 +50,10 @@ class CEVTModel_frame_agg(nn.Module):
         elif self.frame_agg == 'lstm':
             features, _ = self.lstm(features)
             features = features[:, -1, :]  # Take last output of LSTM
-        elif self.frame_agg == 'attention':
-            attn_weights = torch.softmax(self.attention(features), dim=1)
-            features = torch.sum(features * attn_weights, dim=1)
+        elif self.frame_agg == 'mlp':
+            # Flatten features across frames and pass through MLP
+            features = features.view(b, -1)  # Flatten frames into feature vector
+            features = self.mlp(features)  # Pass through MLP
 
         features = self.classifier(features)
         return features

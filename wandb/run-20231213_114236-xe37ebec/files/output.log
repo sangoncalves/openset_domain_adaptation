@@ -1,0 +1,8 @@
+###############---------------#############----------------#####USING uniform FRAME STRATEGY!###############---------------#############----------------#####
+Using device: cuda
+config["adaptation_direction"]: ucf2hmdb, config["n_frames"]: 40, config["strategy"]: uniform
+config["num_classes"]):  12
+Traceback (most recent call last):
+  File "<ipython-input-31-92dfe22cf95d>", line 68, in <cell line: 1>
+    config["model"] = CEVTModel_frame_agg(dataset=train_dataset, output_layer = config["num_classes"], frame_agg=frame_agg, frames=nFrames).to(config["device"]) #frame_agg='mean', ('lstm', hidden_size=256),
+TypeError: CEVTModel_frame_agg.__init__() got an unexpected keyword argument 'frames'
