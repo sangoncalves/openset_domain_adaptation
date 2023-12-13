@@ -24,7 +24,7 @@ class CEVTModel_frame_agg(nn.Module):
             self.lstm = nn.LSTM(feature_size, hidden_size, batch_first=True)
             feature_size = hidden_size
         elif frame_agg == 'mlp':
-            # Define an MLP for frame aggregation
+
             self.mlp = nn.Sequential(
                 nn.Linear(feature_size * frames, hidden_size), 
                 nn.ReLU(),

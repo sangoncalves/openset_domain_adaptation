@@ -284,3 +284,39 @@
 2023-12-13 15:40:19,875 DEBUG   HandlerThread:1581 [handler.py:handle_request():146] handle_request: status_report
 2023-12-13 15:40:24,876 DEBUG   HandlerThread:1581 [handler.py:handle_request():146] handle_request: status_report
 2023-12-13 15:40:29,877 DEBUG   HandlerThread:1581 [handler.py:handle_request():146] handle_request: status_report
+2023-12-13 15:40:34,877 DEBUG   HandlerThread:1581 [handler.py:handle_request():146] handle_request: status_report
+2023-12-13 15:40:39,878 DEBUG   HandlerThread:1581 [handler.py:handle_request():146] handle_request: status_report
+2023-12-13 15:40:44,879 DEBUG   HandlerThread:1581 [handler.py:handle_request():146] handle_request: status_report
+2023-12-13 15:40:49,880 DEBUG   HandlerThread:1581 [handler.py:handle_request():146] handle_request: status_report
+2023-12-13 15:40:54,881 DEBUG   HandlerThread:1581 [handler.py:handle_request():146] handle_request: status_report
+2023-12-13 15:40:59,882 DEBUG   HandlerThread:1581 [handler.py:handle_request():146] handle_request: status_report
+2023-12-13 15:41:04,883 DEBUG   HandlerThread:1581 [handler.py:handle_request():146] handle_request: status_report
+2023-12-13 15:41:09,884 DEBUG   HandlerThread:1581 [handler.py:handle_request():146] handle_request: status_report
+2023-12-13 15:41:14,885 DEBUG   HandlerThread:1581 [handler.py:handle_request():146] handle_request: status_report
+2023-12-13 15:41:19,886 DEBUG   HandlerThread:1581 [handler.py:handle_request():146] handle_request: status_report
+2023-12-13 15:41:24,887 DEBUG   HandlerThread:1581 [handler.py:handle_request():146] handle_request: status_report
+2023-12-13 15:41:29,888 DEBUG   HandlerThread:1581 [handler.py:handle_request():146] handle_request: status_report
+2023-12-13 15:41:34,889 DEBUG   HandlerThread:1581 [handler.py:handle_request():146] handle_request: status_report
+2023-12-13 15:41:39,890 DEBUG   HandlerThread:1581 [handler.py:handle_request():146] handle_request: status_report
+2023-12-13 15:41:44,891 DEBUG   HandlerThread:1581 [handler.py:handle_request():146] handle_request: status_report
+2023-12-13 15:41:49,891 DEBUG   HandlerThread:1581 [handler.py:handle_request():146] handle_request: status_report
+2023-12-13 15:41:54,892 DEBUG   HandlerThread:1581 [handler.py:handle_request():146] handle_request: status_report
+2023-12-13 15:41:59,893 DEBUG   HandlerThread:1581 [handler.py:handle_request():146] handle_request: status_report
+2023-12-13 15:42:04,894 DEBUG   HandlerThread:1581 [handler.py:handle_request():146] handle_request: status_report
+2023-12-13 15:42:09,895 DEBUG   HandlerThread:1581 [handler.py:handle_request():146] handle_request: status_report
+2023-12-13 15:42:14,896 DEBUG   HandlerThread:1581 [handler.py:handle_request():146] handle_request: status_report
+2023-12-13 15:42:19,897 DEBUG   HandlerThread:1581 [handler.py:handle_request():146] handle_request: status_report
+2023-12-13 15:42:24,898 DEBUG   HandlerThread:1581 [handler.py:handle_request():146] handle_request: status_report
+2023-12-13 15:42:29,899 DEBUG   HandlerThread:1581 [handler.py:handle_request():146] handle_request: status_report
+2023-12-13 15:42:34,900 DEBUG   HandlerThread:1581 [handler.py:handle_request():146] handle_request: status_report
+2023-12-13 15:42:39,901 DEBUG   HandlerThread:1581 [handler.py:handle_request():146] handle_request: status_report
+2023-12-13 15:42:44,902 DEBUG   HandlerThread:1581 [handler.py:handle_request():146] handle_request: status_report
+2023-12-13 15:42:49,903 DEBUG   HandlerThread:1581 [handler.py:handle_request():146] handle_request: status_report
+2023-12-13 15:42:54,904 DEBUG   HandlerThread:1581 [handler.py:handle_request():146] handle_request: status_report
+2023-12-13 15:42:56,664 WARNING StreamThr :1581 [internal.py:is_dead():414] Internal process exiting, parent pid 165 disappeared
+2023-12-13 15:42:56,664 ERROR   StreamThr :1581 [internal.py:wandb_internal():152] Internal process shutdown.
+2023-12-13 15:42:56,904 INFO    SenderThread:1581 [sender.py:finish():1548] shutting down sender
+2023-12-13 15:42:56,904 INFO    SenderThread:1581 [file_pusher.py:finish():175] shutting down file pusher
+2023-12-13 15:42:56,904 INFO    SenderThread:1581 [file_pusher.py:join():181] waiting for file pusher
+2023-12-13 15:42:56,905 INFO    HandlerThread:1581 [handler.py:finish():866] shutting down handler
+2023-12-13 15:42:56,905 INFO    WriterThread:1581 [datastore.py:close():294] close: /content/openset_domain_adaptation/wandb/run-20231213_153423-y37244pz/run-y37244pz.wandb
